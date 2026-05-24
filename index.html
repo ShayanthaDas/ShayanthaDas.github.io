@@ -1,115 +1,150 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shayantha Das | Portfolio</title>
+
+  <title>Shayantha Das | Data Analyst & Marketing Analytics Portfolio</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Shayantha Das is a Data Analyst and Marketing Analytics Specialist skilled in Python, SQL, Power BI, Tableau, and SEO.">
+  <meta name="keywords" content="Data Analyst, Marketing Analytics, Python, SQL, Power BI, Tableau, SEO, Portfolio Bangladesh">
+  <meta name="author" content="Shayantha Das">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
-      background: #f5f7fb;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
       line-height: 1.6;
     }
 
-```
-header {
-  background: #0f172a;
-  color: white;
-  padding: 70px 20px;
-  text-align: center;
-}
+    header {
+      background: linear-gradient(135deg, #0f172a, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 42px;
-}
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
 
-header p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #cbd5e1;
-}
+    header p {
+      font-size: 18px;
+      color: #dbeafe;
+      margin-bottom: 20px;
+    }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
-}
+    .btn {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 18px;
+      background: white;
+      color: #1d4ed8;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-section {
-  margin-bottom: 50px;
-}
+    .btn:hover {
+      background: #e0e7ff;
+    }
 
-h2 {
-  color: #0f172a;
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
 
-.card {
-  background: white;
-  padding: 25px;
-  margin-top: 15px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-}
+    section {
+      margin-bottom: 60px;
+    }
 
-ul {
-  padding-left: 20px;
-}
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      position: relative;
+    }
 
-.project-card {
-  background: white;
-  padding: 25px;
-  margin-top: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-}
+    h2::after {
+      content: "";
+      width: 70px;
+      height: 4px;
+      background: #2563eb;
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      border-radius: 5px;
+    }
 
-.project-card h3 {
-  margin-top: 0;
-  color: #111827;
-}
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+      margin-top: 15px;
+    }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #0f172a;
-  color: white;
-  margin-top: 40px;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
 
-a {
-  color: #2563eb;
-  text-decoration: none;
-}
+    .box {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
 
-.btn {
-  display: inline-block;
-  margin: 10px 5px;
-  padding: 10px 15px;
-  background: #2563eb;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-}
-```
+    .project {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+      margin-top: 15px;
+    }
 
+    .project:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0f172a;
+      color: white;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>Shayantha Das</h1>
   <p>Data Analyst & Digital Marketing Specialist</p>
-  <div>
-    <a class="btn" href="#projects">View Projects</a>
-    <a class="btn" href="#contact">Contact Me</a>
-  </div>
+  <a class="btn" href="#projects">View Projects</a>
+  <a class="btn" href="https://github.com/ShayanthaDas" target="_blank">GitHub</a>
 </header>
 
 <div class="container">
@@ -117,93 +152,58 @@ a {
   <section>
     <h2>About Me</h2>
     <div class="card">
-      I am a business graduate with skills in both data analytics and digital marketing. 
-      I focus on using data to understand customer behavior, improve marketing performance, 
-      and support business decision-making.
+      I am a Data Analyst and Digital Marketing Specialist with skills in Python, SQL, Excel,
+      Power BI, Tableau, SEO, and marketing analytics. I focus on turning data into business insights.
     </div>
   </section>
 
   <section>
     <h2>Skills</h2>
-    <div class="card">
-      <ul>
-        <li>Python</li>
-        <li>MySQL / PostgreSQL</li>
-        <li>Excel</li>
-        <li>Power BI</li>
-        <li>Tableau</li>
-        <li>Digital Marketing</li>
-        <li>SEO & Social Media Marketing</li>
-      </ul>
+    <div class="grid">
+      <div class="box">Python</div>
+      <div class="box">SQL</div>
+      <div class="box">Excel</div>
+      <div class="box">Power BI</div>
+      <div class="box">Tableau</div>
+      <div class="box">SEO</div>
+      <div class="box">Marketing Analytics</div>
+      <div class="box">Google Analytics</div>
     </div>
   </section>
 
   <section id="projects">
-  <h2>Featured Projects</h2>
-  <p style="margin-top:-10px; color:#6b7280;">Selected projects from my data analytics and digital marketing work (GitHub-based).</p>
+    <h2>Featured Projects</h2>
 
-  <div class="project-card">
-    <h3>Marketing Campaign Performance Analysis</h3>
-    <p><b>Overview:</b> Analyzed digital marketing campaigns to measure performance, engagement, and ROI.</p>
-    <p><b>Key Work:</b></p>
-    <ul>
-      <li>Data cleaning and preprocessing</li>
-      <li>Campaign performance comparison</li>
-      <li>ROI and engagement analysis</li>
-    </ul>
-    <p><b>Tools:</b> Excel, Google Analytics, Power BI</p>
-    <p><b>GitHub:</b> <a href="https://github.com/ShayanthaDas" target="_blank">View Project on GitHub</a></p>
-  </div>
+    <div class="project">
+      <h3>Sales Data Dashboard</h3>
+      <p>Analyzed sales trends and created dashboards using Power BI.</p>
+    </div>
 
-  <div class="project-card">
-    <h3>Customer Behavior & Sales Analysis</h3>
-    <p><b>Overview:</b> Analyzed customer purchasing patterns to identify high-value segments and trends.</p>
-    <p><b>Key Work:</b></p>
-    <ul>
-      <li>SQL data extraction and transformation</li>
-      <li>Python-based analysis</li>
-      <li>Tableau dashboard creation</li>
-    </ul>
-    <p><b>Tools:</b> Python, SQL, Tableau</p>
-    <p><b>GitHub:</b> <a href="https://github.com/ShayanthaDas" target="_blank">View Project on GitHub</a></p>
-  </div>
+    <div class="project">
+      <h3>Customer Segmentation</h3>
+      <p>Used Python & SQL to segment customers based on behavior.</p>
+    </div>
 
-   <div class="project-card">
-    <h3>More Projects</h3>
-    <p>Explore all my data analytics and marketing projects on GitHub.</p>
-    <a class="btn" href="https://github.com/ShayanthaDas?tab=repositories" target="_blank">Visit My GitHub Repositories</a>
-  </div>
-</section>
+    <div class="project">
+      <h3>Marketing Campaign Analysis</h3>
+      <p>Evaluated campaign performance and ROI using analytics tools.</p>
+    </div>
+
+  </section>
 
   <section>
     <h2>Certifications</h2>
     <div class="card">
-      <ul>
-        <li>Digital Marketing Certification</li>
-        <li>Google Analytics Certification</li>
-        <li>Python for Data Analysis</li>
-        <li>SQL for Data Analysis</li>
-        <li>Power BI Certification</li>
-        <li>Tableau Certification</li>
-      </ul>
+      <p><b>Creative IT Institute:</b> Digital Marketing Certificate</p>
+      <p><b>Google Digital Garage:</b> Digital Marketing Fundamentals</p>
     </div>
   </section>
 
   <section>
-    <h2>Education</h2>
-    <div class="card">
-      <p><b>MBA in Marketing</b> - Comilla University</p>
-      <p><b>BBA in Marketing</b> - Comilla University</p>
-    </div>
-  </section>
-
-  <section id="contact">
     <h2>Contact</h2>
     <div class="card">
-      <p>Email: shayanthadas@gmail.com</p>
-      <p>GitHub: <a href="https://github.com/">Profile</a></p>
-      <p>Linkedin: <a href="https://www.linkedin.com/in/shayantha-das/">Profile</a></p>
-      <p>Fiverr: <a href="https://www.fiverr.com/shayantha_das1/">Profile</a></p>
+      <p>Email: your-email@example.com</p>
+      <p>GitHub: <a href="https://github.com/ShayanthaDas">Profile</a></p>
     </div>
   </section>
 
