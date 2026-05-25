@@ -1,247 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f6f7fb;
+  color:#111;
+  line-height:1.8;
+  font-size:16px;
+}
 
-<head>
+header{
+  background:#0f172a;
+  color:white;
+  padding:60px 20px;
+  text-align:center;
+}
 
-  <!-- SEO -->
-  <meta name="google-site-verification" content="YOUR_GSC_CODE" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:500;
+}
 
-  <title>Shayantha Das | Data Analyst & Digital Marketing Portfolio Bangladesh</title>
+nav a:hover{
+  text-decoration:underline;
+}
 
-  <meta name="description" content="Shayantha Das is a Data Analyst and Digital Marketer from Bangladesh. Skilled in Python, SQL, Excel, Power BI, Tableau, and Marketing Analytics.">
-  <meta name="keywords" content="Data Analyst Bangladesh, Excel Dashboard, Power BI Projects, SQL Python Portfolio, Digital Marketing Bangladesh">
-  <meta name="author" content="Shayantha Das">
-  <meta name="robots" content="index, follow">
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
 
-  <link rel="canonical" href="https://shayanthadas.github.io/">
+.card{
+  background:white;
+  padding:22px;
+  margin:18px 0;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
 
-  <!-- GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZPS4Y64P5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SZPS4Y64P5');
-  </script>
+h1,h2,h3{
+  line-height:1.3;
+}
 
-  <style>
+h2{
+  border-left:5px solid #2563eb;
+  padding-left:10px;
+  margin-top:40px;
+}
 
-    body{
-      margin:0;
-      font-family:Arial;
-      background:#f6f7fb;
-      color:#111;
-      line-height:1.6;
-    }
+p{
+  margin-bottom:12px;
+}
 
-    header{
-      background:#0f172a;
-      color:white;
-      text-align:center;
-      padding:70px 20px;
-    }
+img{
+  width:100%;
+  border-radius:10px;
+  margin-top:12px;
+}
 
-    h1{margin:0;font-size:40px;}
-    h2{
-      border-left:5px solid #2563eb;
-      padding-left:10px;
-      margin-top:50px;
-    }
-
-    .container{
-      max-width:1000px;
-      margin:auto;
-      padding:20px;
-    }
-
-    .card{
-      background:white;
-      padding:20px;
-      margin-top:15px;
-      border-radius:10px;
-      box-shadow:0 4px 15px rgba(0,0,0,0.08);
-    }
-
-    .skills span{
-      display:inline-block;
-      background:#dbeafe;
-      color:#1d4ed8;
-      padding:6px 12px;
-      margin:5px;
-      border-radius:20px;
-      font-size:14px;
-    }
-
-    nav a{
-      margin:0 10px;
-      color:white;
-      text-decoration:none;
-    }
-
-    nav a:hover{
-      text-decoration:underline;
-    }
-
-    img{
-      width:100%;
-      border-radius:10px;
-      margin-top:10px;
-    }
-
-    a{
-      color:#2563eb;
-    }
-
-    footer{
-      text-align:center;
-      background:#0f172a;
-      color:white;
-      padding:20px;
-      margin-top:40px;
-    }
-
-    section{
-      scroll-margin-top:100px;
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-<header>
-
-  <h1>Shayantha Das</h1>
-  <p>Data Analyst & Digital Marketing Specialist | Bangladesh</p>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#blog">Blog</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-</header>
-
-<div class="container">
-
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      I am a Data Analyst and Digital Marketer from Bangladesh. I help businesses make better decisions using data.
-      I specialize in Python, SQL, Excel, Power BI, Tableau, and marketing analytics.
-    </p>
-
-    <img src="https://via.placeholder.com/900x400"
-         alt="Shayantha Das working on data analytics dashboard">
-
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="card skills">
-    <span>Python</span>
-    <span>SQL</span>
-    <span>Excel</span>
-    <span>Power BI</span>
-    <span>Tableau</span>
-    <span>Marketing Analytics</span>
-    <span>SEO</span>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="card">
-    <h3>Sales Dashboard (Excel & Power BI)</h3>
-    <p>Built interactive dashboard to analyze sales performance and business KPIs.</p>
-
-    <img src="https://via.placeholder.com/900x400"
-         alt="Excel Power BI sales dashboard visualization">
-
-    <p><a href="https://github.com/ShayanthaDas" target="_blank">View Project</a></p>
-  </div>
-
-  <div class="card">
-    <h3>Customer Segmentation (Python & SQL)</h3>
-    <p>Analyzed customer behavior and created data-driven segments.</p>
-
-    <img src="https://via.placeholder.com/900x400"
-         alt="Python customer segmentation chart analysis">
-
-    <p><a href="https://github.com/ShayanthaDas" target="_blank">View Project</a></p>
-  </div>
-
-</section>
-
-<!-- BLOG -->
-<section id="blog">
-  <h2>Blog Insights</h2>
-
-  <div class="card">
-    <h3>Why Data Analytics is Important</h3>
-    <p>
-      Data analytics helps businesses understand customers and improve decisions.
-      It is now a core skill in modern industries.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Marketing Analytics Benefits</h3>
-    <p>
-      Marketing analytics improves ROI by identifying which campaigns actually work.
-    </p>
-  </div>
-
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <h2>Services</h2>
-
-  <div class="card">
-    <p>✔ Excel Dashboard Creation</p>
-    <p>✔ Power BI Reports</p>
-    <p>✔ SQL Data Analysis</p>
-    <p>✔ Marketing Analytics Reports</p>
-
-    <p>
-      <a href="https://www.fiverr.com/shayantha_das1" target="_blank">
-        Hire Me on Fiverr
-      </a>
-    </p>
-  </div>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-
-  <div class="card">
-    <p>Email: <a href="mailto:shayanthadas@gmail.com">shayanthadas@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/ShayanthaDas" target="_blank">GitHub Profile</a></p>
-    <p>Fiverr: <a href="https://www.fiverr.com/shayantha_das1" target="_blank">Fiverr Profile</a></p>
-  </div>
-
-</section>
-
-</div>
-
-<footer>
-  © 2026 Shayantha Das | Built with Data Analytics & Passion
-</footer>
-
-</body>
-</html>
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
