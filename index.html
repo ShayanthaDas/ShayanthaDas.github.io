@@ -3,814 +3,2028 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shayantha Das | Data Analyst & Digital Marketer – Bangladesh</title>
-  <meta name="description" content="Shayantha Das is a Data Analyst & Digital Marketer based in Bangladesh, specializing in Python, SQL, Power BI, Tableau, and SEO-driven marketing strategies." />
-  <meta name="keywords" content="Shayantha Das, Data Analyst Bangladesh, Digital Marketer, Python SQL Power BI Tableau, Data Visualization, SEO Expert Bangladesh" />
+  <meta name="description" content="Shayantha Das – Data Analyst & Digital Marketer specializing in Python, SQL, Power BI, Tableau, and Excel. Explore projects, insights, and analytics expertise." />
+  <meta name="keywords" content="Shayantha Das, Data Analyst, Digital Marketer, Python, SQL, Power BI, Tableau, Excel, Bangladesh, portfolio, data science, marketing analytics" />
   <meta name="author" content="Shayantha Das" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://shayanthadas.github.io/" />
+  <meta name="theme-color" content="#0a0a0f" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://shayanthadas.github.io/" />
   <meta property="og:title" content="Shayantha Das | Data Analyst & Digital Marketer" />
-  <meta property="og:description" content="Transforming raw data into strategic decisions. Explore projects in Python, SQL, Power BI, and digital marketing." />
+  <meta property="og:description" content="Portfolio of Shayantha Das – transforming raw data into business decisions through analytics and digital marketing strategies." />
   <meta property="og:image" content="https://shayanthadas.github.io/assets/profile.jpg" />
+  <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Shayantha Das | Data Analyst & Digital Marketer" />
-  <meta name="twitter:description" content="Data Analyst & Digital Marketer | Python · SQL · Power BI · Tableau · SEO" />
+  <meta name="twitter:description" content="Portfolio of Shayantha Das – transforming raw data into business decisions through analytics and digital marketing strategies." />
   <meta name="twitter:image" content="https://shayanthadas.github.io/assets/profile.jpg" />
 
-  <!-- Schema.org structured data -->
+  <!-- Canonical -->
+  <link rel="canonical" href="https://shayanthadas.github.io/" />
+
+  <!-- Structured Data: Person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Shayantha Das",
     "url": "https://shayanthadas.github.io/",
-    "image": "https://shayanthadas.github.io/assets/profile.jpg",
     "jobTitle": "Data Analyst & Digital Marketer",
-    "description": "Data Analyst and Digital Marketer specializing in Python, SQL, Power BI, Tableau, and SEO.",
-    "address": { "@type": "PostalAddress", "addressCountry": "BD" },
+    "knowsAbout": ["Data Analysis", "Python", "SQL", "Power BI", "Tableau", "Excel", "Digital Marketing", "SEO"],
     "sameAs": [
-      "https://linkedin.com/in/shayanthadass",
+      "https://www.linkedin.com/in/shayanthadas",
       "https://github.com/shayanthadas"
     ]
   }
   </script>
 
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Shayantha Das Portfolio",
+    "url": "https://shayanthadas.github.io/",
+    "description": "Data Analyst & Digital Marketer portfolio showcasing projects, skills, and blog posts.",
+    "author": { "@type": "Person", "name": "Shayantha Das" }
+  }
+  </script>
+
+  <title>Shayantha Das | Data Analyst & Digital Marketer</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --ink: #0d0d0d;
-      --paper: #f5f0e8;
-      --cream: #ede8db;
-      --gold: #c9a84c;
-      --gold-light: #e8c97a;
-      --rust: #b84c22;
-      --teal: #1a7c6e;
-      --muted: #6b6457;
-      --card-bg: #ffffff;
-      --radius: 4px;
+      --bg: #060810;
+      --bg2: #0d1120;
+      --bg3: #141829;
+      --accent: #4f8ef7;
+      --accent2: #a78bfa;
+      --gold: #f0c060;
+      --text: #e8eaf0;
+      --muted: #7a84a0;
+      --border: rgba(255,255,255,0.07);
+      --card: rgba(20,24,41,0.85);
+      --radius: 16px;
+      --ff-head: 'Syne', sans-serif;
+      --ff-body: 'DM Sans', sans-serif;
       --nav-h: 72px;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--ff-body);
+      font-weight: 300;
+      line-height: 1.7;
       overflow-x: hidden;
     }
 
-    /* ── NAV ── */
+    /* ─── Noise overlay ─── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 9999; opacity: .35;
+    }
+
+    /* ─── Nav ─── */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 0; left: 0; right: 0;
       height: var(--nav-h);
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 5vw;
-      background: rgba(245,240,232,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(201,168,76,0.25);
+      padding: 0 5%;
+      background: rgba(6,8,16,.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      transition: box-shadow .3s;
     }
-    .nav-logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800; font-size: 1.2rem;
-      color: var(--ink); text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-    .nav-logo span { color: var(--gold); }
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-    .nav-links a {
-      font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
-      font-weight: 500; color: var(--muted);
-      text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--ink); }
-    .nav-links a.active::after {
-      content: ''; display: block; height: 2px;
-      background: var(--gold); margin-top: 2px;
-    }
-    .nav-cta {
-      background: var(--ink); color: var(--paper) !important;
-      padding: 0.5rem 1.2rem; border-radius: var(--radius);
-      transition: background 0.2s !important;
-    }
-    .nav-cta:hover { background: var(--gold) !important; color: var(--ink) !important; }
+    nav.scrolled { box-shadow: 0 4px 40px rgba(0,0,0,.5); }
 
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
-      display: grid; grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: calc(var(--nav-h) + 4rem) 5vw 6rem;
-      gap: 4rem;
-      position: relative; overflow: hidden;
+    .nav-logo {
+      font-family: var(--ff-head);
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: -.02em;
+      color: var(--text);
+      text-decoration: none;
     }
-    #hero::before {
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex; gap: 2.5rem; list-style: none;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 400;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: color .2s;
+      position: relative;
+    }
+    .nav-links a::after {
       content: '';
-      position: absolute; top: -20%; right: -10%;
-      width: 55vw; height: 55vw; border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+      position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 2px; background: var(--accent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .25s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: .45rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 500 !important;
+      font-size: .85rem !important;
+      letter-spacing: .03em;
+      transition: background .2s, transform .2s !important;
+    }
+    .nav-cta:hover { background: #3a7ef0 !important; transform: translateY(-1px); }
+    .nav-cta::after { display: none !important; }
+
+    /* ─── Page sections ─── */
+    section { display: none; }
+    section.active { display: block; }
+
+    /* ─── Hero ─── */
+    #home {
+      min-height: 100vh;
+      padding-top: var(--nav-h);
+      display: flex; align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
       pointer-events: none;
     }
-    .hero-text { position: relative; z-index: 2; }
-    .hero-tag {
-      display: inline-block;
-      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--gold);
-      border: 1px solid var(--gold); padding: 0.3rem 0.9rem;
-      border-radius: 2px; margin-bottom: 1.5rem;
-      animation: fadeUp 0.8s ease both;
+    .glow1 { width: 600px; height: 600px; background: rgba(79,142,247,.12); top: -100px; right: -100px; }
+    .glow2 { width: 400px; height: 400px; background: rgba(167,139,250,.1); bottom: 0; left: -80px; }
+    .glow3 { width: 300px; height: 300px; background: rgba(240,192,96,.07); top: 50%; left: 45%; transform: translateY(-50%); }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
     }
-    h1.hero-name {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      font-weight: 800; line-height: 1.02;
-      letter-spacing: -0.04em;
-      animation: fadeUp 0.8s 0.1s ease both;
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(79,142,247,.1);
+      border: 1px solid rgba(79,142,247,.3);
+      border-radius: 100px;
+      padding: .35rem 1rem;
+      font-size: .8rem;
+      color: var(--accent);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      animation: fadeUp .6s ease both;
     }
-    h1.hero-name em {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic; color: var(--gold);
+    .hero-badge::before {
+      content: '●';
+      font-size: .5rem;
+      animation: pulse 2s infinite;
     }
-    .hero-role {
-      font-size: 1.15rem; color: var(--muted); margin-top: 1rem;
-      animation: fadeUp 0.8s 0.2s ease both;
+    @keyframes pulse { 0%,100% { opacity:1 } 50% { opacity:.3 } }
+
+    .hero-title {
+      font-family: var(--ff-head);
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -.03em;
+      margin-bottom: 1.5rem;
+      animation: fadeUp .6s .1s ease both;
     }
+    .hero-title .line2 { color: var(--accent); }
+    .hero-title .line3 { color: var(--accent2); }
+
     .hero-desc {
-      margin-top: 1.5rem; font-size: 1rem; color: var(--muted);
-      max-width: 480px; line-height: 1.7;
-      animation: fadeUp 0.8s 0.3s ease both;
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      animation: fadeUp .6s .2s ease both;
     }
-    .hero-btns {
-      display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;
-      animation: fadeUp 0.8s 0.4s ease both;
+
+    .hero-actions {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      animation: fadeUp .6s .3s ease both;
+    }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .75rem 1.75rem;
+      border-radius: 10px;
+      font-family: var(--ff-body);
+      font-size: .95rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all .2s;
+      border: none;
     }
     .btn-primary {
-      background: var(--ink); color: var(--paper);
-      padding: 0.85rem 2rem; border-radius: var(--radius);
-      font-family: 'DM Sans', sans-serif; font-weight: 500;
-      font-size: 0.9rem; text-decoration: none; letter-spacing: 0.03em;
-      transition: background 0.2s, transform 0.15s;
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 24px rgba(79,142,247,.35);
     }
-    .btn-primary:hover { background: var(--gold); color: var(--ink); transform: translateY(-2px); }
+    .btn-primary:hover { background: #3a7ef0; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(79,142,247,.45); }
     .btn-outline {
-      border: 1.5px solid var(--ink); color: var(--ink);
-      padding: 0.85rem 2rem; border-radius: var(--radius);
-      font-family: 'DM Sans', sans-serif; font-weight: 500;
-      font-size: 0.9rem; text-decoration: none; letter-spacing: 0.03em;
-      transition: background 0.2s, transform 0.15s;
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
     }
-    .btn-outline:hover { background: var(--ink); color: var(--paper); transform: translateY(-2px); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
-    .hero-skills {
-      display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 2rem;
-      animation: fadeUp 0.8s 0.5s ease both;
+    .hero-stats {
+      display: flex; gap: 2.5rem; margin-top: 3rem;
+      animation: fadeUp .6s .4s ease both;
     }
-    .skill-pill {
-      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.04em;
-      background: var(--cream); color: var(--muted);
-      padding: 0.3rem 0.8rem; border-radius: 20px;
-      border: 1px solid rgba(0,0,0,0.08);
+    .stat-item { }
+    .stat-num {
+      font-family: var(--ff-head);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text);
     }
+    .stat-num span { color: var(--accent); }
+    .stat-label { font-size: .8rem; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
 
-    /* profile image column */
+    /* Profile image */
     .hero-visual {
       display: flex; justify-content: center; align-items: center;
-      position: relative; z-index: 2;
-      animation: fadeIn 1s 0.3s ease both;
+      animation: fadeIn .8s .2s ease both;
     }
-    .hero-img-wrap {
-      position: relative; width: min(380px, 90%); aspect-ratio: 3/4;
+
+    .profile-frame {
+      position: relative;
+      width: 380px; height: 440px;
     }
-    .hero-img-wrap::before {
+    .profile-frame::before {
       content: '';
-      position: absolute; inset: -12px; border: 2px solid var(--gold);
-      border-radius: 4px; transform: rotate(2deg);
-      opacity: 0.5; z-index: 0;
+      position: absolute; inset: -2px;
+      border-radius: 40% 60% 55% 45% / 45% 50% 50% 55%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2), var(--gold));
+      animation: morphBorder 6s ease-in-out infinite;
+      z-index: 0;
     }
-    .hero-img-wrap::after {
-      content: 'Available for Work';
-      position: absolute; bottom: -1.5rem; left: 50%; transform: translateX(-50%);
-      background: var(--teal); color: #fff;
-      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em;
-      text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 20px;
+    @keyframes morphBorder {
+      0%,100% { border-radius: 40% 60% 55% 45% / 45% 50% 50% 55%; }
+      33% { border-radius: 60% 40% 45% 55% / 55% 45% 55% 45%; }
+      66% { border-radius: 50% 50% 60% 40% / 40% 60% 45% 55%; }
+    }
+    .profile-frame-inner {
+      position: absolute; inset: 3px;
+      border-radius: inherit;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .profile-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Floating badges on hero visual */
+    .float-badge {
+      position: absolute;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: .6rem 1rem;
+      backdrop-filter: blur(16px);
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .82rem;
+      font-weight: 500;
+      z-index: 2;
+      animation: float 4s ease-in-out infinite;
+    }
+    .float-badge .icon { font-size: 1.2rem; }
+    .float-badge:nth-child(1) { top: 10%; right: -20px; animation-delay: 0s; }
+    .float-badge:nth-child(2) { bottom: 18%; left: -20px; animation-delay: 1.5s; }
+    .float-badge:nth-child(3) { bottom: 5%; right: 10%; animation-delay: .8s; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+    /* Skill tags strip */
+    .skills-strip {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 0;
+      overflow: hidden;
+    }
+    .skills-track {
+      display: flex; gap: 2.5rem;
+      width: max-content;
+      animation: marquee 25s linear infinite;
+    }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .skill-pill {
+      display: flex; align-items: center; gap: .5rem;
       white-space: nowrap;
+      color: var(--muted);
+      font-size: .85rem;
+      letter-spacing: .04em;
     }
-    .hero-img-wrap img {
-      width: 100%; height: 100%; object-fit: cover;
-      border-radius: var(--radius); position: relative; z-index: 1;
-      filter: grayscale(8%) contrast(1.05);
-    }
-    /* Fallback avatar when image isn't available */
-    .hero-avatar-fallback {
-      width: 100%; height: 100%; border-radius: var(--radius);
-      position: relative; z-index: 1;
-      background: linear-gradient(145deg, #1a1a1a 0%, #2d2a25 50%, #1a1a1a 100%);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 0.5rem;
-    }
-    .hero-avatar-fallback .avatar-initials {
-      font-family: 'Syne', sans-serif; font-size: 5rem; font-weight: 800;
-      color: var(--gold); letter-spacing: -0.05em; line-height: 1;
-    }
-    .hero-avatar-fallback .avatar-label {
-      font-size: 0.8rem; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-transform: uppercase;
+    .skill-pill .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+    /* ─── Section wrapper ─── */
+    .section-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 6rem 5%;
     }
 
-    /* ── STATS BAR ── */
-    .stats-bar {
-      background: var(--ink); color: var(--paper);
-      display: flex; justify-content: center; gap: 4rem;
-      padding: 2.5rem 5vw; flex-wrap: wrap;
-    }
-    .stat { text-align: center; }
-    .stat-n {
-      font-family: 'Syne', sans-serif; font-size: 2.2rem;
-      font-weight: 800; color: var(--gold); line-height: 1;
-    }
-    .stat-l { font-size: 0.82rem; color: rgba(245,240,232,0.55); margin-top: 0.25rem; letter-spacing: 0.06em; text-transform: uppercase; }
-
-    /* ── SECTIONS ── */
-    section { padding: 6rem 5vw; }
     .section-label {
-      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;
+      display: inline-block;
+      color: var(--accent);
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: .75rem;
+      font-weight: 500;
     }
-    h2.section-title {
-      font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800; letter-spacing: -0.03em; line-height: 1.1;
+    .section-title {
+      font-family: var(--ff-head);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
     }
-    .section-sub { color: var(--muted); max-width: 560px; margin-top: 0.8rem; line-height: 1.7; }
+    .section-sub {
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 3.5rem;
+    }
 
-    /* ── ABOUT ── */
-    #about { background: var(--cream); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-top: 3rem; }
-    .about-img-wrap {
-      position: relative; aspect-ratio: 1;
-      max-width: 420px;
+    /* ─── About section ─── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
     }
-    .about-img-wrap img {
-      width: 100%; height: 100%; object-fit: cover;
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-wrap::after {
+      content: '';
+      position: absolute;
+      top: 24px; left: 24px;
+      inset: 24px 0 0 24px;
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      z-index: 0;
+    }
+    .about-img {
+      position: relative; z-index: 1;
+      width: 100%;
+      border-radius: var(--radius);
+      object-fit: cover;
+      height: 460px;
+      filter: grayscale(20%) contrast(1.05);
+    }
+    .about-content p { color: var(--muted); margin-bottom: 1.2rem; }
+    .about-skills {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: .75rem; margin-top: 2rem;
+    }
+    .skill-bar { }
+    .skill-name {
+      font-size: .82rem; color: var(--text);
+      display: flex; justify-content: space-between;
+      margin-bottom: .4rem;
+    }
+    .skill-name span { color: var(--accent); }
+    .skill-track {
+      height: 5px; background: var(--bg3);
+      border-radius: 99px; overflow: hidden;
+    }
+    .skill-fill {
+      height: 100%; border-radius: 99px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transition: width 1.2s cubic-bezier(.4,0,.2,1);
+      width: 0;
+    }
+
+    /* ─── Cards shared ─── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+      backdrop-filter: blur(10px);
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.4);
+      border-color: rgba(79,142,247,.3);
+    }
+
+    /* ─── Projects ─── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card { cursor: pointer; }
+    .project-img-wrap {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      background: var(--bg3);
+    }
+    .project-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .project-card:hover .project-img { transform: scale(1.05); }
+    .project-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(6,8,16,.9));
+    }
+    .project-category {
+      position: absolute; top: 14px; left: 14px;
+      background: var(--accent);
+      color: #fff;
+      padding: .25rem .75rem;
+      border-radius: 100px;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .project-body { padding: 1.5rem; }
+    .project-title {
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+    }
+    .project-desc { color: var(--muted); font-size: .9rem; margin-bottom: 1rem; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .tag {
+      padding: .2rem .65rem;
+      background: rgba(79,142,247,.1);
+      border: 1px solid rgba(79,142,247,.2);
+      border-radius: 100px;
+      font-size: .72rem;
+      color: var(--accent);
+    }
+
+    /* ─── Project detail modal ─── */
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.8);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: none;
+      align-items: center; justify-content: center;
+      padding: 2rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      max-width: 760px; width: 100%;
+      max-height: 90vh; overflow-y: auto;
+      padding: 2.5rem;
+      position: relative;
+      animation: modalIn .3s ease;
+    }
+    @keyframes modalIn { from { opacity: 0; transform: scale(.96) translateY(20px); } to { opacity: 1; transform: none; } }
+    .modal-close {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      transition: background .2s;
+    }
+    .modal-close:hover { background: var(--accent); }
+    .modal-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+    .modal-cat {
+      display: inline-block;
+      background: rgba(79,142,247,.12);
+      color: var(--accent);
+      padding: .25rem .8rem;
+      border-radius: 100px;
+      font-size: .75rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .modal h2 { font-family: var(--ff-head); font-size: 1.7rem; font-weight: 700; margin-bottom: 1rem; }
+    .modal p { color: var(--muted); margin-bottom: 1rem; }
+    .modal-metrics {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1rem; margin: 1.5rem 0;
+    }
+    .metric {
+      text-align: center;
+      background: var(--bg3);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    .metric-val {
+      font-family: var(--ff-head);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .metric-label { font-size: .78rem; color: var(--muted); margin-top: .25rem; }
+
+    /* ─── Blog ─── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .blog-card { cursor: pointer; }
+    .blog-img-wrap { height: 200px; overflow: hidden; background: var(--bg3); }
+    .blog-img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+    .blog-card:hover .blog-img { transform: scale(1.05); }
+    .blog-body { padding: 1.5rem; }
+    .blog-meta {
+      display: flex; gap: 1rem; align-items: center;
+      font-size: .78rem; color: var(--muted);
+      margin-bottom: .75rem;
+    }
+    .blog-cat {
+      background: rgba(167,139,250,.12);
+      border: 1px solid rgba(167,139,250,.2);
+      color: var(--accent2);
+      padding: .2rem .65rem;
+      border-radius: 100px;
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+    .blog-title {
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: .6rem;
+      line-height: 1.3;
+    }
+    .blog-excerpt { color: var(--muted); font-size: .88rem; margin-bottom: 1rem; }
+    .blog-read-more {
+      color: var(--accent);
+      font-size: .85rem;
+      font-weight: 500;
+      display: flex; align-items: center; gap: .3rem;
+      text-decoration: none;
+      transition: gap .2s;
+      cursor: pointer;
+    }
+    .blog-read-more:hover { gap: .6rem; }
+
+    /* Blog detail modal */
+    .blog-detail-date { color: var(--muted); font-size: .85rem; margin-bottom: 2rem; }
+    .blog-content h3 { font-family: var(--ff-head); font-size: 1.2rem; margin: 1.5rem 0 .6rem; color: var(--accent); }
+    .blog-content p { color: var(--muted); margin-bottom: 1rem; }
+    .blog-content ul { color: var(--muted); padding-left: 1.5rem; margin-bottom: 1rem; }
+    .blog-content li { margin-bottom: .4rem; }
+    .blog-content strong { color: var(--text); }
+
+    /* ─── Contact ─── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-info h3 { font-family: var(--ff-head); font-size: 1.5rem; margin-bottom: 1rem; }
+    .contact-info p { color: var(--muted); margin-bottom: 2rem; }
+    .contact-items { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-item {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1rem 1.2rem;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .contact-item-icon {
+      width: 40px; height: 40px;
+      background: rgba(79,142,247,.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-item-label { font-size: .75rem; color: var(--muted); margin-bottom: .1rem; }
+    .contact-item-val { font-size: .9rem; font-weight: 500; }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: .4rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    label { font-size: .82rem; color: var(--muted); letter-spacing: .04em; }
+    input, textarea, select {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      font-family: var(--ff-body);
+      font-size: .95rem;
+      padding: .75rem 1rem;
+      transition: border-color .2s;
+      outline: none;
+      resize: none;
+    }
+    input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(79,142,247,.1); }
+    textarea { height: 130px; }
+    .form-success {
+      background: rgba(34,197,94,.1);
+      border: 1px solid rgba(34,197,94,.3);
+      color: #4ade80;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      display: none;
+    }
+
+    /* ─── Social links ─── */
+    .social-links { display: flex; gap: 1rem; margin-top: 2rem; }
+    .social-link {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all .2s;
+    }
+    .social-link:hover { background: var(--accent); border-color: var(--accent); color: #fff; transform: translateY(-3px); }
+
+    /* ─── Services ─── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      padding: 2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: transform .3s, border-color .3s;
+    }
+    .service-card:hover { transform: translateY(-5px); border-color: rgba(79,142,247,.3); }
+    .service-icon {
+      width: 54px; height: 54px;
+      background: rgba(79,142,247,.1);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    .service-title { font-family: var(--ff-head); font-weight: 700; margin-bottom: .5rem; font-size: 1rem; }
+    .service-desc { color: var(--muted); font-size: .88rem; }
+
+    /* ─── Testimonials ─── */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .testimonial {
+      padding: 2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
     }
-    .about-badge {
-      position: absolute; bottom: -1.5rem; right: -1.5rem;
-      background: var(--gold); color: var(--ink);
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      padding: 1.2rem 1.5rem; border-radius: var(--radius); text-align: center;
-    }
-    .about-badge strong { display: block; font-size: 2rem; line-height: 1; }
-    .about-badge span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; }
-    .about-text p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
-    .about-tools { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
-    .tool-tag {
-      background: var(--card-bg); border: 1px solid rgba(0,0,0,0.1);
-      padding: 0.4rem 1rem; border-radius: 2px;
-      font-size: 0.82rem; font-weight: 500; color: var(--ink);
-    }
-
-    /* ── SERVICES ── */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.5rem; margin-top: 3rem; }
-    .service-card {
-      background: var(--card-bg); border: 1px solid rgba(0,0,0,0.08);
-      padding: 2rem; border-radius: var(--radius);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
-    .svc-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .svc-title { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .svc-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
-
-    /* ── PROJECTS ── */
-    #projects { background: var(--cream); }
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 1.5rem; margin-top: 3rem; }
-    .project-card {
-      background: var(--card-bg); border-radius: var(--radius);
-      overflow: hidden; border: 1px solid rgba(0,0,0,0.08);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
-    .proj-thumb {
-      width: 100%; height: 200px; object-fit: cover;
-      background: linear-gradient(135deg, #1a1a1a, #2d2a25);
+    .stars { color: var(--gold); margin-bottom: 1rem; font-size: .9rem; }
+    .testimonial-text { color: var(--muted); font-style: italic; margin-bottom: 1.5rem; font-size: .92rem; }
+    .testimonial-author { display: flex; align-items: center; gap: .75rem; }
+    .author-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
       display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: #fff; font-size: .9rem;
     }
-    .proj-thumb-placeholder {
-      width: 100%; height: 200px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 3rem;
-    }
-    .proj-body { padding: 1.5rem; }
-    .proj-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
-    .proj-tag { font-size: 0.72rem; background: var(--cream); padding: 0.2rem 0.6rem; border-radius: 2px; color: var(--muted); font-weight: 500; }
-    .proj-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; }
-    .proj-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
-    .proj-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      font-size: 0.83rem; font-weight: 600; color: var(--teal);
-      text-decoration: none; margin-top: 1rem;
-      letter-spacing: 0.02em;
-    }
-    .proj-link:hover { color: var(--rust); }
+    .author-name { font-weight: 500; font-size: .9rem; }
+    .author-role { color: var(--muted); font-size: .78rem; }
 
-    /* ── BLOG ── */
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; margin-top: 3rem; }
-    .blog-card {
-      background: var(--card-bg); border: 1px solid rgba(0,0,0,0.08);
-      border-radius: var(--radius); overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
-    .blog-img {
-      width: 100%; height: 180px; object-fit: cover;
-    }
-    .blog-img-placeholder {
-      width: 100%; height: 180px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2.5rem; background: var(--cream);
-    }
-    .blog-body { padding: 1.5rem; }
-    .blog-meta { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.5rem; letter-spacing: 0.04em; }
-    .blog-cat {
-      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem;
-    }
-    .blog-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; line-height: 1.35; margin-bottom: 0.5rem; }
-    .blog-excerpt { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
-    .blog-read { font-size: 0.82rem; font-weight: 600; color: var(--teal); text-decoration: none; margin-top: 1rem; display: inline-block; }
-    .blog-read:hover { color: var(--rust); }
-
-    /* ── TESTIMONIALS ── */
-    #testimonials { background: var(--ink); color: var(--paper); }
-    #testimonials .section-title { color: var(--paper); }
-    #testimonials .section-sub { color: rgba(245,240,232,0.55); }
-    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; margin-top: 3rem; }
-    .testi-card {
-      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-      padding: 2rem; border-radius: var(--radius);
-    }
-    .testi-stars { color: var(--gold); font-size: 1rem; margin-bottom: 0.8rem; }
-    .testi-quote { font-size: 0.92rem; line-height: 1.75; color: rgba(245,240,232,0.8); font-style: italic; }
-    .testi-author { margin-top: 1.2rem; font-weight: 600; color: var(--gold); font-size: 0.88rem; }
-    .testi-role { font-size: 0.78rem; color: rgba(245,240,232,0.4); }
-
-    /* ── CONTACT ── */
-    #contact { background: var(--cream); }
-    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-top: 3rem; align-items: start; }
-    .contact-info p { color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
-    .contact-items { display: flex; flex-direction: column; gap: 1rem; }
-    .contact-item { display: flex; align-items: center; gap: 1rem; }
-    .ci-icon { width: 44px; height: 44px; background: var(--card-bg); border: 1px solid rgba(0,0,0,0.08); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
-    .ci-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
-    .ci-value { font-weight: 500; font-size: 0.9rem; }
-    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-    .form-group label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
-    .form-group input, .form-group textarea, .form-group select {
-      background: var(--card-bg); border: 1px solid rgba(0,0,0,0.12);
-      padding: 0.75rem 1rem; border-radius: var(--radius);
-      font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ink);
-      outline: none; transition: border-color 0.2s;
-    }
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); }
-    .form-group textarea { resize: vertical; min-height: 130px; }
-    .btn-submit {
-      background: var(--ink); color: var(--paper);
-      padding: 0.9rem 2.5rem; border: none; border-radius: var(--radius);
-      font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.9rem;
-      cursor: pointer; letter-spacing: 0.04em; transition: background 0.2s;
-      align-self: flex-start;
-    }
-    .btn-submit:hover { background: var(--gold); color: var(--ink); }
-
-    /* ── FOOTER ── */
+    /* ─── Footer ─── */
     footer {
-      background: #0a0a0a; color: rgba(245,240,232,0.45);
-      padding: 3rem 5vw; display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 1rem;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 3rem 5%;
+      text-align: center;
     }
-    footer a { color: rgba(245,240,232,0.45); text-decoration: none; transition: color 0.2s; }
-    footer a:hover { color: var(--gold); }
-    .footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--paper); }
-    .footer-logo span { color: var(--gold); }
-    .footer-links { display: flex; gap: 2rem; font-size: 0.82rem; }
-    .footer-copy { font-size: 0.78rem; }
+    .footer-logo {
+      font-family: var(--ff-head);
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: .5rem;
+    }
+    .footer-logo span { color: var(--accent); }
+    footer p { color: var(--muted); font-size: .85rem; margin-bottom: 1.5rem; }
+    .footer-links {
+      display: flex; justify-content: center; gap: 2rem;
+      list-style: none; margin-bottom: 2rem;
+    }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy { color: var(--muted); font-size: .78rem; }
 
-    /* ── ANIMATIONS ── */
+    /* ─── Animations ─── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeIn {
-      from { opacity: 0; } to { opacity: 1; }
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ─── Hamburger mobile ─── */
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all .3s;
     }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 860px) {
-      #hero { grid-template-columns: 1fr; padding-top: calc(var(--nav-h) + 3rem); }
-      .hero-visual { order: -1; }
-      .hero-img-wrap { max-width: 260px; aspect-ratio: 1; }
-      .about-grid, .contact-layout { grid-template-columns: 1fr; }
-      .about-badge { right: 0; bottom: -1rem; }
-      .form-row { grid-template-columns: 1fr; }
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+      .hero-visual { display: none; }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-wrap { display: none; }
+      .contact-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
-      .stats-bar { gap: 2rem; }
+      .hamburger { display: flex; }
     }
+
+    /* Scroll to top */
+    .scroll-top {
+      position: fixed; bottom: 2rem; right: 2rem;
+      width: 44px; height: 44px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0; pointer-events: none;
+      transition: opacity .3s, transform .3s;
+      z-index: 999;
+      box-shadow: 0 4px 20px rgba(79,142,247,.4);
+    }
+    .scroll-top.visible { opacity: 1; pointer-events: all; }
+    .scroll-top:hover { transform: translateY(-3px); }
+
+    /* GitHub link buttons */
+    .gh-btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: var(--ff-body);
+      font-size: .85rem;
+      font-weight: 500;
+      padding: .55rem 1.1rem;
+      text-decoration: none;
+      transition: all .2s;
+      cursor: pointer;
+    }
+    .gh-btn:hover {
+      background: #24292e;
+      border-color: #555;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,.4);
+    }
+    .gh-btn svg { flex-shrink: 0; }
+
+    .gh-profile-banner {
+      display: flex; align-items: center; gap: 1rem;
+      background: rgba(36,41,46,.5);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 12px;
+      padding: .85rem 1.2rem;
+      margin-top: 1.5rem;
+      font-size: .85rem;
+      color: var(--muted);
+    }
+    .gh-profile-banner a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .gh-profile-banner a:hover { text-decoration: underline; }
+
+    .modal-actions {
+      display: flex; gap: .75rem; flex-wrap: wrap;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Gradient divider */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 0;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(79,142,247,.15), rgba(167,139,250,.1));
+      border: 1px solid rgba(79,142,247,.2);
+      border-radius: 20px;
+      padding: 3rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .cta-banner h3 { font-family: var(--ff-head); font-size: 1.8rem; font-weight: 700; margin-bottom: .75rem; }
+    .cta-banner p { color: var(--muted); margin-bottom: 2rem; }
   </style>
 </head>
 <body>
 
-<!-- ════ NAV ════ -->
-<nav role="navigation" aria-label="Main Navigation">
-  <a href="index.html" class="nav-logo" aria-label="Shayantha Das Home">Shayantha<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+<!-- Navigation -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo" onclick="showSection('home')" aria-label="Shayantha Das Home">SD<span>.</span></a>
+  <ul class="nav-links" role="list">
+    <li><a href="#" onclick="showSection('home')" class="active" aria-current="page">Home</a></li>
+    <li><a href="#" onclick="showSection('about')">About</a></li>
+    <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+    <li><a href="#" onclick="showSection('blog')">Blog</a></li>
+    <li><a href="#" onclick="showSection('contact')" class="nav-cta">Hire Me</a></li>
   </ul>
+  <button class="hamburger" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<!-- ════ HERO ════ -->
-<header id="hero" role="banner">
-  <div class="hero-text">
-    <div class="hero-tag">📍 Bangladesh · Open to Remote</div>
-    <h1 class="hero-name">Shayantha<br /><em>Das</em></h1>
-    <p class="hero-role">Data Analyst &amp; Digital Marketer</p>
-    <p class="hero-desc">
-      Turning messy data into clear decisions — and clear decisions into measurable growth.
-      I combine analytical rigor with marketing strategy to help businesses scale.
-    </p>
-    <div class="hero-btns">
-      <a href="projects.html" class="btn-primary" aria-label="View Shayantha Das projects">View Projects →</a>
-      <a href="contact.html" class="btn-outline" aria-label="Contact Shayantha Das">Let's Talk</a>
-    </div>
-    <div class="hero-skills" aria-label="Core skills">
-      <span class="skill-pill">Python</span>
-      <span class="skill-pill">SQL</span>
-      <span class="skill-pill">Power BI</span>
-      <span class="skill-pill">Tableau</span>
-      <span class="skill-pill">Excel</span>
-      <span class="skill-pill">SEO</span>
-      <span class="skill-pill">Google Analytics</span>
-    </div>
-  </div>
-  <div class="hero-visual" aria-hidden="false">
-    <div class="hero-img-wrap">
-      <img
-        src="https://shayanthadas.github.io/assets/profile.jpg"
-        alt="Shayantha Das – Data Analyst and Digital Marketer based in Bangladesh"
-        width="380" height="507"
-        loading="eager"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-      />
-      <div class="hero-avatar-fallback" style="display:none;">
-        <div class="avatar-initials">SD</div>
-        <div class="avatar-label">Data · Analytics · Growth</div>
-      </div>
-    </div>
-  </div>
-</header>
+<!-- ═══════════════════════ HOME ═══════════════════════ -->
+<section id="home" class="active" aria-label="Home">
 
-<!-- ════ STATS ════ -->
-<section class="stats-bar" aria-label="Key statistics">
-  <div class="stat">
-    <div class="stat-n" aria-label="20 plus projects completed">20+</div>
-    <div class="stat-l">Projects Completed</div>
-  </div>
-  <div class="stat">
-    <div class="stat-n" aria-label="3 plus years experience">3+</div>
-    <div class="stat-l">Years Experience</div>
-  </div>
-  <div class="stat">
-    <div class="stat-n" aria-label="15 plus clients served">15+</div>
-    <div class="stat-l">Happy Clients</div>
-  </div>
-  <div class="stat">
-    <div class="stat-n" aria-label="5 core tools mastered">5</div>
-    <div class="stat-l">Core Tools</div>
-  </div>
-</section>
+  <!-- Hero -->
+  <div style="position:relative; overflow:hidden; min-height:100vh; display:flex; align-items:center; padding-top:var(--nav-h);">
+    <div class="hero-glow glow1" aria-hidden="true"></div>
+    <div class="hero-glow glow2" aria-hidden="true"></div>
+    <div class="hero-glow glow3" aria-hidden="true"></div>
 
-<!-- ════ ABOUT ════ -->
-<section id="about" aria-labelledby="about-heading">
-  <div class="section-label">Who I Am</div>
-  <h2 class="section-title" id="about-heading">Data-Driven.<br />Human-Centered.</h2>
-  <div class="about-grid">
-    <div class="about-img-wrap">
-      <img
-        src="https://shayanthadas.github.io/assets/profile.jpg"
-        alt="Shayantha Das working on data analysis in his office in Bangladesh"
-        width="420" height="420"
-        loading="lazy"
-        onerror="this.style.display='none';"
-      />
-      <div class="about-badge">
-        <strong>3+</strong>
-        <span>Yrs of<br/>Experience</span>
-      </div>
-    </div>
-    <div class="about-text">
-      <p>I'm Shayantha Das, a Data Analyst and Digital Marketer based in Bangladesh. I help organizations and startups transform raw, complex data into actionable insights and strategies that actually move the needle.</p>
-      <p>My workflow bridges both worlds: I use Python and SQL to wrangle and analyze data, Power BI and Tableau to visualize it beautifully, and digital marketing expertise to translate those insights into campaigns that convert.</p>
-      <p>Whether it's building a sales dashboard, running an SEO audit, or creating a growth strategy from scratch — I bring both the technical depth and the strategic mindset to get results.</p>
-      <div class="about-tools" aria-label="Tools and technologies used">
-        <span class="tool-tag">Python</span>
-        <span class="tool-tag">SQL</span>
-        <span class="tool-tag">Excel</span>
-        <span class="tool-tag">Power BI</span>
-        <span class="tool-tag">Tableau</span>
-        <span class="tool-tag">SEO Tools</span>
-        <span class="tool-tag">Google Analytics</span>
-        <span class="tool-tag">Meta Ads</span>
-      </div>
-      <div style="margin-top:2rem;">
-        <a href="about.html" class="btn-primary" aria-label="Learn more about Shayantha Das">Full Bio →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ SERVICES ════ -->
-<section id="services" aria-labelledby="services-heading">
-  <div class="section-label">What I Do</div>
-  <h2 class="section-title" id="services-heading">Services &amp; Expertise</h2>
-  <p class="section-sub">From data pipelines to go-to-market strategies, I offer end-to-end analytical and marketing solutions.</p>
-  <div class="services-grid">
-    <article class="service-card">
-      <div class="svc-icon" aria-hidden="true">📊</div>
-      <h3 class="svc-title">Data Analysis &amp; Visualization</h3>
-      <p class="svc-desc">Deep-dive analysis using Python, SQL, and Excel. Interactive dashboards in Power BI and Tableau that make complex data instantly understandable for any audience.</p>
-    </article>
-    <article class="service-card">
-      <div class="svc-icon" aria-hidden="true">🔍</div>
-      <h3 class="svc-title">SEO &amp; Content Strategy</h3>
-      <p class="svc-desc">Data-backed SEO audits, keyword research, and content strategies designed to rank on the first page and drive qualified organic traffic consistently.</p>
-    </article>
-    <article class="service-card">
-      <div class="svc-icon" aria-hidden="true">📈</div>
-      <h3 class="svc-title">Digital Marketing</h3>
-      <p class="svc-desc">Full-funnel digital campaigns across Meta, Google, and email — with conversion tracking and analytics baked in from day one.</p>
-    </article>
-    <article class="service-card">
-      <div class="svc-icon" aria-hidden="true">🤖</div>
-      <h3 class="svc-title">Marketing Analytics</h3>
-      <p class="svc-desc">Attribution modeling, cohort analysis, and customer segmentation to understand exactly what's working and where to invest your marketing budget.</p>
-    </article>
-    <article class="service-card">
-      <div class="svc-icon" aria-hidden="true">🗄️</div>
-      <h3 class="svc-title">Database &amp; SQL Reporting</h3>
-      <p class="svc-desc">Custom SQL queries, stored procedures, and automated reports that give teams instant access to the metrics that matter most.</p>
-    </article>
-    <article class="service-card">
-      <div class="svc-icon" aria-hidden="true">🚀</div>
-      <h3 class="svc-title">Growth Consulting</h3>
-      <p class="svc-desc">Strategic consulting for startups and SMEs looking to establish data culture, build analytics infrastructure, and create scalable growth systems.</p>
-    </article>
-  </div>
-</section>
-
-<!-- ════ PROJECTS ════ -->
-<section id="projects" aria-labelledby="projects-heading">
-  <div class="section-label">Featured Work</div>
-  <h2 class="section-title" id="projects-heading">Recent Projects</h2>
-  <p class="section-sub">A selection of data analysis, visualization, and digital marketing projects with measurable outcomes.</p>
-  <div class="projects-grid">
-    <article class="project-card">
-      <div class="proj-thumb-placeholder" style="background:linear-gradient(135deg,#1a3a2a,#0d5e3f);" role="img" aria-label="E-commerce Sales Dashboard project thumbnail">📦</div>
-      <div class="proj-body">
-        <div class="proj-tags">
-          <span class="proj-tag">Python</span>
-          <span class="proj-tag">Power BI</span>
-          <span class="proj-tag">SQL</span>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge" role="status" aria-label="Available for work">Available for new projects</div>
+        <h1 class="hero-title">
+          <span class="line1">Hi, I'm</span><br/>
+          <span class="line2">Shayantha</span><br/>
+          <span class="line3">Das</span>
+        </h1>
+        <p class="hero-desc">
+          Data Analyst & Digital Marketer transforming raw numbers into business decisions. I work with Python, SQL, Power BI, Tableau & Excel to build clarity from complexity.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" onclick="showSection('projects')" aria-label="View my projects">
+            View Projects →
+          </a>
+          <a href="#" class="btn btn-outline" onclick="showSection('contact')" aria-label="Contact Shayantha">
+            Let's Talk
+          </a>
         </div>
-        <h3 class="proj-title">E-Commerce Sales Dashboard</h3>
-        <p class="proj-desc">Built an interactive Power BI dashboard tracking ৳50M+ in annual sales across 12 product categories. Reduced reporting time by 70%.</p>
-        <a href="project-ecommerce.html" class="proj-link" aria-label="View E-Commerce Sales Dashboard project details">View Case Study →</a>
-      </div>
-    </article>
-    <article class="project-card">
-      <div class="proj-thumb-placeholder" style="background:linear-gradient(135deg,#1a1a3a,#0d0d5e);" role="img" aria-label="Customer Churn Prediction project thumbnail">🔮</div>
-      <div class="proj-body">
-        <div class="proj-tags">
-          <span class="proj-tag">Python</span>
-          <span class="proj-tag">Machine Learning</span>
-          <span class="proj-tag">Tableau</span>
-        </div>
-        <h3 class="proj-title">Customer Churn Prediction Model</h3>
-        <p class="proj-desc">Machine learning model achieving 87% accuracy in predicting customer churn for a telecom client — saving an estimated $200K annually.</p>
-        <a href="project-churn.html" class="proj-link" aria-label="View Customer Churn Prediction project details">View Case Study →</a>
-      </div>
-    </article>
-    <article class="project-card">
-      <div class="proj-thumb-placeholder" style="background:linear-gradient(135deg,#3a1a0d,#8b3a0d);" role="img" aria-label="SEO Content Strategy project thumbnail">🔍</div>
-      <div class="proj-body">
-        <div class="proj-tags">
-          <span class="proj-tag">SEO</span>
-          <span class="proj-tag">Content</span>
-          <span class="proj-tag">Analytics</span>
-        </div>
-        <h3 class="proj-title">B2B SEO Growth Strategy</h3>
-        <p class="proj-desc">Grew organic traffic by 340% in 6 months for a SaaS company using data-driven keyword clustering and topical authority mapping.</p>
-        <a href="project-seo.html" class="proj-link" aria-label="View B2B SEO Growth Strategy project details">View Case Study →</a>
-      </div>
-    </article>
-  </div>
-  <div style="text-align:center; margin-top:3rem;">
-    <a href="projects.html" class="btn-outline" aria-label="View all projects by Shayantha Das">View All Projects →</a>
-  </div>
-</section>
-
-<!-- ════ BLOG ════ -->
-<section id="blog" aria-labelledby="blog-heading">
-  <div class="section-label">Insights &amp; Articles</div>
-  <h2 class="section-title" id="blog-heading">From the Blog</h2>
-  <p class="section-sub">Practical guides on data analysis, digital marketing, and building data-driven businesses.</p>
-  <div class="blog-grid">
-    <article class="blog-card">
-      <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#f5f0e8,#ede8db);" role="img" aria-label="Blog post thumbnail for Python Pandas guide">🐼</div>
-      <div class="blog-body">
-        <div class="blog-cat">Data Analysis</div>
-        <div class="blog-meta">May 10, 2026 · 8 min read</div>
-        <h3 class="blog-title">10 Pandas Tricks Every Data Analyst Needs to Know in 2026</h3>
-        <p class="blog-excerpt">From groupby hacks to memory optimization — the Pandas functions that will cut your analysis time in half and impress your team.</p>
-        <a href="blog-pandas.html" class="blog-read" aria-label="Read article: 10 Pandas Tricks Every Data Analyst Needs to Know">Read Article →</a>
-      </div>
-    </article>
-    <article class="blog-card">
-      <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#e8f0f5,#d8eaed);" role="img" aria-label="Blog post thumbnail for Power BI vs Tableau comparison">📊</div>
-      <div class="blog-body">
-        <div class="blog-cat">Business Intelligence</div>
-        <div class="blog-meta">April 22, 2026 · 6 min read</div>
-        <h3 class="blog-title">Power BI vs Tableau in 2026: Which One Should You Learn?</h3>
-        <p class="blog-excerpt">An honest, data-backed comparison of both platforms — covering learning curve, job market demand, cost, and use cases in the Bangladeshi market.</p>
-        <a href="blog-powerbi-vs-tableau.html" class="blog-read" aria-label="Read article: Power BI vs Tableau in 2026">Read Article →</a>
-      </div>
-    </article>
-    <article class="blog-card">
-      <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#f5ece8,#edd8d0);" role="img" aria-label="Blog post thumbnail for SEO in Bangladesh guide">🔍</div>
-      <div class="blog-body">
-        <div class="blog-cat">Digital Marketing</div>
-        <div class="blog-meta">April 5, 2026 · 10 min read</div>
-        <h3 class="blog-title">SEO in Bangladesh: How to Rank on Page 1 in a Competitive Market</h3>
-        <p class="blog-excerpt">A complete 2026 playbook for local and national SEO in Bangladesh — covering keyword research, technical SEO, and content strategy that actually works.</p>
-        <a href="blog-seo-bangladesh.html" class="blog-read" aria-label="Read article: SEO in Bangladesh guide">Read Article →</a>
-      </div>
-    </article>
-  </div>
-  <div style="text-align:center; margin-top:3rem;">
-    <a href="blog.html" class="btn-outline" aria-label="View all blog articles by Shayantha Das">View All Articles →</a>
-  </div>
-</section>
-
-<!-- ════ TESTIMONIALS ════ -->
-<section id="testimonials" aria-labelledby="testi-heading">
-  <div class="section-label" style="color:var(--gold)">Client Feedback</div>
-  <h2 class="section-title" id="testi-heading">What Clients Say</h2>
-  <p class="section-sub">Real feedback from real clients across data and marketing projects.</p>
-  <div class="testi-grid">
-    <article class="testi-card">
-      <div class="testi-stars" aria-label="5 stars">★★★★★</div>
-      <blockquote class="testi-quote">"Shayantha transformed our messy Excel sheets into a beautiful Power BI dashboard. Our weekly reporting went from 4 hours to 15 minutes. Absolutely exceptional work."</blockquote>
-      <div class="testi-author">Rafiq Ahmed</div>
-      <div class="testi-role">Operations Manager, RetailBD</div>
-    </article>
-    <article class="testi-card">
-      <div class="testi-stars" aria-label="5 stars">★★★★★</div>
-      <blockquote class="testi-quote">"The SEO strategy Shayantha built for us tripled our organic traffic in just 5 months. He doesn't just deliver reports — he explains the data and what it means for our business."</blockquote>
-      <div class="testi-author">Nusrat Islam</div>
-      <div class="testi-role">CEO, TechStartup Dhaka</div>
-    </article>
-    <article class="testi-card">
-      <div class="testi-stars" aria-label="5 stars">★★★★★</div>
-      <blockquote class="testi-quote">"One of the most thorough analysts I've worked with. His Python automation scripts saved our team 20+ hours a week on data processing tasks alone."</blockquote>
-      <div class="testi-author">Karim Hossain</div>
-      <div class="testi-role">Head of Growth, FinTech BD</div>
-    </article>
-  </div>
-</section>
-
-<!-- ════ CONTACT ════ -->
-<section id="contact" aria-labelledby="contact-heading">
-  <div class="section-label">Get in Touch</div>
-  <h2 class="section-title" id="contact-heading">Let's Work Together</h2>
-  <div class="contact-layout">
-    <div class="contact-info">
-      <p>Have a project in mind? I'm always open to discussing new opportunities, data challenges, or marketing goals. Let's start a conversation.</p>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="ci-icon" aria-hidden="true">📧</div>
-          <div>
-            <div class="ci-label">Email</div>
-            <div class="ci-value"><a href="mailto:shayanthadass@gmail.com">shayanthadass@gmail.com</a></div>
+        <div class="hero-stats" role="list" aria-label="Career statistics">
+          <div class="stat-item" role="listitem">
+            <div class="stat-num">15<span>+</span></div>
+            <div class="stat-label">Projects Done</div>
+          </div>
+          <div class="stat-item" role="listitem">
+            <div class="stat-num">3<span>+</span></div>
+            <div class="stat-label">Years Exp.</div>
+          </div>
+          <div class="stat-item" role="listitem">
+            <div class="stat-num">10<span>+</span></div>
+            <div class="stat-label">Tools Mastered</div>
           </div>
         </div>
-        <div class="contact-item">
-          <div class="ci-icon" aria-hidden="true">📍</div>
-          <div>
-            <div class="ci-label">Location</div>
-            <div class="ci-value">Chattogram, Bangladesh</div>
+      </div>
+
+      <!-- Profile image -->
+      <div class="hero-visual" aria-hidden="false">
+        <div class="profile-frame" role="img" aria-label="Portrait of Shayantha Das, Data Analyst and Digital Marketer">
+          <div class="profile-frame-inner">
+            <img
+              src="https://shayanthadas.github.io/assets/profile.jpg"
+              alt="Shayantha Das – Data Analyst and Digital Marketer from Bangladesh, smiling professionally"
+              class="profile-img"
+              width="380" height="440"
+              loading="eager"
+              onerror="this.onerror=null; this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#1a2040,#0d1530)'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:5rem;\'>👤</div>'"
+            />
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="ci-icon" aria-hidden="true">💼</div>
-          <div>
-            <div class="ci-label">Available For</div>
-            <div class="ci-value">Freelance · Remote · Full-Time</div>
+          <!-- Floating skill badges -->
+          <div class="float-badge" aria-hidden="true">
+            <span class="icon">📊</span>
+            <span>Power BI Expert</span>
+          </div>
+          <div class="float-badge" aria-hidden="true">
+            <span class="icon">🐍</span>
+            <span>Python Analyst</span>
+          </div>
+          <div class="float-badge" aria-hidden="true">
+            <span class="icon">📈</span>
+            <span>SEO & Marketing</span>
           </div>
         </div>
       </div>
     </div>
-    <form class="contact-form" action="mailto:shayanthadass@gmail.com" method="GET" enctype="text/plain" aria-label="Contact form">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="fname" placeholder="Your first name" required aria-required="true" />
-        </div>
-        <div class="form-group">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lname" placeholder="Your last name" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="your@email.com" required aria-required="true" />
-      </div>
-      <div class="form-group">
-        <label for="service">I Need Help With</label>
-        <select id="service" name="service">
-          <option value="">Select a service…</option>
-          <option>Data Analysis &amp; Visualization</option>
-          <option>SEO Strategy</option>
-          <option>Digital Marketing</option>
-          <option>Dashboard Development</option>
-          <option>Growth Consulting</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Tell me about your project, goal, or challenge…" required aria-required="true"></textarea>
-      </div>
-      <button type="submit" class="btn-submit" aria-label="Send message to Shayantha Das">Send Message →</button>
-    </form>
   </div>
+
+  <!-- Skills strip -->
+  <div class="skills-strip" aria-label="Tools and technologies">
+    <div class="skills-track" aria-hidden="true">
+      <span class="skill-pill"><span class="dot"></span>Python</span>
+      <span class="skill-pill"><span class="dot"></span>SQL</span>
+      <span class="skill-pill"><span class="dot"></span>Power BI</span>
+      <span class="skill-pill"><span class="dot"></span>Tableau</span>
+      <span class="skill-pill"><span class="dot"></span>Excel</span>
+      <span class="skill-pill"><span class="dot"></span>Digital Marketing</span>
+      <span class="skill-pill"><span class="dot"></span>SEO</span>
+      <span class="skill-pill"><span class="dot"></span>Google Analytics</span>
+      <span class="skill-pill"><span class="dot"></span>Data Visualization</span>
+      <span class="skill-pill"><span class="dot"></span>Machine Learning</span>
+      <span class="skill-pill"><span class="dot"></span>Pandas</span>
+      <span class="skill-pill"><span class="dot"></span>NumPy</span>
+      <!-- duplicate for infinite scroll -->
+      <span class="skill-pill"><span class="dot"></span>Python</span>
+      <span class="skill-pill"><span class="dot"></span>SQL</span>
+      <span class="skill-pill"><span class="dot"></span>Power BI</span>
+      <span class="skill-pill"><span class="dot"></span>Tableau</span>
+      <span class="skill-pill"><span class="dot"></span>Excel</span>
+      <span class="skill-pill"><span class="dot"></span>Digital Marketing</span>
+      <span class="skill-pill"><span class="dot"></span>SEO</span>
+      <span class="skill-pill"><span class="dot"></span>Google Analytics</span>
+      <span class="skill-pill"><span class="dot"></span>Data Visualization</span>
+      <span class="skill-pill"><span class="dot"></span>Machine Learning</span>
+      <span class="skill-pill"><span class="dot"></span>Pandas</span>
+      <span class="skill-pill"><span class="dot"></span>NumPy</span>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="section-wrap reveal">
+    <div class="section-label">What I Offer</div>
+    <h2 class="section-title">Services & Expertise</h2>
+    <p class="section-sub">Combining data analytics with digital marketing to deliver measurable results and strategic insights.</p>
+    <div class="services-grid" role="list">
+      <article class="service-card reveal" role="listitem" aria-label="Data Analysis service">
+        <div class="service-icon" aria-hidden="true">📊</div>
+        <h3 class="service-title">Data Analysis</h3>
+        <p class="service-desc">Transform complex datasets into clear, actionable insights using Python, SQL, and advanced Excel modelling techniques.</p>
+      </article>
+      <article class="service-card reveal" role="listitem" aria-label="Dashboard Development service">
+        <div class="service-icon" aria-hidden="true">📈</div>
+        <h3 class="service-title">Dashboard Development</h3>
+        <p class="service-desc">Build interactive, real-time dashboards in Power BI and Tableau that empower stakeholders to make data-driven decisions.</p>
+      </article>
+      <article class="service-card reveal" role="listitem" aria-label="Digital Marketing service">
+        <div class="service-icon" aria-hidden="true">🚀</div>
+        <h3 class="service-title">Digital Marketing</h3>
+        <p class="service-desc">SEO strategy, content marketing, PPC campaign management, and analytics integration for measurable growth.</p>
+      </article>
+      <article class="service-card reveal" role="listitem" aria-label="Marketing Analytics service">
+        <div class="service-icon" aria-hidden="true">🎯</div>
+        <h3 class="service-title">Marketing Analytics</h3>
+        <p class="service-desc">Measure ROI, attribute campaigns, and optimize performance using Google Analytics, Facebook Ads, and custom reporting.</p>
+      </article>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="divider"></div>
+  <div class="section-wrap reveal">
+    <div class="section-label">Social Proof</div>
+    <h2 class="section-title">Client Testimonials</h2>
+    <p class="section-sub">What people say about working with Shayantha Das on data and marketing projects.</p>
+    <div class="testimonials-grid">
+      <blockquote class="testimonial reveal">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">"Shayantha delivered a Power BI dashboard that completely transformed how we track our sales funnel. Exceptional attention to detail and quick to understand business requirements."</p>
+        <footer class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">RK</div>
+          <div>
+            <div class="author-name">Rakib Khan</div>
+            <div class="author-role">CEO, TechStart BD</div>
+          </div>
+        </footer>
+      </blockquote>
+      <blockquote class="testimonial reveal">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">"The SEO and analytics audit revealed gaps we never knew existed. Organic traffic grew 140% in three months after implementing the recommendations."</p>
+        <footer class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">NJ</div>
+          <div>
+            <div class="author-name">Nusrat Jahan</div>
+            <div class="author-role">Marketing Head, RetailCo</div>
+          </div>
+        </footer>
+      </blockquote>
+      <blockquote class="testimonial reveal">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">"Python automation scripts saved our team 20+ hours per week. Shayantha understood the technical and business side equally well — a rare combination."</p>
+        <footer class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">AI</div>
+          <div>
+            <div class="author-name">Arif Islam</div>
+            <div class="author-role">Operations Manager, LogiCorp</div>
+          </div>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <footer role="contentinfo">
+    <div class="footer-logo">SD<span>.</span></div>
+    <p>Data Analyst & Digital Marketer — turning data into decisions.</p>
+    <ul class="footer-links" role="list">
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+      <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+      <li><a href="#" onclick="showSection('blog')">Blog</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Shayantha Das. All rights reserved. | Chattogram, Bangladesh</p>
+    <div style="margin-top:1rem;">
+      <a href="https://github.com/shayanthadas" target="_blank" rel="noopener noreferrer" class="gh-btn" style="display:inline-flex;" aria-label="Visit Shayantha Das on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+        github.com/shayanthadas
+      </a>
+    </div>
+  </footer>
 </section>
 
-<!-- ════ FOOTER ════ -->
-<footer role="contentinfo">
-  <div>
-    <div class="footer-logo">Shayantha<span>.</span></div>
-    <p style="font-size:0.78rem; margin-top:0.4rem;">Data Analyst &amp; Digital Marketer · Bangladesh</p>
-  </div>
-  <nav class="footer-links" aria-label="Footer navigation">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div class="footer-copy">© 2026 Shayantha Das. All rights reserved.</div>
-</footer>
+<!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+<section id="about" aria-label="About Shayantha Das">
+  <div class="section-wrap">
+    <div class="section-label">Who I Am</div>
+    <h1 class="section-title">About Me</h1>
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img
+          src="https://shayanthadas.github.io/assets/profile.jpg"
+          alt="Shayantha Das seated at a desk with data dashboards on screen – Data Analyst based in Chattogram, Bangladesh"
+          class="about-img"
+          width="460" height="460"
+          loading="lazy"
+          onerror="this.onerror=null; this.style.background='var(--bg3)'; this.style.display='flex';"
+        />
+      </div>
+      <div class="about-content">
+        <p>I'm <strong>Shayantha Das</strong>, a Data Analyst and Digital Marketer based in <strong>Chattogram, Bangladesh</strong>. I specialize in extracting meaningful stories from data and using those stories to drive marketing strategies that actually work.</p>
+        <p>With hands-on experience across Python, SQL, Power BI, Tableau, and advanced Excel, I bridge the gap between raw data and business outcomes. On the marketing side, I combine SEO, content strategy, and performance analytics to grow online presence organically and paid.</p>
+        <p>My goal is simple: help businesses make smarter, faster decisions backed by real evidence — not guesswork.</p>
 
+        <div class="about-skills" aria-label="Technical skill levels">
+          <div class="skill-bar">
+            <div class="skill-name">Python <span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="90%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-name">SQL <span>88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="88%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-name">Power BI <span>85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="85%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-name">Tableau <span>82%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="82%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-name">Excel <span>95%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="95%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-name">SEO <span>80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="80%"></div></div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="#" class="btn btn-primary" onclick="showSection('contact')">Hire Me</a>
+          <a href="#" class="btn btn-outline" onclick="showSection('projects')">See My Work</a>
+          <a href="https://github.com/shayanthadas" target="_blank" rel="noopener noreferrer" class="gh-btn" aria-label="View Shayantha Das GitHub profile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer role="contentinfo">
+    <div class="footer-logo">SD<span>.</span></div>
+    <p>Data Analyst & Digital Marketer — turning data into decisions.</p>
+    <ul class="footer-links" role="list">
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+      <li><a href="#" onclick="showSection('blog')">Blog</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Shayantha Das. All rights reserved.</p>
+  </footer>
+</section>
+
+<!-- ═══════════════════════ PROJECTS ═══════════════════════ -->
+<section id="projects" aria-label="Portfolio projects">
+  <div class="section-wrap">
+    <div class="section-label">My Work</div>
+    <h1 class="section-title">Featured Projects</h1>
+    <p class="section-sub">A selection of data analysis, visualization, and digital marketing projects delivered for clients and personal research.</p>
+
+    <div class="projects-grid" id="projectsGrid" role="list">
+
+      <article class="card project-card reveal" onclick="openProject(0)" role="listitem" aria-label="E-Commerce Sales Analytics Dashboard project">
+        <div class="project-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
+            alt="Interactive e-commerce sales dashboard built in Power BI showing revenue trends and product performance metrics"
+            class="project-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+          <div class="project-overlay" aria-hidden="true"></div>
+          <span class="project-category" aria-label="Category: Data Analytics">Data Analytics</span>
+        </div>
+        <div class="project-body">
+          <h2 class="project-title">E-Commerce Sales Analytics Dashboard</h2>
+          <p class="project-desc">Built a comprehensive Power BI dashboard tracking KPIs for an online retail client — revenue, conversion rates, and cohort analysis.</p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="tag">Power BI</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Python</span>
+            <span class="tag">DAX</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card project-card reveal" onclick="openProject(1)" role="listitem" aria-label="SEO Traffic Growth Campaign project">
+        <div class="project-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
+            alt="SEO analytics chart showing organic traffic growth from 5,000 to 35,000 monthly sessions over 6 months"
+            class="project-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+          <div class="project-overlay" aria-hidden="true"></div>
+          <span class="project-category" aria-label="Category: Digital Marketing">Digital Marketing</span>
+        </div>
+        <div class="project-body">
+          <h2 class="project-title">SEO Traffic Growth – 600% in 6 Months</h2>
+          <p class="project-desc">End-to-end SEO strategy for a BD-based SaaS company: keyword research, on-page optimization, content clusters, and technical SEO audits.</p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="tag">SEO</span>
+            <span class="tag">Ahrefs</span>
+            <span class="tag">GA4</span>
+            <span class="tag">Content Strategy</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card project-card reveal" onclick="openProject(2)" role="listitem" aria-label="Customer Churn Prediction Model project">
+        <div class="project-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=80"
+            alt="Python machine learning pipeline for customer churn prediction using scikit-learn with 89% accuracy"
+            class="project-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+          <div class="project-overlay" aria-hidden="true"></div>
+          <span class="project-category" aria-label="Category: Machine Learning">Machine Learning</span>
+        </div>
+        <div class="project-body">
+          <h2 class="project-title">Customer Churn Prediction Model</h2>
+          <p class="project-desc">Developed a Python-based ML model (Random Forest + XGBoost) achieving 89% accuracy in predicting telecom customer churn.</p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="tag">Python</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">XGBoost</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card project-card reveal" onclick="openProject(3)" role="listitem" aria-label="Marketing Attribution Model project">
+        <div class="project-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=600&q=80"
+            alt="Marketing attribution dashboard in Tableau showing multi-touch attribution across Facebook, Google, and organic channels"
+            class="project-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+          <div class="project-overlay" aria-hidden="true"></div>
+          <span class="project-category" aria-label="Category: Marketing Analytics">Marketing Analytics</span>
+        </div>
+        <div class="project-body">
+          <h2 class="project-title">Multi-Touch Marketing Attribution</h2>
+          <p class="project-desc">Built a data-driven attribution model in Tableau that showed 40% of budget was being misallocated — saving the client $12K/month.</p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="tag">Tableau</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Google Ads</span>
+            <span class="tag">Facebook Ads</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card project-card reveal" onclick="openProject(4)" role="listitem" aria-label="Financial KPI Reporting Automation project">
+        <div class="project-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80"
+            alt="Automated financial KPI report generated with Python and Excel showing monthly P&L trends and forecast"
+            class="project-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+          <div class="project-overlay" aria-hidden="true"></div>
+          <span class="project-category" aria-label="Category: Automation">Automation</span>
+        </div>
+        <div class="project-body">
+          <h2 class="project-title">Financial KPI Report Automation</h2>
+          <p class="project-desc">Python + Excel VBA automation pipeline that generates monthly financial reports in 5 minutes, replacing a 2-day manual process.</p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="tag">Python</span>
+            <span class="tag">Excel</span>
+            <span class="tag">openpyxl</span>
+            <span class="tag">VBA</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card project-card reveal" onclick="openProject(5)" role="listitem" aria-label="Social Media Analytics project">
+        <div class="project-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80"
+            alt="Social media analytics dashboard showing engagement metrics, reach, and follower growth across Instagram, Facebook, and LinkedIn"
+            class="project-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+          <div class="project-overlay" aria-hidden="true"></div>
+          <span class="project-category" aria-label="Category: Social Media">Social Media</span>
+        </div>
+        <div class="project-body">
+          <h2 class="project-title">Social Media Performance Analytics</h2>
+          <p class="project-desc">Cross-platform social analytics dashboard tracking reach, engagement, and conversion across Instagram, Facebook, and LinkedIn.</p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="tag">Python</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">API Integration</span>
+            <span class="tag">Social Analytics</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="cta-banner reveal">
+      <h3>Have a project in mind?</h3>
+      <p>Let's discuss how data analytics and digital marketing can transform your business.</p>
+      <a href="#" class="btn btn-primary" onclick="showSection('contact')">Start a Conversation →</a>
+    </div>
+  </div>
+
+  <footer role="contentinfo">
+    <div class="footer-logo">SD<span>.</span></div>
+    <p>Data Analyst & Digital Marketer — turning data into decisions.</p>
+    <ul class="footer-links" role="list">
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+      <li><a href="#" onclick="showSection('blog')">Blog</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Shayantha Das. All rights reserved.</p>
+  </footer>
+</section>
+
+<!-- ═══════════════════════ BLOG ═══════════════════════ -->
+<section id="blog" aria-label="Blog posts by Shayantha Das">
+  <div class="section-wrap">
+    <div class="section-label">Insights & Guides</div>
+    <h1 class="section-title">Blog & Articles</h1>
+    <p class="section-sub">Deep dives into data analytics, digital marketing strategy, and Python tutorials for analysts and marketers.</p>
+
+    <div class="blog-grid" id="blogGrid" role="list">
+
+      <article class="card blog-card reveal" onclick="openBlog(0)" role="listitem" aria-label="Blog post: Power BI vs Tableau">
+        <div class="blog-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
+            alt="Side-by-side comparison of Power BI and Tableau dashboard interfaces showing data visualization capabilities"
+            class="blog-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Data Viz</span>
+            <time datetime="2026-04-15">April 15, 2026</time>
+            <span>7 min read</span>
+          </div>
+          <h2 class="blog-title">Power BI vs Tableau: Which Should You Use in 2026?</h2>
+          <p class="blog-excerpt">An in-depth comparison of pricing, learning curve, connectors, and use cases to help you choose the right BI tool for your team.</p>
+          <span class="blog-read-more" role="button" tabindex="0" aria-label="Read full article: Power BI vs Tableau">Read more →</span>
+        </div>
+      </article>
+
+      <article class="card blog-card reveal" onclick="openBlog(1)" role="listitem" aria-label="Blog post: Python for Marketers">
+        <div class="blog-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600&q=80"
+            alt="Python code editor showing data analysis scripts for marketing automation and reporting using pandas library"
+            class="blog-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Python</span>
+            <time datetime="2026-03-22">March 22, 2026</time>
+            <span>10 min read</span>
+          </div>
+          <h2 class="blog-title">Python for Digital Marketers: Automate Your Reports in 2026</h2>
+          <p class="blog-excerpt">Step-by-step guide to using Python pandas and openpyxl to pull, clean, and visualize marketing data automatically every week.</p>
+          <span class="blog-read-more" role="button" tabindex="0" aria-label="Read full article: Python for marketers">Read more →</span>
+        </div>
+      </article>
+
+      <article class="card blog-card reveal" onclick="openBlog(2)" role="listitem" aria-label="Blog post: SEO in 2026">
+        <div class="blog-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&q=80"
+            alt="Google Search Console screenshot showing keyword rankings and click-through rates for SEO optimization strategy"
+            class="blog-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">SEO</span>
+            <time datetime="2026-02-10">February 10, 2026</time>
+            <span>8 min read</span>
+          </div>
+          <h2 class="blog-title">SEO in the Age of AI: What Actually Works in 2026</h2>
+          <p class="blog-excerpt">How AI-driven search changes keyword strategy, content structure, and E-E-A-T signals — and what a data-first SEO approach looks like today.</p>
+          <span class="blog-read-more" role="button" tabindex="0" aria-label="Read full article: SEO in 2026">Read more →</span>
+        </div>
+      </article>
+
+      <article class="card blog-card reveal" onclick="openBlog(3)" role="listitem" aria-label="Blog post: SQL for analysts">
+        <div class="blog-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&q=80"
+            alt="SQL query in a database editor showing complex joins and window functions for sales data analysis"
+            class="blog-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">SQL</span>
+            <time datetime="2026-01-28">January 28, 2026</time>
+            <span>12 min read</span>
+          </div>
+          <h2 class="blog-title">10 Advanced SQL Window Functions Every Analyst Must Know</h2>
+          <p class="blog-excerpt">Master ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD, and NTILE with real-world e-commerce dataset examples and performance tips.</p>
+          <span class="blog-read-more" role="button" tabindex="0" aria-label="Read full article: SQL window functions">Read more →</span>
+        </div>
+      </article>
+
+      <article class="card blog-card reveal" onclick="openBlog(4)" role="listitem" aria-label="Blog post: Data-Driven Marketing">
+        <div class="blog-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=600&q=80"
+            alt="Marketing analytics dashboard with funnel visualization showing customer journey from awareness to conversion"
+            class="blog-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Marketing</span>
+            <time datetime="2025-12-15">December 15, 2025</time>
+            <span>6 min read</span>
+          </div>
+          <h2 class="blog-title">Building a Data-Driven Marketing Strategy from Scratch</h2>
+          <p class="blog-excerpt">How to set up tracking, define KPIs, choose attribution models, and build dashboards that actually influence marketing decisions.</p>
+          <span class="blog-read-more" role="button" tabindex="0" aria-label="Read full article: data-driven marketing">Read more →</span>
+        </div>
+      </article>
+
+      <article class="card blog-card reveal" onclick="openBlog(5)" role="listitem" aria-label="Blog post: Excel Advanced Tips">
+        <div class="blog-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80"
+            alt="Microsoft Excel spreadsheet showing advanced pivot tables, XLOOKUP formulas, and dynamic array functions for data analysis"
+            class="blog-img"
+            width="600" height="200"
+            loading="lazy"
+          />
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Excel</span>
+            <time datetime="2025-11-04">November 4, 2025</time>
+            <span>9 min read</span>
+          </div>
+          <h2 class="blog-title">Excel in 2026: Advanced Features Most Analysts Still Don't Use</h2>
+          <p class="blog-excerpt">Dynamic arrays, XLOOKUP, LAMBDA functions, and Power Query transformations that will fundamentally change how you work with data in Excel.</p>
+          <span class="blog-read-more" role="button" tabindex="0" aria-label="Read full article: Excel advanced tips">Read more →</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <footer role="contentinfo">
+    <div class="footer-logo">SD<span>.</span></div>
+    <p>Data Analyst & Digital Marketer — turning data into decisions.</p>
+    <ul class="footer-links" role="list">
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+      <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Shayantha Das. All rights reserved.</p>
+  </footer>
+</section>
+
+<!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+<section id="contact" aria-label="Contact Shayantha Das">
+  <div class="section-wrap">
+    <div class="section-label">Get In Touch</div>
+    <h1 class="section-title">Let's Work Together</h1>
+    <p class="section-sub">Have a data challenge or marketing goal? I'd love to hear about your project.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Based in Chattogram, Bangladesh. Available for remote work globally and in-person locally.</p>
+        <div class="contact-items" role="list">
+          <div class="contact-item" role="listitem">
+            <div class="contact-item-icon" aria-hidden="true">📧</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-val">shayanthadas@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-item" role="listitem">
+            <div class="contact-item-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-val">Chattogram, Bangladesh</div>
+            </div>
+          </div>
+          <div class="contact-item" role="listitem">
+            <div class="contact-item-icon" aria-hidden="true">⏰</div>
+            <div>
+              <div class="contact-item-label">Response Time</div>
+              <div class="contact-item-val">Within 24 hours</div>
+            </div>
+          </div>
+          <div class="contact-item" role="listitem">
+            <div class="contact-item-icon" aria-hidden="true">🌐</div>
+            <div>
+              <div class="contact-item-label">Website</div>
+              <div class="contact-item-val">shayanthadas.github.io</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links" role="list" aria-label="Social media links">
+          <a href="https://linkedin.com/in/shayanthadas" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile of Shayantha Das">in</a>
+          <a href="https://github.com/shayanthadas" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile of Shayantha Das">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+          </a>
+          <a href="https://twitter.com/shayanthadas" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile of Shayantha Das">𝕏</a>
+        </div>
+      </div>
+
+      <div>
+        <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)" aria-label="Contact form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Full Name *</label>
+              <input type="text" id="contactName" name="name" placeholder="Your name" required autocomplete="name" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address *</label>
+              <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required autocomplete="email" aria-required="true" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactService">Service Needed</label>
+            <select id="contactService" name="service" aria-label="Select service type">
+              <option value="">— Select a service —</option>
+              <option value="data-analysis">Data Analysis</option>
+              <option value="dashboard">Dashboard Development</option>
+              <option value="digital-marketing">Digital Marketing</option>
+              <option value="seo">SEO Strategy</option>
+              <option value="python">Python Automation</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject *</label>
+            <input type="text" id="contactSubject" name="subject" placeholder="Project brief" required aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message *</label>
+            <textarea id="contactMessage" name="message" placeholder="Tell me about your project goals, timeline, and budget..." required aria-required="true"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" aria-label="Send message to Shayantha Das" style="align-self:flex-start;">
+            Send Message →
+          </button>
+          <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+            ✅ Message sent! I'll get back to you within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer role="contentinfo">
+    <div class="footer-logo">SD<span>.</span></div>
+    <p>Data Analyst & Digital Marketer — turning data into decisions.</p>
+    <ul class="footer-links" role="list">
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+      <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+      <li><a href="#" onclick="showSection('blog')">Blog</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Shayantha Das. All rights reserved. | Chattogram, Bangladesh</p>
+  </footer>
+</section>
+
+<!-- ═══════════════════════ PROJECT MODAL ═══════════════════════ -->
+<div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="closeModal(event)">
+  <div class="modal" id="projectModalContent">
+    <button class="modal-close" onclick="closeProjectModal()" aria-label="Close project details">✕</button>
+    <img src="" alt="" class="modal-img" id="modalImg" />
+    <span class="modal-cat" id="modalCat"></span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+    <div class="modal-metrics" id="modalMetrics"></div>
+    <div id="modalDetail"></div>
+    <div id="modalTags" style="margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:.5rem;"></div>
+    <div class="modal-actions" id="modalActions"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ BLOG MODAL ═══════════════════════ -->
+<div class="modal-overlay" id="blogModal" role="dialog" aria-modal="true" aria-labelledby="blogModalTitle" onclick="closeBlogModal(event)">
+  <div class="modal" id="blogModalContent">
+    <button class="modal-close" onclick="closeBlogModalBtn()" aria-label="Close blog article">✕</button>
+    <img src="" alt="" class="modal-img" id="blogModalImg" />
+    <div style="display:flex;gap:1rem;margin-bottom:1rem;">
+      <span class="blog-cat" id="blogModalCat"></span>
+      <time id="blogModalDate" class="blog-detail-date"></time>
+    </div>
+    <h2 id="blogModalTitle" style="font-family:var(--ff-head);font-size:1.8rem;font-weight:700;margin-bottom:.5rem;"></h2>
+    <p style="color:var(--muted);font-size:.85rem;margin-bottom:2rem;" id="blogModalMeta"></p>
+    <div class="blog-content" id="blogModalContent2"></div>
+    <div class="modal-actions" id="blogModalActions"></div>
+  </div>
+</div>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Scroll back to top">↑</button>
+
+<!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
 <script>
-  // Smooth active link detection
-  const links = document.querySelectorAll('.nav-links a');
-  links.forEach(l => {
-    if (l.href === window.location.href) {
-      l.classList.add('active');
+  // ─── Data ───
+  const projects = [
+    {
+      title: "E-Commerce Sales Analytics Dashboard",
+      category: "Data Analytics",
+      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=760&q=80",
+      imgAlt: "Power BI e-commerce sales analytics dashboard with revenue trends, product performance charts, and cohort analysis",
+      desc: "Built a comprehensive Power BI dashboard for an online retail client processing 500K+ transactions monthly. The dashboard tracks revenue, conversion rates, basket size, and customer cohort analysis in real-time.",
+      detail: "<p>The client was struggling to identify which product categories drove profit vs. just revenue. By joining SQL transactional data with GA4 behavioral data, I surfaced that 20% of SKUs drove 68% of net margin.</p><p>Key deliverables included: live inventory alerts, daily revenue vs. target tracking, and a cohort retention heatmap that revealed the best acquisition channels for high-LTV customers.</p>",
+      metrics: [
+        { val: "500K+", label: "Transactions Analyzed" },
+        { val: "34%", label: "Margin Improvement" },
+        { val: "8hrs", label: "Weekly Time Saved" }
+      ],
+      tags: ["Power BI", "SQL", "Python", "DAX", "GA4"],
+      repo: "https://github.com/shayanthadas/ecommerce-sales-dashboard"
+    },
+    {
+      title: "SEO Traffic Growth – 600% in 6 Months",
+      category: "Digital Marketing",
+      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=760&q=80",
+      imgAlt: "Google Search Console analytics graph showing organic traffic growth from 5,000 to 35,000 monthly sessions over a 6-month SEO campaign",
+      desc: "End-to-end SEO strategy for a BD-based SaaS company: keyword research, on-page optimization, content clusters, and technical SEO audits resulting in 600% organic traffic growth.",
+      detail: "<p>Starting from 5,200 monthly organic sessions, the strategy focused on three pillars: technical SEO fixes (Core Web Vitals, crawl budget, schema markup), a content cluster strategy targeting 180 long-tail keywords, and authority building through digital PR.</p><p>The result: 35,800 monthly organic sessions within 6 months, ranking #1 for 12 primary keywords in the BD market.</p>",
+      metrics: [
+        { val: "600%", label: "Traffic Growth" },
+        { val: "#1", label: "Keyword Rankings" },
+        { val: "180+", label: "Keywords Targeted" }
+      ],
+      tags: ["SEO", "Ahrefs", "GA4", "Content Strategy", "Technical SEO", "Schema"],
+      repo: "https://github.com/shayanthadas/seo-growth-strategy"
+    },
+    {
+      title: "Customer Churn Prediction Model",
+      category: "Machine Learning",
+      img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=760&q=80",
+      imgAlt: "Python Jupyter notebook showing scikit-learn machine learning pipeline for telecom customer churn prediction with confusion matrix and feature importance chart",
+      desc: "Developed a Python-based ML model using Random Forest and XGBoost to predict telecom customer churn with 89% accuracy, enabling proactive retention campaigns.",
+      detail: "<p>The telecom client was losing 8% of customers monthly with no early warning system. After exploratory analysis on 120K customer records, I engineered 45 features from usage patterns, billing history, and support tickets.</p><p>The final ensemble model (Random Forest + XGBoost with Bayesian hyperparameter tuning) achieved 89% accuracy and 0.91 AUC-ROC. The top 3 churn predictors were identified as: consecutive dropped calls, plan downgrade within 60 days, and unresolved tickets.</p>",
+      metrics: [
+        { val: "89%", label: "Model Accuracy" },
+        { val: "0.91", label: "AUC-ROC Score" },
+        { val: "120K", label: "Records Analyzed" }
+      ],
+      tags: ["Python", "scikit-learn", "XGBoost", "Pandas", "NumPy", "Jupyter"],
+      repo: "https://github.com/shayanthadas/customer-churn-prediction"
+    },
+    {
+      title: "Multi-Touch Marketing Attribution",
+      category: "Marketing Analytics",
+      img: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=760&q=80",
+      imgAlt: "Tableau marketing attribution model dashboard showing multi-touch customer journey paths across paid search, social media, email, and organic channels",
+      desc: "Built a data-driven multi-touch attribution model that revealed 40% of the client's ad budget was being misallocated across channels — saving $12K/month.",
+      detail: "<p>The client was running campaigns across Google Ads, Facebook, email, and organic with no cross-channel attribution. Using SQL to join CRM, ad platform, and analytics data, I built a Markov chain attribution model that assigned accurate credit to each touchpoint.</p><p>The insight: last-click attribution was massively over-crediting Google Branded and under-crediting email nurture sequences, which had a 4.2x higher downstream conversion rate for high-value accounts.</p>",
+      metrics: [
+        { val: "$12K", label: "Monthly Budget Saved" },
+        { val: "4.2x", label: "Email Attribution Lift" },
+        { val: "8", label: "Channels Integrated" }
+      ],
+      tags: ["Tableau", "SQL", "Google Ads", "Facebook Ads", "Markov Chain", "Attribution"],
+      repo: "https://github.com/shayanthadas/marketing-attribution-model"
+    },
+    {
+      title: "Financial KPI Report Automation",
+      category: "Automation",
+      img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=760&q=80",
+      imgAlt: "Python script automating Excel financial KPI report generation showing monthly P&L, cash flow, and variance analysis charts",
+      desc: "Python + Excel VBA automation pipeline that generates monthly financial reports in 5 minutes, replacing a 2-day manual process for a mid-size manufacturing firm.",
+      detail: "<p>The finance team spent 2 full days every month manually compiling data from 6 ERP exports, formatting Excel tables, and emailing reports. The Python pipeline uses openpyxl and pandas to: pull and clean ERP data, apply business logic, generate formatted Excel reports with charts, and auto-email to stakeholders.</p><p>Total time reduced from 16 hours to 5 minutes. The team now uses those freed hours for actual financial analysis instead of copy-paste work.</p>",
+      metrics: [
+        { val: "99.5%", label: "Time Reduction" },
+        { val: "6", label: "Data Sources Merged" },
+        { val: "0", label: "Manual Errors" }
+      ],
+      tags: ["Python", "Excel", "openpyxl", "Pandas", "VBA", "Automation"],
+      repo: "https://github.com/shayanthadas/financial-kpi-automation"
+    },
+    {
+      title: "Social Media Performance Analytics",
+      category: "Social Media",
+      img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=760&q=80",
+      imgAlt: "Power BI social media analytics dashboard tracking Instagram, Facebook, and LinkedIn engagement metrics, follower growth, and post performance data",
+      desc: "Cross-platform social analytics dashboard using Python API integrations to track reach, engagement, and conversion across Instagram, Facebook, and LinkedIn in one unified view.",
+      detail: "<p>The client's marketing team was logging into 3 separate platforms daily to check metrics. I built a Python data pipeline using Meta Graph API and LinkedIn API to pull data nightly into a SQL database, then visualized it in Power BI with automated weekly email summaries.</p><p>The unified view revealed that LinkedIn drove 70% of B2B leads despite only 15% of the content budget — leading to a significant channel reallocation.</p>",
+      metrics: [
+        { val: "3", label: "Platforms Unified" },
+        { val: "70%", label: "LinkedIn Lead Share" },
+        { val: "Daily", label: "Auto Refresh" }
+      ],
+      tags: ["Python", "Power BI", "Meta API", "LinkedIn API", "SQL", "Social Analytics"],
+      repo: "https://github.com/shayanthadas/social-media-analytics"
     }
+  ];
+
+  const blogs = [
+    {
+      title: "Power BI vs Tableau: Which Should You Use in 2026?",
+      category: "Data Viz",
+      date: "April 15, 2026",
+      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=760&q=80",
+      imgAlt: "Comparison of Power BI and Tableau interfaces showing dashboard building, data connectivity, and visualization options for business intelligence teams",
+      readTime: "7 min read",
+      github: "https://github.com/shayanthadas/powerbi-vs-tableau-analysis",
+      content: `
+        <p>Choosing between Power BI and Tableau is one of the most common questions I get from analytics teams. In 2026, both tools have matured significantly — but they still suit different contexts. Here's my honest breakdown.</p>
+        <h3>Pricing & Licensing</h3>
+        <p><strong>Power BI</strong> wins decisively for cost-conscious teams. Power BI Pro runs ~$10/user/month and integrates seamlessly with Microsoft 365. If your company is already on Office 365, the choice is almost made for you. <strong>Tableau</strong> runs $35–75/user/month depending on tier, which adds up fast for larger teams.</p>
+        <h3>Learning Curve</h3>
+        <p>Power BI's DAX formula language is powerful but notoriously confusing for beginners. Tableau's drag-and-drop interface is genuinely more intuitive for non-technical users. I recommend Tableau for teams with mixed technical ability; Power BI for teams comfortable with Excel-style formulas.</p>
+        <h3>Data Connectivity</h3>
+        <p>Both connect to hundreds of sources. Power BI's native integration with Azure, SQL Server, and the broader Microsoft ecosystem gives it an edge in enterprise Windows environments. Tableau has historically had stronger Google BigQuery and Snowflake connectors.</p>
+        <h3>My Verdict</h3>
+        <ul>
+          <li><strong>Use Power BI if:</strong> You're on Microsoft 365, budget-conscious, or your team already knows Excel well.</li>
+          <li><strong>Use Tableau if:</strong> Your team is less technical, needs advanced geospatial analysis, or is heavy on Salesforce/Snowflake.</li>
+          <li><strong>Use both if:</strong> You have the budget and different teams have different needs — I've done this successfully for enterprise clients.</li>
+        </ul>
+      `
+    },
+    {
+      title: "Python for Digital Marketers: Automate Your Reports in 2026",
+      category: "Python",
+      date: "March 22, 2026",
+      img: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=760&q=80",
+      imgAlt: "Jupyter notebook with Python pandas code automating Google Analytics data extraction and weekly marketing report generation",
+      readTime: "10 min read",
+      github: "https://github.com/shayanthadas/python-marketing-automation",
+      content: ` manually pulling data, copy-pasting into spreadsheets, and creating the same charts. Python can automate nearly all of it — and you don't need to be a developer to get started.</p>
+        <h3>The Stack You Need</h3>
+        <p>You only need three libraries to get started: <strong>pandas</strong> for data manipulation, <strong>openpyxl</strong> for Excel output, and the <strong>google-analytics-data</strong> library for pulling GA4 data via API.</p>
+        <h3>Step 1: Connect to GA4</h3>
+        <p>Set up a Google Cloud service account, download the JSON credentials, and use the GA4 Data API to pull sessions, conversions, and revenue by channel for any date range.</p>
+        <h3>Step 2: Clean & Enrich the Data</h3>
+        <p>Use pandas to group by channel, calculate week-over-week growth percentages, and flag channels that are under/over budget thresholds. This takes about 20 lines of code.</p>
+        <h3>Step 3: Export a Formatted Report</h3>
+        <p>Use openpyxl to write the data to Excel with conditional formatting — green for above target, red for below. Schedule the script with Windows Task Scheduler or cron to run every Monday morning.</p>
+        <h3>The Result</h3>
+        <p>What used to take 3 hours runs in 90 seconds. I've built versions of this for 6 marketing clients and it consistently saves 4–8 hours per week. The script pays for the time it took to build within the first two weeks.</p>
+      `
+    },
+    {
+      title: "SEO in the Age of AI: What Actually Works in 2026",
+      category: "SEO",
+      date: "February 10, 2026",
+      img: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=760&q=80",
+      imgAlt: "Google Search Console performance report showing impressions, clicks, and average position for an SEO-optimized website in 2026",
+      readTime: "8 min read",
+      github: "https://github.com/shayanthadas/seo-ai-checklist-2026",
+      content: ` AI Overviews dominate the SERP above the fold. Zero-click searches have increased. Yet organic traffic is still growing for sites that understand the new rules.</p>
+        <h3>E-E-A-T Is Everything Now</h3>
+        <p>Google's Experience, Expertise, Authoritativeness, and Trustworthiness signals have never mattered more. Every article needs a visible, credentialed author, first-hand experience demonstrated in the content, and citations from authoritative sources.</p>
+        <h3>Target the Long Tail of AI Conversations</h3>
+        <p>AI Overviews answer short, simple queries. The opportunity is in detailed, specific queries that require nuanced human expertise. "What's the best BI tool?" gets absorbed by AI. "Power BI vs Tableau for a 50-person manufacturing company on Office 365" sends traffic to whoever has the best answer.</p>
+        <h3>Technical SEO Still Matters — But Differently</h3>
+        <p>Core Web Vitals, schema markup, and crawl efficiency remain critical. But in 2026, internal linking structure and topical authority across a content cluster matters more than individual keyword density.</p>
+        <h3>My 2026 SEO Checklist</h3>
+        <ul>
+          <li>Audit and fix Core Web Vitals (LCP under 2.5s, CLS under 0.1)</li>
+          <li>Add structured data (Article, FAQ, HowTo, Person schemas)</li>
+          <li>Build content clusters around 5–10 core topics instead of isolated articles</li>
+          <li>Add author bio pages with credentials and social proof</li>
+          <li>Earn links from industry publications, not link farms</li>
+          <li>Monitor Google Search Console weekly, not monthly</li>
+        </ul>
+      `
+    },
+    {
+      title: "10 Advanced SQL Window Functions Every Analyst Must Know",
+      category: "SQL",
+      date: "January 28, 2026",
+      img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=760&q=80",
+      imgAlt: "PostgreSQL query editor showing window functions including ROW_NUMBER, RANK, LAG, LEAD, and NTILE used for sales data cohort analysis",
+      readTime: "12 min read",
+      github: "https://github.com/shayanthadas/sql-window-functions-guide",
+      content: ` that most analysts know exist but underuse dramatically. Once you internalize them, you'll solve problems in one query that previously required 3 CTEs or Python post-processing.</p>
+        <h3>The Basics: ROW_NUMBER, RANK, DENSE_RANK</h3>
+        <p>These assign sequence numbers within partitions. The difference matters: RANK skips numbers after ties (1,1,3), DENSE_RANK doesn't (1,1,2). Use ROW_NUMBER for deduplication, RANK for leaderboards where ties are meaningful.</p>
+        <h3>Time-Series: LAG and LEAD</h3>
+        <p>LAG and LEAD let you access values from previous or next rows without a self-join. This is how you calculate week-over-week growth, detect consecutive events, or compare a sale to the previous sale by the same customer — all in one clean SELECT statement.</p>
+        <h3>Distribution: NTILE and PERCENT_RANK</h3>
+        <p>NTILE(4) divides your result set into quartiles — perfect for segmenting customers by spend decile. PERCENT_RANK gives you the relative standing of each row as a 0–1 value.</p>
+        <h3>Running Calculations: SUM OVER, AVG OVER</h3>
+        <p>Adding OVER(ORDER BY date) to aggregate functions creates running totals and moving averages without any GROUP BY, letting you keep all row detail alongside the aggregate.</p>
+        <h3>Practice Exercise</h3>
+        <p>Take any e-commerce order table and use window functions to calculate: (1) each customer's order number, (2) days since their previous order, (3) 30-day rolling revenue, (4) customer revenue decile. All in a single query. Once you can do that from memory, you've truly internalized window functions.</p>
+      `
+    },
+    {
+      title: "Building a Data-Driven Marketing Strategy from Scratch",
+      category: "Marketing",
+      date: "December 15, 2025",
+      img: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=760&q=80",
+      imgAlt: "Marketing strategy flowchart showing KPI definition, tracking setup, attribution model selection, and dashboard reporting cycle for data-driven campaigns",
+      readTime: "6 min read",
+      github: "https://github.com/shayanthadas/data-driven-marketing-framework",
+      content: ` The ones that consistently beat their competitors operate on data. Here's the exact framework I use with every new marketing client.</p>
+        <h3>Step 1: Define Your North Star Metric</h3>
+        <p>Not 20 KPIs — one. For e-commerce: revenue or ROAS. For SaaS: MRR or qualified pipeline. Every other metric should ladder up to this one number. When you have one north star, prioritization becomes dramatically easier.</p>
+        <h3>Step 2: Set Up Tracking Before Running Ads</h3>
+        <p>GA4 with enhanced ecommerce, server-side conversion tracking in Google Ads and Meta, and UTM parameters on every link. I've seen companies spend $50K on ads with broken tracking — measuring nothing. Fix tracking first, then spend.</p>
+        <h3>Step 3: Choose the Right Attribution Model</h3>
+        <p>Last-click attribution is a lie — it systematically over-credits bottom-funnel channels and kills your email and content programs. Use data-driven attribution in GA4 if you have 400+ monthly conversions. Otherwise, use linear attribution and manually review assisted conversions.</p>
+        <h3>Step 4: Build a Weekly Rhythm</h3>
+        <p>Monday: pull performance data. Tuesday: identify one anomaly to investigate. Wednesday: present insight to team. Thursday: implement one change. Friday: document what you learned. This 52-experiment-per-year cadence compounds fast.</p>
+      `
+    },
+    {
+      title: "Excel in 2026: Advanced Features Most Analysts Still Don't Use",
+      category: "Excel",
+      date: "November 4, 2025",
+      img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=760&q=80",
+      imgAlt: "Microsoft Excel spreadsheet demonstrating XLOOKUP, dynamic array spill functions, LAMBDA, and Power Query data transformation for advanced data analysis",
+      readTime: "9 min read",
+      github: "https://github.com/shayanthadas/excel-advanced-features-2026",
+      content: ` The Excel of 2026 is closer to a BI tool than the spreadsheet your finance team used in 2015. Here are the features most analysts are missing.</p>
+        <h3>Dynamic Arrays: The Revolution Nobody Talks About</h3>
+        <p>Functions like SORT, FILTER, UNIQUE, and SEQUENCE return spilled arrays — results that automatically resize based on data. FILTER alone replaces dozens of SUMIFS formulas. If you're still writing complex array formulas with Ctrl+Shift+Enter, stop — you don't need to anymore.</p>
+        <h3>XLOOKUP: Retire VLOOKUP Forever</h3>
+        <p>XLOOKUP handles lookups in any direction, returns multiple columns, has a built-in if-not-found argument, and doesn't break when you insert columns. There's no reason to use VLOOKUP in 2026 — ever.</p>
+        <h3>LAMBDA: Build Custom Functions Without VBA</h3>
+        <p>LAMBDA lets you create named, reusable functions in plain Excel. Define your formula once in the Name Manager, give it a name and parameters, and call it like any built-in function. This alone replaces 80% of use cases for VBA macros.</p>
+        <h3>Power Query: Your ETL Tool Inside Excel</h3>
+        <p>Power Query transforms messy data from any source — APIs, folders full of CSVs, SharePoint lists — with a GUI that records every transformation step. When new data arrives, you click Refresh and everything updates automatically. This is the single highest-ROI Excel skill for analysts.</p>
+      `
+    }
+  ];
+
+  // ─── Navigation ───
+  function showSection(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    const navMap = { home: 0, about: -1, projects: 1, blog: 2, contact: 4 };
+    const links = document.querySelectorAll('.nav-links a');
+    if (id === 'home' && links[0]) links[0].classList.add('active');
+    if (id === 'projects' && links[1]) links[1].classList.add('active');
+    if (id === 'blog' && links[2]) links[2].classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(initReveal, 100);
+    if (id === 'about') setTimeout(animateSkills, 300);
+  }
+
+  // ─── Mobile menu ───
+  function toggleMobileMenu() {
+    const links = document.querySelector('.nav-links');
+    const isOpen = links.style.display === 'flex';
+    links.style.display = isOpen ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'fixed';
+    links.style.top = 'var(--nav-h)';
+    links.style.left = '0'; links.style.right = '0';
+    links.style.background = 'rgba(6,8,16,.97)';
+    links.style.padding = '1.5rem 5%';
+    links.style.borderBottom = '1px solid var(--border)';
+    links.style.backdropFilter = 'blur(20px)';
+  }
+
+  // ─── Navbar scroll ───
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
   });
 
-  // Intersection observer for fade-in on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.opacity = '1';
-        e.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
+  function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
-  document.querySelectorAll('.service-card, .project-card, .blog-card, .testi-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
+  // ─── Reveal on scroll ───
+  function initReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    reveals.forEach(r => { r.classList.remove('visible'); io.observe(r); });
+  }
+  initReveal();
+
+  // ─── Skill bars ───
+  function animateSkills() {
+    document.querySelectorAll('.skill-fill').forEach(bar => {
+      bar.style.width = bar.dataset.w;
+    });
+  }
+
+  // ─── Project modal ───
+  const GH_SVG = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>`;
+
+  function openProject(i) {
+    const p = projects[i];
+    document.getElementById('modalImg').src = p.img;
+    document.getElementById('modalImg').alt = p.imgAlt;
+    document.getElementById('modalCat').textContent = p.category;
+    document.getElementById('modalTitle').textContent = p.title;
+    document.getElementById('modalDesc').textContent = p.desc;
+    document.getElementById('modalDetail').innerHTML = p.detail;
+    document.getElementById('modalMetrics').innerHTML = p.metrics.map(m =>
+      `<div class="metric"><div class="metric-val">${m.val}</div><div class="metric-label">${m.label}</div></div>`
+    ).join('');
+    document.getElementById('modalTags').innerHTML = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+    document.getElementById('modalActions').innerHTML = `
+      <a href="${p.repo}" target="_blank" rel="noopener noreferrer" class="gh-btn" aria-label="View source code on GitHub for ${p.title}">
+        ${GH_SVG} View on GitHub
+      </a>
+      <a href="https://github.com/shayanthadas" target="_blank" rel="noopener noreferrer" class="gh-btn" aria-label="View all repositories on GitHub">
+        ${GH_SVG} All Repos
+      </a>
+    `;
+    document.getElementById('projectModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProjectModal() {
+    document.getElementById('projectModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeModal(e) {
+    if (e.target === document.getElementById('projectModal')) closeProjectModal();
+  }
+
+  // ─── Blog modal ───
+  function openBlog(i) {
+    const b = blogs[i];
+    document.getElementById('blogModalImg').src = b.img;
+    document.getElementById('blogModalImg').alt = b.imgAlt;
+    document.getElementById('blogModalCat').textContent = b.category;
+    document.getElementById('blogModalDate').textContent = b.date;
+    document.getElementById('blogModalTitle').textContent = b.title;
+    document.getElementById('blogModalMeta').textContent = b.readTime + ' · By Shayantha Das';
+    document.getElementById('blogModalContent2').innerHTML = b.content;
+    document.getElementById('blogModalActions').innerHTML = `
+      <a href="${b.github}" target="_blank" rel="noopener noreferrer" class="gh-btn" aria-label="View code and resources for this article on GitHub">
+        ${GH_SVG} Code &amp; Resources on GitHub
+      </a>
+      <a href="https://github.com/shayanthadas" target="_blank" rel="noopener noreferrer" class="gh-btn" aria-label="Browse all repositories on GitHub">
+        ${GH_SVG} All Repos
+      </a>
+    `;
+    document.getElementById('blogModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBlogModalBtn() {
+    document.getElementById('blogModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeBlogModal(e) {
+    if (e.target === document.getElementById('blogModal')) closeBlogModalBtn();
+  }
+
+  // ─── Contact form ───
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type=submit]');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    setTimeout(() => {
+      document.getElementById('formSuccess').style.display = 'block';
+      e.target.reset();
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+    }, 1200);
+  }
+
+  // ─── Keyboard accessibility for modals ───
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeProjectModal();
+      closeBlogModalBtn();
+    }
   });
 </script>
 </body>
