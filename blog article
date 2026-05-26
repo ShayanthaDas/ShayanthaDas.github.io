@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO in Bangladesh 2026: How to Rank on Page 1 | Shayantha Das</title>
+  <meta name="description" content="A complete 2026 SEO guide for Bangladesh — covering keyword research, technical SEO, content strategy, and link building tactics that are actually working right now." />
+  <meta name="keywords" content="SEO Bangladesh 2026, how to rank Google Bangladesh, SEO guide Dhaka, local SEO Bangladesh, digital marketing Bangladesh" />
+  <meta name="author" content="Shayantha Das" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://shayanthadas.github.io/blog-seo-bangladesh.html" />
+  <meta property="article:published_time" content="2026-04-05" />
+  <meta property="article:author" content="Shayantha Das" />
+  <meta property="article:tag" content="SEO, Bangladesh, Digital Marketing" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "SEO in Bangladesh: How to Rank on Page 1 in a Competitive Market",
+    "description": "A complete 2026 SEO playbook for the Bangladeshi market.",
+    "author": { "@type": "Person", "name": "Shayantha Das", "url": "https://shayanthadas.github.io/about.html" },
+    "datePublished": "2026-04-05",
+    "publisher": { "@type": "Person", "name": "Shayantha Das" },
+    "image": "https://shayanthadas.github.io/assets/profile.jpg",
+    "url": "https://shayanthadas.github.io/blog-seo-bangladesh.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink:#0d0d0d; --paper:#f5f0e8; --cream:#ede8db; --gold:#c9a84c; --teal:#1a7c6e; --rust:#b84c22; --muted:#6b6457; --card:#ffffff; --radius:4px; --nav-h:72px; }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--paper); color:var(--ink); line-height:1.6; overflow-x:hidden; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; height:var(--nav-h); display:flex; align-items:center; justify-content:space-between; padding:0 5vw; background:rgba(245,240,232,0.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(201,168,76,0.25); }
+    .nav-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:1.2rem; color:var(--ink); text-decoration:none; }
+    .nav-logo span { color:var(--gold); }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a { font-size:0.88rem; font-weight:500; color:var(--muted); text-decoration:none; letter-spacing:0.06em; text-transform:uppercase; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--ink); }
+    .nav-cta { background:var(--ink); color:var(--paper) !important; padding:0.5rem 1.2rem; border-radius:var(--radius); }
+    .nav-cta:hover { background:var(--gold) !important; color:var(--ink) !important; }
+
+    /* Blog layout */
+    .blog-layout { display:grid; grid-template-columns:1fr 320px; gap:4rem; max-width:1200px; margin:0 auto; padding:calc(var(--nav-h) + 4rem) 5vw 5rem; }
+
+    /* Article */
+    article { min-width:0; }
+    .breadcrumb { font-size:0.8rem; color:var(--muted); margin-bottom:1.5rem; }
+    .breadcrumb a { color:var(--teal); text-decoration:none; }
+    .post-cat { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem; }
+    h1.post-title { font-family:'Syne',sans-serif; font-size:clamp(2rem,4vw,3rem); font-weight:800; letter-spacing:-0.03em; line-height:1.1; margin-bottom:1rem; }
+    .post-meta { display:flex; gap:1.5rem; flex-wrap:wrap; font-size:0.8rem; color:var(--muted); margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid rgba(0,0,0,0.1); }
+    .post-author { display:flex; align-items:center; gap:0.6rem; }
+    .author-avatar { width:32px; height:32px; border-radius:50%; background:var(--ink); color:var(--gold); font-family:'Syne',sans-serif; font-weight:800; font-size:0.75rem; display:flex; align-items:center; justify-content:center; }
+    .post-hero { width:100%; height:320px; border-radius:var(--radius); background:linear-gradient(135deg,#0d1a0d,#1a4a1a); display:flex; align-items:center; justify-content:center; font-size:6rem; margin-bottom:2.5rem; }
+
+    /* Article body */
+    .post-body { color:var(--muted); line-height:1.85; }
+    .post-body h2 { font-family:'Syne',sans-serif; font-size:1.4rem; font-weight:800; color:var(--ink); margin:2.5rem 0 0.8rem; letter-spacing:-0.02em; }
+    .post-body h3 { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; color:var(--ink); margin:2rem 0 0.6rem; }
+    .post-body p { margin-bottom:1.2rem; }
+    .post-body ul, .post-body ol { padding-left:1.5rem; margin-bottom:1.2rem; }
+    .post-body li { margin-bottom:0.5rem; }
+    .post-body strong { color:var(--ink); font-weight:600; }
+    .post-body a { color:var(--teal); text-decoration:underline; text-decoration-color:rgba(26,124,110,0.3); }
+    .post-body blockquote { border-left:4px solid var(--gold); padding:1rem 1.5rem; background:var(--cream); border-radius:0 var(--radius) var(--radius) 0; margin:1.5rem 0; font-style:italic; color:var(--ink); }
+    .callout { background:var(--cream); border:1px solid rgba(201,168,76,0.3); border-radius:var(--radius); padding:1.2rem 1.5rem; margin:1.5rem 0; }
+    .callout-title { font-weight:700; font-size:0.88rem; color:var(--ink); margin-bottom:0.4rem; }
+
+    /* Share tags */
+    .post-tags { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:2.5rem; padding-top:2rem; border-top:1px solid rgba(0,0,0,0.1); }
+    .post-tag { background:var(--cream); padding:0.3rem 0.8rem; border-radius:2px; font-size:0.78rem; color:var(--muted); text-decoration:none; }
+
+    /* Author box */
+    .author-box { background:var(--card); border:1px solid rgba(0,0,0,0.08); border-radius:var(--radius); padding:2rem; margin-top:3rem; display:flex; gap:1.5rem; align-items:flex-start; }
+    .author-img { width:72px; height:72px; border-radius:50%; background:var(--ink); color:var(--gold); font-family:'Syne',sans-serif; font-weight:800; font-size:1.5rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .author-name { font-family:'Syne',sans-serif; font-weight:700; font-size:1rem; margin-bottom:0.2rem; }
+    .author-role { font-size:0.78rem; color:var(--gold); margin-bottom:0.5rem; font-weight:600; }
+    .author-bio { font-size:0.85rem; color:var(--muted); line-height:1.7; }
+
+    /* Sidebar */
+    .sidebar { position:sticky; top:calc(var(--nav-h) + 2rem); display:flex; flex-direction:column; gap:2rem; }
+    .toc { background:var(--card); border:1px solid rgba(0,0,0,0.08); border-radius:var(--radius); padding:1.5rem; }
+    .toc-title { font-family:'Syne',sans-serif; font-size:0.9rem; font-weight:700; margin-bottom:1rem; }
+    .toc ol { padding-left:1.2rem; }
+    .toc li { margin-bottom:0.5rem; }
+    .toc a { font-size:0.83rem; color:var(--muted); text-decoration:none; line-height:1.5; }
+    .toc a:hover { color:var(--teal); }
+    .related-posts { background:var(--cream); border-radius:var(--radius); padding:1.5rem; }
+    .rel-title { font-family:'Syne',sans-serif; font-size:0.9rem; font-weight:700; margin-bottom:1rem; }
+    .rel-post { display:flex; flex-direction:column; gap:0.2rem; padding:0.8rem 0; border-bottom:1px solid rgba(0,0,0,0.08); }
+    .rel-post:last-child { border-bottom:none; }
+    .rel-cat { font-size:0.68rem; text-transform:uppercase; font-weight:700; letter-spacing:0.08em; color:var(--gold); }
+    .rel-post-title { font-family:'Syne',sans-serif; font-size:0.85rem; font-weight:700; line-height:1.3; }
+    .rel-post a { text-decoration:none; color:var(--ink); }
+    .rel-post a:hover { color:var(--teal); }
+
+    footer { background:#0a0a0a; color:rgba(245,240,232,0.45); padding:3rem 5vw; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    footer a { color:rgba(245,240,232,0.45); text-decoration:none; transition:color 0.2s; }
+    footer a:hover { color:var(--gold); }
+    .footer-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:1.1rem; color:var(--paper); }
+    .footer-logo span { color:var(--gold); }
+    .footer-links { display:flex; gap:2rem; font-size:0.82rem; }
+    @media (max-width:900px) { .nav-links{display:none;} .blog-layout{grid-template-columns:1fr;} .sidebar{position:static;} }
+  </style>
+</head>
+<body>
+<nav role="navigation" aria-label="Main Navigation">
+  <a href="index.html" class="nav-logo">Shayantha<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+  </ul>
+</nav>
+
+<div class="blog-layout">
+  <article id="main-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> / <a href="blog.html">Blog</a> / SEO in Bangladesh 2026
+    </nav>
+    <div class="post-cat">Digital Marketing · SEO</div>
+    <h1 class="post-title">SEO in Bangladesh: How to Rank on Page 1 in a Competitive Market (2026 Guide)</h1>
+    <div class="post-meta">
+      <div class="post-author">
+        <div class="author-avatar" aria-hidden="true">SD</div>
+        <span>Shayantha Das</span>
+      </div>
+      <time datetime="2026-04-05">April 5, 2026</time>
+      <span>⏱ 10 min read</span>
+    </div>
+
+    <div class="post-hero" role="img" aria-label="SEO strategy blog post illustration">🔍</div>
+
+    <div class="post-body">
+      <p>If you've tried to rank a website in Bangladesh and felt like you were fighting a losing battle against bigger brands — this guide is for you.</p>
+      <p>The good news: <strong>SEO in Bangladesh is still highly winnable for smaller players</strong>, but only if you understand how the market works and stop copying strategies built for the US or UK audience.</p>
+
+      <h2 id="why-different">Why SEO in Bangladesh Is Different</h2>
+      <p>Bangladesh has a unique search landscape. Most users search in English for commercial and informational queries, but intent, language patterns, and content preferences differ significantly from Western markets. Google's algorithm has also become more sophisticated at understanding local relevance.</p>
+      <p>Key differences to understand:</p>
+      <ul>
+        <li>Mobile-first is not optional — over 78% of Bangladeshi searches happen on mobile</li>
+        <li>Voice search is growing rapidly, especially for local businesses</li>
+        <li>Long-tail keywords in Bangla-English code-switching are highly underserved</li>
+        <li>Local competition for informational keywords is lower than you think</li>
+      </ul>
+
+      <h2 id="keyword-research">Step 1: Keyword Research for the Bangladeshi Market</h2>
+      <p>Standard keyword research tools like Ahrefs and SEMrush are useful, but they don't fully capture Bangladeshi search patterns. Here's the process I use:</p>
+      <h3>Find Your Seed Keywords</h3>
+      <p>Start with Google Autocomplete in incognito mode with your IP set to Bangladesh. Type your core topic and record every suggestion. These are real queries real Bangladeshis are typing.</p>
+      <h3>Segment by Intent</h3>
+      <p>Categorize every keyword into: <strong>informational</strong> (how to, what is), <strong>commercial</strong> (best, review, vs), or <strong>transactional</strong> (buy, price, order). Each type needs a different content format.</p>
+      <blockquote>"The biggest SEO mistake I see Bangladeshi businesses make is trying to rank a product page for an informational keyword. Match intent first, optimize second."</blockquote>
+
+      <h2 id="technical-seo">Step 2: Technical SEO Essentials</h2>
+      <p>Before writing a single word of content, your technical foundation must be solid. These are the issues I find most often on Bangladeshi websites:</p>
+      <ul>
+        <li><strong>Page speed:</strong> Most Bangladeshi sites score below 50 on Google PageSpeed. Images are the biggest culprit — compress and serve in WebP format.</li>
+        <li><strong>Mobile UX:</strong> Fonts too small, buttons too close together, forms that break on small screens.</li>
+        <li><strong>Missing structured data:</strong> Schema markup for local businesses, articles, and products is rarely implemented.</li>
+        <li><strong>Duplicate content:</strong> Especially common in e-commerce sites that copy manufacturer descriptions.</li>
+      </ul>
+
+      <div class="callout">
+        <div class="callout-title">🛠 Quick Win</div>
+        Run your site through Google's PageSpeed Insights and fix the top 3 recommendations. A site that loads in under 2 seconds on mobile has an immediate ranking advantage over 80% of Bangladeshi competitors.
+      </div>
+
+      <h2 id="content-strategy">Step 3: Content Strategy That Works in Bangladesh</h2>
+      <p>Here's the content strategy that has consistently worked for my clients:</p>
+      <h3>Build Topical Authority</h3>
+      <p>Instead of publishing random posts, build a content cluster: one comprehensive pillar page on your main topic, surrounded by 8–12 supporting articles that go deep on subtopics. This signals to Google that your site is an authority on the subject.</p>
+      <h3>Target Underserved Local Keywords</h3>
+      <p>Queries like "best [product] in Dhaka", "[service] in Chattogram", or "how to [action] in Bangladesh" have real search volume and almost no quality content targeting them. These are golden opportunities.</p>
+
+      <h2 id="link-building">Step 4: Link Building for Bangladesh</h2>
+      <p>Backlinks still matter enormously. In Bangladesh, the most effective link-building tactics currently are:</p>
+      <ul>
+        <li><strong>Digital PR:</strong> Get featured in Bangladeshi news outlets like Prothom Alo, The Daily Star, and bdnews24 by contributing expert opinions or data-driven stories.</li>
+        <li><strong>Guest posting</strong> on respected Bangladeshi blogs in your niche.</li>
+        <li><strong>Local directory citations</strong> — Bangladeshi business directories still carry weight for local SEO.</li>
+        <li><strong>Resource page link building</strong> — find pages that list resources and offer to be included.</li>
+      </ul>
+
+      <h2 id="measurement">Step 5: Measuring Your SEO Progress</h2>
+      <p>Track these metrics in Google Search Console and GA4 monthly:</p>
+      <ul>
+        <li>Organic impressions and clicks by page</li>
+        <li>Average position for target keywords</li>
+        <li>Click-through rate (target above 5% for informational, above 2% for competitive)</li>
+        <li>Organic conversion rate</li>
+      </ul>
+      <p>Consistency wins SEO. The sites I've seen go from page 3 to page 1 all have one thing in common: they published quality content consistently for 6+ months without giving up.</p>
+    </div>
+
+    <div class="post-tags" aria-label="Post tags">
+      <a href="#" class="post-tag">SEO</a>
+      <a href="#" class="post-tag">Bangladesh</a>
+      <a href="#" class="post-tag">Digital Marketing</a>
+      <a href="#" class="post-tag">Content Strategy</a>
+      <a href="#" class="post-tag">Google</a>
+    </div>
+
+    <div class="author-box">
+      <div class="author-img" aria-hidden="true">SD</div>
+      <div>
+        <div class="author-name">Shayantha Das</div>
+        <div class="author-role">Data Analyst &amp; Digital Marketer</div>
+        <p class="author-bio">I help businesses in Bangladesh and beyond grow through data-driven marketing and analysis. 3+ years experience in SEO, analytics, and dashboard development.</p>
+        <a href="about.html" style="font-size:0.82rem;font-weight:600;color:var(--teal);text-decoration:none;margin-top:0.6rem;display:inline-block;" aria-label="Read more about Shayantha Das">About Me →</a>
+      </div>
+    </div>
+  </article>
+
+  <aside class="sidebar" aria-label="Article sidebar">
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-title">📋 Table of Contents</div>
+      <ol>
+        <li><a href="#why-different">Why Bangladesh Is Different</a></li>
+        <li><a href="#keyword-research">Keyword Research</a></li>
+        <li><a href="#technical-seo">Technical SEO</a></li>
+        <li><a href="#content-strategy">Content Strategy</a></li>
+        <li><a href="#link-building">Link Building</a></li>
+        <li><a href="#measurement">Measuring Progress</a></li>
+      </ol>
+    </nav>
+    <div class="related-posts">
+      <div class="rel-title">📚 Related Articles</div>
+      <div class="rel-post">
+        <div class="rel-cat">Analytics</div>
+        <div class="rel-post-title"><a href="blog-ga4-setup.html">The Complete GA4 Setup Guide for Small Businesses</a></div>
+      </div>
+      <div class="rel-post">
+        <div class="rel-cat">Data Analysis</div>
+        <div class="rel-post-title"><a href="blog-sql-marketers.html">SQL for Digital Marketers: Queries You'll Use Weekly</a></div>
+      </div>
+      <div class="rel-post">
+        <div class="rel-cat">Career</div>
+        <div class="rel-post-title"><a href="blog-career-roadmap.html">How to Become a Data Analyst in Bangladesh: 2026 Roadmap</a></div>
+      </div>
+    </div>
+    <div style="background:var(--ink);color:var(--paper);padding:1.5rem;border-radius:var(--radius);">
+      <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:0.6rem;">Need SEO Help?</div>
+      <p style="font-size:0.83rem;color:rgba(245,240,232,0.65);line-height:1.65;margin-bottom:1.2rem;">I offer data-backed SEO strategy and implementation for Bangladeshi businesses.</p>
+      <a href="contact.html" style="display:block;text-align:center;background:var(--gold);color:var(--ink);padding:0.7rem;border-radius:var(--radius);text-decoration:none;font-weight:700;font-size:0.88rem;" aria-label="Contact Shayantha Das for SEO services">Get in Touch →</a>
+    </div>
+  </aside>
+</div>
+
+<footer role="contentinfo">
+  <div>
+    <div class="footer-logo">Shayantha<span>.</span></div>
+    <p style="font-size:0.78rem;margin-top:0.4rem;">Data Analyst &amp; Digital Marketer · Bangladesh</p>
+  </div>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div style="font-size:0.78rem;">© 2026 Shayantha Das</div>
+</footer>
+</body>
+</html>
