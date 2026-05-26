@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce Sales Dashboard | Shayantha Das – Power BI Case Study</title>
+  <meta name="description" content="How Shayantha Das built a Power BI dashboard tracking ৳50M+ in sales, reducing reporting time by 70% for a Bangladeshi e-commerce business." />
+  <meta name="keywords" content="Power BI case study Bangladesh, e-commerce sales dashboard, Power BI SQL dashboard, data analyst Bangladesh project" />
+  <meta name="author" content="Shayantha Das" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://shayanthadas.github.io/project-ecommerce.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "E-Commerce Sales Dashboard",
+    "author": { "@type": "Person", "name": "Shayantha Das" },
+    "description": "Power BI dashboard tracking ৳50M+ in annual e-commerce sales with 70% reduction in reporting time.",
+    "keywords": "Power BI, SQL, e-commerce, data analysis"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink:#0d0d0d; --paper:#f5f0e8; --cream:#ede8db; --gold:#c9a84c; --teal:#1a7c6e; --rust:#b84c22; --muted:#6b6457; --card:#ffffff; --radius:4px; --nav-h:72px; }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--paper); color:var(--ink); line-height:1.6; overflow-x:hidden; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; height:var(--nav-h); display:flex; align-items:center; justify-content:space-between; padding:0 5vw; background:rgba(245,240,232,0.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(201,168,76,0.25); }
+    .nav-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:1.2rem; color:var(--ink); text-decoration:none; }
+    .nav-logo span { color:var(--gold); }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a { font-size:0.88rem; font-weight:500; color:var(--muted); text-decoration:none; letter-spacing:0.06em; text-transform:uppercase; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--ink); }
+    .nav-cta { background:var(--ink); color:var(--paper) !important; padding:0.5rem 1.2rem; border-radius:var(--radius); transition:background 0.2s !important; }
+    .nav-cta:hover { background:var(--gold) !important; color:var(--ink) !important; }
+
+    .project-hero { padding:calc(var(--nav-h) + 4rem) 5vw 4rem; background:var(--cream); }
+    .breadcrumb { font-size:0.8rem; color:var(--muted); margin-bottom:1rem; }
+    .breadcrumb a { color:var(--teal); text-decoration:none; }
+    .breadcrumb a:hover { color:var(--rust); }
+    .project-tags { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.2rem; }
+    .proj-tag { font-size:0.74rem; background:var(--card); padding:0.3rem 0.8rem; border-radius:2px; color:var(--muted); font-weight:500; border:1px solid rgba(0,0,0,0.1); }
+    h1.project-title { font-family:'Syne',sans-serif; font-size:clamp(2rem,5vw,3.5rem); font-weight:800; letter-spacing:-0.04em; line-height:1.08; max-width:820px; }
+    h1.project-title em { font-family:'Instrument Serif',serif; font-style:italic; color:var(--gold); }
+    .project-meta { display:flex; gap:2.5rem; margin-top:1.5rem; flex-wrap:wrap; }
+    .pm-item { }
+    .pm-label { font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:0.2rem; }
+    .pm-value { font-weight:600; font-size:0.9rem; }
+
+    .project-thumbnail {
+      margin:0 5vw 0;
+      height:420px; border-radius:var(--radius);
+      background:linear-gradient(135deg,#0d2b1a,#1a5c3a);
+      display:flex; align-items:center; justify-content:center;
+      font-size:8rem;
+    }
+
+    .project-content { max-width:820px; margin:0 auto; padding:4rem 5vw; }
+    .section-label { font-size:0.75rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem; }
+    h2.content-h { font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:800; letter-spacing:-0.02em; margin-bottom:1rem; }
+    .content-body { color:var(--muted); line-height:1.8; margin-bottom:2rem; }
+    .content-body p { margin-bottom:1rem; }
+    .content-body ul { padding-left:1.5rem; margin-bottom:1rem; }
+    .content-body li { margin-bottom:0.5rem; }
+
+    /* Results */
+    .results-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:1rem; margin-bottom:3rem; }
+    .result-card { background:var(--card); border:1px solid rgba(0,0,0,0.08); border-radius:var(--radius); padding:1.5rem; text-align:center; }
+    .result-n { font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:var(--gold); line-height:1; }
+    .result-l { font-size:0.78rem; color:var(--muted); margin-top:0.3rem; }
+
+    .tech-stack { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem; }
+    .tech-pill { background:var(--cream); border:1px solid rgba(0,0,0,0.1); padding:0.4rem 1rem; border-radius:2px; font-size:0.83rem; font-weight:500; }
+
+    .project-nav { display:flex; justify-content:space-between; padding:3rem 5vw; background:var(--cream); }
+    .pnav-link { text-decoration:none; color:var(--ink); }
+    .pnav-label { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); font-weight:600; margin-bottom:0.3rem; }
+    .pnav-title { font-family:'Syne',sans-serif; font-weight:700; font-size:0.95rem; color:var(--teal); }
+    .pnav-link:hover .pnav-title { color:var(--rust); }
+
+    footer { background:#0a0a0a; color:rgba(245,240,232,0.45); padding:3rem 5vw; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    footer a { color:rgba(245,240,232,0.45); text-decoration:none; transition:color 0.2s; }
+    footer a:hover { color:var(--gold); }
+    .footer-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:1.1rem; color:var(--paper); }
+    .footer-logo span { color:var(--gold); }
+    .footer-links { display:flex; gap:2rem; font-size:0.82rem; }
+    @media (max-width:860px) { .nav-links{display:none;} .project-thumbnail{height:240px; font-size:5rem;} }
+  </style>
+</head>
+<body>
+<nav role="navigation" aria-label="Main Navigation">
+  <a href="index.html" class="nav-logo">Shayantha<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+  </ul>
+</nav>
+
+<header class="project-hero">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a> / <a href="projects.html">Projects</a> / E-Commerce Sales Dashboard
+  </nav>
+  <div class="project-tags">
+    <span class="proj-tag">Power BI</span>
+    <span class="proj-tag">SQL Server</span>
+    <span class="proj-tag">Python</span>
+    <span class="proj-tag">DAX</span>
+    <span class="proj-tag">Data Modeling</span>
+  </div>
+  <h1 class="project-title">E-Commerce Sales <em>Dashboard</em></h1>
+  <div class="project-meta">
+    <div class="pm-item">
+      <div class="pm-label">Client</div>
+      <div class="pm-value">Retail Company, Bangladesh</div>
+    </div>
+    <div class="pm-item">
+      <div class="pm-label">Timeline</div>
+      <div class="pm-value">3 Weeks</div>
+    </div>
+    <div class="pm-item">
+      <div class="pm-label">Completed</div>
+      <div class="pm-value">March 2026</div>
+    </div>
+    <div class="pm-item">
+      <div class="pm-label">Category</div>
+      <div class="pm-value">Business Intelligence</div>
+    </div>
+  </div>
+</header>
+
+<div class="project-thumbnail" role="img" aria-label="E-commerce sales dashboard project illustration">📦</div>
+
+<main class="project-content" id="main-content">
+
+  <div class="section-label">Overview</div>
+  <h2 class="content-h">The Challenge</h2>
+  <div class="content-body">
+    <p>A Bangladeshi e-commerce business processing ৳50M+ in annual sales across 12 product categories was drowning in spreadsheets. Their weekly sales reporting process took 4+ hours every Monday morning, involved 6 different Excel files, and was prone to errors that led to incorrect decisions.</p>
+    <p>The operations manager reached out needing a single, reliable source of truth for their business performance data — something the entire team could access, understand, and trust.</p>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="section-label">Impact</div>
+  <h2 class="content-h">Results at a Glance</h2>
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="result-n">70%</div>
+      <div class="result-l">Reduction in reporting time</div>
+    </div>
+    <div class="result-card">
+      <div class="result-n">৳50M+</div>
+      <div class="result-l">Sales tracked in real-time</div>
+    </div>
+    <div class="result-card">
+      <div class="result-n">12</div>
+      <div class="result-l">Product categories monitored</div>
+    </div>
+    <div class="result-card">
+      <div class="result-n">5</div>
+      <div class="result-l">Departments using the dashboard</div>
+    </div>
+  </div>
+
+  <div class="section-label">Approach</div>
+  <h2 class="content-h">How I Built It</h2>
+  <div class="content-body">
+    <p><strong>Step 1: Data Audit &amp; Modeling</strong></p>
+    <p>I started by auditing all 6 existing Excel files to understand the data structure, relationships, and gaps. From there, I designed a proper star schema in SQL Server — a central fact table for orders, surrounded by dimension tables for products, customers, dates, and sales channels.</p>
+    <p><strong>Step 2: ETL with Python</strong></p>
+    <p>I wrote Python scripts using Pandas to automate the extraction, cleaning, and loading of daily order data from their order management system into SQL Server. This eliminated the manual export/import process entirely.</p>
+    <p><strong>Step 3: Power BI Development</strong></p>
+    <p>The dashboard was built in Power BI with DAX measures for all KPIs. Key pages included:</p>
+    <ul>
+      <li>Executive Summary — revenue, orders, AOV, and YoY comparisons</li>
+      <li>Product Performance — sales by category, top/bottom performers, margin analysis</li>
+      <li>Customer Analytics — new vs returning, geographic breakdown, LTV cohorts</li>
+      <li>Trend Analysis — daily/weekly/monthly revenue with rolling averages</li>
+    </ul>
+    <p><strong>Step 4: Deployment &amp; Training</strong></p>
+    <p>The dashboard was published to Power BI Service with row-level security for different team roles. I delivered a 90-minute training session and a written guide for the team.</p>
+  </div>
+
+  <div class="section-label">Tech Stack</div>
+  <h2 class="content-h">Tools Used</h2>
+  <div class="tech-stack">
+    <span class="tech-pill">Power BI Desktop</span>
+    <span class="tech-pill">Power BI Service</span>
+    <span class="tech-pill">SQL Server</span>
+    <span class="tech-pill">Python (Pandas)</span>
+    <span class="tech-pill">DAX</span>
+    <span class="tech-pill">Power Query</span>
+    <span class="tech-pill">Excel</span>
+  </div>
+
+  <div style="background:var(--cream); border-left:4px solid var(--gold); padding:1.5rem 2rem; border-radius:0 var(--radius) var(--radius) 0; margin-bottom:2rem;">
+    <p style="font-style:italic; color:var(--ink); line-height:1.75;">"Shayantha transformed our messy Excel sheets into a beautiful Power BI dashboard. Our weekly reporting went from 4 hours to 15 minutes. I wish we had done this 2 years ago."</p>
+    <div style="margin-top:0.8rem; font-weight:600; font-size:0.88rem;">— Rafiq Ahmed, Operations Manager</div>
+  </div>
+
+  <div style="text-align:center; margin-top:3rem;">
+    <a href="contact.html" style="display:inline-block; background:var(--ink); color:var(--paper); padding:0.9rem 2.5rem; border-radius:var(--radius); text-decoration:none; font-weight:600; font-size:0.9rem;" aria-label="Contact Shayantha Das about a similar project">Build Something Similar →</a>
+  </div>
+
+</main>
+
+<nav class="project-nav" aria-label="Project navigation">
+  <a href="projects.html" class="pnav-link">
+    <div class="pnav-label">← Back to</div>
+    <div class="pnav-title">All Projects</div>
+  </a>
+  <a href="project-churn.html" class="pnav-link" style="text-align:right;">
+    <div class="pnav-label">Next Project →</div>
+    <div class="pnav-title">Customer Churn Prediction</div>
+  </a>
+</nav>
+
+<footer role="contentinfo">
+  <div>
+    <div class="footer-logo">Shayantha<span>.</span></div>
+    <p style="font-size:0.78rem;margin-top:0.4rem;">Data Analyst &amp; Digital Marketer · Bangladesh</p>
+  </div>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div style="font-size:0.78rem;">© 2026 Shayantha Das</div>
+</footer>
+</body>
+</html>
