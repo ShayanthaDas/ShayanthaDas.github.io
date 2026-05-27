@@ -63,7 +63,27 @@
     .skill-pct { color:var(--gold); font-size:0.85rem; }
     .skill-bar { height:4px; background:var(--cream); border-radius:2px; overflow:hidden; }
     .skill-fill { height:100%; background:linear-gradient(90deg,var(--gold),var(--teal)); border-radius:2px; transition:width 1.2s ease; }
+    <section class="card">
 
+<h2>Professional Data Analytics Services</h2>
+
+<p>
+I specialize in business analytics, dashboard development, marketing analytics, and reporting solutions using Python, SQL, Excel, Power BI, and Tableau.
+</p>
+
+<p>
+My projects focus on transforming raw business data into meaningful insights that support decision-making and business growth.
+</p>
+
+<p>
+I continuously work on analytics projects including sales analysis, customer segmentation, dashboard reporting, and marketing performance analysis.
+</p>
+
+<p>
+My goal is to help businesses and clients understand their data clearly through visual dashboards and analytical reporting systems.
+</p>
+
+</section>
     /* Timeline */
     .timeline-section { padding:5rem 5vw; background:var(--cream); }
     .timeline { position:relative; max-width:720px; padding-left:2.5rem; }
