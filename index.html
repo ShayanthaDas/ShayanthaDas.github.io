@@ -61,11 +61,10 @@
     .tab-stripe.show{transform:scaleX(1);}
 
     /* ══ SECTION TRANSITIONS ══ */
-    section{display:none;opacity:0;transform:translateY(28px);filter:blur(6px);}
+    section{display:none;}
     section.active{display:block;animation:sIn var(--speed) cubic-bezier(.22,1,.36,1) forwards;}
-    section.leaving{display:block;animation:sOut .25s ease forwards;pointer-events:none;position:absolute;width:100%;top:0;left:0;}
-    @keyframes sIn{from{opacity:0;transform:translateY(28px);filter:blur(6px);}to{opacity:1;transform:translateY(0);filter:blur(0);}}
-    @keyframes sOut{from{opacity:1;transform:translateY(0);filter:blur(0);}to{opacity:0;transform:translateY(-16px);filter:blur(4px);}}
+    section.leaving{display:none;}
+    @keyframes sIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 
     /* ══ HERO ══ */
     #home{min-height:100vh;padding-top:var(--nav-h);display:flex;align-items:center;position:relative;overflow:hidden;}
@@ -510,18 +509,15 @@ let cur = 'home';
 
 function go(id) {
   if (id === cur) return;
-  /* out */
-  const old = document.getElementById(cur);
-  old.classList.remove('active');
-  old.classList.add('leaving');
-  setTimeout(() => old.classList.remove('leaving'), 300);
+  /* hide old */
+  document.getElementById(cur).classList.remove('active');
   cur = id;
   /* theme */
   Object.values(THEMES).forEach(t => { if (t) document.body.classList.remove(t); });
   if (THEMES[id]) document.body.classList.add(THEMES[id]);
   /* title */
   document.title = TITLES[id] || TITLES.home;
-  /* in */
+  /* show new */
   document.getElementById(id).classList.add('active');
   /* stripe */
   const s = document.getElementById('tabStripe');
