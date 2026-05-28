@@ -197,8 +197,8 @@
 
   /* ── HERO ── */
   .hero {
-    min-height: 100vh;
-    padding-top: 64px;
+    min-height: calc(100vh - 64px);
+    padding-top: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -782,7 +782,7 @@
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; }
     .hero-right { display: none; }
-    .hero-left { padding: 3rem 5vw; }
+    .hero-left { padding: 2rem 5vw 3rem; }
     .about-grid { grid-template-columns: 1fr; gap: 3rem; }
     .contact-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
@@ -792,10 +792,12 @@
     .projects-header { flex-direction: column; align-items: flex-start; }
   }
   @media (max-width: 640px) {
+    .hero { min-height: auto; }
     .nav-links li:not(:last-child) { display: none; }
     .hero-stats { gap: 1.5rem; }
     section { padding: 4rem 5vw; }
-    .hero-name { font-size: 4.5rem; }
+    .hero-name { font-size: 4rem; }
+    .hero-tagline { font-size: 1rem; }
   }
 </style>
 </head>
@@ -814,7 +816,7 @@
   <div class="nav-badge">Available for work</div>
 </nav>
 
-<main id="main-content">
+<main id="main-content" style="margin-top: 64px;">
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -854,9 +856,9 @@
   <div class="hero-right">
     <div class="hero-photo-wrap">
       <div class="hero-photo-bg"></div>
-      <div class="hero-photo">
-        <img src="https://shayanthadas.github.io/assets/profile.jpg" alt="Shayantha Das" onerror="this.style.display='none'; this.nextSibling.style.display='flex'">
-        <div class="hero-photo-initials" style="display:none">SD</div>
+      <div class="hero-photo" id="heroPhoto">
+        <img src="assets/profile.jpg" alt="Shayantha Das – Data Analyst and Digital Marketer from Chattogram Bangladesh" onerror="this.style.display='none'; document.getElementById('heroInitials').style.display='flex'">
+        <div id="heroInitials" class="hero-photo-initials" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; font-size:6rem; opacity:0.25; letter-spacing:0.05em;">SD</div>
       </div>
       <div class="hero-floating-tag tag-python">
         <div class="dot"></div> Python · SQL
