@@ -73,25 +73,13 @@ footer{
   margin-top:40px;
 }
 
-/* FIX CONTACT ALIGNMENT */
-.contact-box p{
-  margin:10px 0;
-  word-break:break-word;
-}
-.linkedin-btn{
-display:inline-block;
-padding:14px 28px;
-background:#0A66C2;
-color:white;
-text-decoration:none;
-font-weight:600;
-border-radius:10px;
-transition:0.3s ease;
-margin-top:15px;
-}
-
-.linkedin-btn:hover{
-background:#004182;
-transform:translateY(-3px);
-box-shadow:0 10px 20px rgba(10,102,194,0.3);
+a.linkedin-btn{
+  all: unset;
+  display: inline-block;
+  padding: 12px 22px;
+  background: #0a66c2;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
 }
