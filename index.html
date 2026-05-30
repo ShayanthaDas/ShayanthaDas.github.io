@@ -911,7 +911,7 @@
 <main id="main-content" style="margin-top: 64px;">
 
 <!-- HERO -->
-<section class="hero" id="home">
+<section class="hero" id="hero">
   <!-- Mobile photo (shown only on small screens) -->
   <div class="hero-mobile-photo">
     <div class="m-photo-ring">
@@ -1394,7 +1394,7 @@ document.querySelectorAll('a[data-section]').forEach(a => {
     const target = document.getElementById(id);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      history.pushState(null, '', '/' + id);
+      history.pushState(null, '', id === 'hero' ? '/' : '/' + id);
     }
   });
 });
@@ -1405,7 +1405,7 @@ function setActiveNav() {
   navSections.forEach(s => {
     if (window.scrollY >= s.offsetTop - 120) current = s.id;
   });
-  if (current) history.replaceState(null, '', '/' + current);
+  if (current && current !== 'hero') history.replaceState(null, '', '/' + current);
   else history.replaceState(null, '', '/');
 
   allNavLinks.forEach(a => {
