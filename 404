@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shayantha Das</title>
+<script>
+  // Grab the section from URL e.g. /about → "about"
+  var path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+  var valid = ['about','services','projects','contact','why','process','testimonials'];
+  if (valid.indexOf(path) !== -1) {
+    sessionStorage.setItem('gotoSection', path);
+  }
+  window.location.replace('/');
+</script>
+</head>
+<body></body>
+</html>
