@@ -175,8 +175,8 @@
     transition: left 0.25s ease, right 0.25s ease;
   }
   .nav-links a:hover {
-    color: var(--text);
-    background: rgba(255,255,255,0.05);
+    color: #60a5fa;
+    background: rgba(59,130,246,0.12);
   }
   .nav-links a:hover::after {
     left: 0.85rem;
@@ -184,14 +184,15 @@
   }
   /* Active / current section highlight */
   .nav-links a.active {
-    color: var(--blue-light);
-    background: rgba(59,130,246,0.08);
+    color: #60a5fa !important;
+    background: rgba(59,130,246,0.15) !important;
+    font-weight: 700 !important;
   }
   .nav-links a.active::after {
     left: 0.85rem;
     right: 0.85rem;
-    background: var(--blue-light);
-    box-shadow: 0 0 8px rgba(59,130,246,0.6);
+    background: #60a5fa;
+    box-shadow: 0 0 10px rgba(59,130,246,0.8);
   }
 
   .nav-cta {
@@ -1381,35 +1382,24 @@
 </footer>
 
 <script>
-// Active nav link highlight on scroll
-const sections = document.querySelectorAll('section[id]');
-// Active nav link on scroll
-const sections = document.querySelectorAll('section[id]');
+// ── Active nav on scroll (clean single version) ──
+const navSections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(a => a.classList.remove('active'));
-      const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-      if (active && !active.classList.contains('nav-cta')) active.classList.add('active');
-    }
-  });
-}, { threshold: 0.4 });
-sections.forEach(s => observer.observe(s));
-window.addEventListener('scroll', () => {
+
+function setActiveNav() {
   let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 100) current = s.id;
+  navSections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.id;
   });
   navLinks.forEach(a => {
-    a.style.color = '';
-    a.style.borderBottomColor = '';
-    if (a.getAttribute('href') === '#' + current) {
-      a.style.color = 'var(--blue-light)';
-      a.style.borderBottomColor = 'var(--blue-light)';
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current && !a.classList.contains('nav-cta')) {
+      a.classList.add('active');
     }
   });
-});
+}
+window.addEventListener('scroll', setActiveNav);
+setActiveNav(); // run on load
 
 function handleSubmit(e) {
   e.preventDefault();
