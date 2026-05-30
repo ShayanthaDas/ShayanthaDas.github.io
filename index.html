@@ -904,58 +904,58 @@ const barObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 bars.forEach(b => { b.style.animationPlayState = 'paused'; barObs.observe(b); });
 
-// ── Clean URL navigation (no # ever) ──
-const sections = document.querySelectorAll('section[id]');
+// ── Navigation: smooth scroll + clean URL ──
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const top = el.getBoundingClientRect().top + window.scrollY - 64;
+  window.scrollTo({ top: top, behavior: 'smooth' });
+  history.pushState(null, '', '/' + id);
+  highlightNav(id);
+}
 
-// Smooth scroll + pushState on click
-document.querySelectorAll('a[data-section]').forEach(a => {
-  a.addEventListener('click', function(e) {
-    e.preventDefault();
-    const id = this.getAttribute('data-section');
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      history.pushState({ section: id }, '', '/' + id);
-      highlightNav(id);
-    }
-  });
-});
-
-// On load: check sessionStorage (set by 404.html) or pathname
-window.addEventListener('DOMContentLoaded', () => {
-  const stored = sessionStorage.getItem('gotoSection');
-  const fromPath = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
-  const id = stored || fromPath;
-  if (stored) sessionStorage.removeItem('gotoSection');
-  if (id && id !== 'index.html') {
-    const el = document.getElementById(id);
-    if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
-    history.replaceState({ section: id }, '', '/' + id);
-    highlightNav(id);
-  }
-});
-
-// Highlight nav link
-function highlightNav(current) {
+function highlightNav(id) {
   document.querySelectorAll('.nav-links a[data-section]').forEach(a => {
     a.classList.remove('active');
-    if (a.getAttribute('data-section') === current && !a.classList.contains('nav-cta')) {
+    if (a.getAttribute('data-section') === id && !a.classList.contains('nav-cta')) {
       a.classList.add('active');
     }
   });
 }
 
-// Scroll: update URL + highlight
-function setActiveNav() {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+// Attach click to ALL data-section links
+document.querySelectorAll('a[data-section]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    scrollToSection(this.getAttribute('data-section'));
   });
-  const path = (current && current !== 'home') ? '/' + current : '/';
-  history.replaceState({ section: current }, '', path);
+});
+
+// On load: restore section from sessionStorage (404 redirect) or URL
+(function() {
+  const stored = sessionStorage.getItem('gotoSection');
+  if (stored) {
+    sessionStorage.removeItem('gotoSection');
+    setTimeout(() => scrollToSection(stored), 300);
+    return;
+  }
+  const path = window.location.pathname.replace(/[^a-z]/gi, '');
+  if (path) setTimeout(() => scrollToSection(path), 300);
+})();
+
+// Scroll: highlight active nav + update URL
+const allSections = document.querySelectorAll('section[id]');
+function onScroll() {
+  let current = '';
+  allSections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 130) current = s.id;
+  });
   highlightNav(current);
+  const path = (current && current !== 'home') ? '/' + current : '/';
+  history.replaceState(null, '', path);
 }
-window.addEventListener('scroll', setActiveNav, { passive: true });
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 </script>
 </head>
 <body>
@@ -1464,58 +1464,58 @@ const barObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 bars.forEach(b => { b.style.animationPlayState = 'paused'; barObs.observe(b); });
 
-// ── Clean URL navigation (no # ever) ──
-const sections = document.querySelectorAll('section[id]');
+// ── Navigation: smooth scroll + clean URL ──
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const top = el.getBoundingClientRect().top + window.scrollY - 64;
+  window.scrollTo({ top: top, behavior: 'smooth' });
+  history.pushState(null, '', '/' + id);
+  highlightNav(id);
+}
 
-// Smooth scroll + pushState on click
-document.querySelectorAll('a[data-section]').forEach(a => {
-  a.addEventListener('click', function(e) {
-    e.preventDefault();
-    const id = this.getAttribute('data-section');
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      history.pushState({ section: id }, '', '/' + id);
-      highlightNav(id);
-    }
-  });
-});
-
-// On load: check sessionStorage (set by 404.html) or pathname
-window.addEventListener('DOMContentLoaded', () => {
-  const stored = sessionStorage.getItem('gotoSection');
-  const fromPath = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
-  const id = stored || fromPath;
-  if (stored) sessionStorage.removeItem('gotoSection');
-  if (id && id !== 'index.html') {
-    const el = document.getElementById(id);
-    if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
-    history.replaceState({ section: id }, '', '/' + id);
-    highlightNav(id);
-  }
-});
-
-// Highlight nav link
-function highlightNav(current) {
+function highlightNav(id) {
   document.querySelectorAll('.nav-links a[data-section]').forEach(a => {
     a.classList.remove('active');
-    if (a.getAttribute('data-section') === current && !a.classList.contains('nav-cta')) {
+    if (a.getAttribute('data-section') === id && !a.classList.contains('nav-cta')) {
       a.classList.add('active');
     }
   });
 }
 
-// Scroll: update URL + highlight
-function setActiveNav() {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+// Attach click to ALL data-section links
+document.querySelectorAll('a[data-section]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    scrollToSection(this.getAttribute('data-section'));
   });
-  const path = (current && current !== 'home') ? '/' + current : '/';
-  history.replaceState({ section: current }, '', path);
+});
+
+// On load: restore section from sessionStorage (404 redirect) or URL
+(function() {
+  const stored = sessionStorage.getItem('gotoSection');
+  if (stored) {
+    sessionStorage.removeItem('gotoSection');
+    setTimeout(() => scrollToSection(stored), 300);
+    return;
+  }
+  const path = window.location.pathname.replace(/[^a-z]/gi, '');
+  if (path) setTimeout(() => scrollToSection(path), 300);
+})();
+
+// Scroll: highlight active nav + update URL
+const allSections = document.querySelectorAll('section[id]');
+function onScroll() {
+  let current = '';
+  allSections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 130) current = s.id;
+  });
   highlightNav(current);
+  const path = (current && current !== 'home') ? '/' + current : '/';
+  history.replaceState(null, '', path);
 }
-window.addEventListener('scroll', setActiveNav, { passive: true });
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 </script>
 </body>
 </html>
