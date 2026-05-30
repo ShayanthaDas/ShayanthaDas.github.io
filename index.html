@@ -1382,10 +1382,25 @@
 </footer>
 
 <script>
-// ── Active nav on scroll (clean single version) ──
+// ── Smooth scroll + remove # from URL ──
 const navSections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
+// Intercept all anchor clicks — scroll smoothly & clean URL
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').slice(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Remove # from URL bar cleanly
+      history.pushState(null, '', window.location.pathname);
+    }
+  });
+});
+
+// Active nav highlight on scroll
 function setActiveNav() {
   let current = '';
   navSections.forEach(s => {
@@ -1399,7 +1414,7 @@ function setActiveNav() {
   });
 }
 window.addEventListener('scroll', setActiveNav);
-setActiveNav(); // run on load
+setActiveNav();
 
 function handleSubmit(e) {
   e.preventDefault();
