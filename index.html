@@ -887,6 +887,7 @@
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
+// ── Form submit ──
 function handleSubmit(e) {
   e.preventDefault();
   const btn = document.getElementById('submitBtn');
@@ -896,30 +897,65 @@ function handleSubmit(e) {
   setTimeout(() => { btn.style.display='none'; msg.style.display='block'; }, 1000);
 }
 
-// Skill bar animation
+// ── Skill bars ──
 const bars = document.querySelectorAll('.skill-bar-fill');
-const obs = new IntersectionObserver((entries) => {
+const barObs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.style.animationPlayState = 'running'; });
 }, { threshold: 0.3 });
-bars.forEach(b => { b.style.animationPlayState = 'paused'; obs.observe(b); });
+bars.forEach(b => { b.style.animationPlayState = 'paused'; barObs.observe(b); });
 
-// Active nav highlight on scroll
-const navSections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-function setActiveNav() {
-  let current = '';
-  navSections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+// ── Clean URL navigation (no # ever) ──
+const sections = document.querySelectorAll('section[id]');
+
+// Smooth scroll + pushState on click
+document.querySelectorAll('a[data-section]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const id = this.getAttribute('data-section');
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.pushState({ section: id }, '', '/' + id);
+      highlightNav(id);
+    }
   });
-  navLinks.forEach(a => {
+});
+
+// On load: check sessionStorage (set by 404.html) or pathname
+window.addEventListener('DOMContentLoaded', () => {
+  const stored = sessionStorage.getItem('gotoSection');
+  const fromPath = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+  const id = stored || fromPath;
+  if (stored) sessionStorage.removeItem('gotoSection');
+  if (id && id !== 'index.html') {
+    const el = document.getElementById(id);
+    if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
+    history.replaceState({ section: id }, '', '/' + id);
+    highlightNav(id);
+  }
+});
+
+// Highlight nav link
+function highlightNav(current) {
+  document.querySelectorAll('.nav-links a[data-section]').forEach(a => {
     a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current && !a.classList.contains('nav-cta')) {
+    if (a.getAttribute('data-section') === current && !a.classList.contains('nav-cta')) {
       a.classList.add('active');
     }
   });
 }
+
+// Scroll: update URL + highlight
+function setActiveNav() {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+  });
+  const path = (current && current !== 'home') ? '/' + current : '/';
+  history.replaceState({ section: current }, '', path);
+  highlightNav(current);
+}
 window.addEventListener('scroll', setActiveNav, { passive: true });
-setActiveNav();
 </script>
 </head>
 <body>
@@ -928,11 +964,11 @@ setActiveNav();
 <nav aria-label="Main navigation">
   <a href="#" class="nav-logo">S<span>D</span></a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    <li><a href="/about" data-section="about">About</a></li>
+    <li><a href="/services" data-section="services">Services</a></li>
+    <li><a href="/projects" data-section="projects">Projects</a></li>
+    <li><a href="/contact" data-section="contact">Contact</a></li>
+    <li><a href="/contact" data-section="contact" class="nav-cta">Hire Me</a></li>
   </ul>
   <div class="nav-badge">Available for work</div>
 </nav>
@@ -962,8 +998,8 @@ setActiveNav();
     </p>
 
     <div class="hero-btns">
-      <a href="#projects" class="btn-primary">View Projects →</a>
-      <a href="#contact" class="btn-secondary">Let's Talk</a>
+      <a href="/projects" data-section="projects" class="btn-primary">View Projects →</a>
+      <a href="/contact" data-section="contact" class="btn-secondary">Let's Talk</a>
     </div>
 
     <div class="hero-stats">
@@ -1157,7 +1193,7 @@ setActiveNav();
       <div style="font-size:2rem; margin-bottom:1rem; opacity:0.4">+</div>
       <div class="project-title" style="font-size:0.95rem; opacity:0.6">More coming soon</div>
       <p class="project-desc" style="font-size:0.8rem; margin-top:0.5rem;">Have a project in mind? Let's collaborate.</p>
-      <a href="#contact" class="project-link" style="margin-top:1rem">Start a conversation →</a>
+      <a href="/contact" data-section="contact" class="project-link" style="margin-top:1rem">Start a conversation →</a>
     </div>
   </div>
 </section>
@@ -1411,6 +1447,7 @@ setActiveNav();
 </footer>
 
 <script>
+// ── Form submit ──
 function handleSubmit(e) {
   e.preventDefault();
   const btn = document.getElementById('submitBtn');
@@ -1420,30 +1457,65 @@ function handleSubmit(e) {
   setTimeout(() => { btn.style.display='none'; msg.style.display='block'; }, 1000);
 }
 
-// Skill bar animation
+// ── Skill bars ──
 const bars = document.querySelectorAll('.skill-bar-fill');
-const obs = new IntersectionObserver((entries) => {
+const barObs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.style.animationPlayState = 'running'; });
 }, { threshold: 0.3 });
-bars.forEach(b => { b.style.animationPlayState = 'paused'; obs.observe(b); });
+bars.forEach(b => { b.style.animationPlayState = 'paused'; barObs.observe(b); });
 
-// Active nav highlight on scroll
-const navSections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-function setActiveNav() {
-  let current = '';
-  navSections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+// ── Clean URL navigation (no # ever) ──
+const sections = document.querySelectorAll('section[id]');
+
+// Smooth scroll + pushState on click
+document.querySelectorAll('a[data-section]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const id = this.getAttribute('data-section');
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.pushState({ section: id }, '', '/' + id);
+      highlightNav(id);
+    }
   });
-  navLinks.forEach(a => {
+});
+
+// On load: check sessionStorage (set by 404.html) or pathname
+window.addEventListener('DOMContentLoaded', () => {
+  const stored = sessionStorage.getItem('gotoSection');
+  const fromPath = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+  const id = stored || fromPath;
+  if (stored) sessionStorage.removeItem('gotoSection');
+  if (id && id !== 'index.html') {
+    const el = document.getElementById(id);
+    if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
+    history.replaceState({ section: id }, '', '/' + id);
+    highlightNav(id);
+  }
+});
+
+// Highlight nav link
+function highlightNav(current) {
+  document.querySelectorAll('.nav-links a[data-section]').forEach(a => {
     a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current && !a.classList.contains('nav-cta')) {
+    if (a.getAttribute('data-section') === current && !a.classList.contains('nav-cta')) {
       a.classList.add('active');
     }
   });
 }
+
+// Scroll: update URL + highlight
+function setActiveNav() {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+  });
+  const path = (current && current !== 'home') ? '/' + current : '/';
+  history.replaceState({ section: current }, '', path);
+  highlightNav(current);
+}
 window.addEventListener('scroll', setActiveNav, { passive: true });
-setActiveNav();
 </script>
 </body>
 </html>
