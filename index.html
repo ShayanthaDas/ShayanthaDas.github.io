@@ -887,6 +887,22 @@
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
+// ── Handle redirect from 404.html ──
+(function() {
+  var stored = sessionStorage.getItem('gotoSection');
+  if (stored) {
+    sessionStorage.removeItem('gotoSection');
+    setTimeout(function() {
+      var el = document.getElementById(stored);
+      if (el) {
+        var top = el.getBoundingClientRect().top + window.scrollY - 64;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        history.replaceState(null, '', '/' + stored);
+      }
+    }, 300);
+  }
+})();
+
 // ── Form submit ──
 function handleSubmit(e) {
   e.preventDefault();
@@ -904,22 +920,45 @@ const barObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 bars.forEach(b => { b.style.animationPlayState = 'paused'; barObs.observe(b); });
 
-// ── Active nav highlight on scroll ──
+// ── Navigation: intercept clicks, scroll smoothly, hide # from URL ──
+document.querySelectorAll('a[data-section]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const id = this.getAttribute('data-section');
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 64;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      // Show clean URL without #
+      history.pushState(null, '', '/' + id);
+      highlightNav(id);
+    }
+  });
+});
+
+// ── Active nav on scroll + clean URL while scrolling ──
 const allSections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+function highlightNav(id) {
+  document.querySelectorAll('.nav-links a[data-section]').forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('data-section') === id && !a.classList.contains('nav-cta')) {
+      a.classList.add('active');
+    }
+  });
+}
 
 function setActiveNav() {
   let current = '';
   allSections.forEach(s => {
     if (window.scrollY >= s.offsetTop - 130) current = s.id;
   });
-  navLinks.forEach(a => {
-    a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current && !a.classList.contains('nav-cta')) {
-      a.classList.add('active');
-    }
-  });
+  // Update URL cleanly while scrolling
+  const cleanPath = (current && current !== 'home') ? '/' + current : '/';
+  history.replaceState(null, '', cleanPath);
+  highlightNav(current);
 }
+
 window.addEventListener('scroll', setActiveNav, { passive: true });
 setActiveNav();
 </script>
@@ -930,11 +969,11 @@ setActiveNav();
 <nav aria-label="Main navigation">
   <a href="#" class="nav-logo">S<span>D</span></a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    <li><a href="#about" data-section="about">About</a></li>
+    <li><a href="#services" data-section="services">Services</a></li>
+    <li><a href="#projects" data-section="projects">Projects</a></li>
+    <li><a href="#contact" data-section="contact">Contact</a></li>
+    <li><a href="#contact" data-section="contact" data-section="contact" class="nav-cta">Hire Me</a></li>
   </ul>
   <div class="nav-badge">Available for work</div>
 </nav>
@@ -964,8 +1003,8 @@ setActiveNav();
     </p>
 
     <div class="hero-btns">
-      <a href="#projects" class="btn-primary">View Projects →</a>
-      <a href="#contact" class="btn-secondary">Let's Talk</a>
+      <a href="#projects" data-section="projects" data-section="projects" class="btn-primary">View Projects →</a>
+      <a href="#contact" data-section="contact" data-section="contact" class="btn-secondary">Let's Talk</a>
     </div>
 
     <div class="hero-stats">
@@ -1159,7 +1198,7 @@ setActiveNav();
       <div style="font-size:2rem; margin-bottom:1rem; opacity:0.4">+</div>
       <div class="project-title" style="font-size:0.95rem; opacity:0.6">More coming soon</div>
       <p class="project-desc" style="font-size:0.8rem; margin-top:0.5rem;">Have a project in mind? Let's collaborate.</p>
-      <a href="#contact" class="project-link" style="margin-top:1rem">Start a conversation →</a>
+      <a href="#contact" data-section="contact" data-section="contact" class="project-link" style="margin-top:1rem">Start a conversation →</a>
     </div>
   </div>
 </section>
@@ -1413,6 +1452,22 @@ setActiveNav();
 </footer>
 
 <script>
+// ── Handle redirect from 404.html ──
+(function() {
+  var stored = sessionStorage.getItem('gotoSection');
+  if (stored) {
+    sessionStorage.removeItem('gotoSection');
+    setTimeout(function() {
+      var el = document.getElementById(stored);
+      if (el) {
+        var top = el.getBoundingClientRect().top + window.scrollY - 64;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        history.replaceState(null, '', '/' + stored);
+      }
+    }, 300);
+  }
+})();
+
 // ── Form submit ──
 function handleSubmit(e) {
   e.preventDefault();
@@ -1430,22 +1485,45 @@ const barObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 bars.forEach(b => { b.style.animationPlayState = 'paused'; barObs.observe(b); });
 
-// ── Active nav highlight on scroll ──
+// ── Navigation: intercept clicks, scroll smoothly, hide # from URL ──
+document.querySelectorAll('a[data-section]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const id = this.getAttribute('data-section');
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 64;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      // Show clean URL without #
+      history.pushState(null, '', '/' + id);
+      highlightNav(id);
+    }
+  });
+});
+
+// ── Active nav on scroll + clean URL while scrolling ──
 const allSections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+function highlightNav(id) {
+  document.querySelectorAll('.nav-links a[data-section]').forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('data-section') === id && !a.classList.contains('nav-cta')) {
+      a.classList.add('active');
+    }
+  });
+}
 
 function setActiveNav() {
   let current = '';
   allSections.forEach(s => {
     if (window.scrollY >= s.offsetTop - 130) current = s.id;
   });
-  navLinks.forEach(a => {
-    a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current && !a.classList.contains('nav-cta')) {
-      a.classList.add('active');
-    }
-  });
+  // Update URL cleanly while scrolling
+  const cleanPath = (current && current !== 'home') ? '/' + current : '/';
+  history.replaceState(null, '', cleanPath);
+  highlightNav(current);
 }
+
 window.addEventListener('scroll', setActiveNav, { passive: true });
 setActiveNav();
 </script>
