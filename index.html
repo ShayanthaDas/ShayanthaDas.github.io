@@ -899,11 +899,11 @@
 <nav aria-label="Main navigation">
   <a href="#" class="nav-logo">S<span>D</span></a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    <li><a href="/about" data-section="about">About</a></li>
+    <li><a href="/services" data-section="services">Services</a></li>
+    <li><a href="/projects" data-section="projects">Projects</a></li>
+    <li><a href="/contact" data-section="contact">Contact</a></li>
+    <li><a href="/contact" data-section="contact" class="nav-cta">Hire Me</a></li>
   </ul>
   <div class="nav-badge">Available for work</div>
 </nav>
@@ -933,8 +933,8 @@
     </p>
 
     <div class="hero-btns">
-      <a href="#projects" class="btn-primary">View Projects →</a>
-      <a href="#contact" class="btn-secondary">Let's Talk</a>
+      <a href="/projects" data-section="projects" class="btn-primary">View Projects →</a>
+      <a href="/contact" data-section="contact" class="btn-secondary">Let's Talk</a>
     </div>
 
     <div class="hero-stats">
@@ -1128,7 +1128,7 @@
       <div style="font-size:2rem; margin-bottom:1rem; opacity:0.4">+</div>
       <div class="project-title" style="font-size:0.95rem; opacity:0.6">More coming soon</div>
       <p class="project-desc" style="font-size:0.8rem; margin-top:0.5rem;">Have a project in mind? Let's collaborate.</p>
-      <a href="#contact" class="project-link" style="margin-top:1rem">Start a conversation →</a>
+      <a href="/contact" data-section="contact" class="project-link" style="margin-top:1rem">Start a conversation →</a>
     </div>
   </div>
 </section>
@@ -1382,21 +1382,54 @@
 </footer>
 
 <script>
-// ── Active nav highlight on scroll ──
+// ── Clean URLs (no #) + smooth scroll + active nav ──
 const navSections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const allNavLinks = document.querySelectorAll('a[data-section]');
+
+// On page load: scroll to section from URL or sessionStorage (404 redirect)
+(function() {
+  const fromStorage = sessionStorage.getItem('scrollTo');
+  const fromPath = window.location.pathname.replace(/\//g, '');
+  const id = fromStorage || fromPath;
+  if (fromStorage) sessionStorage.removeItem('scrollTo');
+  if (id) {
+    const target = document.getElementById(id);
+    if (target) setTimeout(() => target.scrollIntoView({ behavior: 'auto', block: 'start' }), 150);
+  }
+})();
+
+// Click: smooth scroll + clean URL
+allNavLinks.forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const id = this.getAttribute('data-section');
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.pushState(null, '', '/' + id);
+      highlightNav(id);
+    }
+  });
+});
+
+// Scroll: update URL + highlight nav
+function highlightNav(current) {
+  document.querySelectorAll('.nav-links a[data-section]').forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('data-section') === current && !a.classList.contains('nav-cta')) {
+      a.classList.add('active');
+    }
+  });
+}
 
 function setActiveNav() {
   let current = '';
   navSections.forEach(s => {
     if (window.scrollY >= s.offsetTop - 120) current = s.id;
   });
-  navLinks.forEach(a => {
-    a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current && !a.classList.contains('nav-cta')) {
-      a.classList.add('active');
-    }
-  });
+  const cleanPath = (current && current !== 'home') ? '/' + current : '/';
+  history.replaceState(null, '', cleanPath);
+  highlightNav(current);
 }
 window.addEventListener('scroll', setActiveNav, { passive: true });
 setActiveNav();
