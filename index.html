@@ -887,13 +887,34 @@
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
   const btn = document.getElementById('submitBtn');
   const msg = document.getElementById('successMsg');
+  const form = e.target;
   btn.textContent = 'Sending...';
   btn.disabled = true;
-  setTimeout(() => { btn.style.display='none'; msg.style.display='block'; }, 1000);
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      btn.style.display = 'none';
+      msg.style.display = 'block';
+      msg.innerHTML = '✅ Message sent! I will reply within 24 hours.';
+      form.reset();
+    } else {
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+      alert('Something went wrong. Please email shayanthadas@gmail.com directly.');
+    }
+  } catch (err) {
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+    alert('Something went wrong. Please email shayanthadas@gmail.com directly.');
+  }
 }
 const bars = document.querySelectorAll('.skill-bar-fill');
 const barObs = new IntersectionObserver((entries) => {
@@ -1302,21 +1323,21 @@ bars.forEach(b => { b.style.animationPlayState = 'paused'; barObs.observe(b); })
 
     </div>
 
-    <form class="contact-form" onsubmit="handleSubmit(event)">
+    <form class="contact-form" action="https://formspree.io/f/mnjryrdp" method="POST" onsubmit="handleSubmit(event)">
       <div class="form-row">
         <div class="form-group">
           <label class="form-label">Full Name *</label>
-          <input type="text" class="form-input" placeholder="Your name" required>
+          <input type="text" name="name" class="form-input" placeholder="Your name" required>
         </div>
         <div class="form-group">
           <label class="form-label">Email *</label>
-          <input type="email" class="form-input" placeholder="your@email.com" required>
+          <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
         </div>
       </div>
 
       <div class="form-group">
         <label class="form-label">Service Needed</label>
-        <select class="form-select">
+        <select name="service" class="form-select">
           <option value="">— Select —</option>
           <option>Data Analysis</option>
           <option>Dashboard Development</option>
@@ -1329,12 +1350,12 @@ bars.forEach(b => { b.style.animationPlayState = 'paused'; barObs.observe(b); })
 
       <div class="form-group">
         <label class="form-label">Subject *</label>
-        <input type="text" class="form-input" placeholder="Project brief..." required>
+        <input type="text" name="subject" class="form-input" placeholder="Project brief..." required>
       </div>
 
       <div class="form-group">
         <label class="form-label">Message *</label>
-        <textarea class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+        <textarea name="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
       </div>
 
       <button type="submit" class="btn-submit" id="submitBtn">
@@ -1391,13 +1412,34 @@ bars.forEach(b => { b.style.animationPlayState = 'paused'; barObs.observe(b); })
 </footer>
 
 <script>
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
   const btn = document.getElementById('submitBtn');
   const msg = document.getElementById('successMsg');
+  const form = e.target;
   btn.textContent = 'Sending...';
   btn.disabled = true;
-  setTimeout(() => { btn.style.display='none'; msg.style.display='block'; }, 1000);
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      btn.style.display = 'none';
+      msg.style.display = 'block';
+      msg.innerHTML = '✅ Message sent! I will reply within 24 hours.';
+      form.reset();
+    } else {
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+      alert('Something went wrong. Please email shayanthadas@gmail.com directly.');
+    }
+  } catch (err) {
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+    alert('Something went wrong. Please email shayanthadas@gmail.com directly.');
+  }
 }
 const bars = document.querySelectorAll('.skill-bar-fill');
 const barObs = new IntersectionObserver((entries) => {
