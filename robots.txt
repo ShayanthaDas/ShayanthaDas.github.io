@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.git
+
+Sitemap: https://shayanthadas.github.io/sitemap.xml
+Host: https://shayanthadas.github.io
