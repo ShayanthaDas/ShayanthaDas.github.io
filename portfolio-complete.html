@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayantha Das | Data Analyst & BI Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #001a33;
+            --navy-light: #003d5c;
+            --cyan: #00d4ff;
+            --cyan-dark: #0099cc;
+            --teal: #00b8a9;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-500: #6b7280;
+            --gray-700: #374151;
+            --gray-900: #111827;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--navy);
+            color: var(--white);
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0, 26, 51, 0.15);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .logo span {
+            color: var(--cyan);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--cyan);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .hero .tagline {
+            font-size: 1.25rem;
+            color: var(--cyan);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #d1d5db;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: var(--cyan);
+            color: var(--navy);
+            border-color: var(--cyan);
+        }
+
+        .btn-primary:hover {
+            background: var(--cyan-dark);
+            border-color: var(--cyan-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section Styling */
+        section {
+            background: var(--white);
+            margin-bottom: 3rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 26, 51, 0.08);
+        }
+
+        .section-header {
+            position: relative;
+            padding: 2.5rem 2rem 2rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .section-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--cyan) 0%, var(--teal) 100%);
+        }
+
+        .section-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: -0.01em;
+        }
+
+        .section-header p {
+            color: var(--gray-500);
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .section-content {
+            padding: 2.5rem 2rem;
+        }
+
+        /* Case Studies */
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .case-study-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .case-study-card:hover {
+            border-color: var(--cyan);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .case-study-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .case-study-card .label {
+            display: inline-block;
+            background: var(--cyan);
+            color: var(--navy);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .case-study-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study-section strong {
+            display: block;
+            color: var(--navy);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .case-study-section p {
+            color: var(--gray-700);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .case-study-section ul {
+            margin-left: 1.5rem;
+            color: var(--gray-700);
+            font-size: 0.9rem;
+        }
+
+        .case-study-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .metrics-highlight {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 184, 169, 0.1) 100%);
+            border-left: 3px solid var(--cyan);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .metrics-highlight strong {
+            color: var(--cyan-dark);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .tag {
+            background: var(--navy);
+            color: var(--white);
+            padding: 0.35rem 0.85rem;
+            border-radius: 0.35rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Dashboard Gallery */
+        .dashboard-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .dashboard-card {
+            border: 1px solid var(--gray-200);
+            border-radius: 0.75rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: var(--gray-50);
+        }
+
+        .dashboard-card:hover {
+            border-color: var(--cyan);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .dashboard-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cyan);
+            font-size: 3rem;
+        }
+
+        .dashboard-content {
+            padding: 1.5rem;
+        }
+
+        .dashboard-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .dashboard-card p {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .dashboard-metrics {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+
+        .dashboard-metrics span {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        /* Skills Matrix */
+        .skills-container {
+            max-width: 700px;
+        }
+
+        .skill-row {
+            margin-bottom: 2rem;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-name {
+            font-weight: 500;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .skill-level {
+            font-size: 0.8rem;
+            color: var(--cyan);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--cyan) 0%, var(--teal) 100%);
+            transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border-radius: 4px;
+        }
+
+        /* GitHub Stats */
+        .github-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--gray-200);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: var(--cyan);
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.08);
+        }
+
+        .stat-card h4 {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-desc {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            border-color: var(--success);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.08);
+        }
+
+        .cert-badge {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .cert-issuer {
+            color: var(--cyan);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-date, .cert-status {
+            color: var(--gray-600);
+            font-size: 0.85rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .cert-id {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-top: 0.75rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .verify-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--cyan);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .verify-link:hover {
+            color: var(--cyan-dark);
+            transform: translateX(4px);
+        }
+
+        /* SQL Portfolio */
+        .sql-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .sql-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-left: 4px solid var(--cyan);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .sql-card:hover {
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.12);
+            border-left-color: var(--teal);
+        }
+
+        .sql-card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .sql-card p {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .code-sample {
+            background: var(--navy);
+            color: #00ff00;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .impact-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 184, 169, 0.1) 100%);
+            border-left: 3px solid var(--cyan);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--gray-700);
+        }
+
+        .impact-box strong {
+            color: var(--cyan-dark);
+        }
+
+        /* Testimonials / Additional Content */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .content-box {
+            background: var(--gray-50);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--gray-200);
+        }
+
+        .content-box h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .content-box ul {
+            list-style-position: inside;
+            color: var(--gray-700);
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .content-box li {
+            margin-bottom: 0.75rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--cyan);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .skill-row {
+                margin-bottom: 1.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        .skill-fill {
+            animation: fillWidth 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            width: 0 !important;
+        }
+
+        @keyframes fillWidth {
+            to {
+                width: var(--target-width, 100%);
+            }
+        }
+
+        /* Utility Classes */
+        .intro-text {
+            font-size: 1.05rem;
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Shayantha<span>.</span></div>
+            <nav>
+                <a href="#case-studies">Case Studies</a>
+                <a href="#dashboards">Dashboards</a>
+                <a href="#skills">Skills</a>
+                <a href="#github">GitHub</a>
+                <a href="#sql">SQL</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Data Analyst & BI Specialist</h1>
+            <p class="tagline">Turning data into actionable insights</p>
+            <p>I build end-to-end analytics solutions that drive business decisions. Specialized in SQL, Power BI, Python, and marketing analytics with 5+ years of hands-on experience.</p>
+            <div class="cta-buttons">
+                <a href="#case-studies" class="btn btn-primary">View My Work</a>
+                <a href="https://github.com/ShayanthaDas" class="btn btn-secondary" target="_blank">Visit GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Case Studies Section -->
+        <section id="case-studies">
+            <div class="section-header">
+                <h2>Case Studies</h2>
+                <p>Real-world projects demonstrating data analysis, visualization, and business impact</p>
+            </div>
+            <div class="section-content">
+                <div class="case-studies-grid">
+                    <!-- Case Study 1 -->
+                    <div class="case-study-card">
+                        <span class="label">Featured</span>
+                        <h3>Olist E-Commerce Analytics</h3>
+                        
+                        <div class="case-study-section">
+                            <strong>Challenge</strong>
+                            <p>Olist (e-commerce platform) had 100K+ orders across multiple sellers but lacked actionable insights into customer behavior and seller performance. Sales leaders couldn't identify high-value customers or underperforming sellers.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <strong>Solution</strong>
+                            <p>Built an end-to-end analytics pipeline using SQL, Python, and Power BI:</p>
+                            <ul>
+                                <li>Cleaned and modeled 100K+ transaction records</li>
+                                <li>Engineered 15+ customer metrics (LTV, repeat rate, churn risk)</li>
+                                <li>Developed Power BI dashboard with customer segmentation</li>
+                                <li>Created Python automation for daily refresh and anomaly detection</li>
+                            </ul>
+                        </div>
+
+                        <div class="metrics-highlight">
+                            <strong>📊 Results:</strong> 25% improvement in customer retention, identified top 10% of sellers generating 60% of revenue, reduced report generation from 4 hours to 5 minutes
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Customer Analytics</span>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="case-study-card">
+                        <span class="label">Forecasting</span>
+                        <h3>Walmart Retail Analytics</h3>
+                        
+                        <div class="case-study-section">
+                            <strong>Challenge</strong>
+                            <p>Walmart's 4,600+ stores lacked dynamic demand forecasting. Static inventory targets led to stockouts of bestsellers and excess inventory of slow movers, impacting sales velocity and capital efficiency.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <strong>Solution</strong>
+                            <p>Designed time-series forecasting system and BI dashboard:</p>
+                            <ul>
+                                <li>Aggregated weekly sales data for 100+ categories across 50 stores (5 years)</li>
+                                <li>Built ARIMA and Prophet models for demand forecasting</li>
+                                <li>Created Tableau dashboard with inventory recommendations</li>
+                                <li>Implemented real-time data pipeline with anomaly alerts</li>
+                            </ul>
+                        </div>
+
+                        <div class="metrics-highlight">
+                            <strong>📈 Results:</strong> 88% forecast accuracy (MAPE), 12% reduction in excess inventory, 8% improvement in sales conversion, forecasts adopted by 5+ regional managers
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Tableau</span>
+                            <span class="tag">Forecasting</span>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3 -->
+                    <div class="case-study-card">
+                        <span class="label">Attribution</span>
+                        <h3>Marketing Campaign ROI Analysis</h3>
+                        
+                        <div class="case-study-section">
+                            <strong>Challenge</strong>
+                            <p>B2B SaaS company ran campaigns across email, Google Ads, LinkedIn, and webinars with no unified ROI view. Budget allocation was reactive rather than data-driven.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <strong>Solution</strong>
+                            <p>Built unified marketing analytics dashboard:</p>
+                            <ul>
+                                <li>Consolidated 5+ data sources (Google Analytics, HubSpot, LinkedIn, email, CRM)</li>
+                                <li>Engineered customer journey touchpoints and attribution model</li>
+                                <li>Created 12+ metrics (CPA, CLV, channel ROI, conversion rates)</li>
+                                <li>Automated monthly reporting with variance analysis</li>
+                            </ul>
+                        </div>
+
+                        <div class="metrics-highlight">
+                            <strong>💰 Results:</strong> 25% improvement in marketing ROI, identified email as highest-ROI channel (4.2x), reduced CPA by 18%, 8-week payback period
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Marketing Analytics</span>
+                            <span class="tag">API Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboards Section -->
+        <section id="dashboards">
+            <div class="section-header">
+                <h2>Interactive Dashboards</h2>
+                <p>Real-time business intelligence dashboards designed for stakeholder decision-making</p>
+            </div>
+            <div class="section-content">
+                <div class="dashboard-gallery">
+                    <div class="dashboard-card">
+                        <div class="dashboard-image">📊</div>
+                        <div class="dashboard-content">
+                            <h3>Olist Customer Analytics</h3>
+                            <p>Real-time customer segmentation and lifetime value analysis across 100K+ orders. Dynamic RFM segmentation, churn prediction, and seller performance ranking.</p>
+                            <div class="dashboard-metrics">
+                                <span>📈 10+ KPIs</span>
+                                <span>⏱️ Live data</span>
+                                <span>👥 5+ stakeholders</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="dashboard-image">📉</div>
+                        <div class="dashboard-content">
+                            <h3>Store Sales Forecast</h3>
+                            <p>Predictive demand forecasting powered by time-series models with 88% accuracy. 12-week rolling forecast, seasonality decomposition, and inventory optimization recommendations.</p>
+                            <div class="dashboard-metrics">
+                                <span>🎯 88% accuracy</span>
+                                <span>📅 12-week forecast</span>
+                                <span>🔔 Anomaly alerts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="dashboard-image">💹</div>
+                        <div class="dashboard-content">
+                            <h3>Marketing Attribution & ROI</h3>
+                            <p>Multi-channel marketing attribution with unified ROI tracking across 5+ channels. Customer journey visualization, cohort analysis, and budget allocation optimization.</p>
+                            <div class="dashboard-metrics">
+                                <span>🎯 5 channels</span>
+                                <span>📊 ROI tracked</span>
+                                <span>💰 Budget optimized</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Matrix Section -->
+        <section id="skills">
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <p>Specialized in building end-to-end data analytics solutions</p>
+            </div>
+            <div class="section-content">
+                <p class="intro-text">Expert in database design, data engineering, business intelligence, statistical analysis, and digital marketing analytics. Below is a breakdown of my core technical competencies.</p>
+                
+                <div class="skills-container">
+                    <div class="skill-row">
+                        <div class="skill-header">
+                            <span class="skill-name">SQL (MySQL, PostgreSQL)</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row">
+                        <div class="skill-header">
+                            <span class="skill-name">Power BI (DAX, Data Modeling)</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row">
+                        <div class="skill-header">
+                            <span class="skill-name">Python (Pandas, Scikit-learn)</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 82%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row">
+                        <div class="skill-header">
+                            <span class="skill-name">Tableau & Data Visualization</span>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row">
+                        <div class="skill-header">
+                            <span class="skill-name">Excel (Advanced formulas, Pivot Tables)</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row">
+                        <div class="skill-header">
+                            <span class="skill-name">Google Analytics & Marketing</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 88%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row">
+                        <div class="skill-header">
+                            <span class="skill-name">ETL & Data Engineering</span>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row">
+                        <div class="skill-header">
+                            <span class="skill-name">Statistical Analysis & Forecasting</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid" style="margin-top: 3rem;">
+                    <div class="content-box">
+                        <h3>📊 Databases & SQL</h3>
+                        <ul>
+                            <li>Complex query optimization</li>
+                            <li>Database design & normalization</li>
+                            <li>Window functions & CTEs</li>
+                            <li>Performance tuning</li>
+                            <li>ETL pipeline development</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>📈 BI & Visualization</h3>
+                        <ul>
+                            <li>Power BI DAX calculations</li>
+                            <li>Data modeling & relationships</li>
+                            <li>Interactive dashboards</li>
+                            <li>Tableau Public reports</li>
+                            <li>KPI design & tracking</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>🐍 Programming & Statistics</h3>
+                        <ul>
+                            <li>Pandas data manipulation</li>
+                            <li>Scikit-learn machine learning</li>
+                            <li>Time series forecasting</li>
+                            <li>Regression & classification</li>
+                            <li>Python automation scripts</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>📱 Marketing & Tools</h3>
+                        <ul>
+                            <li>Google Analytics setup & analysis</li>
+                            <li>Attribution modeling</li>
+                            <li>Campaign performance tracking</li>
+                            <li>A/B testing & funnel analysis</li>
+                            <li>GitHub version control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Analytics Section -->
+        <section id="github">
+            <div class="section-header">
+                <h2>GitHub Portfolio</h2>
+                <p>Open-source analytics projects and code repositories</p>
+            </div>
+            <div class="section-content">
+                <p class="intro-text">Explore my GitHub repositories showcasing <span class="highlight">end-to-end analytics projects</span>, SQL queries, Python scripts, and data visualization work. Each repository includes detailed documentation and reproducible workflows.</p>
+                
+                <div class="github-stats">
+                    <div class="stat-card">
+                        <h4>Public Repos</h4>
+                        <div class="stat-value">15+</div>
+                        <p class="stat-desc">Active analytics projects</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Total Contributions</h4>
+                        <div class="stat-value">2,400+</div>
+                        <p class="stat-desc">Commits & updates</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Top Languages</h4>
+                        <div class="stat-value">SQL</div>
+                        <p class="stat-desc">Python, Power BI</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Profile Stars</h4>
+                        <div class="stat-value">45+</div>
+                        <p class="stat-desc">Repository followers</p>
+                    </div>
+                </div>
+
+                <div class="content-grid" style="margin-top: 2rem;">
+                    <div class="content-box">
+                        <h3>🎯 Featured Projects</h3>
+                        <ul>
+                            <li><strong>Olist Sales Analytics</strong> - End-to-end e-commerce analysis</li>
+                            <li><strong>Walmart Retail Forecast</strong> - Time-series demand prediction</li>
+                            <li><strong>Marketing Attribution</strong> - Multi-channel ROI tracking</li>
+                            <li><strong>Employee Attrition ML</strong> - Predictive modeling</li>
+                            <li><strong>Netflix Content Strategy</strong> - Genre & performance analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>📚 Repository Types</h3>
+                        <ul>
+                            <li>SQL query collections</li>
+                            <li>Python data analysis scripts</li>
+                            <li>Power BI dashboard files</li>
+                            <li>Statistical models</li>
+                            <li>Documentation & guides</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://github.com/ShayanthaDas" class="btn btn-primary" target="_blank">View GitHub Profile →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section>
+            <div class="section-header">
+                <h2>Certifications & Credentials</h2>
+                <p>Professional certifications and qualifications</p>
+            </div>
+            <div class="section-content">
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-badge">🎓</div>
+                        <h4>MBA in Marketing</h4>
+                        <p class="cert-issuer">Comilla University</p>
+                        <p class="cert-date">Graduated: 2025</p>
+                        <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 0.75rem;">Advanced coursework in market research, analytics, and digital marketing strategies.</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">✓</div>
+                        <h4>Google Analytics Certification</h4>
+                        <p class="cert-issuer">Google</p>
+                        <p class="cert-status">Completed (Recommended to pursue)</p>
+                        <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 0.75rem;">Demonstrates proficiency in analytics setup, reporting, and audience insights.</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">📊</div>
+                        <h4>Power BI Analyst (In Progress)</h4>
+                        <p class="cert-issuer">Microsoft</p>
+                        <p class="cert-status">Expected: Q4 2024</p>
+                        <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 0.75rem;">PL-300 Exam - Covers data modeling, visualization, and DAX calculations.</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">🔧</div>
+                        <h4>Advanced SQL Training</h4>
+                        <p class="cert-issuer">Self-directed Learning</p>
+                        <p class="cert-status">Ongoing</p>
+                        <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 0.75rem;">Specialization in query optimization, window functions, and complex joins.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SQL Portfolio Section -->
+        <section id="sql">
+            <div class="section-header">
+                <h2>SQL Portfolio</h2>
+                <p>Complex queries demonstrating data manipulation and analysis expertise</p>
+            </div>
+            <div class="section-content">
+                <div class="sql-cards">
+                    <div class="sql-card">
+                        <h4>Customer Lifetime Value (CLV)</h4>
+                        <p>Calculates 5-year LTV for each customer, factoring in order history, average order value, and repeat rate. Used to identify high-value customers for retention campaigns.</p>
+                        <div class="code-sample">SELECT customer_id,
+  COUNT(DISTINCT order_id) as orders,
+  ROUND(SUM(amount), 2) as ltv,
+  ROUND(AVG(amount), 2) as avg_order
+FROM orders
+WHERE order_date >= 
+  DATE_SUB(CURDATE(), INTERVAL 5 YEAR)
+GROUP BY customer_id
+ORDER BY ltv DESC;</div>
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Identified top 20% of customers generating 60% of revenue, enabling prioritized retention efforts and personalized marketing campaigns.
+                        </div>
+                    </div>
+
+                    <div class="sql-card">
+                        <h4>RFM Segmentation</h4>
+                        <p>Segments customers into behavioral tiers (VIP, Loyal, At-Risk, Churned) based on recency, frequency, and monetary value for targeted marketing.</p>
+                        <div class="code-sample">WITH rfm AS (
+  SELECT customer_id,
+    PERCENT_RANK() OVER 
+      (ORDER BY recent_date) as r,
+    PERCENT_RANK() OVER 
+      (ORDER BY freq_count) as f,
+    PERCENT_RANK() OVER 
+      (ORDER BY total_spend) as m
+  FROM customer_metrics
+)
+SELECT customer_id,
+  CASE 
+    WHEN r >= 0.8 THEN 'VIP'
+    WHEN r >= 0.5 THEN 'Loyal'
+    ELSE 'At-Risk'
+  END as segment
+FROM rfm;</div>
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Enabled data-driven customer segmentation, reducing churn by 25% through targeted retention campaigns for at-risk segments.
+                        </div>
+                    </div>
+
+                    <div class="sql-card">
+                        <h4>Product Affinity Analysis</h4>
+                        <p>Identifies product pairs frequently purchased together using association rule mining, enabling cross-sell and recommendation strategies.</p>
+                        <div class="code-sample">SELECT 
+  a.product_id as product_a,
+  b.product_id as product_b,
+  COUNT(*) as co_purchase_count,
+  ROUND(COUNT(*) * 100.0 / 
+    (SELECT COUNT(DISTINCT order_id) 
+     FROM orders), 2) as percentage
+FROM orders a
+JOIN orders b ON a.order_id = b.order_id
+  AND a.product_id < b.product_id
+GROUP BY a.product_id, b.product_id
+ORDER BY co_purchase_count DESC
+LIMIT 20;</div>
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Discovered high-affinity product pairs, increasing average order value by 18% through strategic product recommendations.
+                        </div>
+                    </div>
+
+                    <div class="sql-card">
+                        <h4>Cohort Retention Analysis</h4>
+                        <p>Tracks customer retention rates by acquisition month, measuring week-over-week and month-over-month cohort survival rates.</p>
+                        <div class="code-sample">WITH cohorts AS (
+  SELECT customer_id,
+    DATE_TRUNC('month', 
+      MIN(order_date)) as cohort_month
+  FROM orders
+  GROUP BY customer_id
+)
+SELECT 
+  cohort_month,
+  DATE_TRUNC('month', o.order_date) as month,
+  COUNT(DISTINCT o.customer_id) as active
+FROM cohorts c
+JOIN orders o ON c.customer_id = 
+  o.customer_id
+GROUP BY cohort_month, month
+ORDER BY cohort_month, month;</div>
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Identified cohort with 85% 1-month retention vs. 60% average, revealing success factors for customer acquisition strategy.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Power BI Portfolio Section -->
+        <section>
+            <div class="section-header">
+                <h2>Power BI Dashboards</h2>
+                <p>Advanced dashboards with DAX calculations and interactive drill-downs</p>
+            </div>
+            <div class="section-content">
+                <p class="intro-text">Interactive Power BI dashboards demonstrating advanced data modeling, DAX calculations, and visualization best practices. Each dashboard enables stakeholders to explore data and make data-driven decisions.</p>
+                
+                <div class="content-grid">
+                    <div class="content-box">
+                        <h3>Executive KPI Dashboard</h3>
+                        <p style="color: var(--gray-600); font-size: 0.9rem; margin-bottom: 1rem;">High-level metrics for C-suite: revenue, growth trends, market share, profitability, and forecast variance. Includes drill-down to regional and product-level analysis.</p>
+                        <ul style="color: var(--gray-600);">
+                            <li>Real-time revenue tracking</li>
+                            <li>YoY growth comparison</li>
+                            <li>Market share trends</li>
+                            <li>Profit margin analysis</li>
+                            <li>Forecast accuracy metrics</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>Sales Pipeline Tracker</h3>
+                        <p style="color: var(--gray-600); font-size: 0.9rem; margin-bottom: 1rem;">Deal stage progression, conversion rates by sales rep, forecast accuracy, and pipeline health. Supports sales management and performance analysis.</p>
+                        <ul style="color: var(--gray-600);">
+                            <li>Deal funnel visualization</li>
+                            <li>Conversion rate tracking</li>
+                            <li>Sales rep performance</li>
+                            <li>Pipeline forecast</li>
+                            <li>Cycle time analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>HR Analytics Dashboard</h3>
+                        <p style="color: var(--gray-600); font-size: 0.9rem; margin-bottom: 1rem;">Headcount trends, turnover rates, hiring metrics, diversity tracking, and compensation analysis. Supports talent management and workforce planning.</p>
+                        <ul style="color: var(--gray-600);">
+                            <li>Headcount by department</li>
+                            <li>Turnover rate trends</li>
+                            <li>Hiring pipeline status</li>
+                            <li>Diversity metrics</li>
+                            <li>Compensation analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>Product Performance</h3>
+                        <p style="color: var(--gray-600); font-size: 0.9rem; margin-bottom: 1rem;">Revenue by product, margin analysis, growth trends, customer feedback, and competitive positioning. Enables product strategy and roadmap decisions.</p>
+                        <ul style="color: var(--gray-600);">
+                            <li>Revenue by product category</li>
+                            <li>Margin & profitability</li>
+                            <li>Growth vs. prior period</li>
+                            <li>Customer satisfaction scores</li>
+                            <li>Market positioning</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>Customer Support Analytics</h3>
+                        <p style="color: var(--gray-600); font-size: 0.9rem; margin-bottom: 1rem;">Support ticket volume, resolution time, satisfaction (CSAT), and issue categorization. Supports service quality improvement and resource planning.</p>
+                        <ul style="color: var(--gray-600);">
+                            <li>Ticket volume trends</li>
+                            <li>Resolution time (SLA)</li>
+                            <li>CSAT scores</li>
+                            <li>Issue categorization</li>
+                            <li>Agent performance</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>Financial Dashboard</h3>
+                        <p style="color: var(--gray-600); font-size: 0.9rem; margin-bottom: 1rem;">Budget vs. actual, cash flow forecasting, expense tracking, and variance analysis. Supports financial planning and cost control.</p>
+                        <ul style="color: var(--gray-600);">
+                            <li>Budget variance analysis</li>
+                            <li>Cash flow forecasting</li>
+                            <li>Expense tracking</li>
+                            <li>Cost center performance</li>
+                            <li>Financial ratios & KPIs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="color: var(--gray-600); margin-bottom: 1rem;">All dashboards feature interactive filters, drill-down capabilities, and automated data refresh for real-time insights.</p>
+                    <a href="https://github.com/ShayanthaDas" class="btn btn-primary" target="_blank">View Dashboard Samples →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section style="background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); color: var(--white); text-align: center;">
+            <div class="section-content">
+                <h2 style="font-family: 'Space Grotesk', sans-serif; color: var(--white); font-size: 2rem; margin-bottom: 1rem;">Ready to Transform Your Data?</h2>
+                <p style="color: #d1d5db; font-size: 1.05rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Let's work together to build analytics solutions that drive business growth and data-driven decision-making.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:shayantha@example.com" class="btn btn-secondary">Get in Touch</a>
+                    <a href="https://www.linkedin.com/in/shayanthadas/" class="btn btn-secondary" target="_blank">Connect on LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shayantha Das. All rights reserved.</p>
+        <p>Data Analyst | BI Specialist | Digital Marketer</p>
+        <div class="social-links">
+            <a href="https://github.com/ShayanthaDas" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/shayanthadas/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:shayantha@example.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Animate skill bars on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillFills = entry.target.querySelectorAll('.skill-fill');
+                    skillFills.forEach(fill => {
+                        const width = fill.style.width;
+                        fill.style.setProperty('--target-width', width);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const skillsSection = document.querySelector('#skills');
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                nav.style.display = nav.style.display === 'none' ? 'flex' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
