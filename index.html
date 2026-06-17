@@ -3,273 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shayantha Das - Data Analyst & Digital Marketer. Specialized in Business Intelligence, SQL, Python, and Marketing Analytics. Explore my portfolio of end-to-end analytics projects.">
-    <meta name="keywords" content="Data Analyst, Business Intelligence, Power BI, SQL, Python, Marketing Analytics, Tableau">
-    <meta name="author" content="Shayantha Das">
-    <meta property="og:title" content="Shayantha Das - Data Analyst & BI Specialist">
-    <meta property="og:description" content="Portfolio showcasing end-to-end analytics projects and data-driven solutions.">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#3b82f6">
-    
-    <title>Shayantha Das - Data Analyst & BI Specialist | Portfolio</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%233b82f6'>📊</text></svg>">
+    <meta name="description" content="Shayanth Das - Data Science & Analytics Professional. Specializing in ML, HR Analytics, Sales Intelligence & Strategic BI Solutions.">
+    <meta name="keywords" content="Data Science, Analytics, Machine Learning, Python, SQL, Power BI, Tableau">
+    <meta name="author" content="Shayanth Das">
+    <meta name="theme-color" content="#6C5CE7">
+    <title>Shayanth Das | Data Science & Analytics Professional</title>
+    <link rel="canonical" href="https://shayanthadass.github.io/">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="logo">📊 Shayantha</div>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/portfolio">Portfolio</a></li>
-                <li><a href="/skills">Skills</a></li>
-                <li><a href="/contact">Contact</a></li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">
+                    <span class="logo-icon">◆</span>SD
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Projects</a>
+                    <div class="dropdown-menu">
+                        <a href="projects.html" class="dropdown-item">View All</a>
+                        <a href="projects.html#ml" class="dropdown-item">Machine Learning</a>
+                        <a href="projects.html#analytics" class="dropdown-item">Analytics</a>
+                        <a href="projects.html#dashboards" class="dropdown-item">Dashboards</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="insights.html" class="nav-link">Insights</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transform Data Into Growth</h1>
-                <p>I'm Shayantha Das, a Data Analyst & Digital Marketer building end-to-end analytics solutions. Specialized in Business Intelligence, Python, SQL, and Marketing Analytics.</p>
-                <div>
-                    <a href="/portfolio" class="btn btn-primary">View My Work</a>
-                    <a href="/contact" class="btn btn-secondary">Let's Talk</a>
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Transforming Data Into Strategic Insights</h1>
+                <p>Data Science | Machine Learning | Business Analytics</p>
+                <div class="hero-cta">
+                    <a href="about.html" class="btn btn-primary">Discover My Work</a>
+                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-animation">
+                <div class="floating-card card-1">
+                    <span>ML</span>
+                </div>
+                <div class="floating-card card-2">
+                    <span>Analytics</span>
+                </div>
+                <div class="floating-card card-3">
+                    <span>Python</span>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="hero-gradient"></div>
+    </header>
 
-    <!-- Key Stats -->
-    <section class="section lighter">
+    <!-- Featured Projects Section -->
+    <section class="featured-projects">
         <div class="container">
-            <h2 class="text-center mb-3">Proven Track Record</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">15</div>
-                    <div class="stat-label">Data Projects</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">2400</div>
-                    <div class="stat-label">Code Contributions</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">25</div>
-                    <div class="stat-label">% Avg. Improvement</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">5</div>
-                    <div class="stat-label">Core Tech Skills</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Projects Preview -->
-    <section class="section light">
-        <div class="container">
-            <h2 class="text-center mb-3">Featured Projects</h2>
-            <p class="text-center" style="font-size: 1.1rem; margin-bottom: 3rem; color: var(--text-gray);">End-to-end analytics solutions delivering measurable business impact</p>
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">Showcasing my expertise in data analysis and machine learning</p>
             
-            <div class="grid-2">
-                <div class="card card-accent">
-                    <h3>📊 Olist E-Commerce Analytics</h3>
-                    <p>Built a complete analytics pipeline for 100K+ orders with customer segmentation, RFM analysis, and predictive churn modeling. Achieved 25% improvement in customer retention.</p>
-                    <div style="margin: 1.5rem 0;">
-                        <span class="tag secondary">SQL</span>
-                        <span class="tag secondary">Python</span>
-                        <span class="tag secondary">Power BI</span>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Machine Learning</span>
                     </div>
-                    <a href="/portfolio#olist" class="btn btn-primary">View Full Case Study →</a>
-                </div>
+                    <h3>Employee Attrition Prediction</h3>
+                    <p>ML classification model predicting workforce turnover with feature importance analysis using Python and Scikit-Learn.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">ML</span>
+                        <span class="tech-badge">Analytics</span>
+                    </div>
+                    <a href="projects.html#employee-attrition" class="project-link">View Details →</a>
+                </article>
 
-                <div class="card card-accent orange">
-                    <h3>🏪 Walmart Sales Forecasting</h3>
-                    <p>Time-series forecasting system with 88% accuracy using ARIMA & Prophet models. Reduced excess inventory by 12% and improved sales conversion by 8% across 50 stores.</p>
-                    <div style="margin: 1.5rem 0;">
-                        <span class="tag secondary">Tableau</span>
-                        <span class="tag secondary">Time Series</span>
-                        <span class="tag secondary">Python</span>
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Analytics</span>
                     </div>
-                    <a href="/portfolio#walmart" class="btn btn-primary">View Full Case Study →</a>
-                </div>
+                    <h3>Netflix Content Strategy Analytics</h3>
+                    <p>Comprehensive content analysis using Python, SQL, Power BI & Tableau uncovering trends, genres, and regional patterns.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">SQL</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Tableau</span>
+                    </div>
+                    <a href="projects.html#netflix" class="project-link">View Details →</a>
+                </article>
 
-                <div class="card card-accent pink">
-                    <h3>💰 Marketing Attribution & ROI</h3>
-                    <p>Multi-channel attribution model tracking 5+ channels (email, ads, LinkedIn, webinars). Identified 4.2x ROI on email nurturing, enabling data-driven budget allocation.</p>
-                    <div style="margin: 1.5rem 0;">
-                        <span class="tag secondary">Power BI</span>
-                        <span class="tag secondary">Attribution</span>
-                        <span class="tag secondary">Analytics</span>
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Dashboard</span>
                     </div>
-                    <a href="/portfolio#marketing" class="btn btn-primary">View Full Case Study →</a>
-                </div>
+                    <h3>Marketing Campaign Performance</h3>
+                    <p>Multi-platform campaign analysis evaluating ROI, efficiency, leads & revenue using Excel, Power BI & Tableau.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Power BI</span>
+                        <span class="tech-badge">Excel</span>
+                        <span class="tech-badge">Analytics</span>
+                    </div>
+                    <a href="projects.html#marketing" class="project-link">View Details →</a>
+                </article>
+            </div>
 
-                <div class="card card-accent green">
-                    <h3>🎬 Netflix Content Strategy</h3>
-                    <p>Analyzed 5,000+ titles across genres, regions, and ratings. Discovered content-audience fit patterns and developed recommendations for portfolio expansion.</p>
-                    <div style="margin: 1.5rem 0;">
-                        <span class="tag secondary">Python</span>
-                        <span class="tag secondary">EDA</span>
-                        <span class="tag secondary">Visualization</span>
-                    </div>
-                    <a href="/portfolio#netflix" class="btn btn-primary">View Case Study →</a>
+            <div class="view-all">
+                <a href="projects.html" class="btn btn-outline">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2>Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Data Science</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-bar" style="width: 95%"></span>Machine Learning</li>
+                        <li><span class="skill-bar" style="width: 90%"></span>Predictive Analytics</li>
+                        <li><span class="skill-bar" style="width: 92%"></span>Statistical Analysis</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-bar" style="width: 94%"></span>Python</li>
+                        <li><span class="skill-bar" style="width: 88%"></span>SQL</li>
+                        <li><span class="skill-bar" style="width: 85%"></span>Excel/VBA</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Visualization</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-bar" style="width: 93%"></span>Power BI</li>
+                        <li><span class="skill-bar" style="width: 91%"></span>Tableau</li>
+                        <li><span class="skill-bar" style="width: 87%"></span>Dashboard Design</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Overview -->
-    <section class="section lighter">
+    <!-- Stats Section -->
+    <section class="stats-section">
         <div class="container">
-            <h2 class="text-center mb-3">Core Competencies</h2>
-            <p class="text-center" style="font-size: 1.1rem; margin-bottom: 3rem; color: var(--text-gray);">End-to-end analytics expertise across data engineering, BI, and insights</p>
-            
-            <div class="grid-4">
-                <div class="card">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">📈</div>
-                    <h4>Business Intelligence</h4>
-                    <p style="margin-bottom: 0; font-size: 0.95rem;">Power BI dashboards, Tableau visualization, KPI tracking, data storytelling</p>
-                </div>
-
-                <div class="card">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">💾</div>
-                    <h4>Database & SQL</h4>
-                    <p style="margin-bottom: 0; font-size: 0.95rem;">MySQL, PostgreSQL, complex queries, ETL pipelines, query optimization</p>
-                </div>
-
-                <div class="card">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">🐍</div>
-                    <h4>Python Analytics</h4>
-                    <p style="margin-bottom: 0; font-size: 0.95rem;">Pandas, NumPy, Scikit-learn, forecasting, segmentation, automation</p>
-                </div>
-
-                <div class="card">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">📱</div>
-                    <h4>Marketing Analytics</h4>
-                    <p style="margin-bottom: 0; font-size: 0.95rem;">Google Analytics, attribution, A/B testing, campaign ROI, CAC/LTV</p>
-                </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <p>Data Projects Completed</p>
             </div>
-
-            <div class="text-center mt-3">
-                <a href="/skills" class="btn btn-primary">Explore All Skills →</a>
+            <div class="stat-item">
+                <div class="stat-number">8+</div>
+                <p>Technologies Mastered</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="section light">
-        <div class="container">
-            <h2 class="text-center mb-3">Education & Credentials</h2>
-            
-            <div class="grid-3">
-                <div class="card">
-                    <h4>📚 MBA in Marketing</h4>
-                    <p style="color: var(--text-gray); font-size: 0.95rem;">Comilla University</p>
-                    <p style="color: var(--text-light); font-size: 0.9rem;">Graduated 2025 | Focus: Digital Marketing & Customer Analytics</p>
-                    <span class="badge">Completed</span>
-                </div>
-
-                <div class="card">
-                    <h4>📊 Google Analytics IQ</h4>
-                    <p style="color: var(--text-gray); font-size: 0.95rem;">Google</p>
-                    <p style="color: var(--text-light); font-size: 0.9rem;">In Progress | Expected Q3 2024</p>
-                    <span class="badge">In Progress</span>
-                </div>
-
-                <div class="card">
-                    <h4>⚡ Power BI PL-300</h4>
-                    <p style="color: var(--text-gray); font-size: 0.95rem;">Microsoft</p>
-                    <p style="color: var(--text-light); font-size: 0.9rem;">In Progress | Expected Q4 2024</p>
-                    <span class="badge">In Progress</span>
-                </div>
+            <div class="stat-item">
+                <div class="stat-number">500K+</div>
+                <p>Data Points Analyzed</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack -->
-    <section class="section lighter">
-        <div class="container">
-            <h2 class="text-center mb-3">Technology Stack</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0;">
-                <div>
-                    <h4 style="color: var(--primary-blue);">Databases & SQL</h4>
-                    <p style="font-size: 0.95rem;">MySQL • PostgreSQL • Database Design • Query Optimization • ETL</p>
-                </div>
-
-                <div>
-                    <h4 style="color: var(--primary-purple);">BI & Visualization</h4>
-                    <p style="font-size: 0.95rem;">Power BI • Tableau • Data Modeling • DAX • Custom Visuals</p>
-                </div>
-
-                <div>
-                    <h4 style="color: var(--accent-pink);">Python & ML</h4>
-                    <p style="font-size: 0.95rem;">Pandas • NumPy • Scikit-learn • Forecasting • Segmentation</p>
-                </div>
-
-                <div>
-                    <h4 style="color: var(--accent-orange);">Analytics & Tools</h4>
-                    <p style="font-size: 0.95rem;">Google Analytics • Excel • Git • APIs • Automation</p>
-                </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <p>Model Accuracy Average</p>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-box">
+    <section class="cta-section">
         <div class="container">
-            <div class="text-center">
-                <h2>Ready to Discuss Your Data Challenges?</h2>
-                <p>I'm currently open to remote analyst roles, freelance projects, and collaboration opportunities. Let's explore how data can drive growth for your organization.</p>
-                <div style="margin-top: 2rem;">
-                    <a href="/contact" class="btn btn-primary" style="background: white; color: var(--primary-blue); margin: 0 10px;">Get in Touch</a>
-                    <a href="/portfolio" class="btn btn-secondary" style="background: rgba(255,255,255,0.2); border-color: white; color: white; margin: 0 10px;">View Projects</a>
-                </div>
-            </div>
+            <h2>Ready to Transform Your Data?</h2>
+            <p>Let's collaborate on data-driven solutions that deliver real business impact</p>
+            <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div>
-                <h4>Quick Links</h4>
-                <a href="/about">About Me</a>
-                <a href="/portfolio">Portfolio</a>
-                <a href="/skills">Skills</a>
-                <a href="/sql">SQL Portfolio</a>
-                <a href="/contact">Contact</a>
-            </div>
-
-            <div>
-                <h4>Projects</h4>
-                <a href="/portfolio#olist">Olist E-Commerce</a>
-                <a href="/portfolio#walmart">Walmart Forecasting</a>
-                <a href="/portfolio#marketing">Marketing Attribution</a>
-                <a href="/dashboards">Interactive Dashboards</a>
-            </div>
-
-            <div>
-                <h4>Connect</h4>
-                <div class="social-links" style="justify-content: flex-start;">
-                    <a href="https://github.com/ShayanthaDas" target="_blank" title="GitHub">💻</a>
-                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">🔗</a>
-                    <a href="https://fiverr.com" target="_blank" title="Fiverr">💼</a>
-                    <a href="mailto:shayantha@example.com" title="Email">✉️</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Shayanth Das</h4>
+                    <p>Data Science & Analytics Professional specializing in ML, BI, and Strategic Insights</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="social-links">
+                        <li><a href="https://github.com/ShayanthaDas" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 Shayantha Das. Data Analyst & Digital Marketer. Based in Chattogram, Bangladesh. Open to remote opportunities.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shayanth Das. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+            </div>
         </div>
     </footer>
 
-    <script src="/js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
