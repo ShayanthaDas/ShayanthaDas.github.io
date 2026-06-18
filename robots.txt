@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://shayanthadas.github.io/sitemap.xml
