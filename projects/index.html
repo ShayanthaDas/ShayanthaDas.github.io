@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytical Case Studies & Work Projects | Shayantha Das</title>
+    <meta name="description" content="Explore advanced SQL pipeline queries, Python cleaning runs, and Power BI relational dashboards engineered across corporate case studies by Shayantha Das.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Analytical Case Studies Portfolio",
+      "description": "Verifiable engineering analytics projects detailing data pipeline optimization and performance configurations.",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "E-Commerce Multi-Tier Cohort Retention Engine",
+              "description": "Engineered recursive common table expressions (CTEs) and partition window tracking matrices inside PostgreSQL to isolate transactional user dropout points.",
+              "programmingLanguage": ["SQL", "Python"]
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Global Supply Chain Operations Control Screen",
+              "description": "Constructed an enterprise-grade reporting matrix mapping factory logs using complex Data Analysis Expressions (DAX) modeling equations.",
+              "keywords": "Power BI, DAX, Star Schema"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <header class="navbar">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <a href="/" class="logo">SD<span>.</span>analytics</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About & Skills</a></li>
+                <li><a href="/projects/" class="active">Portfolio Work</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-wrapper">
+        <section aria-label="Case Studies Framework">
+            <h5>Production Applications</h5>
+            <h2>Analytical Case Studies</h2>
+            <p class="section-subtitle">Deep dives into relational systems architecture, query optimization, and structured visualization design models.</p>
+
+            <div class="grid-2" style="grid-template-columns: 1fr; gap: 4rem;">
+                
+                <article class="glass-card">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <span class="badge"><span></span>Database Architecture</span>
+                            <h3 style="font-size: 1.8rem; margin-top: 0.5rem;">E-Commerce Multi-Tier Cohort Retention Engine</h3>
+                        </div>
+                        <div class="tech-badges">
+                            <span>PostgreSQL</span>
+                            <span>MySQL</span>
+                            <span>Python (Pandas)</span>
+                            <span>Google Colab</span>
+                        </div>
+                    </div>
+
+                    <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                        <div>
+                            <h4 style="color: var(--neon-cyan);">Business Context & Objective</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">A high-volume consumer platform experienced unmapped transaction dropouts between digital cart insertions and final checkouts. The task was to parse over 1.2 million raw transactional lines to flag bottleneck coordinates and isolate user retention trends across consecutive 30-day cohorts.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--neon-cyan);">Technical Execution Layer</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Engineered recursive Common Table Expressions (CTEs) and multi-stage queries inside PostgreSQL. Applied window tracking formulations (`LEAD`, `LAG`, and `FIRST_VALUE`) to dynamically group consumer segments. Extended pipeline workflows into Python Pandas components inside Google Colab for rapid, automated file formatting transformations.</p>
+                        </div>
+                    </div>
+
+                    <div class="mock-dashboard" style="height: auto; padding: 1.5rem; margin-bottom: 2rem;">
+                        <div class="mock-nav"><span>POSTGRESQL PROFILE // QUERY SCHEDULER</span><span style="color: var(--success)">ACTIVE RUN</span></div>
+                        <pre style="color: #a78bfa; font-size: 0.75rem; margin: 1rem 0; overflow-x: auto; font-family: 'JetBrains Mono', monospace;">
+WITH MonthlyUserActivity AS (
+    SELECT user_id, DATE_TRUNC('month', transaction_date) AS activity_month,
+           LAG(DATE_TRUNC('month', transaction_date), 1) OVER (PARTITION BY user_id ORDER BY transaction_date) AS previous_month
+    FROM source_transaction_ledger
+)
+SELECT activity_month, COUNT(DISTINCT user_id) AS active_cohort_count
+FROM MonthlyUserActivity WHERE activity_month = previous_month + INTERVAL '1 month'
+GROUP BY 1 ORDER BY 1;</pre>
+                        <div class="mock-grid">
+                            <div class="mock-kpi"><span>LATENCY MONITOR</span><div class="mock-val" style="color: var(--success)">1.42s Exec</div></div>
+                            <div class="mock-kpi"><span>ROWS ANALYZED</span><div class="mock-val">1.26M Blocks</div></div>
+                            <div class="mock-kpi"><span>INDEX GAIN</span><div class="mock-val" style="color: var(--success)">-42% Overhead</div></div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;">
+                        <h6>Key Impact: <span style="color: #fff; font-weight: 700;">Reduced nested query evaluation times by 42%.</span></h6>
+                        <a href="https://github.com/ShayanthaDas" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Inspect Blueprint Repository <i class="fab fa-github"></i></a>
+                    </div>
+                </article>
+
+                <article class="glass-card">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <span class="badge" style="background: rgba(168,85,247,0.08); border-color: rgba(168,85,247,0.2); color: var(--neon-purple);"><span></span>Business Intelligence</span>
+                            <h3 style="font-size: 1.8rem; margin-top: 0.5rem;">Global Supply Chain Operations Control Screen</h3>
+                        </div>
+                        <div class="tech-badges">
+                            <span>Power BI</span>
+                            <span>Tableau</span>
+                            <span>DAX Modeling</span>
+                            <span>Advanced Excel</span>
+                            <span>SPSS</span>
+                        </div>
+                    </div>
+
+                    <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                        <div>
+                            <h4 style="color: var(--neon-purple);">Business Context & Objective</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">A manufacturing ecosystem tracking garment accessories suffered severe bottlenecks due to scattered production books. Lead time records lived in unindexed spreadsheet rows, causing data blind spots and hours of manual assembly overhead for operational management.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--neon-purple);">Technical Execution Layer</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Normalized chaotic, multi-tier inputs into an analytical Star Schema layout (Fact/Dimension mapping) inside Power BI. Structured 45+ performant Data Analysis Expressions (DAX) equations utilizing `CALCULATE` and `FILTER` loops to map multi-tier timelines. Ran statistical confirmations across components using SPSS variance analysis models.</p>
+                        </div>
+                    </div>
+
+                    <div class="mock-dashboard" style="border-color: rgba(168, 85, 247, 0.2);">
+                        <div class="mock-nav"><span style="color: var(--neon-purple);"><i class="fas fa-chart-line"></i> POWER BI // LOGISTICS SCHEMA</span><span style="color: var(--success)">DATA STREAMS ACTIVE</span></div>
+                        <div class="mock-grid">
+                            <div class="mock-kpi"><span>LEAD TIME VARIANCE</span><div class="mock-val" style="color: var(--neon-purple);">-3.4 Days Avg</div></div>
+                            <div class="mock-kpi"><span>COMPILING SPEED</span><div class="mock-val">Direct Direct Ingest</div></div>
+                            <div class="mock-kpi"><span>DAX EXPRESSIONS</span><div class="mock-val">45 Measures Live</div></div>
+                        </div>
+                        <div class="mock-chart" style="background: rgba(168, 85, 247, 0.02); border-color: rgba(168, 85, 247, 0.15); height: 50px;">
+                            <div class="mock-bar-container">
+                                <div class="mock-bar" style="height: 35%; background: var(--neon-purple)"></div>
+                                <div class="mock-bar" style="height: 75%; background: var(--neon-purple)"></div>
+                                <div class="mock-bar" style="height: 50%; background: var(--neon-purple)"></div>
+                                <div class="mock-bar" style="height: 95%; background: var(--neon-purple)"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;">
+                        <h6>Key Impact: <span style="color: #fff; font-weight: 700;">Eliminated 18+ hours of redundant weekly tracking procedures.</span></h6>
+                        <a href="https://github.com/ShayanthaDas" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">View Dashboard Blueprint <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Shayantha Das. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
