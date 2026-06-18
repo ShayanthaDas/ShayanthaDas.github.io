@@ -41,7 +41,7 @@
 
             <div class="grid-2" style="grid-template-columns: 1fr; gap: 4rem;">
                 
-                <!-- CASE STUDY 1: SQL & COHORT RETENTION -->
+                <!-- CASE STUDY 1 -->
                 <article class="glass-card">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
                         <div>
@@ -81,89 +81,61 @@ GROUP BY 1 ORDER BY 1;</pre>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;">
                         <h6>Key Impact: <span style="color: #fff; font-weight: 700;">Reduced nested query evaluation times by 42%.</span></h6>
-                        <a href="https://github.com/ShayanthaDas/ecommerce-cohort-retention" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Inspect Blueprint Repository <i class="fab fa-github"></i></a>
+                        <a href="https://github.com/ShayanthaDas/" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Inspect Blueprint Repository <i class="fab fa-github"></i></a>
                     </div>
                 </article>
 
-                <!-- CASE STUDY 2: PYTHON & SUPPLY CHAIN AUTOMATION -->
+                <!-- CASE STUDY 2 -->
                 <article class="glass-card">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
                         <div>
-                            <span class="badge" style="color: var(--neon-blue); border-color: rgba(59,130,246,0.3);"><span></span>Operations Analytics</span>
-                            <h3>Garment Accessories Supply Chain Lead Time Predictor</h3>
+                            <span class="badge" style="background: rgba(168,85,247,0.1); color: var(--neon-purple); border-color: rgba(168,85,247,0.2);"><span></span>Business Intelligence</span>
+                            <h3>Garment Component Logistics & Supply Chain Tracker</h3>
                         </div>
                         <div class="tech-badges">
-                            <span>Python</span><span>Pandas</span><span>Advanced Excel</span><span>SPSS</span>
-                        </div>
-                    </div>
-                    <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                        <div>
-                            <h4 style="color: var(--neon-blue);">Business Context & Objective</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Unpredictable raw material delivery timelines in garment operations caused structural downstream delays. The objective was to replace fragmented Excel audit sheets with an automated Python pipeline to isolate logistical variances and calculate delivery confidence intervals.</p>
-                        </div>
-                        <div>
-                            <h4 style="color: var(--neon-blue);">Technical Execution Layer</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Built an automated parsing script using Python and Pandas to clean multi-sheet text files. Exported standardized metrics to SPSS to perform multivariate analysis and calculate critical correlation metrics.</p>
-                        </div>
-                    </div>
-                    <div class="mock-dashboard" style="height: auto; padding: 1.5rem; margin-bottom: 2rem;">
-                        <div class="mock-nav"><span>JUPYTER NOTEBOOK // DATA PURGE PIPELINE</span><span style="color: var(--neon-blue)">SUCCESS</span></div>
-                        <pre style="color: #60a5fa; font-size: 0.75rem; margin: 1rem 0; overflow-x: auto; font-family: 'JetBrains Mono', monospace;">
-import pandas as pd
-df = pd.read_excel('raw_logistics_manifest.xlsx', sheet_name='Transit_Logs')
-df['lead_time_days'] = (df['delivery_date'] - df['order_date']).dt.days
-clean_df = df.dropna(subset=['supplier_id', 'lead_time_days'])
-summary_matrix = clean_df.groupby('supplier_id')['lead_time_days'].agg(['mean', 'std']).reset_index()</pre>
-                        <div class="mock-grid">
-                            <div class="mock-kpi"><span>CLEANSING RATE</span><div class="mock-val" style="color: var(--success)">100% Automated</div></div>
-                            <div class="mock-kpi"><span>OUTLIERS FLAGGED</span><div class="mock-val">3,420 Blocks</div></div>
-                            <div class="mock-kpi"><span>ACCURACY GAIN</span><div class="mock-val" style="color: var(--success)">+18% Precision</div></div>
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;">
-                        <h6>Key Impact: <span style="color: #fff; font-weight: 700;">Eliminated 12 weekly hours of manual operational cross-referencing.</span></h6>
-                        <a href="https://github.com/ShayanthaDas/supply-chain-leadtime" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Inspect Blueprint Repository <i class="fab fa-github"></i></a>
-                    </div>
-                </article>
-
-                <!-- CASE STUDY 3: POWER BI / STRATEGIC STAKEHOLDER EXECUTIVE MONITOR -->
-                <article class="glass-card">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div>
-                            <span class="badge" style="color: var(--neon-purple); border-color: rgba(168,85,247,0.3);"><span></span>Business Intelligence</span>
-                            <h3>Corporate Operations & BI Executive Matrix</h3>
-                        </div>
-                        <div class="tech-badges">
-                            <span>Power BI</span><span>Tableau</span><span>DAX</span><span>SQL Server</span>
+                            <span>Power BI</span><span>Advanced Excel</span><span>MySQL</span><span>Star Schema</span>
                         </div>
                     </div>
                     <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                         <div>
                             <h4 style="color: var(--neon-purple);">Business Context & Objective</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Executive stakeholders required cross-departmental data tracking to monitor organizational margin health. The goal was to consolidate siloed operational and financial data into a comprehensive Star Schema relational framework.</p>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Operational leaders in manufacturing struggled with systemic lead-time delivery variances across multiple accessory supply lines. Flat, unstructured spreadsheet logs hidden across silos prevented real-time delivery audits.</p>
                         </div>
                         <div>
                             <h4 style="color: var(--neon-purple);">Technical Execution Layer</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Designed relational data models linking multiple fact and dimension tables. Programmed complex, optimized DAX measures to calculate dynamic, time-intelligent performance metrics across various reporting periods.</p>
-                        </div>
-                    </div>
-                    <div class="mock-dashboard" style="height: auto; padding: 1.5rem; margin-bottom: 2rem;">
-                        <div class="mock-nav"><span>POWER BI ENGINE // DAX MATRIX COMPILER</span><span style="color: var(--neon-purple)">DEPLOYED</span></div>
-                        <pre style="color: #c084fc; font-size: 0.75rem; margin: 1rem 0; overflow-x: auto; font-family: 'JetBrains Mono', monospace;">
-YoY_Margin_Growth := 
-VAR CurrentPeriodMargin = [Total_Contribution_Margin]
-VAR PriorPeriodMargin = CALCULATE([Total_Contribution_Margin], SAMEPERIODLASTYEAR('Calendar_Dim'[Date]))
-RETURN 
-DIVIDE(CurrentPeriodMargin - PriorPeriodMargin, PriorPeriodMargin, 0)</pre>
-                        <div class="mock-grid">
-                            <div class="mock-kpi"><span>ACTIVE REFRESH</span><div class="mock-val" style="color: var(--success)">DirectQuery</div></div>
-                            <div class="mock-kpi"><span>DAX MEASURES</span><div class="mock-val">45+ Elements</div></div>
-                            <div class="mock-kpi"><span>REPORT LAG</span><div class="mock-val" style="color: var(--success)">&lt; 0.8s Render</div></div>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Extracted messy Excel datasets into a structured MySQL database layer. Modeled an optimized Star Schema topology inside Power BI, fabricating custom time-intelligence DAX matrices to isolate target supplier friction zones.</p>
                         </div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;">
-                        <h6>Key Impact: <span style="color: #fff; font-weight: 700;">Delivered zero-lag visual updates for corporate leadership.</span></h6>
-                        <a href="https://github.com/ShayanthaDas/corporate-bi-matrix" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Inspect Blueprint Repository <i class="fab fa-github"></i></a>
+                        <h6>Key Impact: <span style="color: #fff; font-weight: 700;">Consolidated 14 tracking segments into 1 interactive control panel.</span></h6>
+                        <a href="https://github.com/ShayanthaDas/" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Inspect Blueprint Repository <i class="fab fa-github"></i></a>
+                    </div>
+                </article>
+
+                <!-- CASE STUDY 3 -->
+                <article class="glass-card">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <span class="badge" style="background: rgba(59,130,246,0.1); color: var(--neon-blue); border-color: rgba(59,130,246,0.2);"><span></span>Automated Engineering</span>
+                            <h3>Statistical Workflow Pipeline & Discrepancy Auditor</h3>
+                        </div>
+                        <div class="tech-badges">
+                            <span>Python</span><span>Pandas</span><span>SPSS Matrix</span><span>NumPy</span>
+                        </div>
+                    </div>
+                    <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                        <div>
+                            <h4 style="color: var(--neon-blue);">Business Context & Objective</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Manual entry pipelines frequently introduced structural structural variations, duplicate keys, and formatting anomalies into data layers before they reached executive-facing visualization tools.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--neon-blue);">Technical Execution Layer</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Programmed a reproducible automated data cleaning module using Python and Pandas. Constructed outlier validation layers via NumPy masking constraints, and benchmarked output structures against SPSS variance controls.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;">
+                        <h6>Key Impact: <span style="color: #fff; font-weight: 700;">Eliminated manual preprocessing overhead by 90%.</span></h6>
+                        <a href="https://github.com/ShayanthaDas/" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Inspect Blueprint Repository <i class="fab fa-github"></i></a>
                     </div>
                 </article>
 
@@ -171,7 +143,7 @@ DIVIDE(CurrentPeriodMargin - PriorPeriodMargin, PriorPeriodMargin, 0)</pre>
         </section>
     </main>
 
-    <!-- UPDATED FOOTER (NAVIGATION REMOVED) -->
+    <!-- FOOTER (STRICTLY NAVIGATION FREE) -->
     <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
