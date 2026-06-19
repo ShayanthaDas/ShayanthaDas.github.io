@@ -41,21 +41,27 @@
             <h2>Direct Communication Terminal</h2>
             <p class="section-subtitle">Submit professional data role guidelines, platform inquiries, or technical infrastructure audits directly through the secure gateway.</p>
 
-            <form action="https://formspree.io/f/your-formspree-id" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="recruiter_name">Full Professional Name</label>
-                    <input type="text" id="recruiter_name" name="name" class="form-control" placeholder="Jane Doe" required>
-                </div>
-                <div class="form-group">
-                    <label for="recruiter_email">Corporate Email Address</label>
-                    <input type="email" id="recruiter_email" name="email" class="form-control" placeholder="j.doe@company.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="msg_body">Role Specifications / Project Objectives</label>
-                    <textarea id="msg_body" name="message" rows="5" class="form-control" placeholder="Detail your infrastructure timeline or system scope parameter tracking requirements..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="justify-content: center; margin-top: 0.5rem;">Dispatch Message <i class="fas fa-paper-plane"></i></button>
-            </form>
+           <!-- CONTACT FORM SECTION -->
+<form action="https://formspree.io/f/xojzalpw" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 500px; margin: 0 auto;">
+    
+    <!-- Email Input Field -->
+    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <label for="email" style="color: #fff; font-size: 0.9rem; font-weight: 600;">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.02); color: #fff;">
+    </div>
+
+    <!-- Message Input Field -->
+    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <label for="message" style="color: #fff; font-size: 0.9rem; font-weight: 600;">Your Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" required rows="5" style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.02); color: #fff; resize: vertical;"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" style="padding: 0.75rem; font-weight: 600; border-radius: 6px; cursor: pointer;">
+        Send Message <i class="fas fa-paper-plane" style="margin-left: 0.5rem;"></i>
+    </button>
+
+</form>
         </section>
     </main>
 
