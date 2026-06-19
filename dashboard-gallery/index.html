@@ -4,44 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Dashboard Gallery | Shayantha Das</title>
+    <meta name="description" content="Production-ready Business Intelligence canvases, Power BI mockups, and interactive corporate reporting interfaces engineered by Shayantha Das.">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- UNIFIED TOP NAVIGATION HEADER -->
     <header class="navbar">
         <nav class="nav-container" aria-label="Main Navigation">
             <a href="/" class="logo">SD<span>.</span>analytics</a>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about/">About & Skills</a></li>
-                <li><a href="/projects/">Portfolio Work</a></li>
-                <li><a href="/services/">Services</a></li>
+                <li><a href="/experience/">Experience</a></li>
                 <li><a href="/case-studies/">Case Studies</a></li>
-                <li><a href="/dashboard-gallery/">Dashboard Gallery</a></li>
+                <li><a href="/dashboard-gallery/" class="active">Dashboard Gallery</a></li>
+                <li><a href="/projects/">Portfolio Work</a></li>
                 <li><a href="/contact/">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main-wrapper">
-        <section aria-label="Interactive Dashboard Showroom">
-            <h5>Executive Visibility</h5>
-            <h1 class="gradient-text" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">BI Dashboard Gallery</h1>
-            <h2>Executive Mockups & Analytics Interfaces</h2>
+        <section aria-label="Interactive Dashboard Showroom" style="padding: 2rem 0 5rem 0;">
+            <h5 style="letter-spacing: 2px; text-transform: uppercase; color: var(--neon-cyan); margin-bottom: 0.5rem;">Executive Visibility</h5>
+            <h1 class="gradient-text" style="font-size: 2.75rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.2;">BI Dashboard Gallery</h1>
+            <h2 style="font-size: 1.3rem; font-weight: 400; color: #cbd5e1; margin-bottom: 3.5rem;">Transforming Complex Analytical Ledgers into High-Fidelity Executive Canvases</h2>
 
-            <div class="grid-2" style="margin-top: 3rem; gap: 2.5rem;">
-                <div class="glass-card" style="padding: 1.5rem;">
-                    <div style="width: 100%; height: 180px; background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-                        <i class="fas fa-chart-pie" style="font-size: 2.5rem; color: var(--neon-cyan); opacity: 0.4;"></i>
+            <!-- DASHBOARD GRID ARCHITECTURE -->
+            <div style="display: flex; flex-direction: column; gap: 4rem;">
+
+                <!-- DASHBOARD CARD 1: WALMART -->
+                <div class="glass-card" style="padding: 2.5rem; border: 1px solid rgba(255, 255, 255, 0.06); display: flex; flex-direction: column; gap: 2rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <span style="color: #eab308; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;"><i class="fas fa-chart-line"></i> Supply Chain & Retail Analytics</span>
+                            <h3 style="color: #fff; font-size: 1.75rem; margin: 0.25rem 0 0.5rem 0;">Walmart Weekly Sales Optimization Canvas</h3>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="font-family: monospace; font-size: 0.75rem; background: rgba(6,182,212,0.06); border: 1px solid rgba(6,182,212,0.2); padding: 0.4rem 0.8rem; border-radius: 4px; color: var(--neon-cyan);">Power BI Desktop</span>
+                            <span style="font-family: monospace; font-size: 0.75rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 0.4rem 0.8rem; border-radius: 4px; color: #94a3b8;">DAX Measures</span>
+                        </div>
                     </div>
-                    <h3 style="color: #fff; font-size: 1.25rem; margin: 0 0 0.5rem 0;">Retail Revenue Tracking Canvas</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Cross-filtering data modules built to parse weekly pipeline velocities and branch parameters dynamically.</p>
+
+                    <!-- SCREENSHOT CONTAINER -->
+                    <div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: #030712;">
+                        <!-- Replace src link with your own uploaded image path later if preferred -->
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Walmart Retail Demand Optimization Power BI Dashboard Screenshot" style="width: 100%; height: auto; display: block; opacity: 0.85;">
+                    </div>
+
+                    <!-- METADATA & ARCHITECTURE BREAKDOWN -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; background: rgba(255,255,255,0.01); padding: 1.5rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.02);">
+                        <div>
+                            <h4 style="color: #fff; font-size: 1rem; margin-top: 0; margin-bottom: 0.5rem;"><i class="fas fa-bullseye" style="color: #eab308; margin-right: 0.5rem;"></i> Business Problem Isolated</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0;">Uncontrolled stock markdown events and localized inventory loading patterns causing branch-level distribution leakage across core trading categories.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #fff; font-size: 1rem; margin-top: 0; margin-bottom: 0.5rem;"><i class="fas fa-layer-group" style="color: var(--neon-cyan); margin-right: 0.5rem;"></i> Implemented Viewports</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0;">Features dynamic matrix parameters tracking temporal peak operations, markdown elasticities, holiday trend overlays, and localized district performance matrices.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                        <span style="font-family: monospace; font-size: 0.85rem; color: #64748b;"><i class="fas fa-link"></i> Target Model: Integrated Star Schema (1 Fact, 4 Dimensions)</span>
+                        <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting-and-Business-Intelligence-Project" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">Review Engineering Assets <i class="fab fa-github"></i></a>
+                    </div>
                 </div>
+
+                <!-- DASHBOARD CARD 2: OLIST -->
+                <div class="glass-card" style="padding: 2.5rem; border: 1px solid rgba(255, 255, 255, 0.06); display: flex; flex-direction: column; gap: 2rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <span style="color: #22c55e; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;"><i class="fas fa-boxes-packing"></i> Logistical Operational Visibility</span>
+                            <h3 style="color: #fff; font-size: 1.75rem; margin: 0.25rem 0 0.5rem 0;">Olist Brazilian E-Commerce Fulfillment Intelligence</h3>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="font-family: monospace; font-size: 0.75rem; background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.2); padding: 0.4rem 0.8rem; border-radius: 4px; color: #22c55e;">Tableau Public / Pro</span>
+                            <span style="font-family: monospace; font-size: 0.75rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 0.4rem 0.8rem; border-radius: 4px; color: #94a3b8;">Geospatial Polygons</span>
+                        </div>
+                    </div>
+
+                    <!-- SCREENSHOT CONTAINER -->
+                    <div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: #030712;">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Olist Brazil E-Commerce Shipping Logistics Dashboard Screenshot" style="width: 100%; height: auto; display: block; opacity: 0.85;">
+                    </div>
+
+                    <!-- METADATA & ARCHITECTURE BREAKDOWN -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; background: rgba(255,255,255,0.01); padding: 1.5rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.02);">
+                        <div>
+                            <h4 style="color: #fff; font-size: 1rem; margin-top: 0; margin-bottom: 0.5rem;"><i class="fas fa-bullseye" style="color: #22c55e; margin-right: 0.5rem;"></i> Business Problem Isolated</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0;">Unidentified shipping fulfillment lag across remote regional hubs causing localized review score degeneration and order cancellations.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #fff; font-size: 1rem; margin-top: 0; margin-bottom: 0.5rem;"><i class="fas fa-layer-group" style="color: var(--neon-cyan); margin-right: 0.5rem;"></i> Implemented Viewports</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0;">Integrates complex geospatial distribution density maps, freight carrier delivery delta charts, order validation timelines, and multi-tier seller performance matrices.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                        <span style="font-family: monospace; font-size: 0.85rem; color: #64748b;"><i class="fas fa-link"></i> Target Model: Multi-Join Relational Pipeline Schema</span>
+                        <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics-End-to-End-Data-Project-" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">Review Engineering Assets <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
+    <!-- UNIFIED CORPORATE FOOTER -->
     <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
@@ -50,20 +121,11 @@
             </div>
             <div style="flex: 1; min-width: 250px;">
                 <h4 style="color: #fff; font-size: 1rem; margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">Inquiries & Comms</h4>
-                <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.8rem;">Open to junior data analytics roles, pipeline architecture testing, or custom automated workflow options.</p>
-                <a href="https://wa.me/8801729851376" target="_blank" style="color: #06b6d4; text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-block; margin-top: 0.2rem;"><i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i> +880 1729-851376</a>
+                <a href="https://wa.me/8801729851376" target="_blank" style="color: #06b6d4; text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-block;"><i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i> +880 1729-851376</a>
             </div>
         </div>
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; padding-top: 1.5rem; font-size: 0.85rem;">
             <div><p style="margin: 0;">&copy; 2026 Shayantha Das. All Rights Reserved.</p></div>
-            <div style="display: flex; gap: 1.3rem;">
-                <a href="https://linkedin.com/in/shayantha-das/" target="_blank" aria-label="LinkedIn" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://facebook.com/shayantho.das" target="_blank" aria-label="Facebook" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/mrdasq1/" target="_blank" aria-label="Instagram" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/8801729851376" target="_blank" aria-label="WhatsApp" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://github.com/ShayanthaDas" target="_blank" aria-label="GitHub" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/ShayanthaDas" target="_blank" aria-label="Twitter" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-x-twitter"></i></a>
-            </div>
         </div>
     </footer>
 
