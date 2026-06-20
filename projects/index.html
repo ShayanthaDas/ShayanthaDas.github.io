@@ -3,128 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytical Case Studies & Work Projects | Shayantha Das</title>
-    <meta name="description" content="Explore advanced SQL pipeline queries, Python data cleaning scripts, and Power BI relational star schema dashboards engineered across structural business case studies by Shayantha Das.">
-    <link rel="canonical" href="https://shayanthadas.github.io/projects/">
+    <title>Production Engineering Projects | Shayantha Das</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
 </head>
 <body>
 
+    <!-- UNIFIED TOP NAVIGATION HEADER -->
     <header class="navbar">
         <nav class="nav-container" aria-label="Main Navigation">
             <a href="/" class="logo">SD<span>.</span>analytics</a>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about/">About & Skills</a></li>
-                <li><a href="/projects/">Portfolio Work</a></li>
-                <li><a href="/services/">Services</a></li>
+                <li><a href="/experience/">Experience</a></li>
                 <li><a href="/case-studies/">Case Studies</a></li>
                 <li><a href="/dashboard-gallery/">Dashboard Gallery</a></li>
+                <li><a href="/projects/" class="active">Portfolio Work</a></li>
                 <li><a href="/contact/">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main-wrapper">
-        <section aria-label="Case Studies Framework">
-            <h5>Production Applications</h5>
-            <h1 class="gradient-text" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">Analytical Case Studies</h1>
-            <h2>Verifiable Engineering Work</h2>
-            <p class="section-subtitle">Deep dives into relational systems architecture, query structure optimization, and clean interactive visualization design models.</p>
+        <section aria-label="Engineered Repositories" style="padding: 2rem 0 5rem 0;">
+            <h5 style="letter-spacing: 2px; text-transform: uppercase; color: var(--neon-cyan); margin-bottom: 0.5rem;">Production Systems</h5>
+            <h1 class="gradient-text" style="font-size: 2.75rem; font-weight: 800; margin-bottom: 0.5rem;">Portfolio Work</h1>
+            <h2 style="font-size: 1.3rem; font-weight: 400; color: #cbd5e1; margin-bottom: 3.5rem;">Open Source Relational Databases, ETL Solutions & Execution Frameworks</h2>
 
-            <div class="grid-2" style="grid-template-columns: 1fr; gap: 4rem;">
+            <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
 
-                <article class="glass-card">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div>
-                            <span class="badge" style="background: rgba(234,179,8,0.1); color: #eab308;"><span style="background: #eab308;"></span>Retail Intelligence</span>
-                            <h3>Walmart Sales Data Analysis</h3>
+                <!-- PROJECT CARD 1: MARKETING CAMPAIGNS -->
+                <div class="glass-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(255,255,255,0.06);">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <i class="fas fa-bullhorn" style="font-size: 2rem; color: #a855f7;"></i>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: #c084fc; background: rgba(168,85,247,0.1); padding: 0.25rem 0.6rem; border-radius: 4px;">Signature</span>
                         </div>
-                        <div class="tech-badges">
-                            <span>MySQL</span><span>SQL Queries</span><span>Data Wrangling</span><span>Feature Engineering</span>
-                        </div>
+                        <h3 style="color: #fff; font-size: 1.3rem; margin: 0 0 0.75rem 0;">Marketing Campaign Performance</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">Advanced conversion attribution data architecture built to parse multi-channel customer acquisition cost (CAC) and ROI indices.</p>
                     </div>
-                    <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                        <div>
-                            <h4 style="color: var(--neon-cyan);">Business Context & Objective</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Exploring Walmart's historical branch transactions to pinpoint top-performing branches, study product line velocities, and evaluate consumer behavior patterns. The core aim is evaluating how markdown features and localized factors alter weekly sales metrics.</p>
-                        </div>
-                        <div>
-                            <h4 style="color: var(--neon-cyan);">Technical Execution Layer</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Constructed robust raw tables inside MySQL. Managed absolute data-wrangling tasks to drop null values, and added custom computed time-of-day, day-name, and month-name columns to build historical feature dimensions supporting granular corporate aggregations.</p>
-                        </div>
+                    <div style="padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">Python / BI</span>
+                        <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" style="color: var(--neon-cyan); text-decoration: none; font-size: 0.9rem; font-weight: 600;">View Repository <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 0.25rem;"></i></a>
                     </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;">
-                        <h6>Repository Context: <span style="color: #fff; font-weight: 700;">Walmart Retail Analytics</span></h6>
-                        <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting-and-Business-Intelligence-Project" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Inspect Project Files <i class="fab fa-github"></i></a>
-                    </div>
-                </article>
+                </div>
 
-                <article class="glass-card">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div>
-                            <span class="badge" style="background: rgba(34,197,94,0.1); color: #22c55e;"><span style="background: #22c55e;"></span>Supply Chain Analytics</span>
-                            <h3>Olist Brazilian E-Commerce Analysis</h3>
+                <!-- PROJECT CARD 2: OLIST -->
+                <div class="glass-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(255,255,255,0.06);">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <i class="fas fa-truck-fast" style="font-size: 2rem; color: #22c55e;"></i>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: #4ade80; background: rgba(34,197,94,0.1); padding: 0.25rem 0.6rem; border-radius: 4px;">End-to-End</span>
                         </div>
-                        <div class="tech-badges">
-                            <span>Python</span><span>Pandas</span><span>Exploratory Data Analysis</span><span>Matplotlib</span>
-                        </div>
+                        <h3 style="color: #fff; font-size: 1.3rem; margin: 0 0 0.75rem 0;">Olist Supply Chain Operations</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">Data transformations evaluating fulfillment delays, geospatial shipping hubs, and platform review matrices.</p>
                     </div>
-                    <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                        <div>
-                            <h4 style="color: var(--neon-cyan);">Business Context & Objective</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Investigating 100k multi-tenant marketplace orders from Brazilian hubs. The diagnostic objective targets evaluating customer distribution densities, mapping logistical delivery delays, and computing vendor delivery score correlations.</p>
-                        </div>
-                        <div>
-                            <h4 style="color: var(--neon-cyan);">Technical Execution Layer</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Leveraged Python scripts to ingest multiple interconnected relational datasets. Managed key data manipulation operations via Pandas to merge dataframes, clean geospatial outliers, and script descriptive visualizations mapping order fulfillment lag.</p>
-                        </div>
+                    <div style="padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">Pandas / SQL</span>
+                        <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" style="color: var(--neon-cyan); text-decoration: none; font-size: 0.9rem; font-weight: 600;">View Repository <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 0.25rem;"></i></a>
                     </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;">
-                        <h6>Repository Context: <span style="color: #fff; font-weight: 700;">Olist Sales & Customer Analytics</span></h6>
-                        <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics-End-to-End-Data-Project-" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Inspect Project Files <i class="fab fa-github"></i></a>
-                    </div>
-                </article>
+                </div>
 
-                <article class="glass-card">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div>
-                            <span class="badge" style="background: rgba(239,68,68,0.1); color: #ef4444;"><span style="background: #ef4444;"></span>Content Optimization</span>
-                            <h3>Netflix Data Analysis</h3>
+                <!-- PROJECT CARD 3: WALMART -->
+                <div class="glass-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(255,255,255,0.06);">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <i class="fas fa-store" style="font-size: 2rem; color: #eab308;"></i>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: #fde047; background: rgba(234,179,8,0.1); padding: 0.25rem 0.6rem; border-radius: 4px;">Integrated</span>
                         </div>
-                        <div class="tech-badges">
-                            <span>Python</span><span>Data Cleaning</span><span>Seaborn Visualization</span><span>Jupyter Notebook</span>
-                        </div>
+                        <h3 style="color: #fff; font-size: 1.3rem; margin: 0 0 0.75rem 0;">Walmart Demand Analytics</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">Optimized MySQL aggregate data sets measuring weekly promotional markdown metrics and store loading spikes.</p>
                     </div>
-                    <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                        <div>
-                            <h4 style="color: var(--neon-cyan);">Business Context & Objective</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Parsing complex media metadata to inspect production trends, runtime variances, and category concentrations. This matrix exposes production country distributions and provides insights into content classification strategies.</p>
-                        </div>
-                        <div>
-                            <h4 style="color: var(--neon-cyan);">Technical Execution Layer</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Engineered automated programmatic parsing blocks inside Jupyter Notebooks. Addressed null handling across director and cast fields, cleaned categorical values, and produced clear visualization layouts tracking content shifts using Seaborn.</p>
-                        </div>
+                    <div style="padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">MySQL Server</span>
+                        <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" style="color: var(--neon-cyan); text-decoration: none; font-size: 0.9rem; font-weight: 600;">View Repository <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 0.25rem;"></i></a>
                     </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;">
-                        <h6>Repository Context: <span style="color: #fff; font-weight: 700;">Netflix Content Strategy Analytics</span></h6>
-                        <a href="https://github.com/ShayanthaDas/netflix-content-strategy-analytics" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Inspect Project Files <i class="fab fa-github"></i></a>
-                    </div>
-                </article>
+                </div>
 
             </div>
         </section>
     </main>
 
+    <!-- UNIFIED CORPORATE FOOTER -->
     <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
@@ -133,20 +94,11 @@
             </div>
             <div style="flex: 1; min-width: 250px;">
                 <h4 style="color: #fff; font-size: 1rem; margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">Inquiries & Comms</h4>
-                <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.8rem;">Open to junior data analytics roles, pipeline architecture testing, or custom automated workflow options.</p>
-                <a href="https://wa.me/8801729851376" target="_blank" style="color: #06b6d4; text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-block; margin-top: 0.2rem;"><i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i> +880 1729-851376</a>
+                <a href="https://wa.me/8801729851376" target="_blank" style="color: #06b6d4; text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-block;"><i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i> +880 1729-851376</a>
             </div>
         </div>
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; padding-top: 1.5rem; font-size: 0.85rem;">
             <div><p style="margin: 0;">&copy; 2026 Shayantha Das. All Rights Reserved.</p></div>
-            <div style="display: flex; gap: 1.3rem;">
-                <a href="https://linkedin.com/in/shayantha-das/" target="_blank" aria-label="LinkedIn" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://facebook.com/shayantho.das" target="_blank" aria-label="Facebook" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/mrdasq1/" target="_blank" aria-label="Instagram" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/8801729851376" target="_blank" aria-label="WhatsApp" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://github.com/ShayanthaDas" target="_blank" aria-label="GitHub" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/ShayanthaDas" target="_blank" aria-label="Twitter" style="color: #94a3b8; font-size: 1.3rem; transition: color 0.2s;"><i class="fab fa-x-twitter"></i></a>
-            </div>
         </div>
     </footer>
 
