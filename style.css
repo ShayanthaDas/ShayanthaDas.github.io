@@ -259,3 +259,19 @@ h6 { font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); }
     .nav-container { flex-direction: column; gap: 1rem; }
     .rec-grid { grid-template-columns: 1fr; }
 }
+/* --- Fix for Dashboard Gallery Cutting Off --- */
+.gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 2rem !important;
+    height: auto !important; /* Prevents the container from cutting off after 3 images */
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.gallery-item {
+    display: block !important; /* Forces every single image card to be visible */
+    height: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
