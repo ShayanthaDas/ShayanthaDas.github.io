@@ -3,103 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Analytics Case Studies | Shayantha Das</title>
-    <link rel="stylesheet" href="../style.css?v=3.5">
+    <title>Business Case Studies | Shayantha Das</title>
+    <link rel="stylesheet" href="../style.css?v=5.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .case-wrapper {
-            max-width: 1200px;
+        .case-studies-container {
+            max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
             font-family: system-ui, -apple-system, sans-serif;
             color: #f1f5f9;
         }
-        .case-header {
-            margin-bottom: 50px;
-        }
         .case-card {
             background: #0f172a;
             border: 1px solid #1e293b;
             border-radius: 12px;
-            padding: 35px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 2.5rem;
+            margin-bottom: 4rem;
         }
-        .repo-label {
-            font-size: 0.85rem;
-            text-transform: lowercase;
-            color: #06b6d4;
-            font-family: monospace;
-            background: rgba(6, 182, 212, 0.08);
-            padding: 4px 10px;
-            border-radius: 4px;
-            border: 1px solid rgba(6, 182, 212, 0.15);
+        .repo-badge {
             display: inline-block;
-            margin-bottom: 15px;
+            background: rgba(6, 182, 212, 0.08);
+            border: 1px solid #06b6d4;
+            color: #06b6d4;
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
         .case-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin: 0 0 20px 0;
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 0 0 1.5rem 0;
+            line-height: 1.3;
         }
-        .readme-section {
+        .grid-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
             background: #030712;
-            border-left: 4px solid #06b6d4;
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 20px 0;
+            padding: 1.25rem;
+            border-radius: 6px;
+            border: 1px solid #1e293b;
         }
-        .readme-title {
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .meta-item strong {
+            display: block;
             color: #94a3b8;
-            margin-top: 0;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
         }
-        .readme-text {
+        .meta-item p {
+            margin: 0;
             font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #06b6d4;
+            margin: 2rem 0 0.75rem 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .content-text {
+            font-size: 0.98rem;
             line-height: 1.7;
             color: #cbd5e1;
-            margin: 0;
+            margin: 0 0 1.5rem 0;
+            text-align: justify;
         }
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 25px;
+        .bullet-list {
+            margin: 0 0 2rem 0;
+            padding-left: 1.25rem;
         }
-        .tech-tag {
-            font-size: 0.8rem;
-            background: #1e293b;
-            color: #94a3b8;
-            padding: 4px 12px;
-            border-radius: 20px;
-            border: 1px solid #334155;
-            font-weight: 600;
+        .bullet-list li {
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+            font-size: 0.98rem;
         }
-        .view-repo-btn {
+        .btn-git {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: transparent;
-            color: #06b6d4;
-            border: 1px solid #06b6d4;
-            padding: 10px 20px;
-            border-radius: 6px;
+            gap: 0.5rem;
+            background: #1e293b;
+            color: #fff;
             text-decoration: none;
-            font-weight: 600;
+            padding: 0.65rem 1.4rem;
+            border-radius: 6px;
             font-size: 0.9rem;
-            margin-top: 20px;
+            font-weight: 600;
+            border: 1px solid #334155;
             transition: all 0.2s ease;
+            margin-top: 1rem;
         }
-        .view-repo-btn:hover {
-            background: rgba(6, 182, 212, 0.1);
-            transform: translateY(-2px);
+        .btn-git:hover {
+            background: #06b6d4;
+            border-color: #06b6d4;
+            color: #fff;
         }
     </style>
 </head>
@@ -120,100 +126,103 @@
         </nav>
     </header>
 
-    <main class="case-wrapper">
+    <main class="case-studies-container">
         
-        <div class="case-header">
-            <h1 style="font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 10px;">Data Case Studies</h1>
-            <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Comprehensive deep-dives into production database systems, advanced schemas, and analytical insights.</p>
+        <div style="margin-bottom: 4rem;">
+            <h1 style="font-size: 2.6rem; color: #fff; margin-bottom: 0.5rem; font-weight: 800;">Business Case Studies</h1>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Comprehensive deep-dives detailing dataset engineering, business problems, and interface development.</p>
         </div>
 
         <article class="case-card">
-            <span class="repo-label"><i class="fab fa-github"></i> Marketing-Campaign-Performance-Analytics</span>
-            <h2 class="case-title">Multi-Channel Marketing Performance & Customer Conversion Profiling</h2>
+            <span class="repo-badge">Repository Name</span>
+            <h2 class="case-title">Marketing-Campaign-Performance-Analytics</h2>
             
-            <p style="color: #cbd5e1; line-height: 1.6;">
-                An end-to-end analytical project processing customer campaign variables to trace behavioral trends, clean unstructured marketing inputs, optimize conversion channels, and generate actionable multi-platform report dashboards.
-            </p>
-
-            <div class="readme-section">
-                <h4 class="readme-title"><i class="fas fa-file-alt"></i> Extract from README.md</h4>
-                <p class="readme-text">
-                    This project focuses on evaluating marketing campaign data to uncover customer behavior patterns, profile high-value converting cohorts, and identify response variances across distinct demographic groups. By analyzing features such as household size, educational tier, marital distribution, income spreads, and complaint frequencies, the system highlights structural bottlenecks in response processing pipelines and optimizes user-targeting logic for lower acquisition overhead costs.
-                </p>
+            <div class="grid-meta">
+                <div class="meta-item"><strong>Core Technology Stack</strong><p>Python (Pandas/NumPy), MySQL Server, Power BI, Tableau</p></div>
+                <div class="meta-item"><strong>Analytical Methods</strong><p>Cohort Extraction, Conversion Optimization, RFM Modeling</p></div>
+                <div class="meta-item"><strong>Database Engine</strong><p>Relational Schema Script Structures</p></div>
             </div>
 
-            <div class="tech-stack">
-                <span class="tech-tag">Python (Pandas/NumPy)</span>
-                <span class="tech-tag">SQL Server</span>
-                <span class="tech-tag">Advanced Excel</span>
-                <span class="tech-tag">Power BI</span>
-                <span class="tech-tag">Tableau</span>
-            </div>
+            <h3 class="section-subtitle">Project From README File</h3>
+            <p class="content-text">This analytical repository establishes an end-to-end framework for processing complex customer interaction metrics and attributing performance cross multi-tier campaign initiatives. The primary focus centers on automated extraction, structural data validation via Python workflows, and ingestion into an optimized relational model to trace cross-channel interaction loops.</p>
+            <p class="content-text">By joining behavioral click logs with down-funnel acquisition records, the processing system normalizes messy attributes across varied segments. This architecture serves as the direct pipeline for feeding cross-platform dashboard reporting sheets that reveal functional acquisition trends.</p>
 
-            <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="view-repo-btn">
-                View Repository <i class="fas fa-external-link-alt"></i>
+            <h3 class="section-subtitle">Case Studies From Case Studies File</h3>
+            <p class="content-text"><strong>The Business Problem:</strong> The organization faced attribution blindness where fragmented, multi-channel promotional spend masked actual conversion drivers. Overlapping campaign schedules across distinct ad channels caused significant double-counting of conversion loops, leading to inflated acquisition overheads and localized ad-budget inefficiencies.</p>
+            <p class="content-text"><strong>The Investigation & Implementation:</strong> To decouple the true driver of campaign profitability, granular customer interaction touchpoints were extracted and transformed via a specialized data model. Using Python for schema normalization and SQL for transaction aggregation, multi-tier touchpoint pathways were successfully separated. Cross-platform visualization suites were then engineered to display live tracking variables, giving management the tools to restructure campaign budget distribution balances and lower Cost Per Acquisition (CPA) parameters.</p>
+            
+            <ul class="bullet-list">
+                <li>Normalized multi-source lead arrays into standardized transaction schemas.</li>
+                <li>Built interactive cross-platform layouts tracking attribution decay.</li>
+                <li>Isolated performance variances using rolling cohort matrices.</li>
+            </ul>
+
+            <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn-git">
+                <i class="fab fa-github"></i> View Full Repository
             </a>
         </article>
 
         <article class="case-card">
-            <span class="repo-label"><i class="fab fa-github"></i> Walmart-Retail-Analytics-Demand-Forecasting</span>
-            <h2 class="case-title">Supply Chain Demand Forecasting & Macro-Economic Volatility Modeling</h2>
+            <span class="repo-badge">Repository Name</span>
+            <h2 class="case-title">Walmart-Retail-Analytics-Demand-Forecasting</h2>
             
-            <p style="color: #cbd5e1; line-height: 1.6;">
-                Engineered to isolate retail trends, this case study blends complex structural database schemas with localized time-series vectors to evaluate supply chain efficiency against regional economic indicators.
-            </p>
-
-            <div class="readme-section">
-                <h4 class="readme-title"><i class="fas fa-file-alt"></i> Extract from README.md</h4>
-                <p class="readme-text">
-                    This analytical workload parses store-level performance trends across multiple regional hubs, evaluating weekly sales data alongside external market conditions. It maps interactions between performance data and macroeconomic forces—including structural unemployment figures, consumer price index fluctuations, fuel price volatility, and localized holiday schedules. The resulting cross-platform tracking dashboards provide executive leaders with a framework to control inventory levels and mitigate distribution bottlenecks during peak market demand cycles.
-                </p>
+            <div class="grid-meta">
+                <div class="meta-item"><strong>Core Technology Stack</strong><p>PostgreSQL, Python, Power BI Desktop, Advanced Excel</p></div>
+                <div class="meta-item"><strong>Analytical Methods</strong><p>Time Series Partitioning, Rolling Drift Analysis, Trend Audit</p></div>
+                <div class="meta-item"><strong>Database Engine</strong><p>Structured Multi-Row Storage Engine</p></div>
             </div>
 
-            <div class="tech-stack">
-                <span class="tech-tag">Time-Series Analytics</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Power BI Desktop</span>
-                <span class="tech-tag">Tableau Desktop</span>
-            </div>
+            <h3 class="section-subtitle">Project From README File</h3>
+            <p class="content-text">An enterprise data engineering and trend prediction framework built to evaluate historical sales records across multi-location store footprints. The environment ingests historical weekly store metrics, cross-referencing markdown promotions, local pricing indices, macro-economic metrics, and markdown variables across distinct regional operational departments.</p>
+            <p class="content-text">The resulting architecture optimizes analytical indexing paths to handle data density smoothly. It feeds interactive reporting interfaces designed to track inventory levels, monitor regional demand variations, and trace operational trends.</p>
 
-            <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="view-repo-btn">
-                View Repository <i class="fas fa-external-link-alt"></i>
+            <h3 class="section-subtitle">Case Studies From Case Studies File</h3>
+            <p class="content-text"><strong>The Business Problem:</strong> Extreme seasonal demand spikes and unpredictable localized sales variations consistently disrupted regional distribution pipelines. Holiday sales surges often led to severe out-of-stock situations in high-margin categories, while sudden drop-offs resulted in excessive holding costs and margin erosion due to heavy post-season clearance markdowns.</p>
+            <p class="content-text"><strong>The Investigation & Implementation:</strong> Large historical transaction records were queried using optimized window functions and multi-table joins within PostgreSQL. The data was structured into discrete chronological sequences to analyze store demand shifts and isolate baseline seasonal noise. Using Power BI and Advanced Excel, a demand intelligence portal was created to sync inventory thresholds with moving average trends, allowing distribution managers to preemptively balance warehouse shipments and limit stock depletion metrics during high-traffic promotional periods.</p>
+            
+            <ul class="bullet-list">
+                <li>Processed dense regional transaction tables into structured analytical views.</li>
+                <li>Engineered time-series tracking metrics inside Power BI and Excel models.</li>
+                <li>Implemented dynamic parameters to forecast distribution threshold adjustments.</li>
+            </ul>
+
+            <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-git">
+                <i class="fab fa-github"></i> View Full Repository
             </a>
         </article>
 
         <article class="case-card">
-            <span class="repo-label"><i class="fab fa-github"></i> Olist-Sales-Customer-Analytics</span>
-            <h2 class="case-title">E-Commerce Marketplace Fulfillment & Geospatial Shipping Logistics</h2>
+            <span class="repo-badge">Repository Name</span>
+            <h2 class="case-title">Olist-Sales-Customer-Analytics</h2>
             
-            <p style="color: #cbd5e1; line-height: 1.6;">
-                A thorough exploration of a multi-tier e-commerce relational structure to isolate logistical delay vectors, optimize customer review feedback scores, and streamline marketplace processing pipelines.
-            </p>
-
-            <div class="readme-section">
-                <h4 class="readme-title"><i class="fas fa-file-alt"></i> Extract from README.md</h4>
-                <p class="readme-text">
-                    This project delivers a multi-dimensional analysis of customer buying behaviors and logistics pipelines. By structuring complex data architectures—encompassing order lifecycles, payment type splits, geolocation distributions, items catalog metadata, and review trends—it extracts crucial insights into product popularity patterns and fulfillment delays. The interface includes interactive geospatial tracking configurations that explicitly highlight transit speed drops and carrier performance across distinct territory hubs.
-                </p>
+            <div class="grid-meta">
+                <div class="meta-item"><strong>Core Technology Stack</strong><p>MySQL Workbench, Python, Tableau Client, Power BI</p></div>
+                <div class="meta-item"><strong>Analytical Methods</strong><p>Geospatial Mapping, Lifecycle Segmentation, Logistics Flow</p></div>
+                <div class="meta-item"><strong>Database Engine</strong><p>Relational SQL Operational Schema</p></div>
             </div>
 
-            <div class="tech-stack">
-                <span class="tech-tag">Relational Schemas</span>
-                <span class="tech-tag">MySQL Workbench</span>
-                <span class="tech-tag">Python Matplotlib</span>
-                <span class="tech-tag">Power BI Service</span>
-                <span class="tech-tag">Tableau Server</span>
-            </div>
+            <h3 class="section-subtitle">Project From README File</h3>
+            <p class="content-text">This structural analytics project processes multi-tenant e-commerce marketplace variables to chart lifecycle behaviors, order fulfilment paths, and localized transit efficiency indices. The target scope involves parsing thousands of unique tracking points across distribution networks, connecting transaction statuses, regional geographic hubs, and consumer review scores.</p>
+            <p class="content-text">The processing layer cleans structural anomalies and prepares relational structures optimized for cross-platform visual deployment. This gives operations teams direct visibility into fulfillment workflows across the entire marketplace footprint.</p>
 
-            <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="view-repo-btn">
-                View Repository <i class="fas fa-external-link-alt"></i>
+            <h3 class="section-subtitle">Case Studies From Case Studies File</h3>
+            <p class="content-text"><strong>The Business Problem:</strong> Severe operational bottlenecks within fragmented regional delivery channels were driving customer satisfaction scores down and increasing churn among third-party sellers. Extended fulfillment loops and inaccurate transit window projections routinely triggered high order abandonment rates, making it critical to establish spatial logistics transparency.</p>
+            <p class="content-text"><strong>The Investigation & Implementation:</strong> Complex relational queries were written to join geographic master keys with fulfillment tracking parameters inside a centralized database instance. Order fulfillment timelines were broken down into separate processing phases to measure localized courier delays. Through interactive geospatial maps in Tableau and comprehensive cohort dashboards in Power BI, these critical bottleneck points were mapped across regions, providing logistical coordinators with the insights needed to audit carrier performance and optimize regional fulfillment SLAs.</p>
+            
+            <ul class="bullet-list">
+                <li>Connected fragmented order metrics into structured tracking tables.</li>
+                <li>Designed interactive geospatial layouts pinpointing transit bottlenecks.</li>
+                <li>Modeled consumer purchase frequencies using multi-year cohort retention.</li>
+            </ul>
+
+            <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-git">
+                <i class="fab fa-github"></i> View Full Repository
             </a>
         </article>
 
     </main>
 
-     <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
+    <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
                 <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; display: inline-block; margin-bottom: 1rem;">SD<span>.</span>analytics</a>
