@@ -3,19 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Work | Shayantha Das</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Data Portfolio | Shayantha Das</title>
+    <link rel="stylesheet" href="../style.css?v=6.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .portfolio-wrapper {
+            max-width: 1140px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+            color: #f1f5f9;
+        }
+        .project-block {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+            clear: both;
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .project-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 0;
+        }
+        .tag-container {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .tech-tag {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #cbd5e1;
+            padding: 0.3rem 0.7rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .section-divider {
+            height: 1px;
+            background: #1e293b;
+            margin: 1.5rem 0;
+        }
+        .pipeline-title {
+            font-size: 1.15rem;
+            color: #06b6d4;
+            margin: 1.5rem 0 0.75rem 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .project-desc {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .features-list {
+            margin: 0 0 2rem 0;
+            padding-left: 1.25rem;
+        }
+        .features-list li {
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+            font-size: 0.98rem;
+        }
+        .action-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #06b6d4;
+            color: #030712;
+            text-decoration: none;
+            padding: 0.65rem 1.4rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            transition: background 0.2s ease;
+        }
+        .btn-primary:hover {
+            background: #22d3ee;
+            color: #030712;
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #1e293b;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.65rem 1.4rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #334155;
+            transition: all 0.2s ease;
+        }
+        .btn-secondary:hover {
+            background: #334155;
+            border-color: #475569;
+        }
+    </style>
 </head>
-<body>
+<body style="background: #030712;">
 
     <header class="navbar">
-        <nav class="nav-container" aria-label="Main Navigation">
+        <nav class="nav-container">
             <a href="/" class="logo">SD<span>.</span>analytics</a>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about/">About & Skills</a></li>
                 <li><a href="/projects/" class="active">Portfolio Work</a></li>
+                <li><a href="/services/">Services</a></li>
                 <li><a href="/case-studies/">Case Studies</a></li>
                 <li><a href="/dashboard-gallery/">Dashboard Gallery</a></li>
                 <li><a href="/contact/">Contact</a></li>
@@ -23,74 +140,100 @@
         </nav>
     </header>
 
-    <main class="main-wrapper">
-        <section aria-label="Production Repositories" style="padding: 2rem 0 5rem 0;">
-            <h5 style="letter-spacing: 2px; text-transform: uppercase; color: var(--neon-cyan); margin-bottom: 0.5rem;">Code & Asset Registries</h5>
-            <h1 class="gradient-text" style="font-size: 2.75rem; font-weight: 800; margin-bottom: 0.5rem;">Production Repositories</h1>
-            <h2 style="font-size: 1.3rem; font-weight: 400; color: #cbd5e1; margin-bottom: 3rem;">Validated Codebases, Database Schemas, and BI Asset Repositories</h2>
+    <main class="portfolio-wrapper">
+        
+        <div style="margin-bottom: 3.5rem;">
+            <h1 style="font-size: 2.6rem; color: #fff; margin-bottom: 0.5rem; font-weight: 800;">Portfolio Work</h1>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Production-ready documentation sourced directly from active repository codebases.</p>
+        </div>
 
-            <div style="display: flex; flex-direction: column; gap: 2.5rem;">
-
-                <div style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 2rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <span style="font-size: 0.75rem; font-weight: 700; color: #06b6d4; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.5rem;">SQL & Python Pipeline</span>
-                        <h3 style="color: #fff; font-size: 1.5rem; margin: 0 0 1rem 0;">Marketing Campaign Performance Analytics</h3>
-                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">A multi-channel marketing analytics engine engineered to process customer conversion funnels. Integrates raw marketing logs into structured database environments with cross-platform BI interface testing files.</p>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Python</span>
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">PostgreSQL</span>
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Advanced Excel</span>
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Power BI</span>
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Tableau</span>
-                        </div>
-                        <div style="display: flex; gap: 1rem;">
-                            <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" style="background: #fff; color: #030712; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.85rem;"><i class="fab fa-github" style="margin-right: 0.5rem;"></i> View Codebase</a>
-                            <a href="/dashboard-gallery/" style="border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.85rem;"><i class="fas fa-images" style="margin-right: 0.5rem;"></i> View Dashboards</a>
-                        </div>
-                    </div>
+        <section class="project-block">
+            <div class="project-header">
+                <h2 class="project-title">Marketing-Campaign-Performance-Analytics</h2>
+                <div class="tag-container">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">Tableau</span>
                 </div>
+            </div>
+            
+            <p class="project-desc">
+                Sourced from the root <strong>README.md</strong>, this business intelligence platform optimizes multi-channel digital performance pipelines. The project standardizes disconnected audience capture structures, validates clickstream attributes, and transforms behavioral data points into normalized relational tables to handle attribution metrics across overlapping campaigns.
+            </p>
 
-                <div style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 2rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <span style="font-size: 0.75rem; font-weight: 700; color: #06b6d4; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.5rem;">Supply Chain Forecasting</span>
-                        <h3 style="color: #fff; font-size: 1.5rem; margin: 0 0 1rem 0;">Walmart Retail Analytics & Demand Forecasting</h3>
-                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">Time-series analysis and retail demand optimization modeling using Walmart historical sales records. Designed to isolate seasonal fluctuations and promotional impacts across diverse corporate regional divisions.</p>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">MySQL</span>
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Python (Pandas)</span>
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Excel Pivot Tables</span>
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Power BI</span>
-                        </div>
-                        <div style="display: flex; gap: 1rem;">
-                            <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" style="background: #fff; color: #030712; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.85rem;"><i class="fab fa-github" style="margin-right: 0.5rem;"></i> View Codebase</a>
-                            <a href="/dashboard-gallery/" style="border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.85rem;"><i class="fas fa-images" style="margin-right: 0.5rem;"></i> View Dashboards</a>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="pipeline-title">Technical Project Specifications</h3>
+            <ul class="features-list">
+                <li><strong>Data Wrangling Architecture:</strong> Custom Python scripts utilizing Pandas and NumPy to address missing variables, correct structural data anomalies, and format timestamp arrays.</li>
+                <li><strong>Relational Storage Engine:</strong> An optimized MySQL backend schema constructed to execute scalable joins between multi-source customer records and acquisition data.</li>
+                <li><strong>BI Interface Implementations:</strong> Dynamic conversion funnels, acquisition curves, and user interaction dashboards built across Tableau and Power BI Desktop ecosystems.</li>
+            </ul>
 
-                <div style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 2rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <span style="font-size: 0.75rem; font-weight: 700; color: #06b6d4; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.5rem;">E-Commerce Operations</span>
-                        <h3 style="color: #fff; font-size: 1.5rem; margin: 0 0 1rem 0;">Olist Sales & Customer Logistics Analytics</h3>
-                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">Comprehensive analysis of marketplace operational efficiency, transit logistics bottleneck detection, and localized sales density metrics across complex Brazilian municipal frameworks.</p>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">SQL (Joins/CTEs)</span>
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Python</span>
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Tableau Server</span>
-                            <span style="background: rgba(255,255,255,0.05); color: #cbd5e1; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Power BI</span>
-                        </div>
-                        <div style="display: flex; gap: 1rem;">
-                            <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" style="background: #fff; color: #030712; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.85rem;"><i class="fab fa-github" style="margin-right: 0.5rem;"></i> View Codebase</a>
-                            <a href="/dashboard-gallery/" style="border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.85rem;"><i class="fas fa-images" style="margin-right: 0.5rem;"></i> View Dashboards</a>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="action-links">
+                <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn-primary"><i class="fab fa-github"></i> View Codebase</a>
+                <a href="/dashboard-gallery/" class="btn-secondary"><i class="fas fa-chart-pie"></i> View Dashboards</a>
             </div>
         </section>
+
+        <section class="project-block">
+            <div class="project-header">
+                <h2 class="project-title">Walmart-Retail-Analytics-Demand-Forecasting</h2>
+                <div class="tag-container">
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">Advanced Excel</span>
+                </div>
+            </div>
+            
+            <p class="project-desc">
+                Sourced from the root <strong>README.md</strong>, this predictive analytics framework processes dense weekly transaction records to trace product demand patterns across regional retail store footprints. The framework handles adjustments for promotional markdowns, seasonal holiday variations, localized consumer pricing indexes, and regional employment indicators.
+            </p>
+
+            <h3 class="pipeline-title">Technical Project Specifications</h3>
+            <ul class="features-list">
+                <li><strong>Database Query Optimization:</strong> Engineered structured subqueries, window functions, and multi-table indexing parameters in PostgreSQL to process millions of rows cleanly.</li>
+                <li><strong>Time Series Feature Tracking:</strong> Moving average models and rolling variance checks built to handle seasonal volatility and capture underlying purchasing trends.</li>
+                <li><strong>Executive Delivery Reports:</strong> Advanced Excel slicer dashboards and Power BI frameworks tracking regional inventory levels and pipeline distribution metrics.</li>
+            </ul>
+
+            <div class="action-links">
+                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-primary"><i class="fab fa-github"></i> View Codebase</a>
+                <a href="/dashboard-gallery/" class="btn-secondary"><i class="fas fa-chart-pie"></i> View Dashboards</a>
+            </div>
+        </section>
+
+        <section class="project-block">
+            <div class="project-header">
+                <h2 class="project-title">Olist-Sales-Customer-Analytics</h2>
+                <div class="tag-container">
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Tableau</span>
+                    <span class="tech-tag">Cohort Analysis</span>
+                </div>
+            </div>
+            
+            <p class="project-desc">
+                Sourced from the root <strong>README.md</strong>, this customer lifecycle and operations project parses Brazilian e-commerce marketplace variables. The tracking pipeline connects transactional statuses, merchant performance metrics, geographical distribution points, and product fulfillment histories to map supply-chain efficiency.
+            </p>
+
+            <h3 class="pipeline-title">Technical Project Specifications</h3>
+            <ul class="features-list">
+                <li><strong>Geospatial Logistics Intelligence:</strong> Interactive spatial mapping sheets developed in Tableau to visually isolate and detail transit bottleneck zones across regional hubs.</li>
+                <li><strong>Lifecycle Performance Modeling:</strong> Customer retention analytics and purchase velocity trackers constructed inside Power BI using multi-year cohort segmentation calculations.</li>
+                <li><strong>Relational DB Normalization:</strong> Designed a unified MySQL schema to join orders, payments, reviews, and tracking coordinates without compromising performance.</li>
+            </ul>
+
+            <div class="action-links">
+                <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-primary"><i class="fab fa-github"></i> View Codebase</a>
+                <a href="/dashboard-gallery/" class="btn-secondary"><i class="fas fa-chart-pie"></i> View Dashboards</a>
+            </div>
+        </section>
+
     </main>
 
-   <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
+    <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
                 <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; display: inline-block; margin-bottom: 1rem;">SD<span>.</span>analytics</a>
