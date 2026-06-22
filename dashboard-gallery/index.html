@@ -7,26 +7,33 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .gallery-filter-btn {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            color: #94a3b8;
-            padding: 0.6rem 1.5rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
+        .repo-section {
+            margin-bottom: 4rem;
         }
-        .gallery-filter-btn:hover, .gallery-filter-btn.active {
-            background: rgba(6, 182, 212, 0.1);
-            border-color: #06b6d4;
+        .repo-title {
+            font-size: 1.75rem;
+            font-weight: 700;
             color: #fff;
-            box-shadow: 0 0 12px rgba(6, 182, 212, 0.2);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(6, 182, 212, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .repo-title span {
+            color: #06b6d4;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(6, 182, 212, 0.08);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-left: auto;
         }
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
         .gallery-item {
@@ -43,7 +50,7 @@
         .image-container {
             position: relative;
             width: 100%;
-            height: 220px;
+            height: 200px;
             background: #030712;
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             overflow: hidden;
@@ -53,10 +60,7 @@
             height: 100%;
             object-fit: contain;
             padding: 0.5rem;
-            transition: transform 0.5s ease;
-        }
-        .gallery-item:hover .image-container img {
-            transform: scale(1.02);
+            loading: eagr; /* Optimizes rapid browser rendering */
         }
         .tech-badge {
             position: absolute;
@@ -91,211 +95,149 @@
         </nav>
     </header>
 
-    <main class="main-wrapper">
+    <main class="main-wrapper" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
         <section aria-label="Visual Analytics Interface" style="padding: 2rem 0 5rem 0;">
-            <h5 style="letter-spacing: 2px; text-transform: uppercase; color: var(--neon-cyan); margin-bottom: 0.5rem;">BI Interface Showroom</h5>
+            <h5 style="letter-spacing: 2px; text-transform: uppercase; color: #06b6d4; margin-bottom: 0.5rem;">BI Interface Showroom</h5>
             <h1 class="gradient-text" style="font-size: 2.75rem; font-weight: 800; margin-bottom: 0.5rem;">Dashboard Gallery</h1>
-            <h2 style="font-size: 1.3rem; font-weight: 400; color: #cbd5e1; margin-bottom: 3rem;">Cross-Platform Reporting Frontends Categorized By Core Repositories</h2>
+            <h2 style="font-size: 1.2rem; font-weight: 400; color: #cbd5e1; margin-bottom: 4rem;">Cross-Platform Reporting Frontends Categorized By Core Repositories</h2>
 
-            <div class="filter-tabs" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3.5rem;">
-                <button class="gallery-filter-btn active" onclick="filterEnvironment('all')">All Projects (17)</button>
-                <button class="gallery-filter-btn" onclick="filterEnvironment('marketing')">Marketing Campaigns</button>
-                <button class="gallery-filter-btn" onclick="filterEnvironment('walmart')">Walmart Retail</button>
-                <button class="gallery-filter-btn" onclick="filterEnvironment('olist')">Olist Logistics</button>
+            <div class="repo-section">
+                <h3 class="repo-title"><i class="fas fa-bullhorn"></i> Repo: maketing <span>4 Dashboards</span></h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./Marketing%20Data%20Analysis%20Report-Excel.png" alt="maketing excel dashboard">
+                            <span class="tech-badge badge-excel">Excel</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Marketing Performance Sheet</h4></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./Marketing%20Data%20Analysis%20Report-PBI.png" alt="maketing power bi dashboard">
+                            <span class="tech-badge badge-pbi">Power BI</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Multi-Channel Conversion Matrix</h4></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./Marketing%20Data%20Analysis%20Report-Tableau.png" alt="maketing tableau dashboard">
+                            <span class="tech-badge badge-tableau">Tableau</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Funnel Attribution Workspace</h4></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./CSI_PBI.PNG" alt="maketing customer sentiment dashboard">
+                            <span class="tech-badge badge-pbi">Power BI</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Lead Sentiment Intelligence</h4></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="gallery-grid" id="galleryGrid">
-
-                <div class="gallery-item marketing">
-                    <div class="image-container">
-                        <img src="./Marketing%20Data%20Analysis%20Report-Excel.png" alt="Marketing Analysis - Excel">
-                        <span class="tech-badge badge-excel">Excel</span>
+            <div class="repo-section">
+                <h3 class="repo-title"><i class="fas fa-shopping-cart"></i> Repo: walmart <span>7 Dashboards</span></h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./W_D.PNG" alt="walmart excel demand sheet">
+                            <span class="tech-badge badge-excel">Excel</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Supply Chain Pivot Slicer</h4></div>
                     </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Campaign Metrics Breakdown</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Marketing Campaign Performance</p>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./E_O_PBI.jpg" alt="walmart dashboard power bi">
+                            <span class="tech-badge badge-pbi">Power BI</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Demand Volatility Command Center</h4></div>
                     </div>
-                </div>
-
-                <div class="gallery-item marketing">
-                    <div class="image-container">
-                        <img src="./Marketing%20Data%20Analysis%20Report-PBI.png" alt="Marketing Analysis - Power BI">
-                        <span class="tech-badge badge-pbi">Power BI</span>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./EX_O_TAB.PNG" alt="walmart tableau overview">
+                            <span class="tech-badge badge-tableau">Tableau</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Regional Sales Trend Server</h4></div>
                     </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Multi-Channel Conversion Matrix</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Marketing Campaign Performance</p>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./EFA_TAB.PNG" alt="walmart financial asset allocation dashboard">
+                            <span class="tech-badge badge-tableau">Tableau</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Financial Asset Allocation Tracker</h4></div>
                     </div>
-                </div>
-
-                <div class="gallery-item marketing">
-                    <div class="image-container">
-                        <img src="./Marketing%20Data%20Analysis%20Report-Tableau.png" alt="Marketing Analysis - Tableau">
-                        <span class="tech-badge badge-tableau">Tableau</span>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./F%26D_TAB.PNG" alt="walmart forecast demand server tableau">
+                            <span class="tech-badge badge-tableau">Tableau</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Predictive Forecasting Engine</h4></div>
                     </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Funnel Attribution Workspace</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Marketing Campaign Performance</p>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./FA_PBI.PNG" alt="walmart fiscal financial audit power bi">
+                            <span class="tech-badge badge-pbi">Power BI</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Fiscal Performance Auditor</h4></div>
                     </div>
-                </div>
-
-                <div class="gallery-item marketing">
-                    <div class="image-container">
-                        <img src="./CSI_PBI.PNG" alt="Customer Sentiment Intelligence - Power BI">
-                        <span class="tech-badge badge-pbi">Power BI</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Lead Sentiment Intelligence</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Marketing Campaign Performance</p>
-                    </div>
-                </div>
-
-
-                <div class="gallery-item walmart">
-                    <div class="image-container">
-                        <img src="./W_D.PNG" alt="Walmart Retail - Excel">
-                        <span class="tech-badge badge-excel">Excel</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Supply Chain Pivot Slicer</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Walmart Retail Demand</p>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./F_PBI.PNG" alt="walmart trend core forecast power bi">
+                            <span class="tech-badge badge-pbi">Power BI</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Trend Drift Analysis Portal</h4></div>
                     </div>
                 </div>
-
-                <div class="gallery-item walmart">
-                    <div class="image-container">
-                        <img src="./E_O_PBI.jpg" alt="Walmart Overview - Power BI">
-                        <span class="tech-badge badge-pbi">Power BI</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Demand Volatility Command Center</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Walmart Retail Demand</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item walmart">
-                    <div class="image-container">
-                        <img src="./EX_O_TAB.PNG" alt="Walmart Overview - Tableau">
-                        <span class="tech-badge badge-tableau">Tableau</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Regional Sales Trend Server</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Walmart Retail Demand</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item walmart">
-                    <div class="image-container">
-                        <img src="./EFA_TAB.PNG" alt="Finance Analysis - Tableau">
-                        <span class="tech-badge badge-tableau">Tableau</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Financial Asset Allocation Tracker</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Walmart Retail Demand</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item walmart">
-                    <div class="image-container">
-                        <img src="./F%26D_TAB.PNG" alt="Forecast and Demand - Tableau">
-                        <span class="tech-badge badge-tableau">Tableau</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Predictive Forecasting Engine</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Walmart Retail Demand</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item walmart">
-                    <div class="image-container">
-                        <img src="./FA_PBI.PNG" alt="Financial Analysis - Power BI">
-                        <span class="tech-badge badge-pbi">Power BI</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Fiscal Performance Auditor</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Walmart Retail Demand</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item walmart">
-                    <div class="image-container">
-                        <img src="./F_PBI.PNG" alt="Forecast - Power BI">
-                        <span class="tech-badge badge-pbi">Power BI</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Trend Drift Analysis Portal</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Walmart Retail Demand</p>
-                    </div>
-                </div>
-
-
-                <div class="gallery-item olist">
-                    <div class="image-container">
-                        <img src="./excel_dashboard.png" alt="Olist Metrics - Excel">
-                        <span class="tech-badge badge-excel">Excel</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Logistical Performance Sheet</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Olist Logistics & Sales</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item olist">
-                    <div class="image-container">
-                        <img src="./executive_dahboard_pbi.png" alt="Olist Dashboard - Power BI">
-                        <span class="tech-badge badge-pbi">Power BI</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Marketplace Fulfillment Controller</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Olist Logistics & Sales</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item olist">
-                    <div class="image-container">
-                        <img src="./geo_dash_tab.png" alt="Olist Geography - Tableau">
-                        <span class="tech-badge badge-tableau">Tableau</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Geospatial Shipping Hub Workspace</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Olist Logistics & Sales</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item olist">
-                    <div class="image-container">
-                        <img src="./customer_analysis_pbi.png" alt="Customer Analysis - Power BI">
-                        <span class="tech-badge badge-pbi">Power BI</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Consumer Behavior Cohorts</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Olist Logistics & Sales</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item olist">
-                    <div class="image-container">
-                        <img src="./time_analysis_pbi.png" alt="Time Analysis - Power BI">
-                        <span class="tech-badge badge-pbi">Power BI</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Temporal Delivery Slicers</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Olist Logistics & Sales</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item olist">
-                    <div class="image-container">
-                        <img src="./cus_beh_tab.png" alt="Customer Behavior - Tableau">
-                        <span class="tech-badge badge-tableau">Tableau</span>
-                    </div>
-                    <div style="padding: 1.25rem;">
-                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Engagement Retention Server</h4>
-                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Olist Logistics & Sales</p>
-                    </div>
-                </div>
-
             </div>
+
+            <div class="repo-section">
+                <h3 class="repo-title"><i class="fas fa-box-open"></i> Repo: olist <span>6 Dashboards</span></h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./excel_dashboard.png" alt="olist logistical metrics sheet excel">
+                            <span class="tech-badge badge-excel">Excel</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Logistical Performance Sheet</h4></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./executive_dahboard_pbi.png" alt="olist marketplace fulfillment power bi">
+                            <span class="tech-badge badge-pbi">Power BI</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Marketplace Fulfillment Controller</h4></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./geo_dash_tab.png" alt="olist geospatial shipping workspace tableau">
+                            <span class="tech-badge badge-tableau">Tableau</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Geospatial Shipping Hub Workspace</h4></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./customer_analysis_pbi.png" alt="olist consumer behavior cohorts power bi">
+                            <span class="tech-badge badge-pbi">Power BI</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Consumer Behavior Cohorts</h4></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./time_analysis_pbi.png" alt="olist temporal delivery slicers power bi">
+                            <span class="tech-badge badge-pbi">Power BI</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Temporal Delivery Slicers</h4></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="./cus_beh_tab.png" alt="olist engagement retention tableau">
+                            <span class="tech-badge badge-tableau">Tableau</span>
+                        </div>
+                        <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Engagement Retention Server</h4></div>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
 
@@ -314,26 +256,6 @@
             <div><p style="margin: 0;">&copy; 2026 Shayantha Das. All Rights Reserved.</p></div>
         </div>
     </footer>
-
-    <script>
-        function filterEnvironment(env) {
-            const items = document.querySelectorAll('.gallery-grid .gallery-item');
-            const buttons = document.querySelectorAll('.filter-tabs .gallery-filter-btn');
-            
-            buttons.forEach(btn => btn.classList.remove('active'));
-            if (event && event.target) {
-                event.target.classList.add('active');
-            }
-
-            items.forEach(item => {
-                if (env === 'all' || item.classList.contains(env)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-    </script>
 
 </body>
 </html>
