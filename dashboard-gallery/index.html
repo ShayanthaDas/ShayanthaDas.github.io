@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Executive Dashboard Gallery | Shayantha Das</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=2.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .repo-section {
             margin-bottom: 4rem;
+            clear: both;
         }
         .repo-title {
             font-size: 1.75rem;
@@ -17,35 +18,19 @@
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid rgba(6, 182, 212, 0.2);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        .repo-title span {
-            color: #06b6d4;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            background: rgba(6, 182, 212, 0.08);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            margin-left: auto;
+            text-transform: lowercase;
         }
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+            gap: 2rem !important;
         }
         .gallery-item {
             background: rgba(255, 255, 255, 0.01);
             border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 8px;
             overflow: hidden;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        .gallery-item:hover {
-            transform: translateY(-4px);
-            border-color: rgba(6, 182, 212, 0.3);
+            display: block !important;
         }
         .image-container {
             position: relative;
@@ -53,14 +38,12 @@
             height: 200px;
             background: #030712;
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            overflow: hidden;
         }
         .image-container img {
             width: 100%;
             height: 100%;
             object-fit: contain;
             padding: 0.5rem;
-            loading: eagr; /* Optimizes rapid browser rendering */
         }
         .tech-badge {
             position: absolute;
@@ -71,7 +54,6 @@
             text-transform: uppercase;
             padding: 0.25rem 0.6rem;
             border-radius: 4px;
-            letter-spacing: 0.5px;
         }
         .badge-excel { background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
         .badge-pbi { background: rgba(234, 179, 8, 0.15); color: #fde047; border: 1px solid rgba(234, 179, 8, 0.3); }
@@ -81,7 +63,7 @@
 <body>
 
     <header class="navbar">
-        <nav class="nav-container" aria-label="Main Navigation">
+        <nav class="nav-container">
             <a href="/" class="logo">SD<span>.</span>analytics</a>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
@@ -96,38 +78,38 @@
     </header>
 
     <main class="main-wrapper" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
-        <section aria-label="Visual Analytics Interface" style="padding: 2rem 0 5rem 0;">
+        <section style="padding: 2rem 0 5rem 0;">
             <h5 style="letter-spacing: 2px; text-transform: uppercase; color: #06b6d4; margin-bottom: 0.5rem;">BI Interface Showroom</h5>
-            <h1 class="gradient-text" style="font-size: 2.75rem; font-weight: 800; margin-bottom: 0.5rem;">Dashboard Gallery</h1>
+            <h1 style="font-size: 2.75rem; font-weight: 800; margin-bottom: 0.5rem; color: #fff;">Dashboard Gallery</h1>
             <h2 style="font-size: 1.2rem; font-weight: 400; color: #cbd5e1; margin-bottom: 4rem;">Cross-Platform Reporting Frontends Categorized By Core Repositories</h2>
 
             <div class="repo-section">
-                <h3 class="repo-title"><i class="fas fa-bullhorn"></i> Repo: maketing <span>4 Dashboards</span></h3>
+                <h3 class="repo-title">repo: maketing</h3>
                 <div class="gallery-grid">
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./Marketing%20Data%20Analysis%20Report-Excel.png" alt="maketing excel dashboard">
+                            <img src="./Marketing%20Data%20Analysis%20Report-Excel.png" alt="Marketing Excel">
                             <span class="tech-badge badge-excel">Excel</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Marketing Performance Sheet</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./Marketing%20Data%20Analysis%20Report-PBI.png" alt="maketing power bi dashboard">
+                            <img src="./Marketing%20Data%20Analysis%20Report-PBI.png" alt="Marketing Power BI">
                             <span class="tech-badge badge-pbi">Power BI</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Multi-Channel Conversion Matrix</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./Marketing%20Data%20Analysis%20Report-Tableau.png" alt="maketing tableau dashboard">
+                            <img src="./Marketing%20Data%20Analysis%20Report-Tableau.png" alt="Marketing Tableau">
                             <span class="tech-badge badge-tableau">Tableau</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Funnel Attribution Workspace</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./CSI_PBI.PNG" alt="maketing customer sentiment dashboard">
+                            <img src="./CSI_PBI.PNG" alt="Customer Sentiment Power BI">
                             <span class="tech-badge badge-pbi">Power BI</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Lead Sentiment Intelligence</h4></div>
@@ -136,53 +118,53 @@
             </div>
 
             <div class="repo-section">
-                <h3 class="repo-title"><i class="fas fa-shopping-cart"></i> Repo: walmart <span>7 Dashboards</span></h3>
+                <h3 class="repo-title">repo: walmart</h3>
                 <div class="gallery-grid">
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./W_D.PNG" alt="walmart excel demand sheet">
+                            <img src="./W_D.PNG" alt="Walmart Excel">
                             <span class="tech-badge badge-excel">Excel</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Supply Chain Pivot Slicer</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./E_O_PBI.jpg" alt="walmart dashboard power bi">
+                            <img src="./E_O_PBI.jpg" alt="Walmart Power BI">
                             <span class="tech-badge badge-pbi">Power BI</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Demand Volatility Command Center</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./EX_O_TAB.PNG" alt="walmart tableau overview">
+                            <img src="./EX_O_TAB.PNG" alt="Walmart Tableau Overview">
                             <span class="tech-badge badge-tableau">Tableau</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Regional Sales Trend Server</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./EFA_TAB.PNG" alt="walmart financial asset allocation dashboard">
+                            <img src="./EFA_TAB.PNG" alt="Walmart Financial Tableau">
                             <span class="tech-badge badge-tableau">Tableau</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Financial Asset Allocation Tracker</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./F%26D_TAB.PNG" alt="walmart forecast demand server tableau">
+                            <img src="./F%26D_TAB.PNG" alt="Walmart Forecast Tableau">
                             <span class="tech-badge badge-tableau">Tableau</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Predictive Forecasting Engine</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./FA_PBI.PNG" alt="walmart fiscal financial audit power bi">
+                            <img src="./FA_PBI.PNG" alt="Walmart Fiscal Power BI">
                             <span class="tech-badge badge-pbi">Power BI</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Fiscal Performance Auditor</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./F_PBI.PNG" alt="walmart trend core forecast power bi">
+                            <img src="./F_PBI.PNG" alt="Walmart Trend Power BI">
                             <span class="tech-badge badge-pbi">Power BI</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Trend Drift Analysis Portal</h4></div>
@@ -191,46 +173,46 @@
             </div>
 
             <div class="repo-section">
-                <h3 class="repo-title"><i class="fas fa-box-open"></i> Repo: olist <span>6 Dashboards</span></h3>
+                <h3 class="repo-title">repo: olist</h3>
                 <div class="gallery-grid">
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./excel_dashboard.png" alt="olist logistical metrics sheet excel">
+                            <img src="./excel_dashboard.png" alt="Olist Excel">
                             <span class="tech-badge badge-excel">Excel</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Logistical Performance Sheet</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./executive_dahboard_pbi.png" alt="olist marketplace fulfillment power bi">
+                            <img src="./executive_dahboard_pbi.png" alt="Olist Power BI">
                             <span class="tech-badge badge-pbi">Power BI</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Marketplace Fulfillment Controller</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./geo_dash_tab.png" alt="olist geospatial shipping workspace tableau">
+                            <img src="./geo_dash_tab.png" alt="Olist Tableau Geography">
                             <span class="tech-badge badge-tableau">Tableau</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Geospatial Shipping Hub Workspace</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./customer_analysis_pbi.png" alt="olist consumer behavior cohorts power bi">
+                            <img src="./customer_analysis_pbi.png" alt="Olist Customer Power BI">
                             <span class="tech-badge badge-pbi">Power BI</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Consumer Behavior Cohorts</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./time_analysis_pbi.png" alt="olist temporal delivery slicers power bi">
+                            <img src="./time_analysis_pbi.png" alt="Olist Time Power BI">
                             <span class="tech-badge badge-pbi">Power BI</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Temporal Delivery Slicers</h4></div>
                     </div>
                     <div class="gallery-item">
                         <div class="image-container">
-                            <img src="./cus_beh_tab.png" alt="olist engagement retention tableau">
+                            <img src="./cus_beh_tab.png" alt="Olist Customer Tableau">
                             <span class="tech-badge badge-tableau">Tableau</span>
                         </div>
                         <div style="padding: 1rem;"><h4 style="color: #fff; font-size: 1rem; margin: 0;">Engagement Retention Server</h4></div>
