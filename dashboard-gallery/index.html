@@ -3,10 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Dashboard Gallery | Shayantha Das</title>
-    <meta name="description" content="Production-ready Business Intelligence canvases, Power BI mockups, and interactive corporate reporting interfaces engineered by Shayantha Das.">
+    <title>Executive Dashboard Gallery | Shayantha Das</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-filter-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #94a3b8;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .gallery-filter-btn:hover, .gallery-filter-btn.active {
+            background: rgba(6, 182, 212, 0.1);
+            border-color: #06b6d4;
+            color: #fff;
+            box-shadow: 0 0 12px rgba(6, 182, 212, 0.2);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            background: #030712;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 0.5rem;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover .image-container img {
+            transform: scale(1.02);
+        }
+        .tech-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+        .badge-excel { background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
+        .badge-pbi { background: rgba(234, 179, 8, 0.15); color: #fde047; border: 1px solid rgba(234, 179, 8, 0.3); }
+        .badge-tableau { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+    </style>
 </head>
 <body>
 
@@ -17,7 +83,7 @@
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about/">About & Skills</a></li>
-                <li><a href="/projects/">Portfolio Work</a></li>
+                <li><a href="/projects/" class="active">Portfolio Work</a></li>
                 <li><a href="/case-studies/">Case Studies</a></li>
                 <li><a href="/dashboard-gallery/" class="active">Dashboard Gallery</a></li>
                 <li><a href="/contact/">Contact</a></li>
@@ -26,78 +92,121 @@
     </header>
 
     <main class="main-wrapper">
-        <section aria-label="Interactive Dashboard Showroom" style="padding: 2rem 0 5rem 0;">
-            <h5 style="letter-spacing: 2px; text-transform: uppercase; color: var(--neon-cyan); margin-bottom: 0.5rem;">Executive Visibility</h5>
-            <h1 class="gradient-text" style="font-size: 2.75rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.2;">BI Dashboard Gallery</h1>
-            <h2 style="font-size: 1.3rem; font-weight: 400; color: #cbd5e1; margin-bottom: 3.5rem;">Transforming Complex Relational Data and Scripts into High-Fidelity Decision Canvases</h2>
+        <section aria-label="Visual Analytics Interface" style="padding: 2rem 0 5rem 0;">
+            <h5 style="letter-spacing: 2px; text-transform: uppercase; color: var(--neon-cyan); margin-bottom: 0.5rem;">BI Interface Showroom</h5>
+            <h1 class="gradient-text" style="font-size: 2.75rem; font-weight: 800; margin-bottom: 0.5rem;">Dashboard Gallery</h1>
+            <h2 style="font-size: 1.3rem; font-weight: 400; color: #cbd5e1; margin-bottom: 3rem;">Cross-Platform Reporting Frontends Developed For Technical Sign-off</h2>
 
-            <div style="display: flex; flex-direction: column; gap: 4rem;">
+            <!-- INTERACTIVE BI PLATFORM FILTERS -->
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3.5rem;">
+                <button class="gallery-filter-btn active" onclick="filterGallery('all', event)">All Environments (9)</button>
+                <button class="gallery-filter-btn" onclick="filterGallery('excel', event)"><i class="fas fa-file-excel" style="margin-right: 0.4rem;"></i> Advanced Excel (3)</button>
+                <button class="gallery-filter-btn" onclick="filterGallery('pbi', event)"><i class="fas fa-chart-bar" style="margin-right: 0.4rem;"></i> Microsoft Power BI (3)</button>
+                <button class="gallery-filter-btn" onclick="filterGallery('tableau', event)"><i class="fas fa-chart-pie" style="margin-right: 0.4rem;"></i> Tableau Server (3)</button>
+            </div>
 
-                <!-- SIGNATURE PROJECT: MARKETING PERFORMANCE CAMPAIGNS -->
-                <div class="glass-card" style="padding: 2.5rem; border: 1px solid rgba(255, 255, 255, 0.06); display: flex; flex-direction: column; gap: 2rem;">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-                        <div>
-                            <span style="color: #a855f7; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;"><i class="fas fa-star"></i> Signature Enterprise Project</span>
-                            <h3 style="color: #fff; font-size: 1.75rem; margin: 0.25rem 0 0.5rem 0;">Marketing Campaign Performance Analytics Engine</h3>
-                        </div>
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                            <span style="font-family: monospace; font-size: 0.75rem; background: rgba(168,85,247,0.06); border: 1px solid rgba(168,85,247,0.2); padding: 0.4rem 0.8rem; border-radius: 4px; color: #c084fc;">Power BI Premium</span>
-                            <span style="font-family: monospace; font-size: 0.75rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 0.4rem 0.8rem; border-radius: 4px; color: #94a3b8;">Python Core Integration</span>
-                        </div>
+            <!-- CORE INTERFACE GRID -->
+            <div class="gallery-grid" id="galleryGrid">
+
+                <!-- ==================== REPO 1: MARKETING CAMPAIGNS ==================== -->
+                <div class="gallery-item" data-tech="excel">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics/main/images/Marketing%20Data%20Analysis%20Report-Excel.png" alt="Marketing Campaign Performance Report - Excel">
+                        <span class="tech-badge badge-excel">Excel</span>
                     </div>
-
-                    <div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: #030712;">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Marketing Campaign Performance Dashboard Screenshot" style="width: 100%; height: auto; display: block; opacity: 0.85;">
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; background: rgba(255,255,255,0.01); padding: 1.5rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.02);">
-                        <div>
-                            <h4 style="color: #fff; font-size: 1rem; margin-top: 0; margin-bottom: 0.5rem;"><i class="fas fa-bullseye" style="color: #a855f7; margin-right: 0.5rem;"></i> Business Problem Isolated</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0;">Inability to attribute conversion values and calculate accurate customer acquisition cost metrics across overlapping acquisition channels.</p>
-                        </div>
-                        <div>
-                            <h4 style="color: #fff; font-size: 1rem; margin-top: 0; margin-bottom: 0.5rem;"><i class="fas fa-layer-group" style="color: var(--neon-cyan); margin-right: 0.5rem;"></i> Implemented Viewports</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0;">Tracks core conversion attribution loops, cross-channel ROI indexing cards, platform cost-variance tools, and long-term customer lifetime values.</p>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05);">
-                        <span style="font-family: monospace; font-size: 0.85rem; color: #64748b;"><i class="fas fa-link"></i> Target Model: Multi-Channel ROI Ledger Framework</span>
-                        <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">Review Engineering Assets <i class="fab fa-github"></i></a>
+                    <div style="padding: 1.25rem;">
+                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Marketing Campaign Performance Sheet</h4>
+                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Repo: Marketing-Campaign-Performance-Analytics</p>
                     </div>
                 </div>
 
-                <!-- INTEGRATED PROJECT: WALMART RETAIL CANVAS -->
-                <div class="glass-card" style="padding: 2.5rem; border: 1px solid rgba(255, 255, 255, 0.06); display: flex; flex-direction: column; gap: 2rem;">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-                        <div>
-                            <span style="color: #eab308; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;"><i class="fas fa-layer-group"></i> Integrated Framework Project</span>
-                            <h3 style="color: #fff; font-size: 1.75rem; margin: 0.25rem 0 0.5rem 0;">Walmart Weekly Sales Optimization Canvas</h3>
-                        </div>
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                            <span style="font-family: monospace; font-size: 0.75rem; background: rgba(6,182,212,0.06); border: 1px solid rgba(6,182,212,0.2); padding: 0.4rem 0.8rem; border-radius: 4px; color: var(--neon-cyan);">Power BI Desktop</span>
-                            <span style="font-family: monospace; font-size: 0.75rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 0.4rem 0.8rem; border-radius: 4px; color: #94a3b8;">DAX Measures</span>
-                        </div>
+                <div class="gallery-item" data-tech="pbi">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics/main/images/Marketing%20Data%20Analysis%20Report-PBI.png" alt="Marketing Data Analysis Report - Power BI">
+                        <span class="tech-badge badge-pbi">Power BI</span>
                     </div>
-
-                    <div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: #030712;">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Walmart Retail Demand Optimization Power BI Dashboard Screenshot" style="width: 100%; height: auto; display: block; opacity: 0.85;">
+                    <div style="padding: 1.25rem;">
+                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Marketing Multi-Channel Conversion Matrix</h4>
+                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Repo: Marketing-Campaign-Performance-Analytics</p>
                     </div>
+                </div>
 
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; background: rgba(255,255,255,0.01); padding: 1.5rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.02);">
-                        <div>
-                            <h4 style="color: #fff; font-size: 1rem; margin-top: 0; margin-bottom: 0.5rem;"><i class="fas fa-bullseye" style="color: #eab308; margin-right: 0.5rem;"></i> Business Problem Isolated</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0;">Uncontrolled product stock markdown strategies and missing seasonal loading parameters causing branch distribution leakage.</p>
-                        </div>
-                        <div>
-                            <h4 style="color: #fff; font-size: 1rem; margin-top: 0; margin-bottom: 0.5rem;"><i class="fas fa-layer-group" style="color: var(--neon-cyan); margin-right: 0.5rem;"></i> Implemented Viewports</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0;">Features dynamic parameter slicers tracking store traffic velocity metrics, markdown margins, holiday trend lines, and district performance tables.</p>
-                        </div>
+                <div class="gallery-item" data-tech="tableau">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics/main/images/Marketing%20Data%20Analysis%20Report-Tableau.png" alt="Marketing Data Performance Report - Tableau">
+                        <span class="tech-badge badge-tableau">Tableau</span>
                     </div>
+                    <div style="padding: 1.25rem;">
+                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Marketing Funnel Attribution Workspace</h4>
+                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Repo: Marketing-Campaign-Performance-Analytics</p>
+                    </div>
+                </div>
 
-                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05);">
-                        <span style="font-family: monospace; font-size: 0.85rem; color: #64748b;"><i class="fas fa-link"></i> Target Model: Star Schema Structure</span>
-                        <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">Review Engineering Assets <i class="fab fa-github"></i></a>
+                <!-- ==================== REPO 2: WALMART DEMAND ==================== -->
+                <div class="gallery-item" data-tech="excel">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting/main/images/W_D.PNG" alt="Walmart Retail Analytics - Excel">
+                        <span class="tech-badge badge-excel">Excel</span>
+                    </div>
+                    <div style="padding: 1.25rem;">
+                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Walmart Pivot Supply Chain Slicer</h4>
+                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Repo: Walmart-Retail-Analytics-Demand-Forecasting</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-tech="pbi">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting/main/images/E_O_PBI.jpg" alt="Walmart Executive Overview - Power BI">
+                        <span class="tech-badge badge-pbi">Power BI</span>
+                    </div>
+                    <div style="padding: 1.25rem;">
+                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Walmart Demand Volatility Command Center</h4>
+                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Repo: Walmart-Retail-Analytics-Demand-Forecasting</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-tech="tableau">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting/main/images/EX_O_TAB.PNG" alt="Walmart Executive Overview - Tableau">
+                        <span class="tech-badge badge-tableau">Tableau</span>
+                    </div>
+                    <div style="padding: 1.25rem;">
+                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Walmart Regional Sales Trend Server</h4>
+                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Repo: Walmart-Retail-Analytics-Demand-Forecasting</p>
+                    </div>
+                </div>
+
+                <!-- ==================== REPO 3: OLIST LOGISTICS ==================== -->
+                <div class="gallery-item" data-tech="excel">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/ShayanthaDas/Olist-Sales-Customer-Analytics/main/images/excel_dashboard.png" alt="Olist Analytics - Excel">
+                        <span class="tech-badge badge-excel">Excel</span>
+                    </div>
+                    <div style="padding: 1.25rem;">
+                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Olist Operational Metrics Worksheet</h4>
+                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Repo: Olist-Sales-Customer-Analytics</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-tech="pbi">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/ShayanthaDas/Olist-Sales-Customer-Analytics/main/images/executive_dahboard_pbi.png" alt="Olist Executive Dashboard - Power BI">
+                        <span class="tech-badge badge-pbi">Power BI</span>
+                    </div>
+                    <div style="padding: 1.25rem;">
+                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Olist Marketplace Fulfillment Controller</h4>
+                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Repo: Olist-Sales-Customer-Analytics</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-tech="tableau">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/ShayanthaDas/Olist-Sales-Customer-Analytics/main/images/geo_dash_tab.png" alt="Olist Geographic Dashboard - Tableau">
+                        <span class="tech-badge badge-tableau">Tableau</span>
+                    </div>
+                    <div style="padding: 1.25rem;">
+                        <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem 0;">Olist Geospatial Shipping Hub Slicers</h4>
+                        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Repo: Olist-Sales-Customer-Analytics</p>
                     </div>
                 </div>
 
@@ -121,6 +230,24 @@
             <div><p style="margin: 0;">&copy; 2026 Shayantha Das. All Rights Reserved.</p></div>
         </div>
     </footer>
+
+    <!-- INTERACTIVE FILTER LOGIC -->
+    <script>
+        function filterGallery(tech, event) {
+            const buttons = document.querySelectorAll('.gallery-filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (tech === 'all' || item.getAttribute('data-tech') === tech) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
