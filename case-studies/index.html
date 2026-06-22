@@ -3,19 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytical Case Studies | Shayantha Das</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Analytics Case Studies | Shayantha Das</title>
+    <link rel="stylesheet" href="../style.css?v=4.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .case-wrapper {
+            max-width: 1140px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+            color: #e2e8f0;
+        }
+        .case-header {
+            margin-bottom: 50px;
+        }
+        .case-header h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .case-header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+        .repo-card {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 45px;
+        }
+        .repo-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #06b6d4;
+            background: rgba(6, 182, 212, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: lowercase;
+            margin-bottom: 15px;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+        }
+        .repo-name {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin: 0 0 20px 0;
+            font-weight: 700;
+        }
+        .readme-block {
+            background: #030712;
+            border-left: 4px solid #334155;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .readme-block h4 {
+            color: #94a3b8;
+            margin: 0 0 10px 0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .readme-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+            white-space: pre-line;
+        }
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .tech-item {
+            font-size: 0.8rem;
+            background: #1e293b;
+            color: #f1f5f9;
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid #334155;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .metric-box {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .metric-val {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #06b6d4;
+        }
+        .metric-lbl {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 5px;
+        }
+    </style>
 </head>
-<body>
+<body style="background: #030712;">
 
     <header class="navbar">
-        <nav class="nav-container" aria-label="Main Navigation">
+        <nav class="nav-container">
             <a href="/" class="logo">SD<span>.</span>analytics</a>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about/">About & Skills</a></li>
                 <li><a href="/projects/">Portfolio Work</a></li>
+                <li><a href="/services/">Services</a></li>
                 <li><a href="/case-studies/" class="active">Case Studies</a></li>
                 <li><a href="/dashboard-gallery/">Dashboard Gallery</a></li>
                 <li><a href="/contact/">Contact</a></li>
@@ -23,73 +128,118 @@
         </nav>
     </header>
 
-    <main class="main-wrapper">
-        <section aria-label="Business Intelligence Deep Dives" style="padding: 2rem 0 5rem 0;">
-            <h5 style="letter-spacing: 2px; text-transform: uppercase; color: var(--neon-cyan); margin-bottom: 0.5rem;">Data-Driven Problem Solving</h5>
-            <h1 class="gradient-text" style="font-size: 2.75rem; font-weight: 800; margin-bottom: 0.5rem;">Case Studies</h1>
-            <h2 style="font-size: 1.3rem; font-weight: 400; color: #cbd5e1; margin-bottom: 3rem;">In-Depth Analytical Breakthroughs Translating Raw Server Logs into Business Solutions</h2>
+    <main class="case-wrapper">
+        
+        <div class="case-header">
+            <h1>Analytics Case Studies</h1>
+            <p>Deep-dive production documentation extracted directly from project repository repositories.</p>
+        </div>
 
-            <div style="display: flex; flex-direction: column; gap: 3.5rem;">
+        <article class="repo-card">
+            <span class="repo-badge">repo: maketing</span>
+            <h2 class="repo-name">Marketing Campaign Attribution & Funnel Optimization</h2>
+            
+            <p>This analytics framework monitors end-to-end customer acquisition metrics, calculating conversion velocities across multi-tier promotional pipelines. It focuses on resolving structural inefficiencies in ad spend attribution modeling across paid acquisition channels.</p>
 
-                <article style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 2.5rem;">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
-                        <div>
-                            <span style="color: #06b6d4; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Methodology Deep Dive</span>
-                            <h3 style="color: #fff; font-size: 1.75rem; margin: 0.25rem 0 0 0;">Multi-Channel Marketing Funnel & Customer Acquisition Optimization</h3>
-                        </div>
-                        <span style="background: rgba(6, 182, 212, 0.1); color: #06b6d4; padding: 0.35rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700;">ROI & Attribution</span>
-                    </div>
-                    <p style="color: #94a3b8; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                        <strong>Business Context:</strong> Marketing spend allocation lacked precision due to isolated cross-platform campaign structures, risking ad fatigue and high cost-per-acquisition (CPA).<br><br>
-                        <strong>Execution:</strong> Built data cleaning and modeling scripts in Python to standardize disparate customer touchpoint logs. Loaded consolidated schemas into PostgreSQL databases to evaluate channel efficiency, then developed parallel reporting architectures in Excel, Power BI, and Tableau to ensure validation.
-                    </p>
-                    <div style="display: flex; gap: 1.5rem; font-size: 0.85rem;">
-                        <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" style="color: #fff; text-decoration: none; font-weight: 600;"><i class="fab fa-github" style="margin-right: 0.4rem;"></i> Review Code Documentation</a>
-                        <a href="/dashboard-gallery/" style="color: #06b6d4; text-decoration: none; font-weight: 600;"><i class="fas fa-chart-line" style="margin-right: 0.4rem;"></i> Inspect Interfaces</a>
-                    </div>
-                </article>
-
-                <article style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 2.5rem;">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
-                        <div>
-                            <span style="color: #06b6d4; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Supply Chain Logistics</span>
-                            <h3 style="color: #fff; font-size: 1.75rem; margin: 0.25rem 0 0 0;">Predictive Demand Modeling & Regional Volatility Analysis</h3>
-                        </div>
-                        <span style="background: rgba(34, 197, 94, 0.1); color: #4ade80; padding: 0.35rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700;">Retail Forecasting</span>
-                    </div>
-                    <p style="color: #94a3b8; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                        <strong>Business Context:</strong> Sudden demand surges and stockouts across macro-regional retail environments threatened fulfillment parameters during complex holiday sales matrix transformations.<br><br>
-                        <strong>Execution:</strong> Queried historical transactional schemas using advanced MySQL scripts to run seasonal moving averages. Developed analytical views mapping procurement bottlenecks, translating raw queries into structural executive dashboards across Excel, Power BI, and Tableau platforms.
-                    </p>
-                    <div style="display: flex; gap: 1.5rem; font-size: 0.85rem;">
-                        <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" style="color: #fff; text-decoration: none; font-weight: 600;"><i class="fab fa-github" style="margin-right: 0.4rem;"></i> Review Code Documentation</a>
-                        <a href="/dashboard-gallery/" style="color: #06b6d4; text-decoration: none; font-weight: 600;"><i class="fas fa-chart-line" style="margin-right: 0.4rem;"></i> Inspect Interfaces</a>
-                    </div>
-                </article>
-
-                <article style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 2.5rem;">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
-                        <div>
-                            <span style="color: #06b6d4; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Geospatial Optimization</span>
-                            <h3 style="color: #fff; font-size: 1.75rem; margin: 0.25rem 0 0 0;">Marketplace Freight Logistics Bottleneck Analysis</h3>
-                        </div>
-                        <span style="background: rgba(168, 85, 247, 0.1); color: #c084fc; padding: 0.35rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700;">Operations</span>
-                    </div>
-                    <p style="color: #94a3b8; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                        <strong>Business Context:</strong> Scaled e-commerce distribution networks across Brazil suffered severe delivery latency delays, reducing customer satisfaction scores.<br><br>
-                        <strong>Execution:</strong> Formulated complex multi-table SQL queries combining customer locations, orders, and carrier registries. Isolated regional freight variations via Python script manipulations and built visual geographic workbooks in Tableau, Power BI, and Excel.
-                    </p>
-                    <div style="display: flex; gap: 1.5rem; font-size: 0.85rem;">
-                        <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" style="color: #fff; text-decoration: none; font-weight: 600;"><i class="fab fa-github" style="margin-right: 0.4rem;"></i> Review Code Documentation</a>
-                        <a href="/dashboard-gallery/" style="color: #06b6d4; text-decoration: none; font-weight: 600;"><i class="fas fa-chart-line" style="margin-right: 0.4rem;"></i> Inspect Interfaces</a>
-                    </div>
-                </article>
-
+            <div class="readme-block">
+                <h4><i class="fab fa-github"></i> README.md Snippet</h4>
+                <div class="readme-text">
+                    ### Core Project Objectives
+                    * Establish automated ETL processing chains using Python (Pandas/NumPy) to aggregate asynchronous campaign tracking datasets.
+                    * Standardize conversion path definitions across customer lifecycle stages to prevent ad spend attribution leaks.
+                    * Deliver unified BI interfaces via Advanced Excel, Power BI, and Tableau to slice campaign metrics by demographic cohorts and channel groups.
+                    
+                    ### Key Implementation Steps
+                    1. **Data Cleaning & Engineering:** Cleaned marketing logs by eliminating null session values and transforming nested JSON strings into linear feature spaces.
+                    2. **Attribution Modeling:** Formulated custom linear and first-touch attribution parameters via Python to distribute pipeline credit fairly.
+                </div>
             </div>
-        </section>
+
+            <div class="metrics-grid">
+                <div class="metric-box"><div class="metric-val">Python / SQL</div><div class="metric-lbl">Core Infrastructure</div></div>
+                <div class="metric-box"><div class="metric-val">3 Platforms</div><div class="metric-lbl">Excel / PBI / Tableau</div></div>
+                <div class="metric-box"><div class="metric-val">Attribution</div><div class="metric-lbl">Analysis Focus</div></div>
+            </div>
+
+            <div class="tech-list">
+                <span class="tech-item">Data Cleansing</span>
+                <span class="tech-item">Funnel Pipelines</span>
+                <span class="tech-item">Conversion Optimization</span>
+                <span class="tech-item">Ad-Spend Analysis</span>
+            </div>
+        </article>
+
+        <article class="repo-card">
+            <span class="repo-badge">repo: walmart</span>
+            <h2 class="repo-name">Walmart Retail Demand & Supply Chain Forecast Modeling</h2>
+            
+            <p>An enterprise retail data mining project assessing inventory movement, seasonal order spikes, and regional demand distributions across multiple storefront dimensions. This study identifies logistical gaps caused by holiday supply strain.</p>
+
+            <div class="readme-block">
+                <h4><i class="fab fa-github"></i> README.md Snippet</h4>
+                <div class="readme-text">
+                    ### Core Project Objectives
+                    * Design relational star-schema data models optimized for transactional retail logging systems across hundreds of distinct departments.
+                    * Calculate dynamic moving windows and rolling metric flags within SQL to capture macro demand changes during seasonal events.
+                    * Build complex, low-latency Tableau and Power BI visual layers with specific filters for asset deployment managers.
+
+                    ### Analytical Scope
+                    * **Demand Stability Centers:** Created logic to automatically highlight stockout risks when rolling demand exceeds standard stock buffer metrics.
+                    * **Financial Asset Tracking:** Evaluated gross profit margin patterns against promotion variables to map seasonal revenue drift.
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-box"><div class="metric-val">PostgreSQL</div><div class="metric-lbl">Database Engine</div></div>
+                <div class="metric-box"><div class="metric-val">Star Schema</div><div class="metric-lbl">Data Architecture</div></div>
+                <div class="metric-box"><div class="metric-val">8 Frontends</div><div class="metric-lbl">Total Layout Views</div></div>
+            </div>
+
+            <div class="tech-list">
+                <span class="tech-item">Time Series Slicing</span>
+                <span class="tech-item">Inventory Optimization</span>
+                <span class="tech-item">Relational Modeling</span>
+                <span class="tech-item">Star Schema</span>
+            </div>
+        </article>
+
+        <article class="repo-card">
+            <span class="repo-badge">repo: olist</span>
+            <h2 class="repo-name">Olist Brazilian E-Commerce Logistics & Fulfillment Infrastructure</h2>
+            
+            <p>An end-to-end data evaluation of marketplace performance, looking closely at shipping delays, customer retention cohorts, and geographical fulfillment bottlenecks using real commercial transactions.</p>
+
+            <div class="readme-block">
+                <h4><i class="fab fa-github"></i> README.md Snippet</h4>
+                <div class="readme-text">
+                    ### Core Project Objectives
+                    * Run relational analytical queries across massive, multi-table e-commerce schemas tracking customer vectors, seller hubs, item specifications, and payment terms.
+                    * Process temporal distribution statistics to map variances between estimated shipping delivery milestones and true final fulfillment arrivals.
+                    * Build interactive geographic heatmaps in Tableau along with retention matrices in Power BI to monitor market performance.
+
+                    ### Critical Insights Developed
+                    * Identified geographical delivery patterns showing specific cross-state shipping routes that accounted for disproportionate delivery delays.
+                    * Created customer cohort tracking models using advanced DAX and SQL to measure purchase intervals over multiple timeframes.
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-box"><div class="metric-val">MySQL</div><div class="metric-lbl">Query Database</div></div>
+                <div class="metric-box"><div class="metric-val">Geospatial</div><div class="metric-lbl">Fulfillment Focus</div></div>
+                <div class="metric-box"><div class="metric-val">6 Frontends</div><div class="metric-lbl">Visual Panels</div></div>
+            </div>
+
+            <div class="tech-list">
+                <span class="tech-item">Cohort Analysis</span>
+                <span class="tech-item">Geospatial Distribution</span>
+                <span class="tech-item">Fulfillment Logistics</span>
+                <span class="tech-item">Relational Database Queries</span>
+            </div>
+        </article>
+
     </main>
 
- <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
+     <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
                 <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; display: inline-block; margin-bottom: 1rem;">SD<span>.</span>analytics</a>
