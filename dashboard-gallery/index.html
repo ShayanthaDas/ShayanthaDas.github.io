@@ -3,78 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Gallery | Shayantha Das</title>
-    <link rel="stylesheet" href="../style.css?v=3.0">
+    <title>Interactive Dashboard Gallery Showcase | Shayantha Das</title>
+    
+    <meta name="description" content="Browse the data reporting dashboard gallery by Shayantha Das. Explore custom analytical frontends engineered in Power BI Desktop, Tableau Client, and Advanced Excel.">
+    <link rel="canonical" href="https://shayanthadas.github.io/dashboard-gallery/">
+    
+    <link rel="stylesheet" href="../style.css?v=8.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        .gallery-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-        .section-block {
-            margin-bottom: 60px;
-            clear: both;
-        }
-        .section-header {
-            font-size: 1.6rem;
-            color: #06b6d4;
-            margin-bottom: 25px;
-            border-bottom: 2px solid rgba(6, 182, 212, 0.2);
-            padding-bottom: 8px;
-        }
-        .image-grid {
-            display: grid !important;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-            gap: 25px !important;
-        }
-        .card {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            border-radius: 8px;
-            overflow: hidden;
-            display: block !important;
-            transition: transform 0.2s ease;
-        }
-        .card:hover {
-            transform: translateY(-4px);
-        }
-        .media-box {
-            width: 100%;
-            height: 200px;
-            background: #030712;
-            position: relative;
-            border-bottom: 1px solid #1e293b;
-        }
-        .media-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 8px;
-            display: block !important;
-        }
-        .tech-badge {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 4px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
-        }
+        .gallery-container { max-width: 1200px; margin: 40px auto; padding: 20px; font-family: system-ui, -apple-system, sans-serif; }
+        .section-block { margin-bottom: 60px; clear: both; }
+        
+        /* Heading Structure Standardizations */
+        .page-heading { font-size: 2.5rem; margin-bottom: 8px; font-weight: 800; color: #fff; }
+        .page-subheading { color: #94a3b8; font-size: 1.1rem; margin: 0 0 30px 0; font-weight: 400; }
+        .section-header { font-size: 1.6rem; color: #06b6d4; margin: 0 0 10px 0; font-weight: 700; text-transform: lowercase; }
+        .section-desc { color: #94a3b8; font-size: 0.95rem; margin-bottom: 25px; line-height: 1.5; }
+        
+        .image-grid { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important; gap: 25px !important; }
+        .card { background: #0f172a; border: 1px solid #1e293b; border-radius: 8px; overflow: hidden; display: block !important; }
+        .media-box { width: 100%; height: 200px; background: #030712; position: relative; border-bottom: 1px solid #1e293b; }
+        .media-box img { width: 100%; height: 100%; object-fit: contain; padding: 8px; display: block !important; }
+        .tech-badge { position: absolute; bottom: 10px; right: 10px; font-size: 0.7rem; font-weight: 700; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; }
         .excel { background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
         .pbi { background: rgba(234, 179, 8, 0.15); color: #fde047; border: 1px solid rgba(234, 179, 8, 0.3); }
         .tableau { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
-        .info-text {
-            padding: 15px;
-            font-size: 0.95rem;
-            color: #f1f5f9;
-            font-weight: 500;
-        }
+        .info-text { padding: 15px; font-size: 0.95rem; color: #f1f5f9; font-weight: 500; }
     </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YOUR_TRACKING_ID');
+</script>
 </head>
 <body style="background: #030712; color: #fff;">
 
@@ -94,32 +57,30 @@
     </header>
 
     <main class="gallery-container">
-        
-        <div style="margin-bottom: 40px;">
-            <h1 style="font-size: 2.5rem; margin-bottom: 8px; font-weight: 800;">Dashboard Gallery</h1>
-            <p style="color: #94a3b8; font-size: 1.1rem;">Cross-Platform Reporting Frontends Categorized By Core Repositories</p>
-        </div>
+        <h1 class="page-heading">Dashboard Gallery</h1>
+        <h2 class="page-subheading">Cross-Platform Reporting Frontends Categorized By Core Repositories</h2>
 
         <section class="section-block">
-            <h2 class="section-header">repo: maketing</h2>
+            <h3 class="section-header">repo: maketing</h3>
+            <p class="section-desc">Interactive business reporting canvases tracking acquisition loops, funnel conversion rates, and multi-tier user engagement matrices derived from audience logs.</p>
             <div class="image-grid">
                 <div class="card">
                     <div class="media-box">
-                        <img src="./Marketing%20Data%20Analysis%20Report-Excel.png" alt="Marketing Excel">
+                        <img src="./Marketing%20Data%20Analysis%20Report-Excel.png" alt="Marketing Excel Dashboard">
                         <span class="tech-badge excel">Excel</span>
                     </div>
                     <div class="info-text">Marketing Performance Sheet</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./Marketing%20Data%20Analysis%20Report-PBI.png" alt="Marketing Power BI">
+                        <img src="./Marketing%20Data%20Analysis%20Report-PBI.png" alt="Marketing Power BI Grid">
                         <span class="tech-badge pbi">Power BI</span>
                     </div>
                     <div class="info-text">Multi-Channel Conversion Matrix</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./Marketing%20Data%20Analysis%20Report-Tableau.png" alt="Marketing Tableau">
+                        <img src="./Marketing%20Data%20Analysis%20Report-Tableau.png" alt="Marketing Tableau Workspace">
                         <span class="tech-badge tableau">Tableau</span>
                     </div>
                     <div class="info-text">Funnel Attribution Workspace</div>
@@ -128,60 +89,61 @@
         </section>
 
         <section class="section-block">
-            <h2 class="section-header">repo: walmart</h2>
+            <h3 class="section-header">repo: walmart</h3>
+            <p class="section-desc">Enterprise trend monitoring panels measuring regional inventory stock thresholds, moving averages, sales variations, and revenue updates.</p>
             <div class="image-grid">
                 <div class="card">
                     <div class="media-box">
-                        <img src="./WALMART_W_D.PNG" alt="Walmart Excel">
+                        <img src="./WALMART_W_D.PNG" alt="Walmart Excel Slicer Card">
                         <span class="tech-badge excel">Excel</span>
                     </div>
                     <div class="info-text">Supply Chain Pivot Slicer</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./WALMART_E_O_PBI.PNG" alt="Walmart Power BI Overview">
+                        <img src="./WALMART_E_O_PBI.PNG" alt="Walmart Power BI Command View">
                         <span class="tech-badge pbi">Power BI</span>
                     </div>
                     <div class="info-text">Demand Volatility Command Center</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./WALMART_EX_O_TAB.PNG" alt="Walmart Tableau Overview">
+                        <img src="./WALMART_EX_O_TAB.PNG" alt="Walmart Tableau Server Map">
                         <span class="tech-badge tableau">Tableau</span>
                     </div>
                     <div class="info-text">Regional Sales Trend Server</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./WALMART_EFA_TAB.PNG" alt="Walmart Financial Tableau">
+                        <img src="./WALMART_EFA_TAB.PNG" alt="Walmart Financial Tracking Canvas">
                         <span class="tech-badge tableau">Tableau</span>
                     </div>
                     <div class="info-text">Financial Asset Allocation Tracker</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./WALMART_F%26D_TAB.PNG" alt="Walmart Forecast Tableau">
+                        <img src="./WALMART_F%26D_TAB.PNG" alt="Walmart Prediction Modeling Layout">
                         <span class="tech-badge tableau">Tableau</span>
                     </div>
                     <div class="info-text">Predictive Forecasting Engine</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./WALMART_FA_PBI.PNG" alt="Walmart Fiscal Power BI">
+                        <img src="./WALMART_FA_PBI.PNG" alt="Walmart Fiscal Audit Grid">
                         <span class="tech-badge pbi">Power BI</span>
                     </div>
                     <div class="info-text">Fiscal Performance Auditor</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./WALMART_F_PBI.PNG" alt="Walmart Trend Power BI">
+                        <img src="./WALMART_F_PBI.PNG" alt="Walmart Trend Drift Model">
                         <span class="tech-badge pbi">Power BI</span>
                     </div>
                     <div class="info-text">Trend Drift Analysis Portal</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./WALMART_CSI_PBI.PNG" alt="Walmart Sentiment Power BI">
+                        <img src="./WALMART_CSI_PBI.PNG" alt="Walmart Consumer Sentiment Analysis">
                         <span class="tech-badge pbi">Power BI</span>
                     </div>
                     <div class="info-text">Lead Sentiment Intelligence</div>
@@ -190,56 +152,56 @@
         </section>
 
         <section class="section-block">
-            <h2 class="section-header">repo: olist</h2>
+            <h3 class="section-header">repo: olist</h3>
+            <p class="section-desc">E-commerce logistical visibility pipelines evaluating carrier transit milestones, customer purchase frequency, and spatial delivery tracking maps.</p>
             <div class="image-grid">
                 <div class="card">
                     <div class="media-box">
-                        <img src="./olist_excel_dashboard.png" alt="Olist Excel">
+                        <img src="./olist_excel_dashboard.png" alt="Olist Logistic Sheet">
                         <span class="tech-badge excel">Excel</span>
                     </div>
                     <div class="info-text">Logistical Performance Sheet</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./olist_executive_dahboard_pbi.png" alt="Olist Power BI">
+                        <img src="./olist_executive_dahboard_pbi.png" alt="Olist Executive Power BI Frontend">
                         <span class="tech-badge pbi">Power BI</span>
                     </div>
                     <div class="info-text">Marketplace Fulfillment Controller</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./olist_geo_dash_tab.png" alt="Olist Tableau Geography">
+                        <img src="./olist_geo_dash_tab.png" alt="Olist Spatial Mapping Layout">
                         <span class="tech-badge tableau">Tableau</span>
                     </div>
                     <div class="info-text">Geospatial Shipping Hub Workspace</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./olist_customer_analysis_pbi.png" alt="Olist Customer Power BI">
+                        <img src="./olist_customer_analysis_pbi.png" alt="Olist Customer Cohort Matrix">
                         <span class="tech-badge pbi">Power BI</span>
                     </div>
                     <div class="info-text">Consumer Behavior Cohorts</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./olist_time_analysis_pbi.png" alt="Olist Time Power BI">
+                        <img src="./olist_time_analysis_pbi.png" alt="Olist Transit Time Slicer">
                         <span class="tech-badge pbi">Power BI</span>
                     </div>
                     <div class="info-text">Temporal Delivery Slicers</div>
                 </div>
                 <div class="card">
                     <div class="media-box">
-                        <img src="./olist_cus_beh_tab.png" alt="Olist Customer Behavior Tableau">
+                        <img src="./olist_cus_beh_tab.png" alt="Olist Retention Analysis Model">
                         <span class="tech-badge tableau">Tableau</span>
                     </div>
                     <div class="info-text">Engagement Retention Server</div>
                 </div>
             </div>
         </section>
-
     </main>
 
-     <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
+    <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
                 <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; display: inline-block; margin-bottom: 1rem;">SD<span>.</span>analytics</a>
