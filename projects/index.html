@@ -3,125 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Portfolio | Shayantha Das</title>
-    <link rel="stylesheet" href="../style.css?v=6.0">
+    <title>Data Portfolio & Technical Projects | Shayantha Das</title>
+    
+    <meta name="description" content="Explore advanced data analytics engineering projects by Shayantha Das. Featuring production-ready portfolios across Python, MySQL, PostgreSQL, and Power BI.">
+    <link rel="canonical" href="https://shayanthadas.github.io/projects/">
+    
+    <link rel="stylesheet" href="../style.css?v=8.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .portfolio-wrapper {
-            max-width: 1140px;
-            margin: 40px auto;
-            padding: 0 20px;
-            font-family: system-ui, -apple-system, sans-serif;
-            color: #f1f5f9;
-        }
-        .project-block {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin-bottom: 4rem;
-            clear: both;
-        }
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        .project-title {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #fff;
-            margin: 0;
-        }
-        .tag-container {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-        .tech-tag {
-            background: #1e293b;
-            border: 1px solid #334155;
-            color: #cbd5e1;
-            padding: 0.3rem 0.7rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        .section-divider {
-            height: 1px;
-            background: #1e293b;
-            margin: 1.5rem 0;
-        }
-        .pipeline-title {
-            font-size: 1.15rem;
-            color: #06b6d4;
-            margin: 1.5rem 0 0.75rem 0;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .project-desc {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #cbd5e1;
-            margin-bottom: 1.5rem;
-            text-align: justify;
-        }
-        .features-list {
-            margin: 0 0 2rem 0;
-            padding-left: 1.25rem;
-        }
-        .features-list li {
-            margin-bottom: 0.6rem;
-            line-height: 1.6;
-            color: #cbd5e1;
-            font-size: 0.98rem;
-        }
-        .action-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-        }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #06b6d4;
-            color: #030712;
-            text-decoration: none;
-            padding: 0.65rem 1.4rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            transition: background 0.2s ease;
-        }
-        .btn-primary:hover {
-            background: #22d3ee;
-            color: #030712;
-        }
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #1e293b;
-            color: #fff;
-            text-decoration: none;
-            padding: 0.65rem 1.4rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: 1px solid #334155;
-            transition: all 0.2s ease;
-        }
-        .btn-secondary:hover {
-            background: #334155;
-            border-color: #475569;
-        }
+        .portfolio-wrapper { max-width: 1140px; margin: 40px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
+        .project-block { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2.5rem; margin-bottom: 4rem; clear: both; }
+        .project-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+        .project-title { font-size: 2rem; font-weight: 800; color: #fff; margin: 0; }
+        .tag-container { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .tech-tag { background: #1e293b; border: 1px solid #334155; color: #cbd5e1; padding: 0.3rem 0.7rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+        .pipeline-title { font-size: 1.15rem; color: #06b6d4; margin: 1.5rem 0 0.75rem 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .project-desc { font-size: 1rem; line-height: 1.7; color: #cbd5e1; margin-bottom: 1.5rem; text-align: justify; }
+        .features-list { margin: 0 0 2rem 0; padding-left: 1.25rem; }
+        .features-list li { margin-bottom: 0.6rem; line-height: 1.6; color: #cbd5e1; font-size: 0.98rem; }
+        .action-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #06b6d4; color: #030712; text-decoration: none; padding: 0.65rem 1.4rem; border-radius: 6px; font-size: 0.9rem; font-weight: 700; transition: background 0.2s ease; }
+        .btn-primary:hover { background: #22d3ee; color: #030712; }
+        .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: #1e293b; color: #fff; text-decoration: none; padding: 0.65rem 1.4rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; border: 1px solid #334155; transition: all 0.2s ease; }
+        .btn-secondary:hover { background: #334155; border-color: #475569; }
     </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YOUR_TRACKING_ID');
+</script>
 </head>
 <body style="background: #030712;">
 
@@ -141,34 +53,27 @@
     </header>
 
     <main class="portfolio-wrapper">
-        
         <div style="margin-bottom: 3.5rem;">
-            <h1 style="font-size: 2.6rem; color: #fff; margin-bottom: 0.5rem; font-weight: 800;">Portfolio Work</h1>
-            <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Production-ready documentation sourced directly from active repository codebases.</p>
+            <h1 style="font-size: 2.6rem; color: #fff; margin-bottom: 0.5rem; font-weight: 800;">Portfolio Work & Technical Projects</h1>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Production-ready data engineering pipelines and optimization environments built to transform complex relational metrics into executive business knowledge.</p>
         </div>
 
         <section class="project-block">
             <div class="project-header">
                 <h2 class="project-title">Marketing-Campaign-Performance-Analytics</h2>
                 <div class="tag-container">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">MySQL</span>
-                    <span class="tech-tag">Power BI</span>
-                    <span class="tech-tag">Tableau</span>
+                    <span class="tech-tag">Python</span><span class="tech-tag">MySQL</span><span class="tech-tag">Power BI</span><span class="tech-tag">Tableau</span>
                 </div>
             </div>
-            
             <p class="project-desc">
-                Sourced from the root <strong>README.md</strong>, this business intelligence platform optimizes multi-channel digital performance pipelines. The project standardizes disconnected audience capture structures, validates clickstream attributes, and transforms behavioral data points into normalized relational tables to handle attribution metrics across overlapping campaigns.
+                Sourced from structural codebase requirements, this data infrastructure automates digital marketing data ingestion and channel attribution parsing. The script architecture processes disconnected tracking patterns, evaluates conversion funnels, and maps cross-channel user interactions to maximize marketing budget distribution metrics.
             </p>
-
             <h3 class="pipeline-title">Technical Project Specifications</h3>
             <ul class="features-list">
-                <li><strong>Data Wrangling Architecture:</strong> Custom Python scripts utilizing Pandas and NumPy to address missing variables, correct structural data anomalies, and format timestamp arrays.</li>
-                <li><strong>Relational Storage Engine:</strong> An optimized MySQL backend schema constructed to execute scalable joins between multi-source customer records and acquisition data.</li>
-                <li><strong>BI Interface Implementations:</strong> Dynamic conversion funnels, acquisition curves, and user interaction dashboards built across Tableau and Power BI Desktop ecosystems.</li>
+                <li><strong>Data Wrangling Architecture:</strong> Custom Python workflows built to isolate incomplete database fields, normalize mixed formatting parameters, and clean timestamp records.</li>
+                <li><strong>Relational Database Logic:</strong> Engineered structured multi-table schemas in MySQL Server to smoothly handle relational queries tracking conversion paths.</li>
+                <li><strong>Visual Interface Frontends:</strong> Developed interactive attribution canvases, cohort retention tables, and revenue dashboards in Power BI and Tableau Client.</li>
             </ul>
-
             <div class="action-links">
                 <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn-primary"><i class="fab fa-github"></i> View Codebase</a>
                 <a href="/dashboard-gallery/" class="btn-secondary"><i class="fas fa-chart-pie"></i> View Dashboards</a>
@@ -179,24 +84,18 @@
             <div class="project-header">
                 <h2 class="project-title">Walmart-Retail-Analytics-Demand-Forecasting</h2>
                 <div class="tag-container">
-                    <span class="tech-tag">PostgreSQL</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Power BI</span>
-                    <span class="tech-tag">Advanced Excel</span>
+                    <span class="tech-tag">PostgreSQL</span><span class="tech-tag">Python</span><span class="tech-tag">Power BI</span><span class="tech-tag">Advanced Excel</span>
                 </div>
             </div>
-            
             <p class="project-desc">
-                Sourced from the root <strong>README.md</strong>, this predictive analytics framework processes dense weekly transaction records to trace product demand patterns across regional retail store footprints. The framework handles adjustments for promotional markdowns, seasonal holiday variations, localized consumer pricing indexes, and regional employment indicators.
+                An enterprise-level data processing environment mapping historical retail metrics over dense store networks. The framework processes adjustments for promotional markdown pricing levels, macroeconomic indicators, localized employment values, and regional seasonal fluctuations.
             </p>
-
             <h3 class="pipeline-title">Technical Project Specifications</h3>
             <ul class="features-list">
-                <li><strong>Database Query Optimization:</strong> Engineered structured subqueries, window functions, and multi-table indexing parameters in PostgreSQL to process millions of rows cleanly.</li>
-                <li><strong>Time Series Feature Tracking:</strong> Moving average models and rolling variance checks built to handle seasonal volatility and capture underlying purchasing trends.</li>
-                <li><strong>Executive Delivery Reports:</strong> Advanced Excel slicer dashboards and Power BI frameworks tracking regional inventory levels and pipeline distribution metrics.</li>
+                <li><strong>Query Performance Engineering:</strong> Built complex window function scripts, subqueries, and table indexing rules inside PostgreSQL to handle massive transactional arrays efficiently.</li>
+                <li><strong>Time Series Pattern Capture:</strong> Implemented moving statistical calculations and historical rolling variance filters to measure supply chain volatility parameters.</li>
+                <li><strong>Distribution Control Boards:</strong> Constructed dynamic dashboard reporting systems using Advanced Excel slicer controls and Power BI Desktop templates.</li>
             </ul>
-
             <div class="action-links">
                 <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-primary"><i class="fab fa-github"></i> View Codebase</a>
                 <a href="/dashboard-gallery/" class="btn-secondary"><i class="fas fa-chart-pie"></i> View Dashboards</a>
@@ -207,30 +106,23 @@
             <div class="project-header">
                 <h2 class="project-title">Olist-Sales-Customer-Analytics</h2>
                 <div class="tag-container">
-                    <span class="tech-tag">MySQL</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Tableau</span>
-                    <span class="tech-tag">Cohort Analysis</span>
+                    <span class="tech-tag">MySQL</span><span class="tech-tag">Python</span><span class="tech-tag">Tableau</span><span class="tech-tag">Cohort Analysis</span>
                 </div>
             </div>
-            
             <p class="project-desc">
-                Sourced from the root <strong>README.md</strong>, this customer lifecycle and operations project parses Brazilian e-commerce marketplace variables. The tracking pipeline connects transactional statuses, merchant performance metrics, geographical distribution points, and product fulfillment histories to map supply-chain efficiency.
+                An end-to-end data analytics system processing Brazilian marketplace datasets to monitor delivery patterns, trace customer purchase frequencies, and isolate fulfillment delays across diverse logistics paths.
             </p>
-
             <h3 class="pipeline-title">Technical Project Specifications</h3>
             <ul class="features-list">
-                <li><strong>Geospatial Logistics Intelligence:</strong> Interactive spatial mapping sheets developed in Tableau to visually isolate and detail transit bottleneck zones across regional hubs.</li>
-                <li><strong>Lifecycle Performance Modeling:</strong> Customer retention analytics and purchase velocity trackers constructed inside Power BI using multi-year cohort segmentation calculations.</li>
-                <li><strong>Relational DB Normalization:</strong> Designed a unified MySQL schema to join orders, payments, reviews, and tracking coordinates without compromising performance.</li>
+                <li><strong>Geospatial Shipping Audits:</strong> Engineered interactive geographic mapping layers in Tableau to locate precise carrier performance delays across complex fulfillment routes.</li>
+                <li><strong>Customer Lifecycle Tracking:</strong> Formulated year-over-year retention heatmaps and purchase velocity matrices using advanced multi-tier cohort logic in Power BI.</li>
+                <li><strong>Database Optimization:</strong> Designed normalized MySQL schemas to seamlessly merge massive order volumes, user reviews, and shipping logs without performance overhead.</li>
             </ul>
-
             <div class="action-links">
                 <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-primary"><i class="fab fa-github"></i> View Codebase</a>
                 <a href="/dashboard-gallery/" class="btn-secondary"><i class="fas fa-chart-pie"></i> View Dashboards</a>
             </div>
         </section>
-
     </main>
 
     <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
