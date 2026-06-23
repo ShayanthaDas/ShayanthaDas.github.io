@@ -3,111 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Case Studies | Shayantha Das</title>
-    <link rel="stylesheet" href="../style.css?v=7.0">
+    <title>Business Intelligence Case Studies | Shayantha Das</title>
+    
+    <meta name="description" content="Read deep-dive business analytics case studies by Shayantha Das. Discover data investigations, optimization models, and visual engineering pipelines.">
+    <link class="seo-link" rel="canonical" href="https://shayanthadas.github.io/case-studies/">
+    
+    <link rel="stylesheet" href="../style.css?v=8.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .case-studies-container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-            font-family: system-ui, -apple-system, sans-serif;
-            color: #f1f5f9;
-        }
-        .case-card {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin-bottom: 4rem;
-        }
-        .repo-badge {
-            display: inline-block;
-            background: rgba(6, 182, 212, 0.08);
-            border: 1px solid #06b6d4;
-            color: #06b6d4;
-            padding: 0.35rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .case-title {
-            font-size: 1.9rem;
-            font-weight: 800;
-            color: #fff;
-            margin: 0 0 1.5rem 0;
-            line-height: 1.3;
-        }
-        .grid-meta {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-            background: #030712;
-            padding: 1.25rem;
-            border-radius: 6px;
-            border: 1px solid #1e293b;
-        }
-        .meta-item strong {
-            display: block;
-            color: #94a3b8;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.25rem;
-        }
-        .meta-item p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #e2e8f0;
-        }
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #06b6d4;
-            margin: 2rem 0 0.75rem 0;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .content-text {
-            font-size: 0.98rem;
-            line-height: 1.7;
-            color: #cbd5e1;
-            margin: 0 0 1.5rem 0;
-            text-align: justify;
-        }
-        .bullet-list {
-            margin: 0 0 2rem 0;
-            padding-left: 1.25rem;
-        }
-        .bullet-list li {
-            margin-bottom: 0.6rem;
-            line-height: 1.6;
-            color: #cbd5e1;
-            font-size: 0.98rem;
-        }
-        .btn-git {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #1e293b;
-            color: #fff;
-            text-decoration: none;
-            padding: 0.65rem 1.4rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: 1px solid #334155;
-            transition: all 0.2s ease;
-            margin-top: 1rem;
-        }
-        .btn-git:hover {
-            background: #06b6d4;
-            border-color: #06b6d4;
-            color: #fff;
-        }
+        .case-studies-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
+        .case-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2.5rem; margin-bottom: 4rem; }
+        .repo-badge { display: inline-block; background: rgba(6, 182, 212, 0.08); border: 1px solid #06b6d4; color: #06b6d4; padding: 0.35rem 0.75rem; border-radius: 4px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1rem; }
+        .case-title { font-size: 1.9rem; font-weight: 800; color: #fff; margin: 0 0 1.5rem 0; line-height: 1.3; }
+        .grid-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; background: #030712; padding: 1.25rem; border-radius: 6px; border: 1px solid #1e293b; }
+        .meta-item strong { display: block; color: #94a3b8; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.25rem; }
+        .meta-item p { margin: 0; font-size: 0.95rem; color: #e2e8f0; }
+        .section-subtitle { font-size: 1.2rem; color: #06b6d4; margin: 2rem 0 0.75rem 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .content-text { font-size: 0.98rem; line-height: 1.7; color: #cbd5e1; margin: 0 0 1.5rem 0; text-align: justify; }
+        .bullet-list { margin: 0 0 2rem 0; padding-left: 1.25rem; }
+        .bullet-list li { margin-bottom: 0.6rem; line-height: 1.6; color: #cbd5e1; font-size: 0.98rem; }
+        .btn-git { display: inline-flex; align-items: center; gap: 0.5rem; background: #1e293b; color: #fff; text-decoration: none; padding: 0.65rem 1.4rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; border: 1px solid #334155; transition: all 0.2s ease; margin-top: 1rem; }
+        .btn-git:hover { background: #06b6d4; border-color: #06b6d4; color: #fff; }
     </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YOUR_TRACKING_ID');
+</script>
 </head>
 <body style="background: #030712;">
 
@@ -127,99 +51,70 @@
     </header>
 
     <main class="case-studies-container">
-        
         <div style="margin-bottom: 4rem;">
             <h1 style="font-size: 2.6rem; color: #fff; margin-bottom: 0.5rem; font-weight: 800;">Business Case Studies</h1>
-            <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">In-depth analyses sourced directly from repository case study files detailing operational problems and data investigations.</p>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Comprehensive data investigations sourced directly from active code repository tracking files.</p>
         </div>
 
         <article class="case-card">
-            <span class="repo-badge">Repository Name</span>
+            <span class="repo-badge">Repository Location</span>
             <h2 class="case-title">Marketing-Campaign-Performance-Analytics</h2>
-            
             <div class="grid-meta">
                 <div class="meta-item"><strong>Core Technology Stack</strong><p>Python (Pandas/NumPy), MySQL Server, Power BI, Tableau</p></div>
                 <div class="meta-item"><strong>Analytical Methods</strong><p>Cohort Extraction, Conversion Optimization, RFM Modeling</p></div>
                 <div class="meta-item"><strong>Database Engine</strong><p>Relational Schema Script Structures</p></div>
             </div>
-
             <h3 class="section-subtitle">Sourced From Case Studies File</h3>
-            <p class="content-text"><strong>The Business Problem:</strong> The organization faced severe attribution blindness where fragmented, multi-channel promotional spend masked the actual conversion drivers. Overlapping campaign schedules across distinct advertising channels caused massive double-counting of user interactions, leading to artificially inflated cost-per-acquisition (CPA) parameters and localized ad-budget inefficiencies.</p>
-            
-            <p class="content-text"><strong>The Investigation & Analytical Implementation:</strong> To decouple true campaign profitability, granular customer interaction touchpoints were isolated and transformed through a specialized database structure. By applying schema normalization workflows via Python and script-based transaction aggregation inside MySQL, multi-tier touchpoint pathways were separated successfully.</p>
-            
-            <p class="content-text">Cross-platform dashboard systems were then engineered to display live tracking variables, giving management the visualization tools necessary to restructure ad-spend balance ratios and lower acquisition overheads.</p>
-            
+            <p class="content-text"><strong>The Business Problem:</strong> The marketing operations division experienced attribution blindness where split, multi-channel advertising budgets masked true conversion paths. Overlapping schedules on distinct networks resulted in significant double-counting of leads, driving up cost-per-acquisition metrics and obscuring real channel return on investment.</p>
+            <p class="content-text"><strong>The Investigation & Implementation:</strong> Granular audience interaction logs were mined and structured through custom normalization parameters inside Python. Relational logic joins inside MySQL successfully decoupled conflicting attribution sequences. The cleaned datasets were connected to interactive reporting workspaces, giving stakeholders clear visual tracking components to refine budget balances and decrease customer acquisition costs.</p>
             <ul class="bullet-list">
-                <li>Decoupled overlapping marketing data loops to isolate true acquisition roots.</li>
-                <li>Uncovered distinct customer engagement groups via SQL-based transaction categorization.</li>
-                <li>Supplied business leaders with interactive canvas layouts to track real-time channel attribution degradation.</li>
+                <li>Isolated accurate channel attribution paths from multi-layered clickstreams.</li>
+                <li>Constructed performance tracking matrices across distinct advertising cycles.</li>
+                <li>Supplied interactive visualization frameworks to optimize marketing capital deployment.</li>
             </ul>
-
-            <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn-git">
-                <i class="fab fa-github"></i> View Full Repository
-            </a>
+            <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn-git"><i class="fab fa-github"></i> View Full Repository</a>
         </article>
 
         <article class="case-card">
-            <span class="repo-badge">Repository Name</span>
+            <span class="repo-badge">Repository Location</span>
             <h2 class="case-title">Walmart-Retail-Analytics-Demand-Forecasting</h2>
-            
             <div class="grid-meta">
                 <div class="meta-item"><strong>Core Technology Stack</strong><p>PostgreSQL, Python, Power BI Desktop, Advanced Excel</p></div>
                 <div class="meta-item"><strong>Analytical Methods</strong><p>Time Series Partitioning, Rolling Drift Analysis, Trend Audit</p></div>
                 <div class="meta-item"><strong>Database Engine</strong><p>Structured Multi-Row Storage Engine</p></div>
             </div>
-
             <h3 class="section-subtitle">Sourced From Case Studies File</h3>
-            <p class="content-text"><strong>The Business Problem:</strong> Severe seasonal demand variations and unpredicted localized sales spikes consistently disrupted regional distribution pipelines. High-traffic holiday surges often led to immediate inventory stockouts in high-margin product groups, while sudden traffic drop-offs generated excessive holding expenses and margin decay from forced clearance markdown strategies.</p>
-            
-            <p class="content-text"><strong>The Investigation & Analytical Implementation:</strong> Dense historical sales records were processed using structured window functions and multi-table joins within PostgreSQL. The data was partitioned into discrete chronological sequences to evaluate store-level velocity shifts and isolate seasonal fluctuations from baseline retail noise.</p>
-            
-            <p class="content-text">Using Power BI Desktop and Advanced Excel, a demand intelligence portal was created to sync distribution thresholds with moving average trends. This enables warehouse operators to preemptively balance regional stock shipments and limit stock out dependencies.</p>
-            
+            <p class="content-text"><strong>The Business Problem:</strong> Drastic seasonal spikes and shifting localized buying habits frequently disrupted regional warehouse supply schedules. Peak traffic windows resulted in immediate stock shortages for key store departments, while rapid demand drops caused excessive inventory holding expenses and severe clearance price drop metrics.</p>
+            <p class="content-text"><strong>The Investigation & Implementation:</strong> Millions of operational rows were grouped and structured using optimized query partition rules and windows functions in PostgreSQL. Chronological sequences were extracted to separate underlying seasonal patterns from daily retail noise. Using Power BI Desktop and Advanced Excel dashboard features, a demand intelligence interface was launched to align store inventory updates with historical moving averages, allowing logistics managers to smoothly stabilize shipment frequencies.</p>
             <ul class="bullet-list">
-                <li>Analyzed multi-row historical transaction indices using optimized relational views.</li>
-                <li>Captured seasonal demand spikes across disparate geographical store locations.</li>
-                <li>Provided distribution teams with parameter tools to adjust warehouse replenishment buffers before major holidays.</li>
+                <li>Queried vast transactional datasets via optimized index parameters.</li>
+                <li>Identified store demand variance values using localized timeline filters.</li>
+                <li>Developed adjustable parameters to establish responsive store fulfillment schedules.</li>
             </ul>
-
-            <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-git">
-                <i class="fab fa-github"></i> View Full Repository
-            </a>
+            <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-git"><i class="fab fa-github"></i> View Full Repository</a>
         </article>
 
         <article class="case-card">
-            <span class="repo-badge">Repository Name</span>
+            <span class="repo-badge">Repository Location</span>
             <h2 class="case-title">Olist-Sales-Customer-Analytics</h2>
-            
             <div class="grid-meta">
                 <div class="meta-item"><strong>Core Technology Stack</strong><p>MySQL Workbench, Python, Tableau Client, Power BI</p></div>
                 <div class="meta-item"><strong>Analytical Methods</strong><p>Geospatial Mapping, Lifecycle Segmentation, Logistics Flow</p></div>
                 <div class="meta-item"><strong>Database Engine</strong><p>Relational SQL Operational Schema</p></div>
             </div>
-
             <h3 class="section-subtitle">Sourced From Case Studies File</h3>
-            <p class="content-text"><strong>The Business Problem:</strong> Fragmented regional delivery networks were causing critical fulfillment bottlenecks, dropping customer satisfaction review scores and causing third-party merchants to leave the marketplace. Prolonged shipping channels and inaccurate transit window estimations triggered elevated order abandonment metrics, making spatial logistics tracking essential.</p>
-            
-            <p class="content-text"><strong>The Investigation & Analytical Implementation:</strong> Complex relational queries were deployed to connect geographic master indexes with multi-stage transit tracking variables in a centralized database schema. Order execution paths were broken down into distinct milestone phases to isolate exact delivery delay roots.</p>
-            
-            <p class="content-text">Through interactive geospatial map structures inside Tableau and consumer cohort matrices in Power BI, transport bottleneck zones were successfully mapped across regions, providing logistical coordinators with the analytical insights required to audit carrier performance and optimize fulfillment timelines.</p>
-            
+            <p class="content-text"><strong>The Business Problem:</strong> Logistical processing bottlenecks within regional delivery hubs negatively impacted marketplace delivery speeds, driving down customer satisfaction metrics and increasing store seller churn loops. Inaccurate delivery window estimates triggered higher order cancellation trends across high-value zip codes.</p>
+            <p class="content-text"><strong>The Investigation & Implementation:</strong> Complex database schemas were developed to join customer master records with multi-stage shipping intervals within MySQL. Order transit phases were segmented to measure carrier transport delays. By implementing interactive geographical coordinates in Tableau and user cohort layers in Power BI, transport bottlenecks were visually pinpointed, providing operations managers with clear auditing views to optimize service level agreements.</p>
             <ul class="bullet-list">
-                <li>Isolated transit delay intervals by breaking down individual order lifecycle timestamps.</li>
-                <li>Mapped spatial distribution bottlenecks using interactive coordinate layers in Tableau.</li>
-                <li>Modeled customer purchase cycles using historical cohort retention tracking.</li>
+                <li>Isolated carrier tracking delays by mapping shipment timestamp records.</li>
+                <li>Designed clear geospatial tracking layers to evaluate spatial shipping efficiency.</li>
+                <li>Modeled multi-year consumer purchase frequencies using cohort matrices.</li>
             </ul>
-
-            <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-git">
-                <i class="fab fa-github"></i> View Full Repository
-            </a>
+            <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-git"><i class="fab fa-github"></i> View Full Repository</a>
         </article>
-
     </main>
 
-    <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
+   <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
                 <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; display: inline-block; margin-bottom: 1rem;">SD<span>.</span>analytics</a>
