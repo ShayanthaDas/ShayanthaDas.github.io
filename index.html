@@ -1,70 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shayantha Das | Data Analyst & Business Intelligence Portfolio</title>
-    <meta name="description" content="Explore the professional portfolio of Shayantha Das. Specializing in SQL database architecture, Python automation pipelines, and advanced Power BI dashboard designs.">
-    <meta name="keywords" content="Data Analyst, SQL Developer, Power BI Portfolio, Business Intelligence, Python Analytics, Shayantha Das">
-    <link rel="canonical" href="https://shayanthadas.github.io/">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_TRACKING_ID"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-YOUR_TRACKING_ID');
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://shayanthadas.github.io/#organization",
-          "name": "Shayantha Das Analytics",
-          "url": "https://shayanthadas.github.io/",
-          "logo": "https://shayanthadas.github.io/profile.jpg",
-          "image": "https://shayanthadas.github.io/profile.jpg",
-          "description": "Professional data engineering, dashboard generation, and relational architecture configuration by Shayantha Das.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Chattogram",
-            "addressCountry": "BD"
-          }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://shayanthadas.github.io/#person",
-          "name": "Shayantha Das",
-          "jobTitle": "Data Analyst",
-          "url": "https://shayanthadas.github.io/",
-          "image": "https://shayanthadas.github.io/profile.jpg",
-          "sameAs": [
-            "https://github.com/ShayanthaDas",
-            "https://linkedin.com/in/shayantha-das/"
-          ],
-          "knowsAbout": ["Data Analysis", "SQL", "PostgreSQL", "MySQL", "Python", "Pandas", "Microsoft Power BI", "Tableau", "Advanced Excel", "SPSS"]
-        }
-      ]
-    }
-    </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_TRACKING_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YOUR_TRACKING_ID');
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayantha Das | Junior Data Analyst Portfolio</title>
+    
+    <!-- SEO OPTIMIZATION -->
+    <meta name="description" content="Professional portfolio of Shayantha Das, a Junior Data Analyst specializing in Python, MySQL, PostgreSQL, Power BI, Tableau, and Advanced Excel solutions.">
+    <link rel="canonical" href="https://shayanthadas.github.io/">
+    
+    <link rel="stylesheet" href="./style.css?v=10.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section { max-width: 1100px; margin: 60px auto 40px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 4rem; }
+        .stat-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; transition: transform 0.2s ease; }
+        .stat-card:hover { transform: translateY(-4px); }
+        .btn-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: #06b6d4; color: #030712; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-size: 1rem; font-weight: 700; margin-top: 1.5rem; transition: background 0.2s ease; }
+        .btn-cta:hover { background: #22d3ee; }
+        .btn-sub { display: inline-flex; align-items: center; gap: 0.5rem; background: #1e293b; color: #fff; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-size: 1rem; font-weight: 600; margin-top: 1.5rem; margin-left: 1rem; border: 1px solid #334155; transition: background 0.2s ease; }
+        .btn-sub:hover { background: #334155; }
+    </style>
 </head>
-<body>
+<body style="background: #030712;">
 
+    <!-- NAVIGATION MENU -->
     <header class="navbar">
-        <nav class="nav-container" aria-label="Main Navigation">
+        <nav class="nav-container">
             <a href="/" class="logo">SD<span>.</span>analytics</a>
             <ul class="nav-links">
                 <li><a href="/" class="active">Home</a></li>
@@ -78,99 +49,92 @@
         </nav>
     </header>
 
-    <main class="main-wrapper">
-        <section class="grid-2" aria-label="Professional Overview" style="margin-bottom: 2rem;">
-            <div class="hero-text" style="text-align: left;">
-                <h5>Welcome to My Portfolio</h5>
-                <h1 class="gradient-text" style="font-size: 3.2rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">Data Analyst & Business Intelligence Specialist</h1>
-                <p class="section-subtitle" style="margin-bottom: 2rem; max-width: 600px;">Transforming raw database records into scalable relational data pipelines, optimized analytical queries, and clear executive-facing operational dashboards.</p>
-                
-                <div class="cta-group" style="justify-content: flex-start;">
-                    <a href="/projects/" class="btn btn-primary">Explore Case Studies <i class="fas fa-arrow-right"></i></a>
-                    <a href="/contact/" class="btn btn-secondary">Get In Touch <i class="fas fa-envelope"></i></a>
-                </div>
+    <!-- HERO INTRODUCTION -->
+    <main class="hero-section">
+        <div style="max-width: 750px; margin-bottom: 5rem;">
+            <h1 style="font-size: 3rem; color: #fff; font-weight: 800; line-height: 1.2; margin-bottom: 1rem;">
+                Transforming Data Pipelines Into Operational Intelligence
+            </h1>
+            <h2 style="font-size: 1.3rem; color: #94a3b8; font-weight: 400; line-height: 1.6; margin: 0 0 2rem 0;">
+                Hi, I'm Shayantha Das. I engineer optimized relational database queries, clean complex unformatted attributes with Python, and deploy interactive enterprise dashboard tracking systems.
+            </h2>
+            <div>
+                <a href="/projects/" class="btn-cta"><i class="fas fa-briefcase"></i> Explore Portfolio Projects</a>
+                <a href="/contact/" class="btn-sub"><i class="fas fa-envelope"></i> Open Data Intake</a>
             </div>
+        </div>
 
-            <div class="avatar-frame">
-                <div class="avatar-glow">
-                    <img src="./profile.jpg" alt="Shayantha Das Professional Profile Photo">
+        <hr style="border: 0; height: 1px; background: #1e293b; margin: 4rem 0;">
+
+        <!-- CORE TECH EXPERTISE GRID -->
+        <section>
+            <h2 style="font-size: 1.8rem; color: #fff; font-weight: 800; margin-bottom: 1rem;">Core Technical Systems</h2>
+            <p style="color: #94a3b8; font-size: 1rem; margin-bottom: 2.5rem;">Symmetric data tools configured to process multi-tenant tracking frameworks and enterprise metrics.</p>
+            
+            <div class="grid-container" style="margin-top: 0;">
+                <div class="stat-card">
+                    <div style="color: #06b6d4; font-size: 1.75rem; margin-bottom: 1rem;"><i class="fas fa-database"></i></div>
+                    <h3 style="font-size: 1.2rem; color: #fff; margin: 0 0 0.5rem 0; font-weight: 700;">SQL Engineering</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">Advanced schema creation, multi-table structural joins, and partition window querying logic built inside MySQL and PostgreSQL environments.</p>
+                </div>
+
+                <div class="stat-card">
+                    <div style="color: #06b6d4; font-size: 1.75rem; margin-bottom: 1rem;"><i class="fab fa-python"></i></div>
+                    <h3 style="font-size: 1.2rem; color: #fff; margin: 0 0 0.5rem 0; font-weight: 700;">Python Ingestion</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">Data cleaning pipelines utilizing Pandas, NumPy arrays, and Google Colab workspaces to standardize anomalies and format datasets cleanly.</p>
+                </div>
+
+                <div class="stat-card">
+                    <div style="color: #06b6d4; font-size: 1.75rem; margin-bottom: 1rem;"><i class="fas fa-chart-line"></i></div>
+                    <h3 style="font-size: 1.2rem; color: #fff; margin: 0 0 0.5rem 0; font-weight: 700;">BI Canvas UI</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">Interactive, user-friendly visualization dashboards, spatial delivery maps, and cohort timelines built across Power BI, Tableau, and Advanced Excel.</p>
                 </div>
             </div>
         </section>
 
-        <section style="margin-top: 3rem;">
-            <h5>Expertise Spectrum</h5>
-            <h2>Targeted Operational Domains</h2>
-            <p class="section-subtitle">Practical applications of analytical modeling across commercial sectors.</p>
-            <div class="grid-3">
-                <div class="glass-card">
-                    <div class="card-icon"><i class="fas fa-industry" style="color: var(--neon-cyan); font-size: 1.5rem; margin-bottom: 1rem;"></i></div>
-                    <h3>Supply Chain & Operations</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Auditing component workflows, predicting lead time variances, and optimizing material tracking matrix layouts within the garment accessories sector.</p>
+        <hr style="border: 0; height: 1px; background: #1e293b; margin: 4rem 0;">
+
+        <!-- OPTION 1: PROFESSIONAL STANDARDS GRID (REPLACES PLACEHOLDERS) -->
+        <section class="endorsements-section">
+            <div style="margin-bottom: 2.5rem;">
+                <h2 style="font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">Professional Standards & Core Verification</h2>
+                <p style="color: #94a3b8; font-size: 1rem; margin: 0;">Technical execution capabilities backed by active production repos and professional data entry environments.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <!-- Core Card 1 -->
+                <div style="background: #0f172a; border: 1px solid #1e293b; padding: 2rem; border-radius: 8px;">
+                    <div style="color: #06b6d4; font-size: 1.5rem; margin-bottom: 1rem;"><i class="fas fa-shield-alt"></i></div>
+                    <h3 style="font-size: 1.15rem; color: #fff; margin: 0 0 0.5rem 0; font-weight: 700;">Data Integrity & Validation</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Demonstrated professional accuracy through active operational data entry roles, maintaining strict formatting constraints, structure validations, and error-free intake loops.
+                    </p>
                 </div>
-                <div class="glass-card">
-                    <div class="card-icon"><i class="fas fa-shopping-cart" style="color: var(--neon-blue); font-size: 1.5rem; margin-bottom: 1rem;"></i></div>
-                    <h3>E-Commerce & Checkout Funnels</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Isolating cohort retention thresholds, processing digital ledger logs, and tracing multi-tier conversion dropouts.</p>
+
+                <!-- Core Card 2 -->
+                <div style="background: #0f172a; border: 1px solid #1e293b; padding: 2rem; border-radius: 8px;">
+                    <div style="color: #06b6d4; font-size: 1.5rem; margin-bottom: 1rem;"><i class="fas fa-check-circle"></i></div>
+                    <h3 style="font-size: 1.15rem; color: #fff; margin: 0 0 0.5rem 0; font-weight: 700;">Technical Verification</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        All core analytical repositories are transparently hosted on GitHub, containing verified file tracking structures and open relational logic available for direct technical audit.
+                    </p>
                 </div>
-                <div class="glass-card">
-                    <div class="card-icon"><i class="fas fa-chart-line" style="color: var(--neon-purple); font-size: 1.5rem; margin-bottom: 1rem;"></i></div>
-                    <h3>Corporate Administration</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Merging core business administration foundations (BBA) with engineering analytics solutions to drive metric clarity for key stakeholders.</p>
+
+                <!-- Core Card 3 -->
+                <div style="background: #0f172a; border: 1px solid #1e293b; padding: 2rem; border-radius: 8px;">
+                    <div style="color: #06b6d4; font-size: 1.5rem; margin-bottom: 1rem;"><i class="fas fa-id-card"></i></div>
+                    <h3 style="font-size: 1.15rem; color: #fff; margin: 0 0 0.5rem 0; font-weight: 700;">References Available</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Official academic documentation, formal language certifications (IELTS overall band 5.0), and active employment verifications can be forwarded securely to recruiters upon request.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section style="margin-top: 2rem;">
-            <h5>System Telemetry</h5>
-            <h2>Measurable Code Execution Milestones</h2>
-            <p class="section-subtitle">A look at operational data metrics across active projects.</p>
-            <div class="insight-strip">
-                <div class="insight-card">
-                    <div class="insight-metric">1.2M+</div>
-                    <div class="insight-label">Transaction Records Parsed</div>
-                </div>
-                <div class="insight-card" style="border-left-color: var(--neon-cyan);">
-                    <div class="insight-metric">&lt; 1.8s</div>
-                    <div class="insight-label">Optimized Query Latency</div>
-                </div>
-                <div class="insight-card" style="border-left-color: var(--neon-purple);">
-                    <div class="insight-metric">45+</div>
-                    <div class="insight-label">Complex DAX Measures Live</div>
-                </div>
-            </div>
-        </section>
-
-        <section style="margin-top: 3rem;">
-            <h5>Verified Endorsements</h5>
-            <h2>Professional Recommendations</h2>
-            <p class="section-subtitle">Feedback tracking from database administrators and operational supervisors.</p>
-            <div class="rec-grid">
-                <div class="rec-card">
-                    <p class="rec-text">"Shayantha brings structural rigor to tabular datasets. His optimization of complex PostgreSQL queries effectively slashed layout lag across our production logs."</p>
-                    <div class="rec-author">
-                        <div class="rec-avatar">OM</div>
-                        <div>
-                            <h4>Operations Manager</h4>
-                            <h6>Garment Manufacturing Group</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="rec-card">
-                    <p class="rec-text">"His clean conversion of flat Excel data into structured database engines transformed how we audited our weekly logistics throughput graphs."</p>
-                    <div class="rec-author">
-                        <div class="rec-avatar">TS</div>
-                        <div>
-                            <h4>Technical Supervisor</h4>
-                            <h6>Supply Analytics Hub</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
+    <!-- FOOTER LINK SYNC -->
+   <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
                 <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; display: inline-block; margin-bottom: 1rem;">SD<span>.</span>analytics</a>
@@ -195,5 +159,7 @@
         </div>
     </footer>
 
+</body>
+</html>
 </body>
 </html>
