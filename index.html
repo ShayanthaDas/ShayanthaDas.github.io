@@ -18,10 +18,15 @@
     <meta name="description" content="Professional portfolio of Shayantha Das, a Data Analyst specializing in Python, MySQL, PostgreSQL, Power BI, Tableau, and Advanced Excel solutions.">
     <link rel="canonical" href="https://shayanthadas.github.io/">
     
-    <link rel="stylesheet" href="./style.css?v=11.0">
+    <link rel="stylesheet" href="./style.css?v=12.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .hero-section { max-width: 1100px; margin: 60px auto 40px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
+        .hero-container { display: flex; flex-direction: column-reverse; gap: 3rem; align-items: center; margin-bottom: 5rem; }
+        @media (min-width: 768px) { .hero-container { flex-direction: row; justify-content: space-between; } }
+        .hero-text { max-width: 700px; }
+        .profile-img-container { width: 240px; height: 240px; border-radius: 50%; overflow: hidden; border: 3px solid #06b6d4; box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.3); flex-shrink: 0; }
+        .profile-img-container img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
         .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 4rem; }
         .stat-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; transition: transform 0.2s ease; }
         .stat-card:hover { transform: translateY(-4px); }
@@ -51,19 +56,27 @@
 
     <!-- MAIN PROFILE HERO -->
     <main class="hero-section">
-        <div style="max-width: 800px; margin-bottom: 5rem;">
-            <h1 style="font-size: 3rem; color: #fff; font-weight: 800; line-height: 1.2; margin-bottom: 1rem;">
-                Shayantha Das
-            </h1>
-            <h2 style="font-size: 1.4rem; color: #06b6d4; font-weight: 600; margin: 0 0 1.5rem 0;">
-                Data Analyst & Data Entry Executive
-            </h2>
-            <p style="font-size: 1.1rem; color: #cbd5e1; line-height: 1.7; margin-bottom: 2.5rem;">
-                Specializing in bridging the gap between raw backend operational records and business intelligence layouts. Experienced in structuring complex database architectures, implementing data validation processing pipelines, and creating dynamic interactive dashboards that empower corporate resource planning.
-            </p>
-            <div>
-                <a href="/projects/" class="btn-cta"><i class="fas fa-chart-bar"></i> Review Portfolio Projects</a>
-                <a href="/contact/" class="btn-sub"><i class="fas fa-envelope"></i> Get In Touch</a>
+        <div class="hero-container">
+            <!-- Left Side: Profile Text -->
+            <div class="hero-text">
+                <h1 style="font-size: 3rem; color: #fff; font-weight: 800; line-height: 1.2; margin-bottom: 1rem;">
+                    Shayantha Das
+                </h1>
+                <h2 style="font-size: 1.4rem; color: #06b6d4; font-weight: 600; margin: 0 0 1.5rem 0;">
+                    Data Analyst & Data Entry Executive
+                </h2>
+                <p style="font-size: 1.1rem; color: #cbd5e1; line-height: 1.7; margin-bottom: 2.5rem;">
+                    Specializing in bridging the gap between raw backend operational records and business intelligence layouts. Experienced in structuring complex database architectures, implementing data validation processing pipelines, and creating dynamic interactive dashboards that empower corporate resource planning.
+                </p>
+                <div>
+                    <a href="/projects/" class="btn-cta"><i class="fas fa-chart-bar"></i> Review Portfolio Projects</a>
+                    <a href="/contact/" class="btn-sub"><i class="fas fa-envelope"></i> Get In Touch</a>
+                </div>
+            </div>
+
+            <!-- Right Side: Profile Image Component -->
+            <div class="profile-img-container">
+                <img src="profile.jpg" alt="Shayantha Das Profile Picture">
             </div>
         </div>
 
@@ -100,7 +113,7 @@
 
         <hr style="border: 0; height: 1px; background: #1e293b; margin: 4rem 0;">
 
-        <!-- UPDATED AREA: PROFESSIONAL STANDARDS (REPLACES PLACEHOLDERS) -->
+        <!-- STANDARDS SECTION (VERIFIED REPLACEMENT FOR PLACEHOLDERS) -->
         <section class="endorsements-section">
             <div style="margin-bottom: 2.5rem;">
                 <h2 style="font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">Professional Standards & Core Verification</h2>
@@ -140,7 +153,7 @@
     </main>
 
     <!-- FOOTER SECTION -->
-<footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
+   <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
                 <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; display: inline-block; margin-bottom: 1rem;">SD<span>.</span>analytics</a>
