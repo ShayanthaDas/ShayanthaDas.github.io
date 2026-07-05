@@ -14,21 +14,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Work | Shayantha Das</title>
     
-    <meta name="description" content="Explore technical data analytics projects by Shayantha Das. Featuring advanced SQL data extraction, Python predictive modeling, and interactive business intelligence dashboards.">
+    <meta name="description" content="Explore data analysis repositories, business intelligence deployments, and machine learning pipelines built by Shayantha Das.">
     <link rel="canonical" href="https://shayanthadas.github.io/projects/">
     
     <link rel="stylesheet" href="../style.css?v=12.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .portfolio-section { max-width: 1100px; margin: 60px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
-        .project-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; overflow: hidden; transition: transform 0.2s ease, border-color 0.2s ease; display: flex; flex-direction: column; }
-        .project-card:hover { transform: translateY(-4px); border-color: #06b6d4; }
-        .project-content { padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; }
-        .tech-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 1.5rem 0; }
-        .tag { background: rgba(6, 182, 212, 0.1); color: #06b6d4; font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.6rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.2); }
-        .btn-link { display: inline-flex; align-items: center; gap: 0.5rem; color: #06b6d4; text-decoration: none; font-weight: 700; font-size: 0.95rem; margin-top: auto; }
-        .btn-link:hover { color: #22d3ee; }
+        .portfolio-section { max-width: 1100px; margin: 60px auto 40px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
+        .project-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2.25rem; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s ease; }
+        .project-card:hover { transform: translateY(-4px); }
+        .tech-badge { background: rgba(6, 182, 212, 0.1); color: #06b6d4; font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.6rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.2); text-transform: uppercase; }
+        .btn-repo { display: inline-flex; align-items: center; gap: 0.5rem; background: #06b6d4; color: #030712; text-decoration: none; padding: 0.65rem 1.25rem; border-radius: 6px; font-size: 0.95rem; font-weight: 700; margin-top: 1.5rem; transition: background 0.2s ease; width: fit-content; }
+        .btn-repo:hover { background: #22d3ee; }
     </style>
 </head>
 <body style="background: #030712;">
@@ -49,74 +47,70 @@
         </nav>
     </header>
 
-    <!-- PORTFOLIO SECTION -->
+    <!-- MAIN PORTFOLIO CONTENT -->
     <main class="portfolio-section">
-        <h1 style="font-size: 2.5rem; color: #fff; font-weight: 800; margin-bottom: 0.5rem;">Portfolio Work</h1>
-        <p style="color: #94a3b8; font-size: 1.1rem; max-width: 800px; line-height: 1.6;">
-            A curated selection of production-grade data engineering, machine learning pipelines, and corporate business intelligence environments built to convert complex user transactional behaviors into measurable financial insights.
-        </p>
+        <div style="margin-bottom: 3rem;">
+            <h1 style="font-size: 2.5rem; color: #fff; font-weight: 800; margin-bottom: 0.5rem;">Portfolio Work</h1>
+            <p style="color: #94a3b8; font-size: 1.1rem; max-width: 750px;">A collection of end-to-end data products, database architecture environments, and pipeline logic setups compiled to solve concrete business challenges.</p>
+        </div>
 
-        <div class="project-grid">
-            <!-- NEW PROJECT: CUSTOMER CHURN ANALYTICS -->
+        <div class="grid-container">
+            <!-- REPO 1: CUSTOMER CHURN ANALYTICS (NEW) -->
             <div class="project-card">
-                <div class="project-content">
-                    <span style="color: #06b6d4; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Predictive Analytics</span>
-                    <h2 style="font-size: 1.4rem; color: #fff; margin: 0.5rem 0; font-weight: 700;">Customer Churn End-to-End Analytics</h2>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">
-                        An enterprise-grade business intelligence and machine learning solution built to identify operational friction, forecast subscriber attrition risks, and outline financial churn patterns using complex customer datasets.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">SQL Extraction</span>
-                        <span class="tag">Power BI Canvas</span>
-                        <span class="tag">ETL Pipeline</span>
+                <div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem;">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Power BI</span>
+                        <span class="tech-badge">Machine Learning</span>
                     </div>
-                    <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-link">
-                        View Repository <i class="fas fa-external-link-alt"></i>
-                    </a>
+                    <h3 style="font-size: 1.3rem; color: #fff; font-weight: 700; margin: 0 0 0.75rem 0;">Customer Churn Analytics</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">An end-to-end business intelligence pipeline combining machine learning classification models with an interactive Power BI dashboard to predict user churn patterns and preserve subscription retention metrics.</p>
                 </div>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-repo"><i class="fab fa-github"></i> View Repository</a>
             </div>
 
-            <!-- Legacy Project 1 Placeholder -->
+            <!-- REPO 2: EXISTING REPOSITORY 1 -->
             <div class="project-card">
-                <div class="project-content">
-                    <span style="color: #a855f7; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Marketing Analytics</span>
-                    <h2 style="font-size: 1.4rem; color: #fff; margin: 0.5rem 0; font-weight: 700;">Campaign Performance Dashboard</h2>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">
-                        Consolidating omni-channel acquisition records, calculating precise customer lifetime value curves, and tracking regional spend efficiency metrics across unified database views.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tag">Advanced Excel</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Tableau Canvas</span>
+                <div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem;">
+                        <span class="tech-badge">SQL</span>
+                        <span class="tech-badge">Tableau</span>
                     </div>
-                    <a href="/projects/" class="btn-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    <h3 style="font-size: 1.3rem; color: #fff; font-weight: 700; margin: 0 0 0.75rem 0;">Olist Sales Analytics</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">Deep-dive operational analysis tracking historical e-commerce fulfillment logs, payment segmentations, and customer geographical density configurations across Brazilian marketplace records.</p>
                 </div>
+                <a href="#" class="btn-repo"><i class="fab fa-github"></i> View Repository</a>
             </div>
 
-            <!-- Legacy Project 2 Placeholder -->
+            <!-- REPO 3: EXISTING REPOSITORY 2 -->
             <div class="project-card">
-                <div class="project-content">
-                    <span style="color: #eab308; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Supply Chain</span>
-                    <h2 style="font-size: 1.4rem; color: #fff; margin: 0.5rem 0; font-weight: 700;">Walmart Demand Forecasting Engine</h2>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">
-                        Parsing big-box store telemetry logs using advanced time-series decomposition modeling to predict inventory replenishment points and reduce supply warehouse overages.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tag">Python Scripts</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Google Colab</span>
+                <div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem;">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Pandas</span>
                     </div>
-                    <a href="/projects/" class="btn-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    <h3 style="font-size: 1.3rem; color: #fff; font-weight: 700; margin: 0 0 0.75rem 0;">Netflix Content Strategy</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">Automated processing engine designed to aggregate and categorize raw streaming platform metadata, identifying historical trends across localized media catalog investments.</p>
                 </div>
+                <a href="#" class="btn-repo"><i class="fab fa-github"></i> View Repository</a>
+            </div>
+
+            <!-- REPO 4: EXISTING REPOSITORY 3 -->
+            <div class="project-card">
+                <div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem;">
+                        <span class="tech-badge">Advanced Excel</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                    <h3 style="font-size: 1.3rem; color: #fff; font-weight: 700; margin: 0 0 0.75rem 0;">HR Personnel Dashboard</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin: 0;">Relational employee tracking architecture parsing corporate attrition variables, internal training attendance rates, and performance distribution levels.</p>
+                </div>
+                <a href="#" class="btn-repo"><i class="fab fa-github"></i> View Repository</a>
             </div>
         </div>
     </main>
 
-</body>
-</html>
-<footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
+   <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
                 <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; display: inline-block; margin-bottom: 1rem;">SD<span>.</span>analytics</a>
