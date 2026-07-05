@@ -24,7 +24,14 @@
         .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
         .gallery-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; transition: transform 0.2s ease; }
         .gallery-card:hover { transform: translateY(-4px); }
-        .mock-image-container { background: #1e293b; height: 180px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 2.5rem; margin-bottom: 1.5rem; border: 1px dashed #334155; }
+        
+        /* IMAGE GALLERY WRAPPERS */
+        .mock-image-container { height: 180px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; margin-bottom: 1.5rem; border: 1px solid #1e293b; position: relative; overflow: hidden; }
+        .img-churn { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); border-bottom: 3px solid #06b6d4; }
+        .img-walmart { background: linear-gradient(135deg, #0f172a 0%, #134e5e 100%); border-bottom: 3px solid #eab308; }
+        .img-olist { background: linear-gradient(135deg, #0f172a 0%, #311b92 100%); border-bottom: 3px solid #a855f7; }
+        .img-marketing { background: linear-gradient(135deg, #0f172a 0%, #1c1917 100%); border-bottom: 3px solid #ec4899; }
+        
         .platform-tag { display: inline-block; background: #030712; border: 1px solid #334155; color: #cbd5e1; font-size: 0.8rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; margin-bottom: 0.75rem; width: fit-content; }
         .btn-view { display: inline-flex; align-items: center; gap: 0.5rem; color: #06b6d4; text-decoration: none; font-size: 0.95rem; font-weight: 700; margin-top: 1.25rem; transition: color 0.2s ease; }
         .btn-view:hover { color: #22d3ee; }
@@ -56,40 +63,48 @@
         </div>
 
         <div class="grid-container">
-            <!-- DASHBOARD 1: CUSTOMER CHURN POWER BI (NEW) -->
+            <!-- DASHBOARD 1 -->
             <div class="gallery-card">
-                <div class="mock-image-container"><i class="fas fa-chart-line" style="color: #06b6d4;"></i></div>
-                <span class="platform-tag">Microsoft Power BI canvas</span>
-                <h3 style="font-size: 1.2rem; color: #fff; font-weight: 700; margin: 0 0 0.5rem 0;">End-to-End Retention Analytics Layout</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin: 0;">Features risk level segment drop-downs, dynamic cross-filtering by contract tenure type, monthly cost matrix comparisons, and machine learning classification prediction visual outputs.</p>
+                <div class="mock-image-container img-churn">
+                    <i class="fas fa-pie-chart" style="color: #06b6d4; filter: drop-shadow(0 0 15px rgba(6,182,212,0.4));"></i>
+                </div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <h3 style="font-size: 1.2rem; color: #fff; font-weight: 700; margin: 0 0 0.5rem 0;">Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin: 0;">Renders subscription contract timelines, distribution matrix filtering, and custom threshold gauges indicating user flight metrics.</p>
                 <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
             </div>
 
-            <!-- DASHBOARD 2: EXISTING DASHBOARD 1 -->
+            <!-- DASHBOARD 2 -->
             <div class="gallery-card">
-                <div class="mock-image-container"><i class="fas fa-map-marked-alt"></i></div>
-                <span class="platform-tag">Tableau Worksheet Dashboard</span>
-                <h3 style="font-size: 1.2rem; color: #fff; font-weight: 700; margin: 0 0 0.5rem 0;">Olist Operational Logistics Screen</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin: 0;">Geographical order density maps combined with delivery window time-series graphs, tracing transit bottlenecks across individual Brazilian municipal networks.</p>
-                <a href="#" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+                <div class="mock-image-container img-walmart">
+                    <i class="fas fa-line-chart" style="color: #eab308; filter: drop-shadow(0 0 15px rgba(234,179,8,0.4));"></i>
+                </div>
+                <span class="platform-tag">Advanced Python / Plotly Dashboard</span>
+                <h3 style="font-size: 1.2rem; color: #fff; font-weight: 700; margin: 0 0 0.5rem 0;">Walmart-Retail-Analytics-Demand-Forecasting</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin: 0;">Displays dynamic confidence-interval forecasting sweeps, multi-regional velocity overlays, and peak seasonal markdown trends.</p>
+                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
             </div>
 
-            <!-- DASHBOARD 3: EXISTING DASHBOARD 2 -->
+            <!-- DASHBOARD 3 -->
             <div class="gallery-card">
-                <div class="mock-image-container"><i class="fas fa-video"></i></div>
-                <span class="platform-tag">Python Seaborn / Plotly View</span>
-                <h3 style="font-size: 1.2rem; color: #fff; font-weight: 700; margin: 0 0 0.5rem 0;">Global Media Metric Analytics</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin: 0;">An automated interface charting rolling content expansion rates, volume clusters across localized release years, and target consumer runtime attributes.</p>
-                <a href="#" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+                <div class="mock-image-container img-olist">
+                    <i class="fas fa-map-location-dot" style="color: #a855f7; filter: drop-shadow(0 0 15px rgba(168,85,247,0.4));"></i>
+                </div>
+                <span class="platform-tag">Tableau Server Dashboard</span>
+                <h3 style="font-size: 1.2rem; color: #fff; font-weight: 700; margin: 0 0 0.5rem 0;">Olist-Sales-Customer-Analytics</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin: 0;">Geographic heatmaps tracing freight lags across regional corridors alongside customer densities and payment-tier allocations.</p>
+                <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
             </div>
 
-            <!-- DASHBOARD 4: EXISTING DASHBOARD 3 -->
+            <!-- DASHBOARD 4 -->
             <div class="gallery-card">
-                <div class="mock-image-container"><i class="fas fa-users"></i></div>
-                <span class="platform-tag">Advanced Microsoft Excel Grid</span>
-                <h3 style="font-size: 1.2rem; color: #fff; font-weight: 700; margin: 0 0 0.5rem 0;">HR Corporate Attrition Tracker</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin: 0;">Consolidates automated internal macros, dynamic pivot matrices, and condition-mapped charts tracing overall team churn indicators alongside salary structures.</p>
-                <a href="#" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+                <div class="mock-image-container img-marketing">
+                    <i class="fas fa-bar-chart" style="color: #ec4899; filter: drop-shadow(0 0 15px rgba(236,72,153,0.4));"></i>
+                </div>
+                <span class="platform-tag">Advanced Excel Matrix Map</span>
+                <h3 style="font-size: 1.2rem; color: #fff; font-weight: 700; margin: 0 0 0.5rem 0;">Marketing-Campaign-Performance-Analytics</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin: 0;">Multi-funnel attribution dashboards charting customer acquisition values, click-through variations, and channel yields.</p>
+                <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
             </div>
         </div>
     </main>
