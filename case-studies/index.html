@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_TRACKING_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YOUR_TRACKING_ID');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Intelligence Case Studies | Shayantha Das</title>
+    <title>Case Studies | Shayantha Das</title>
     
-    <meta name="description" content="Read deep-dive business analytics case studies by Shayantha Das. Discover data investigations, optimization models, and visual engineering pipelines.">
-    <link class="seo-link" rel="canonical" href="https://shayanthadas.github.io/case-studies/">
+    <meta name="description" content="In-depth data analysis case studies examining business challenges, classification models, and algorithmic performance reviews by Shayantha Das.">
+    <link rel="canonical" href="https://shayanthadas.github.io/case-studies/">
     
-    <link rel="stylesheet" href="../style.css?v=8.0">
+    <link rel="stylesheet" href="../style.css?v=12.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .case-studies-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
-        .case-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2.5rem; margin-bottom: 4rem; }
-        .repo-badge { display: inline-block; background: rgba(6, 182, 212, 0.08); border: 1px solid #06b6d4; color: #06b6d4; padding: 0.35rem 0.75rem; border-radius: 4px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1rem; }
-        .case-title { font-size: 1.9rem; font-weight: 800; color: #fff; margin: 0 0 1.5rem 0; line-height: 1.3; }
-        .grid-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; background: #030712; padding: 1.25rem; border-radius: 6px; border: 1px solid #1e293b; }
-        .meta-item strong { display: block; color: #94a3b8; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.25rem; }
-        .meta-item p { margin: 0; font-size: 0.95rem; color: #e2e8f0; }
-        .section-subtitle { font-size: 1.2rem; color: #06b6d4; margin: 2rem 0 0.75rem 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-        .content-text { font-size: 0.98rem; line-height: 1.7; color: #cbd5e1; margin: 0 0 1.5rem 0; text-align: justify; }
-        .bullet-list { margin: 0 0 2rem 0; padding-left: 1.25rem; }
-        .bullet-list li { margin-bottom: 0.6rem; line-height: 1.6; color: #cbd5e1; font-size: 0.98rem; }
-        .btn-git { display: inline-flex; align-items: center; gap: 0.5rem; background: #1e293b; color: #fff; text-decoration: none; padding: 0.65rem 1.4rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; border: 1px solid #334155; transition: all 0.2s ease; margin-top: 1rem; }
-        .btn-git:hover { background: #06b6d4; border-color: #06b6d4; color: #fff; }
+        .case-section { max-width: 1100px; margin: 60px auto 40px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
+        .case-list { display: flex; flex-direction: column; gap: 3rem; margin-top: 4rem; }
+        .case-item { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2.5rem; transition: border-color 0.2s ease; }
+        .case-item:hover { border-color: #06b6d4; }
+        .btn-read { display: inline-flex; align-items: center; gap: 0.5rem; color: #06b6d4; text-decoration: none; font-size: 1rem; font-weight: 700; margin-top: 1.5rem; transition: color 0.2s ease; }
+        .btn-read:hover { color: #22d3ee; }
     </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_TRACKING_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YOUR_TRACKING_ID');
-</script>
 </head>
 <body style="background: #030712;">
 
+    <!-- NAVIGATION MENU -->
     <header class="navbar">
         <nav class="nav-container">
             <a href="/" class="logo">SD<span>.</span>analytics</a>
@@ -50,71 +46,49 @@
         </nav>
     </header>
 
-    <main class="case-studies-container">
-        <div style="margin-bottom: 4rem;">
-            <h1 style="font-size: 2.6rem; color: #fff; margin-bottom: 0.5rem; font-weight: 800;">Business Case Studies</h1>
-            <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">Comprehensive data investigations sourced directly from active code repository tracking files.</p>
+    <!-- MAIN CASE STUDIES CONTENT -->
+    <main class="case-section">
+        <div style="margin-bottom: 2rem;">
+            <h1 style="font-size: 2.5rem; color: #fff; font-weight: 800; margin-bottom: 0.5rem;">Business Case Studies</h1>
+            <p style="color: #94a3b8; font-size: 1.1rem;">Detailed logical walkthroughs covering predictive analytics frameworks and exploratory infrastructure problem-solving.</p>
         </div>
 
-        <article class="case-card">
-            <span class="repo-badge">Repository Location</span>
-            <h2 class="case-title">Marketing-Campaign-Performance-Analytics</h2>
-            <div class="grid-meta">
-                <div class="meta-item"><strong>Core Technology Stack</strong><p>Python (Pandas/NumPy), MySQL Server, Power BI, Tableau</p></div>
-                <div class="meta-item"><strong>Analytical Methods</strong><p>Cohort Extraction, Conversion Optimization, RFM Modeling</p></div>
-                <div class="meta-item"><strong>Database Engine</strong><p>Relational Schema Script Structures</p></div>
+        <div class="case-list">
+            <!-- CASE 1: CUSTOMER CHURN PIPELINE (NEW) -->
+            <div class="case-item">
+                <span style="color: #06b6d4; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Predictive Operations Study</span>
+                <h2 style="font-size: 1.6rem; color: #fff; font-weight: 700; margin: 0.5rem 0 1rem 0;">Evaluating Enterprise Subscriber Attrition Risks Using Machine Learning Logic</h2>
+                <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin: 0;">This case study evaluates the development of an end-to-end churn analysis pipeline. It details the process of cleansing raw transaction histories with Python, isolating high-correlation predictive retention flags via algorithmic validation matrices, and rendering localized customer risk groupings inside corporate reporting workspaces.</p>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-read">Examine Case Architecture <i class="fas fa-arrow-right"></i></a>
             </div>
-            <h3 class="section-subtitle">Sourced From Case Studies File</h3>
-            <p class="content-text"><strong>The Business Problem:</strong> The marketing operations division experienced attribution blindness where split, multi-channel advertising budgets masked true conversion paths. Overlapping schedules on distinct networks resulted in significant double-counting of leads, driving up cost-per-acquisition metrics and obscuring real channel return on investment.</p>
-            <p class="content-text"><strong>The Investigation & Implementation:</strong> Granular audience interaction logs were mined and structured through custom normalization parameters inside Python. Relational logic joins inside MySQL successfully decoupled conflicting attribution sequences. The cleaned datasets were connected to interactive reporting workspaces, giving stakeholders clear visual tracking components to refine budget balances and decrease customer acquisition costs.</p>
-            <ul class="bullet-list">
-                <li>Isolated accurate channel attribution paths from multi-layered clickstreams.</li>
-                <li>Constructed performance tracking matrices across distinct advertising cycles.</li>
-                <li>Supplied interactive visualization frameworks to optimize marketing capital deployment.</li>
-            </ul>
-            <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn-git"><i class="fab fa-github"></i> View Full Repository</a>
-        </article>
 
-        <article class="case-card">
-            <span class="repo-badge">Repository Location</span>
-            <h2 class="case-title">Walmart-Retail-Analytics-Demand-Forecasting</h2>
-            <div class="grid-meta">
-                <div class="meta-item"><strong>Core Technology Stack</strong><p>PostgreSQL, Python, Power BI Desktop, Advanced Excel</p></div>
-                <div class="meta-item"><strong>Analytical Methods</strong><p>Time Series Partitioning, Rolling Drift Analysis, Trend Audit</p></div>
-                <div class="meta-item"><strong>Database Engine</strong><p>Structured Multi-Row Storage Engine</p></div>
+            <!-- CASE 2: EXISTING CASE 1 -->
+            <div class="case-item">
+                <span style="color: #06b6d4; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Marketplace Logistics Study</span>
+                <h2 style="font-size: 1.6rem; color: #fff; font-weight: 700; margin: 0.5rem 0 1rem 0;">Optimizing Cross-Border Supply Chain Fulfillment Profiles Across E-Commerce Frameworks</h2>
+                <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin: 0;">An evaluation of Brazilian regional shipping lags using nested SQL queries, isolating systematic choke-points within the Olist fulfillment ecosystem and offering routing answers.</p>
+                <a href="#" class="btn-read">Examine Case Architecture <i class="fas fa-arrow-right"></i></a>
             </div>
-            <h3 class="section-subtitle">Sourced From Case Studies File</h3>
-            <p class="content-text"><strong>The Business Problem:</strong> Drastic seasonal spikes and shifting localized buying habits frequently disrupted regional warehouse supply schedules. Peak traffic windows resulted in immediate stock shortages for key store departments, while rapid demand drops caused excessive inventory holding expenses and severe clearance price drop metrics.</p>
-            <p class="content-text"><strong>The Investigation & Implementation:</strong> Millions of operational rows were grouped and structured using optimized query partition rules and windows functions in PostgreSQL. Chronological sequences were extracted to separate underlying seasonal patterns from daily retail noise. Using Power BI Desktop and Advanced Excel dashboard features, a demand intelligence interface was launched to align store inventory updates with historical moving averages, allowing logistics managers to smoothly stabilize shipment frequencies.</p>
-            <ul class="bullet-list">
-                <li>Queried vast transactional datasets via optimized index parameters.</li>
-                <li>Identified store demand variance values using localized timeline filters.</li>
-                <li>Developed adjustable parameters to establish responsive store fulfillment schedules.</li>
-            </ul>
-            <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-git"><i class="fab fa-github"></i> View Full Repository</a>
-        </article>
 
-        <article class="case-card">
-            <span class="repo-badge">Repository Location</span>
-            <h2 class="case-title">Olist-Sales-Customer-Analytics</h2>
-            <div class="grid-meta">
-                <div class="meta-item"><strong>Core Technology Stack</strong><p>MySQL Workbench, Python, Tableau Client, Power BI</p></div>
-                <div class="meta-item"><strong>Analytical Methods</strong><p>Geospatial Mapping, Lifecycle Segmentation, Logistics Flow</p></div>
-                <div class="meta-item"><strong>Database Engine</strong><p>Relational SQL Operational Schema</p></div>
+            <!-- CASE 3: EXISTING CASE 2 -->
+            <div class="case-item">
+                <span style="color: #06b6d4; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Content Deployment Study</span>
+                <h2 style="font-size: 1.6rem; color: #fff; font-weight: 700; margin: 0.5rem 0 1rem 0;">Data-Driven Localized Media Cataloging Schemes for Global On-Demand Networks</h2>
+                <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin: 0;">Isolating maturity metrics and genre production trends in specific content distribution pipelines to locate underserved target audiences using advanced automated metadata analysis models.</p>
+                <a href="#" class="btn-read">Examine Case Architecture <i class="fas fa-arrow-right"></i></a>
             </div>
-            <h3 class="section-subtitle">Sourced From Case Studies File</h3>
-            <p class="content-text"><strong>The Business Problem:</strong> Logistical processing bottlenecks within regional delivery hubs negatively impacted marketplace delivery speeds, driving down customer satisfaction metrics and increasing store seller churn loops. Inaccurate delivery window estimates triggered higher order cancellation trends across high-value zip codes.</p>
-            <p class="content-text"><strong>The Investigation & Implementation:</strong> Complex database schemas were developed to join customer master records with multi-stage shipping intervals within MySQL. Order transit phases were segmented to measure carrier transport delays. By implementing interactive geographical coordinates in Tableau and user cohort layers in Power BI, transport bottlenecks were visually pinpointed, providing operations managers with clear auditing views to optimize service level agreements.</p>
-            <ul class="bullet-list">
-                <li>Isolated carrier tracking delays by mapping shipment timestamp records.</li>
-                <li>Designed clear geospatial tracking layers to evaluate spatial shipping efficiency.</li>
-                <li>Modeled multi-year consumer purchase frequencies using cohort matrices.</li>
-            </ul>
-            <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-git"><i class="fab fa-github"></i> View Full Repository</a>
-        </article>
+
+            <!-- CASE 4: EXISTING CASE 3 -->
+            <div class="case-item">
+                <span style="color: #06b6d4; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Human Resource Capital Study</span>
+                <h2 style="font-size: 1.6rem; color: #fff; font-weight: 700; margin: 0.5rem 0 1rem 0;">Minimizing Performance Slippage and Voluntary Operational Turnover Triggers</h2>
+                <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin: 0;">Mapping structural workforce attrition triggers against operational training timelines, demonstrating how optimized data schema architectures identify systemic workforce churn markers.</p>
+                <a href="#" class="btn-read">Examine Case Architecture <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
     </main>
 
-   <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
+    <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
                 <a href="/" style="font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; display: inline-block; margin-bottom: 1rem;">SD<span>.</span>analytics</a>
