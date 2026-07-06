@@ -21,18 +21,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .gallery-section { max-width: 1200px; margin: 60px auto 40px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
-        .project-section { margin-bottom: 4rem; border-bottom: 1px solid #1e293b; padding-bottom: 2rem; }
-        .project-title { font-size: 1.75rem; color: #fff; font-weight: 700; margin-bottom: 0.5rem; }
-        .project-desc { color: #94a3b8; font-size: 1rem; margin-bottom: 1.5rem; }
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-        .gallery-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; transition: transform 0.2s ease; }
-        .gallery-card:hover { transform: translateY(-4px); border-color: #06b6d4; }
+        .category-header { margin: 3rem 0 1.5rem 0; border-bottom: 1px solid #1e293b; padding-bottom: 0.75rem; }
+        .category-header h2 { font-size: 1.8rem; color: #fff; font-weight: 700; margin: 0; }
+        .category-header p { color: #94a3b8; font-size: 0.95rem; margin: 0.25rem 0 0 0; }
         
-        .image-container { height: 160px; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #1e293b; overflow: hidden; background: #030712; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-bottom: 2rem; }
+        .gallery-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; transition: transform 0.2s ease; }
+        .gallery-card:hover { transform: translateY(-4px); }
+        
+        .image-container { height: 180px; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid #1e293b; overflow: hidden; background: #0a0f1d; display: flex; align-items: center; justify-content: center; }
         .image-container img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
-        .image-name { font-size: 0.85rem; color: #cbd5e1; font-family: monospace; word-break: break-all; margin-bottom: 0.5rem; }
-        .platform-tag { display: inline-block; background: #030712; border: 1px solid #334155; color: #06b6d4; font-size: 0.75rem; font-weight: 600; padding: 0.2rem 0.4rem; border-radius: 4px; width: fit-content; }
+        .platform-tag { display: inline-block; background: #030712; border: 1px solid #334155; color: #cbd5e1; font-size: 0.8rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; margin-bottom: 0.75rem; width: fit-content; }
+        .btn-view { display: inline-flex; align-items: center; gap: 0.5rem; color: #06b6d4; text-decoration: none; font-size: 0.95rem; font-weight: 700; margin-top: 1.25rem; transition: color 0.2s ease; }
+        .btn-view:hover { color: #22d3ee; }
     </style>
 </head>
 <body style="background: #030712;">
@@ -53,70 +55,179 @@
         </nav>
     </header>
 
+    <!-- MAIN GALLERY CONTENT -->
     <main class="gallery-section">
-        <div style="margin-bottom: 3rem;">
+        <div style="margin-bottom: 2rem;">
             <h1 style="font-size: 2.5rem; color: #fff; font-weight: 800; margin-bottom: 0.5rem;">Dashboard Gallery</h1>
             <p style="color: #94a3b8; font-size: 1.1rem;">Comprehensive verification catalog showing all deployed analytical workspaces.</p>
         </div>
 
-        <!-- SECTION 1: CUSTOMER CHURN -->
-        <section class="project-section">
-            <h2 class="project-title">Customer Churn Analytics</h2>
-            <p class="project-desc">End-to-End Business Intelligence & Machine Learning Project</p>
-            <div class="grid-container">
-                <div class="gallery-card"><div class="image-container"><img src="../Customer_Churn_CPI_PBI.PNG" alt="Customer Churn CPI PBI"></div><div class="image-name">Customer_Churn_CPI_PBI.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../Customer_Churn_CS_PBI.PNG" alt="Customer Churn CS PBI"></div><div class="image-name">Customer_Churn_CS_PBI.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../Customer_Churn_Chu_Ana.PNG" alt="Customer Churn Chu Ana"></div><div class="image-name">Customer_Churn_Chu_Ana.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../Customer_Churn_Cus_Seg.PNG" alt="Customer Churn Cus Seg"></div><div class="image-name">Customer_Churn_Cus_Seg.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../Customer_Churn_Dashboard_Excel.PNG" alt="Customer Churn Dashboard Excel"></div><div class="image-name">Customer_Churn_Dashboard_Excel.PNG</div><span class="platform-tag">Excel</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../Customer_Churn_EO_PBI.PNG" alt="Customer Churn EO PBI"></div><div class="image-name">Customer_Churn_EO_PBI.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../Customer_Churn_Exe_Over.PNG" alt="Customer Churn Exe Over"></div><div class="image-name">Customer_Churn_Exe_Over.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../Customer_Churn_RA_PBI.PNG" alt="Customer Churn RA PBI"></div><div class="image-name">Customer_Churn_RA_PBI.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../Customer_Churn_Rev_Ana.PNG" alt="Customer Churn Rev Ana"></div><div class="image-name">Customer_Churn_Rev_Ana.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../Customer_Churn_Ri_Ana.PNG" alt="Customer Churn Ri Ana"></div><div class="image-name">Customer_Churn_Ri_Ana.PNG</div><span class="platform-tag">Power BI</span></div>
+        <!-- CATEGORY 1: CUSTOMER CHURN -->
+        <div class="category-header">
+            <h2>Customer Churn Analytics</h2>
+            <p>End-to-End Business Intelligence & Machine Learning Frameworks</p>
+        </div>
+        <div class="grid-container">
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Customer_Churn_CPI_PBI.PNG" alt="Customer Churn CPI"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
             </div>
-        </section>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Customer_Churn_CS_PBI.PNG" alt="Customer Churn CS"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Customer_Churn_Chu_Ana.PNG" alt="Customer Churn Churn Analysis"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Customer_Churn_Cus_Seg.PNG" alt="Customer Churn Segmentation"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Customer_Churn_Dashboard_Excel.PNG" alt="Customer Churn Excel"></div>
+                <span class="platform-tag">Advanced Excel Matrix Map</span>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Customer_Churn_EO_PBI.PNG" alt="Customer Churn EO"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Customer_Churn_Exe_Over.PNG" alt="Customer Churn Executive Overview"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Customer_Churn_RA_PBI.PNG" alt="Customer Churn RA"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Customer_Churn_Rev_Ana.PNG" alt="Customer Churn Revenue Analysis"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Customer_Churn_Ri_Ana.PNG" alt="Customer Churn Risk Analysis"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
 
-        <!-- SECTION 2: WALMART RETAIL -->
-        <section class="project-section">
-            <h2 class="project-title">Walmart Retail Analytics</h2>
-            <p class="project-desc">Demand Forecasting & Inventory Optimization</p>
-            <div class="grid-container">
-                <div class="gallery-card"><div class="image-container"><img src="../WALMART_CSI_PBI.PNG" alt="WALMART CSI PBI"></div><div class="image-name">WALMART_CSI_PBI.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../WALMART_EFA_TAB.PNG" alt="WALMART EFA TAB"></div><div class="image-name">WALMART_EFA_TAB.PNG</div><span class="platform-tag">Tableau</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../WALMART_EX_O_TAB.PNG" alt="WALMART EX O TAB"></div><div class="image-name">WALMART_EX_O_TAB.PNG</div><span class="platform-tag">Tableau</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../WALMART_E_O_PBI.PNG" alt="WALMART E O PBI"></div><div class="image-name">WALMART_E_O_PBI.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../WALMART_FD_TAB.PNG" alt="WALMART FD TAB"></div><div class="image-name">WALMART_FD_TAB.PNG</div><span class="platform-tag">Tableau</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../WALMART_FA_PBI.PNG" alt="WALMART FA PBI"></div><div class="image-name">WALMART_FA_PBI.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../WALMART_F_PBI.PNG" alt="WALMART F PBI"></div><div class="image-name">WALMART_F_PBI.PNG</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../WALMART_W_D.PNG" alt="WALMART W D"></div><div class="image-name">WALMART_W_D.PNG</div><span class="platform-tag">Data Visual</span></div>
+        <!-- CATEGORY 2: WALMART RETAIL -->
+        <div class="category-header">
+            <h2>Walmart Retail Analytics</h2>
+            <p>Demand Forecasting & Performance Overlays</p>
+        </div>
+        <div class="grid-container">
+            <div class="gallery-card">
+                <div class="image-container"><img src="../WALMART_CSI_PBI.PNG" alt="Walmart CSI"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
             </div>
-        </section>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../WALMART_EFA_TAB.PNG" alt="Walmart EFA"></div>
+                <span class="platform-tag">Tableau Server Dashboard</span>
+                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../WALMART_EX_O_TAB.PNG" alt="Walmart Executive Overview Tableau"></div>
+                <span class="platform-tag">Tableau Server Dashboard</span>
+                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../WALMART_E_O_PBI.PNG" alt="Walmart Executive Overview Power BI"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../WALMART_FD_TAB.PNG" alt="Walmart FD"></div>
+                <span class="platform-tag">Tableau Server Dashboard</span>
+                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../WALMART_FA_PBI.PNG" alt="Walmart FA"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../WALMART_F_PBI.PNG" alt="Walmart F"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../WALMART_W_D.PNG" alt="Walmart WD"></div>
+                <span class="platform-tag">Advanced Python / Plotly Dashboard</span>
+                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
 
-        <!-- SECTION 3: OLIST SALES -->
-        <section class="project-section">
-            <h2 class="project-title">Olist Sales & Customer Analytics</h2>
-            <p class="project-desc">Marketplace Logistics & Commercial Performance</p>
-            <div class="grid-container">
-                <div class="gallery-card"><div class="image-container"><img src="../olist_cus_beh_tab.png" alt="Olist Customer Behavior"></div><div class="image-name">olist_cus_beh_tab.png</div><span class="platform-tag">Tableau</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../olist_customer_analysis_pbi.png" alt="Olist Customer Analysis"></div><div class="image-name">olist_customer_analysis_pbi.png</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../olist_excel_dashboard.png" alt="Olist Excel Dashboard"></div><div class="image-name">olist_excel_dashboard.png</div><span class="platform-tag">Excel</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../olist_executive_dahboard_pbi.png" alt="Olist Executive Dashboard"></div><div class="image-name">olist_executive_dahboard_pbi.png</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../olist_geo_dash_tab.png" alt="Olist Geo Dashboard"></div><div class="image-name">olist_geo_dash_tab.png</div><span class="platform-tag">Tableau</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../olist_time_analysis_pbi.png" alt="Olist Time Analysis"></div><div class="image-name">olist_time_analysis_pbi.png</div><span class="platform-tag">Power BI</span></div>
+        <!-- CATEGORY 3: OLIST SALES -->
+        <div class="category-header">
+            <h2>Olist Sales & Customer Analytics</h2>
+            <p>Commercial Matrix Maps & Logistic Pipeline Sweeps</p>
+        </div>
+        <div class="grid-container">
+            <div class="gallery-card">
+                <div class="image-container"><img src="../olist_cus_beh_tab.png" alt="Olist Customer Behavior"></div>
+                <span class="platform-tag">Tableau Server Dashboard</span>
+                <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
             </div>
-        </section>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../olist_customer_analysis_pbi.png" alt="Olist Customer Analysis"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../olist_excel_dashboard.png" alt="Olist Excel"></div>
+                <span class="platform-tag">Advanced Excel Matrix Map</span>
+                <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../olist_executive_dahboard_pbi.png" alt="Olist Executive Dashboard"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../olist_geo_dash_tab.png" alt="Olist Geo Dashboard"></div>
+                <span class="platform-tag">Tableau Server Dashboard</span>
+                <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../olist_time_analysis_pbi.png" alt="Olist Time Analysis"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
 
-        <!-- SECTION 4: MARKETING CAMPAIGN -->
-        <section class="project-section" style="border-bottom: none;">
-            <h2 class="project-title">Marketing Campaign Performance Analytics</h2>
-            <p class="project-desc">Conversion Optimization & Attribution Mapping</p>
-            <div class="grid-container">
-                <div class="gallery-card"><div class="image-container"><img src="../Marketing Data Analysis Report-Excel.png" alt="Marketing Report Excel"></div><div class="image-name">Marketing Data Analysis Report-Excel.png</div><span class="platform-tag">Excel</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../Marketing Data Analysis Report-PBI.png" alt="Marketing Report Power BI"></div><div class="image-name">Marketing Data Analysis Report-PBI.png</div><span class="platform-tag">Power BI</span></div>
-                <div class="gallery-card"><div class="image-container"><img src="../Marketing Data Analysis Report-Tableau.png" alt="Marketing Report Tableau"></div><div class="image-name">Marketing Data Analysis Report-Tableau.png</div><span class="platform-tag">Tableau</span></div>
+        <!-- CATEGORY 4: MARKETING ANALYTICS -->
+        <div class="category-header">
+            <h2>Marketing Campaign Performance Analytics</h2>
+            <p>Conversion Funnel Tracing & Multi-Channel Attribution Metrics</p>
+        </div>
+        <div class="grid-container">
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Marketing Data Analysis Report-Excel.png" alt="Marketing Excel Report"></div>
+                <span class="platform-tag">Advanced Excel Matrix Map</span>
+                <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
             </div>
-        </section>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Marketing Data Analysis Report-PBI.png" alt="Marketing Power BI Report"></div>
+                <span class="platform-tag">Microsoft Power BI Engine</span>
+                <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="gallery-card">
+                <div class="image-container"><img src="../Marketing Data Analysis Report-Tableau.png" alt="Marketing Tableau Report"></div>
+                <span class="platform-tag">Tableau Server Dashboard</span>
+                <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn-view">Inspect Workspace Elements <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
     </main>
 
     <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
