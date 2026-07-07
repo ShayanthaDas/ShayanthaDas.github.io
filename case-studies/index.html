@@ -12,20 +12,33 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies | Shayantha Das</title>
+    <title>Analytical Case Studies | Shayantha Das</title>
     
-    <meta name="description" content="In-depth data analysis case studies examining business challenges, classification models, and algorithmic performance reviews by Shayantha Das.">
+    <meta name="description" content="Read comprehensive data analytics case studies on customer churn forecasting, marketing attribution, retail analytics, and logistics optimizations.">
     <link rel="canonical" href="https://shayanthadas.github.io/case-studies/">
     
     <link rel="stylesheet" href="../style.css?v=12.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .case-section { max-width: 1100px; margin: 60px auto 40px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
-        .case-list { display: flex; flex-direction: column; gap: 3rem; margin-top: 4rem; }
-        .case-item { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2.5rem; transition: border-color 0.2s ease; }
-        .case-item:hover { border-color: #06b6d4; }
-        .btn-read { display: inline-flex; align-items: center; gap: 0.5rem; color: #06b6d4; text-decoration: none; font-size: 1rem; font-weight: 700; margin-top: 1.5rem; transition: color 0.2s ease; }
-        .btn-read:hover { color: #22d3ee; }
+        .case-studies-section { max-width: 1000px; margin: 60px auto 40px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; }
+        .case-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 3rem; margin-bottom: 3rem; transition: border-color 0.2s ease; }
+        .case-card:hover { border-color: #334155; }
+        
+        .case-badge { display: inline-block; background: #030712; border: 1px solid #06b6d4; color: #06b6d4; font-size: 0.8rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 20px; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .case-title { font-size: 2rem; color: #fff; font-weight: 800; margin: 0 0 1rem 0; line-height: 1.3; }
+        .case-summary { color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; }
+        
+        .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; border-left: 3px solid #1e293b; padding-left: 1.5rem; }
+        .highlight-item h4 { color: #94a3b8; font-size: 0.85rem; text-transform: uppercase; margin: 0 0 0.25rem 0; letter-spacing: 0.5px; }
+        .highlight-item p { color: #fff; font-size: 1.1rem; font-weight: 600; margin: 0; }
+        
+        .case-links { display: flex; flex-wrap: wrap; gap: 1rem; border-top: 1px solid #1e293b; padding-top: 1.5rem; }
+        .btn-action { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 700; text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 6px; transition: all 0.2s ease; }
+        
+        .btn-primary { background: #06b6d4; color: #030712; }
+        .btn-primary:hover { background: #22d3ee; }
+        .btn-secondary { background: transparent; color: #cbd5e1; border: 1px solid #334155; }
+        .btn-secondary:hover { background: #1e293b; color: #fff; }
     </style>
 </head>
 <body style="background: #030712;">
@@ -47,47 +60,99 @@
     </header>
 
     <!-- MAIN CASE STUDIES CONTENT -->
-    <main class="case-section">
-        <div style="margin-bottom: 2rem;">
-            <h1 style="font-size: 2.5rem; color: #fff; font-weight: 800; margin-bottom: 0.5rem;">Business Case Studies</h1>
-            <p style="color: #94a3b8; font-size: 1.1rem;">Operational walkthroughs detailing backend problem-solving strategies, algorithmic models, and cross-functional performance adjustments.</p>
+    <main class="case-studies-section">
+        <div style="margin-bottom: 4rem;">
+            <h1 style="font-size: 2.5rem; color: #fff; font-weight: 800; margin-bottom: 0.5rem;">Analytical Case Studies</h1>
+            <p style="color: #94a3b8; font-size: 1.1rem;">In-depth business problems mapped out from raw database exploration through to actionable strategic outcomes.</p>
         </div>
 
-        <div class="case-list">
-            <!-- CASE 1 -->
-            <div class="case-item">
-                <span style="color: #06b6d4; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project</span>
-                <h2 style="font-size: 1.6rem; color: #fff; font-weight: 700; margin: 0.5rem 0 1rem 0;">Evaluating Enterprise Subscriber Attrition Risks Using Machine Learning Logic</h2>
-                <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin: 0;">Isolating core churn markers from historical transaction logs, deploying predictive models, and constructing interactive tracking frameworks to identify at-risk client vectors before subscription lapses.</p>
-                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project" target="_blank" class="btn-read">Examine Case Architecture <i class="fas fa-arrow-right"></i></a>
+        <!-- CASE STUDY 1: CUSTOMER CHURN -->
+        <div class="case-card">
+            <span class="case-badge">Predictive Analytics</span>
+            <h2 class="case-title">Optimizing Telecom Customer Retention Frameworks</h2>
+            <p class="case-summary">This business case traces how predictive customer modeling shifts reactive support measures into proactive retention workflows. By segmenting risk criteria across customer lifetimes, the analysis reveals explicit triggers behind account closures.</p>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <h4>Core Tools</h4>
+                    <p>Python, Power BI, SQL</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>Primary Focus</h4>
+                    <p>Churn Risk Reduction</p>
+                </div>
             </div>
-
-            <!-- CASE 2 -->
-            <div class="case-item">
-                <span style="color: #06b6d4; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Walmart-Retail-Analytics-Demand-Forecasting</span>
-                <h2 style="font-size: 1.6rem; color: #fff; font-weight: 700; margin: 0.5rem 0 1rem 0;">Predictive Logistics Optimization: Modeling Inventory Requirements Across Regional Hubs</h2>
-                <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin: 0;">Analyzing markdown cycles, calendar exceptions, and macroeconomic indicators to generate deep historical time-series estimations, protecting store floors from fulfillment delays.</p>
-                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting" target="_blank" class="btn-read">Examine Case Architecture <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <!-- CASE 3 -->
-            <div class="case-item">
-                <span style="color: #06b6d4; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Olist-Sales-Customer-Analytics</span>
-                <h2 style="font-size: 1.6rem; color: #fff; font-weight: 700; margin: 0.5rem 0 1rem 0;">Supply Chain Mapping and Geo-Distribution Vulnerabilities inside Marketplace Infrastructure</h2>
-                <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin: 0;">Structuring relational queries to parse order records, identify localized fulfillment bottlenecks, and measure vendor performance thresholds across complex logistical terrain.</p>
-                <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics" target="_blank" class="btn-read">Examine Case Architecture <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <!-- CASE 4 -->
-            <div class="case-item">
-                <span style="color: #06b6d4; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Marketing-Campaign-Performance-Analytics</span>
-                <h2 style="font-size: 1.6rem; color: #fff; font-weight: 700; margin: 0.5rem 0 1rem 0;">Attribution Modeling & Conversion Efficiency Diagnostics in Multi-Channel Networks</h2>
-                <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin: 0;">Isolating demographic interaction trends and budget alignment flaws across multiple funnels to optimize corporate spend allocation and maximize revenue yields.</p>
-                <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics" target="_blank" class="btn-read">Examine Case Architecture <i class="fas fa-arrow-right"></i></a>
+            <div class="case-links">
+                <a href="https://github.com/ShayanthaDas/Customer-Churn-Analytics-End-to-End-Business-Intelligence-Machine-Learning-Project/blob/main/CASE_STUDY.md" target="_blank" class="btn-action btn-primary"><i class="fas fa-book-open"></i> Read Deep-Dive</a>
+                <a href="/dashboard-gallery/" class="btn-action btn-secondary"><i class="fas fa-chart-pie"></i> View Dashboards</a>
             </div>
         </div>
+
+        <!-- CASE STUDY 2: WALMART RETAIL -->
+        <div class="case-card">
+            <span class="case-badge">Supply Chain & Demand</span>
+            <h2 class="case-title">Evaluating Multi-Department Demand Volatility</h2>
+            <p class="case-summary">An analytical study dissecting retail store footprints during volatile seasonal shifts. It addresses fulfillment latencies, breaks down regional macro factors, and highlights spatial data distributions across department structures.</p>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <h4>Core Tools</h4>
+                    <p>Tableau, Power BI, Python</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>Primary Focus</h4>
+                    <p>Forecast Tracking</p>
+                </div>
+            </div>
+            <div class="case-links">
+                <a href="https://github.com/ShayanthaDas/Walmart-Retail-Analytics-Demand-Forecasting/blob/main/CASE_STUDY.md" target="_blank" class="btn-action btn-primary"><i class="fas fa-book-open"></i> Read Deep-Dive</a>
+                <a href="/dashboard-gallery/" class="btn-action btn-secondary"><i class="fas fa-chart-line"></i> View Dashboards</a>
+            </div>
+        </div>
+
+        <!-- CASE STUDY 3: OLIST SALES -->
+        <div class="case-card">
+            <span class="case-badge">E-Commerce Logistics</span>
+            <h2 class="case-title">Deconstructing E-Commerce Delivery Bottlenecks</h2>
+            <p class="case-summary">This operationally focused evaluation traces delivery pipelines from order confirmation up to the final customer delivery sweep. It targets localized delivery delays, structural carrier issues, and changes in buyer behavior maps.</p>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <h4>Core Tools</h4>
+                    <p>Tableau, Advanced Excel</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>Primary Focus</h4>
+                    <p>Logistics Optimization</p>
+                </div>
+            </div>
+            <div class="case-links">
+                <a href="https://github.com/ShayanthaDas/Olist-Sales-Customer-Analytics/blob/main/CASE_STUDY.md" target="_blank" class="btn-action btn-primary"><i class="fas fa-book-open"></i> Read Deep-Dive</a>
+                <a href="/dashboard-gallery/" class="btn-action btn-secondary"><i class="fas fa-shopping-cart"></i> View Dashboards</a>
+            </div>
+        </div>
+
+        <!-- CASE STUDY 4: MARKETING ANALYTICS -->
+        <div class="case-card">
+            <span class="case-badge">Marketing Performance</span>
+            <h2 class="case-title">Multi-Channel Campaign Performance & Funnel Attribution</h2>
+            <p class="case-summary">A detailed analysis tracking customer acquisition costs and audience responses across active digital channels. This study identifies conversion drop-off points and determines which media assets drive the highest returns.</p>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <h4>Core Tools</h4>
+                    <p>Excel Matrix, Power BI</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>Primary Focus</h4>
+                    <p>ROI & Cost Attribution</p>
+                </div>
+            </div>
+            <div class="case-links">
+                <a href="https://github.com/ShayanthaDas/Marketing-Campaign-Performance-Analytics/blob/main/CASE_STUDY.md" target="_blank" class="btn-action btn-primary"><i class="fas fa-book-open"></i> Read Deep-Dive</a>
+                <a href="/dashboard-gallery/" class="btn-action btn-secondary"><i class="fas fa-bullhorn"></i> View Dashboards</a>
+            </div>
+        </div>
+
     </main>
 
+    <!-- NEW RICH FOOTER INTEGRATION -->
     <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
