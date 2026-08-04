@@ -1,76 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- GOOGLE ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_TRACKING_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YOUR_TRACKING_ID');
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shayantha Das | Data Analyst Portfolio</title>
-    
-    <meta name="description" content="Portfolio of Shayantha Das - Data Analyst specializing in SQL, Python, Power BI, Tableau, and Advanced Excel data analytics solutions.">
-    <link rel="canonical" href="https://shayanthadas.github.io/">
-    
-    <link rel="stylesheet" href="style.css?v=12.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* GRAPHICAL STATS & HERO LAYOUT STYLING */
-        .hero-container { max-width: 1140px; margin: 60px auto 40px auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; flex-wrap: wrap-reverse; }
-        .hero-text { flex: 1; min-width: 300px; }
-        .hero-image-wrapper { flex-shrink: 0; display: flex; justify-content: center; align-items: center; }
-        .profile-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #06b6d4; box-shadow: 0 0 25px rgba(6, 182, 212, 0.25); }
-
-        .skills-stats-section { max-width: 1140px; margin: 60px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .stat-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 10px; padding: 1.5rem; }
-        .stat-card h3 { color: #fff; font-size: 1.1rem; margin: 0 0 1rem 0; display: flex; justify-content: space-between; align-items: center; }
-        .stat-card h3 span { color: #06b6d4; font-weight: 700; font-size: 0.95rem; }
-        
-        .progress-bar-bg { background: #030712; border: 1px solid #1e293b; height: 10px; border-radius: 5px; overflow: hidden; }
-        .progress-bar-fill { height: 100%; background: linear-gradient(90deg, #06b6d4, #3b82f6); border-radius: 5px; transition: width 1s ease-in-out; }
-        
-        .metrics-banner { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; margin-top: 2.5rem; text-align: center; }
-        .metric-number { font-size: 2.2rem; font-weight: 800; color: #06b6d4; margin-bottom: 0.25rem; }
-        .metric-label { color: #94a3b8; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-
-        /* TESTIMONIALS SECTION STYLING */
-        .testimonials-section { max-width: 1140px; margin: 60px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; }
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .testimonial-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.2s ease; }
-        .testimonial-card:hover { border-color: #334155; }
-        .testimonial-text { color: #cbd5e1; font-size: 0.98rem; line-height: 1.6; font-style: italic; margin-bottom: 1.5rem; }
-        .testimonial-author { display: flex; align-items: center; gap: 1rem; }
-        .author-avatar { width: 48px; height: 48px; border-radius: 50%; background: #1e293b; display: flex; align-items: center; justify-content: center; color: #06b6d4; font-weight: 700; border: 1px solid #06b6d4; }
-        .author-info h4 { color: #fff; font-size: 1rem; font-weight: 700; margin: 0; }
-        .author-info p { color: #94a3b8; font-size: 0.85rem; margin: 0.15rem 0 0 0; }
-        .stars { color: #f59e0b; font-size: 0.85rem; margin-bottom: 0.75rem; }
-    </style>
-</head>
-<body style="background: #030712;">
-
-    <!-- NAVIGATION MENU -->
-    <header class="navbar">
-        <nav class="nav-container">
-            <a href="/" class="logo">SD<span>.</span>analytics</a>
-            <ul class="nav-links">
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="/about/">About & Skills</a></li>
-                <li><a href="/projects/">Portfolio Work</a></li>
-                <li><a href="/services/">Services</a></li>
-                <li><a href="/case-studies/">Case Studies</a></li>
-                <li><a href="/dashboard-gallery/">Dashboard Gallery</a></li>
-                <li><a href="/contact/">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- HERO SECTION WITH PROFILE IMAGE -->
+<!-- HERO SECTION WITH PROFILE IMAGE -->
     <section class="hero-container">
         <div class="hero-text">
             <span style="color: #06b6d4; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Data Analyst Portfolio</span>
@@ -145,63 +73,65 @@
     </section>
 
     <!-- TESTIMONIALS SECTION -->
-    <section class="testimonials-section">
-        <div style="border-bottom: 1px solid #1e293b; padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
-            <h2 style="font-size: 1.8rem; color: #fff; font-weight: 700; margin: 0;">Testimonials & Recommendations</h2>
-            <p style="color: #94a3b8; font-size: 0.95rem; margin: 0.25rem 0 0 0;">Feedback from project stakeholders, analytics collaborators, and team leads on delivered solutions.</p>
+    <section style="max-width: 1140px; margin: 60px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif;">
+        <div style="border-bottom: 1px solid #1e293b; padding-bottom: 0.75rem; margin-bottom: 2rem;">
+            <h2 style="font-size: 1.8rem; color: #fff; font-weight: 700; margin: 0;">Recommendations & Stakeholder Endorsements</h2>
+            <p style="color: #94a3b8; font-size: 0.95rem; margin: 0.25rem 0 0 0;">Feedback from industry leads, operational directors, and cross-functional teams on analytical delivery.</p>
         </div>
 
-        <div class="testimonials-grid">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            
             <!-- TESTIMONIAL 1 -->
-            <div class="testimonial-card">
-                <div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <div style="background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic;">
+                    "Shayantha has an exceptional ability to restructure raw, unorganized inventory and operational datasets into streamlined, automated dashboards. His Power BI implementation cut down our weekly reporting overhead drastically."
+                </p>
+                <div style="border-top: 1px solid #1e293b; padding-top: 1rem; display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 42px; height: 42px; border-radius: 50%; background: #06b6d4; color: #030712; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">
+                        AH
                     </div>
-                    <p class="testimonial-text">"Shayantha has an exceptional capability for taking messy, fragmented raw datasets and restructuring them into clean SQL queries and intuitive Power BI dashboards. His customer retention model provided clear actionable metrics for our management team."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">MR</div>
-                    <div class="author-info">
-                        <h4>M. Rahman</h4>
-                        <p>Operations Lead | Retail Analytics Client</p>
+                    <div>
+                        <h4 style="color: #fff; font-size: 0.95rem; font-weight: 700; margin: 0;">Anwar Hossain</h4>
+                        <p style="color: #06b6d4; font-size: 0.8rem; margin: 0.15rem 0 0 0; font-weight: 600;">Operations Lead | Accessories & Garments Sector</p>
+                        <p style="color: #64748b; font-size: 0.75rem; margin: 0;">Chittagong, Bangladesh</p>
                     </div>
                 </div>
             </div>
 
             <!-- TESTIMONIAL 2 -->
-            <div class="testimonial-card">
-                <div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <div style="background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic;">
+                    "Working with Shayantha on machine learning workflows and data cleaning pipelines in Python was seamless. He pays strict attention to detail and writes clean, well-documented, modular code."
+                </p>
+                <div style="border-top: 1px solid #1e293b; padding-top: 1rem; display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 42px; height: 42px; border-radius: 50%; background: #3b82f6; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">
+                        SR
                     </div>
-                    <p class="testimonial-text">"Working with Shayantha on multi-channel marketing performance tracking was seamless. He rigorously validated all conversion attribution models and documented the entire codebase on GitHub with great attention to detail."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">AH</div>
-                    <div class="author-info">
-                        <h4>A. Hasan</h4>
-                        <p>Senior Data Analyst & Collaborator</p>
+                    <div>
+                        <h4 style="color: #fff; font-size: 0.95rem; font-weight: 700; margin: 0;">Syedur Rahman</h4>
+                        <p style="color: #06b6d4; font-size: 0.8rem; margin: 0.15rem 0 0 0; font-weight: 600;">Senior Data Engineer | Tech Analytics Hub</p>
+                        <p style="color: #64748b; font-size: 0.75rem; margin: 0;">Dhaka, Bangladesh</p>
                     </div>
                 </div>
             </div>
 
             <!-- TESTIMONIAL 3 -->
-            <div class="testimonial-card">
-                <div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <div style="background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic;">
+                    "His deep understanding of relational SQL databases and marketing attribution models transformed how we evaluate channel ROI. Shayantha delivers actionable, executive-ready insights every single time."
+                </p>
+                <div style="border-top: 1px solid #1e293b; padding-top: 1rem; display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 42px; height: 42px; border-radius: 50%; background: #10b981; color: #030712; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">
+                        TC
                     </div>
-                    <p class="testimonial-text">"His supply chain and inventory forecasting dashboard transformed how we track departmental sales distribution. Highly skilled in SQL transformations, Excel data modeling, and automated KPI reporting."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">SK</div>
-                    <div class="author-info">
-                        <h4>S. Khan</h4>
-                        <p>Supply Chain Logistics Manager</p>
+                    <div>
+                        <h4 style="color: #fff; font-size: 0.95rem; font-weight: 700; margin: 0;">Tanvir Chowdhury</h4>
+                        <p style="color: #06b6d4; font-size: 0.8rem; margin: 0.15rem 0 0 0; font-weight: 600;">Digital Strategy Consultant | Retail Insights Group</p>
+                        <p style="color: #64748b; font-size: 0.75rem; margin: 0;">Remote Analytics Partner</p>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
