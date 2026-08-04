@@ -20,7 +20,12 @@
     <link rel="stylesheet" href="style.css?v=12.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ADDED GRAPHICAL STATS STYLING - NON-DISRUPTIVE */
+        /* GRAPHICAL STATS & HERO LAYOUT STYLING */
+        .hero-container { max-width: 1140px; margin: 60px auto 40px auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; flex-wrap: wrap-reverse; }
+        .hero-text { flex: 1; min-width: 300px; }
+        .hero-image-wrapper { flex-shrink: 0; display: flex; justify-content: center; align-items: center; }
+        .profile-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #06b6d4; box-shadow: 0 0 25px rgba(6, 182, 212, 0.25); }
+
         .skills-stats-section { max-width: 1140px; margin: 60px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
         .stat-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 10px; padding: 1.5rem; }
@@ -53,18 +58,25 @@
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero" style="max-width: 1140px; margin: 60px auto 40px auto; padding: 0 20px; text-align: left;">
-        <span style="color: #06b6d4; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Data Analyst Portfolio</span>
-        <h1 style="font-size: 3rem; color: #fff; font-weight: 800; margin: 0.5rem 0 1rem 0; line-height: 1.2;">Shayantha Das</h1>
-        <p style="color: #cbd5e1; font-size: 1.2rem; max-width: 750px; line-height: 1.6; margin-bottom: 2rem;">Transforming complex relational datasets into optimized SQL queries, predictive ML models, and executive-ready interactive dashboards.</p>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a href="/projects/" style="background: #06b6d4; color: #030712; padding: 0.75rem 1.5rem; font-weight: 700; border-radius: 6px; text-decoration: none;">Explore Portfolio Work</a>
-            <a href="/dashboard-gallery/" style="border: 1px solid #334155; color: #fff; padding: 0.75rem 1.5rem; font-weight: 700; border-radius: 6px; text-decoration: none;">Dashboard Gallery</a>
+    <!-- HERO SECTION WITH PROFILE IMAGE -->
+    <section class="hero-container">
+        <div class="hero-text">
+            <span style="color: #06b6d4; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Data Analyst Portfolio</span>
+            <h1 style="font-size: 3rem; color: #fff; font-weight: 800; margin: 0.5rem 0 1rem 0; line-height: 1.2;">Shayantha Das</h1>
+            <p style="color: #cbd5e1; font-size: 1.2rem; max-width: 750px; line-height: 1.6; margin-bottom: 2rem;">Transforming complex relational datasets into optimized SQL queries, predictive ML models, and executive-ready interactive dashboards.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="/projects/" style="background: #06b6d4; color: #030712; padding: 0.75rem 1.5rem; font-weight: 700; border-radius: 6px; text-decoration: none;">Explore Portfolio Work</a>
+                <a href="/dashboard-gallery/" style="border: 1px solid #334155; color: #fff; padding: 0.75rem 1.5rem; font-weight: 700; border-radius: 6px; text-decoration: none;">Dashboard Gallery</a>
+            </div>
+        </div>
+        
+        <!-- PROFILE IMAGE -->
+        <div class="hero-image-wrapper">
+            <img src="https://github.com/ShayanthaDas.png" alt="Shayantha Das" class="profile-img">
         </div>
     </section>
 
-    <!-- NEW GRAPHICAL STATS SECTION -->
+    <!-- GRAPHICAL STATS SECTION -->
     <section class="skills-stats-section">
         <div style="border-bottom: 1px solid #1e293b; padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
             <h2 style="font-size: 1.8rem; color: #fff; font-weight: 700; margin: 0;">Technical Proficiency & Analytics Metrics</h2>
@@ -120,7 +132,7 @@
         </div>
     </section>
 
-    <!-- RICH FOOTER INTEGRATION -->
+    <!-- FOOTER INTEGRATION -->
     <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
