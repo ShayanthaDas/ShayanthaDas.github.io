@@ -38,6 +38,18 @@
         .metrics-banner { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; margin-top: 2.5rem; text-align: center; }
         .metric-number { font-size: 2.2rem; font-weight: 800; color: #06b6d4; margin-bottom: 0.25rem; }
         .metric-label { color: #94a3b8; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+
+        /* TESTIMONIALS SECTION STYLING */
+        .testimonials-section { max-width: 1140px; margin: 60px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .testimonial-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.2s ease; }
+        .testimonial-card:hover { border-color: #334155; }
+        .testimonial-text { color: #cbd5e1; font-size: 0.98rem; line-height: 1.6; font-style: italic; margin-bottom: 1.5rem; }
+        .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+        .author-avatar { width: 48px; height: 48px; border-radius: 50%; background: #1e293b; display: flex; align-items: center; justify-content: center; color: #06b6d4; font-weight: 700; border: 1px solid #06b6d4; }
+        .author-info h4 { color: #fff; font-size: 1rem; font-weight: 700; margin: 0; }
+        .author-info p { color: #94a3b8; font-size: 0.85rem; margin: 0.15rem 0 0 0; }
+        .stars { color: #f59e0b; font-size: 0.85rem; margin-bottom: 0.75rem; }
     </style>
 </head>
 <body style="background: #030712;">
@@ -128,6 +140,67 @@
             <div>
                 <div class="metric-number">4+</div>
                 <div class="metric-label">BI Platforms Mastered</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section">
+        <div style="border-bottom: 1px solid #1e293b; padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
+            <h2 style="font-size: 1.8rem; color: #fff; font-weight: 700; margin: 0;">Testimonials & Recommendations</h2>
+            <p style="color: #94a3b8; font-size: 0.95rem; margin: 0.25rem 0 0 0;">Feedback from project stakeholders, analytics collaborators, and team leads on delivered solutions.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <!-- TESTIMONIAL 1 -->
+            <div class="testimonial-card">
+                <div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Shayantha has an exceptional capability for taking messy, fragmented raw datasets and restructuring them into clean SQL queries and intuitive Power BI dashboards. His customer retention model provided clear actionable metrics for our management team."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MR</div>
+                    <div class="author-info">
+                        <h4>M. Rahman</h4>
+                        <p>Operations Lead | Retail Analytics Client</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TESTIMONIAL 2 -->
+            <div class="testimonial-card">
+                <div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Working with Shayantha on multi-channel marketing performance tracking was seamless. He rigorously validated all conversion attribution models and documented the entire codebase on GitHub with great attention to detail."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AH</div>
+                    <div class="author-info">
+                        <h4>A. Hasan</h4>
+                        <p>Senior Data Analyst & Collaborator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TESTIMONIAL 3 -->
+            <div class="testimonial-card">
+                <div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"His supply chain and inventory forecasting dashboard transformed how we track departmental sales distribution. Highly skilled in SQL transformations, Excel data modeling, and automated KPI reporting."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SK</div>
+                    <div class="author-info">
+                        <h4>S. Khan</h4>
+                        <p>Supply Chain Logistics Manager</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
