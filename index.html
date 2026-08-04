@@ -14,86 +14,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shayantha Das | Data Analyst Portfolio</title>
     
-    <meta name="description" content="Portfolio of Shayantha Das - Data Analyst specializing in Power BI, Tableau, Advanced Excel, Python, and SQL database architectures.">
+    <meta name="description" content="Portfolio of Shayantha Das - Data Analyst specializing in SQL, Python, Power BI, Tableau, and Advanced Excel data analytics solutions.">
     <link rel="canonical" href="https://shayanthadas.github.io/">
     
     <link rel="stylesheet" href="style.css?v=12.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* GRAPHICAL SKILLS SECTION STYLES */
-        .skills-graph-section {
-            max-width: 1140px;
-            margin: 80px auto 60px auto;
-            padding: 0 20px;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-        .skills-graph-header {
-            margin-bottom: 2.5rem;
-            border-bottom: 1px solid #1e293b;
-            padding-bottom: 1rem;
-        }
-        .skills-graph-header h2 {
-            font-size: 2rem;
-            color: #fff;
-            font-weight: 800;
-            margin: 0 0 0.5rem 0;
-        }
-        .skills-graph-header p {
-            color: #94a3b8;
-            font-size: 1rem;
-            margin: 0;
-        }
-        .skills-container-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 2.5rem;
-        }
-        @media (max-width: 550px) {
-            .skills-container-grid { grid-template-columns: 1fr; }
-        }
-        .skill-group-card {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            border-radius: 12px;
-            padding: 2rem;
-        }
-        .skill-group-card h3 {
-            color: #06b6d4;
-            font-size: 1.2rem;
-            margin: 0 0 1.5rem 0;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-        .skill-item {
-            margin-bottom: 1.25rem;
-        }
-        .skill-item:last-child {
-            margin-bottom: 0;
-        }
-        .skill-info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.4rem;
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-        .skill-name { color: #f1f5f9; }
-        .skill-percentage { color: #94a3b8; font-size: 0.85rem; }
-        .progress-bar-bg {
-            width: 100%;
-            height: 8px;
-            background: #030712;
-            border-radius: 4px;
-            overflow: hidden;
-            border: 1px solid #1e293b;
-        }
-        .progress-bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #06b6d4, #3b82f6);
-            border-radius: 4px;
-        }
+        /* ADDED GRAPHICAL STATS STYLING - NON-DISRUPTIVE */
+        .skills-stats-section { max-width: 1140px; margin: 60px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .stat-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 10px; padding: 1.5rem; }
+        .stat-card h3 { color: #fff; font-size: 1.1rem; margin: 0 0 1rem 0; display: flex; justify-content: space-between; align-items: center; }
+        .stat-card h3 span { color: #06b6d4; font-weight: 700; font-size: 0.95rem; }
+        
+        .progress-bar-bg { background: #030712; border: 1px solid #1e293b; height: 10px; border-radius: 5px; overflow: hidden; }
+        .progress-bar-fill { height: 100%; background: linear-gradient(90deg, #06b6d4, #3b82f6); border-radius: 5px; transition: width 1s ease-in-out; }
+        
+        .metrics-banner { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; margin-top: 2.5rem; text-align: center; }
+        .metric-number { font-size: 2.2rem; font-weight: 800; color: #06b6d4; margin-bottom: 0.25rem; }
+        .metric-label { color: #94a3b8; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
     </style>
 </head>
 <body style="background: #030712;">
@@ -115,101 +54,73 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero-section" style="max-width: 1140px; margin: 60px auto; padding: 0 20px; color: #fff; font-family: system-ui, -apple-system, sans-serif;">
-        <div style="max-width: 800px;">
-            <span style="color: #06b6d4; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem;">Data Analytics & Business Intelligence</span>
-            <h1 style="font-size: 3rem; font-weight: 800; margin: 1rem 0; line-height: 1.2;">Transforming Raw Data into Executive Decision Intelligence</h1>
-            <p style="color: #cbd5e1; font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem;">Specializing in end-to-end relational data architectures, automated ETL cleaning pipelines, and production-ready interactive dashboard ecosystems built in Power BI, Tableau, and Advanced Excel.</p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="/projects/" style="background: #06b6d4; color: #030712; padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: 700; text-decoration: none;">Explore Portfolio Work</a>
-                <a href="/dashboard-gallery/" style="border: 1px solid #334155; color: #fff; padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: 700; text-decoration: none;">View Dashboard Gallery</a>
+    <section class="hero" style="max-width: 1140px; margin: 60px auto 40px auto; padding: 0 20px; text-align: left;">
+        <span style="color: #06b6d4; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Data Analyst Portfolio</span>
+        <h1 style="font-size: 3rem; color: #fff; font-weight: 800; margin: 0.5rem 0 1rem 0; line-height: 1.2;">Shayantha Das</h1>
+        <p style="color: #cbd5e1; font-size: 1.2rem; max-width: 750px; line-height: 1.6; margin-bottom: 2rem;">Transforming complex relational datasets into optimized SQL queries, predictive ML models, and executive-ready interactive dashboards.</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="/projects/" style="background: #06b6d4; color: #030712; padding: 0.75rem 1.5rem; font-weight: 700; border-radius: 6px; text-decoration: none;">Explore Portfolio Work</a>
+            <a href="/dashboard-gallery/" style="border: 1px solid #334155; color: #fff; padding: 0.75rem 1.5rem; font-weight: 700; border-radius: 6px; text-decoration: none;">Dashboard Gallery</a>
+        </div>
+    </section>
+
+    <!-- NEW GRAPHICAL STATS SECTION -->
+    <section class="skills-stats-section">
+        <div style="border-bottom: 1px solid #1e293b; padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
+            <h2 style="font-size: 1.8rem; color: #fff; font-weight: 700; margin: 0;">Technical Proficiency & Analytics Metrics</h2>
+            <p style="color: #94a3b8; font-size: 0.95rem; margin: 0.25rem 0 0 0;">Quantitative overview of technical capabilities across data engineering, modeling, and visualization workflows.</p>
+        </div>
+
+        <!-- GRAPHICAL SKILL BARS -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3><i class="fas fa-database" style="color: #06b6d4;"></i> SQL & Relational Databases <span>92%</span></h3>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 92%;"></div></div>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fab fa-python" style="color: #06b6d4;"></i> Python Analytics & ML <span>88%</span></h3>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 88%;"></div></div>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-chart-pie" style="color: #06b6d4;"></i> Power BI Modeling <span>90%</span></h3>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-chart-line" style="color: #06b6d4;"></i> Tableau Server Dashboards <span>85%</span></h3>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-file-excel" style="color: #06b6d4;"></i> Advanced Excel & DAX <span>95%</span></h3>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 95%;"></div></div>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-project-diagram" style="color: #06b6d4;"></i> Data Pipeline Optimization <span>87%</span></h3>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 87%;"></div></div>
+            </div>
+        </div>
+
+        <!-- KEY STATISTICAL HIGHLIGHTS BANNER -->
+        <div class="metrics-banner">
+            <div>
+                <div class="metric-number">25+</div>
+                <div class="metric-label">Dashboards Deployed</div>
+            </div>
+            <div>
+                <div class="metric-number">4</div>
+                <div class="metric-label">End-to-End Case Studies</div>
+            </div>
+            <div>
+                <div class="metric-number">100%</div>
+                <div class="metric-label">Reproducible Codebases</div>
+            </div>
+            <div>
+                <div class="metric-number">4+</div>
+                <div class="metric-label">BI Platforms Mastered</div>
             </div>
         </div>
     </section>
 
-    <!-- GRAPHICAL SKILLS STATISTICS SECTION -->
-    <section class="skills-graph-section">
-        <div class="skills-graph-header">
-            <h2>Technical Competency Statistics</h2>
-            <p>Quantitative overview of tools, languages, and analytical frameworks across projects.</p>
-        </div>
-
-        <div class="skills-container-grid">
-            
-            <!-- GROUP 1: BI & VISUALIZATION -->
-            <div class="skill-group-card">
-                <h3><i class="fas fa-chart-line"></i> BI & Data Visualization</h3>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">Microsoft Power BI Engine</span>
-                        <span class="skill-percentage">92%</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 92%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">Tableau Desktop & Server</span>
-                        <span class="skill-percentage">88%</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 88%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">Advanced Excel & Pivot Matrices</span>
-                        <span class="skill-percentage">95%</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 95%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- GROUP 2: PROGRAMMING & DATABASES -->
-            <div class="skill-group-card">
-                <h3><i class="fas fa-database"></i> Databases & Programming</h3>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">SQL (MySQL & PostgreSQL)</span>
-                        <span class="skill-percentage">90%</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 90%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">Python (Pandas, NumPy, Plotly)</span>
-                        <span class="skill-percentage">85%</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 85%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">Statistical Analytics (SPSS & ML)</span>
-                        <span class="skill-percentage">80%</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 80%;"></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- FOOTER INTEGRATION -->
+    <!-- RICH FOOTER INTEGRATION -->
     <footer style="background: #040714; border-top: 1px solid rgba(255,255,255,0.05); padding: 4rem 2rem 2rem 2rem; color: #94a3b8; font-family: sans-serif;">
         <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem;">
             <div style="flex: 1.5; min-width: 300px;">
